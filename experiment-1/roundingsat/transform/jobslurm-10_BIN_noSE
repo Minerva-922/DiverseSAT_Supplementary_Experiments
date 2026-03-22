@@ -1,0 +1,34 @@
+#!/bin/sh
+#SBATCH --job-name=10Bv0
+#SBATCH --partition=normal            # submission queue (normal or long or bigmem or bigpu or quadgpu)
+#SBATCH --time=10-1:00:00            # 1-1 means one day and one hour
+#SBATCH --output=slurm-%j.out        # if --error is absent, includes also the errors
+#SBATCH --mem=120G    # T-tera, G-giga, M-mega
+#SBATCH --nodes=1
+#SBATCH --exclusive
+echo "-----------------------------------------------------------"
+echo "hostname                     =   $(hostname)"
+echo "SLURM_JOB_NAME               =   $SLURM_JOB_NAME"
+echo "SLURM_SUBMIT_DIR             =   $SLURM_SUBMIT_DIR"
+echo "SLURM_JOBID                  =   $SLURM_JOBID"
+echo "SLURM_JOB_ID                 =   $SLURM_JOB_ID"
+echo "SLURM_NODELIST               =   $SLURM_NODELIST"
+echo "SLURM_JOB_NODELIST           =   $SLURM_JOB_NODELIST"
+echo "SLURM_TASKS_PER_NODE         =   $SLURM_TASKS_PER_NODE"
+echo "SLURM_JOB_CPUS_PER_NODE      =   $SLURM_JOB_CPUS_PER_NODE"
+echo "SLURM_TOPOLOGY_ADDR_PATTERN  = $SLURM_TOPOLOGY_ADDR_PATTERN"
+echo "SLURM_TOPOLOGY_ADDR          =   $SLURM_TOPOLOGY_ADDR"
+echo "SLURM_CPUS_ON_NODE           =   $SLURM_CPUS_ON_NODE"
+echo "SLURM_NNODES                 =   $SLURM_NNODES"
+echo "SLURM_JOB_NUM_NODES          =   $SLURM_JOB_NUM_NODES"
+echo "SLURMD_NODENAME              =   $SLURMD_NODENAME"
+echo "SLURM_NTASKS                 =   $SLURM_NTASKS"
+echo "SLURM_NPROCS                 =   $SLURM_NPROCS"
+echo "SLURM_MEM_PER_NODE           =   $SLURM_MEM_PER_NODE"
+echo "SLURM_PRIO_PROCESS           =   $SLURM_PRIO_PROCESS"
+echo "-----------------------------------------------------------"
+k_value="10"
+encode="BIN"
+SE_mode="noSE"
+key_word="k_${k_value}-${encode}-${SE_mode}"
+python ./goTransformer.py 2 10000 ../transformers/${encode}_${SE_mode}_cnf_to_PBO.py  /users/scherif/ComputeSpace/DiverseSAT/benchmarks/ ../benchmarks/$key_word  ./output-trans/ .cnf .pbo  --name_list 299_instances.txt ${k_value}  --suffix $key_word

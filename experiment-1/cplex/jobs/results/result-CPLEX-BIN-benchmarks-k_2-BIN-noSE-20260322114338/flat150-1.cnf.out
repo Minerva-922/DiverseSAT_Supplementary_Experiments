@@ -1,0 +1,73 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 1194 rows and 0 columns.
+MIP Presolve modified 2172 coefficients.
+Aggregator did 900 substitutions.
+Reduced MIP has 3516 rows, 2250 columns, and 9054 nonzeros.
+Reduced MIP has 2250 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (13.59 ticks)
+Probing time = 0.00 sec. (2.36 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 300 rows and 0 columns.
+Reduced MIP has 3216 rows, 2250 columns, and 8154 nonzeros.
+Reduced MIP has 2250 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (9.88 ticks)
+Probing time = 0.01 sec. (2.29 ticks)
+Clique table members: 6191.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.10 sec. (70.27 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0      300.0000   818                    300.0000     1418         
+      0     0      300.0000   692                 ZeroHalf: 1     1428         
+      0     0      300.0000   853                   Cuts: 154     1982         
+      0     2      300.0000   828                    300.0000     2226         
+Elapsed time = 1.72 sec. (1240.69 ticks, tree = 0.01 MB, solutions = 0)
+      7     9      300.0000   702                    300.0000     5450         
+     21    23      300.0000   674                    300.0000     7066         
+     33    29      297.0000   693                    300.0000    10419         
+     43    33      300.0000   697                    300.0000    13439         
+     53    43      294.9000   991                    300.0000    17131         
+     66    48      290.7500   882                    300.0000    20522         
+     75    47    infeasible                          300.0000    23370         
+     81    45      300.0000   728                    300.0000    25554         
+     89    43      300.0000   712                    300.0000    27396         
+    111    45    infeasible                          300.0000    36637         
+Elapsed time = 5.94 sec. (4755.76 ticks, tree = 0.53 MB, solutions = 0)
+    130    52      298.6667   984                    300.0000    45565         
+    148    52    infeasible                          300.0000    54382         
+    184    52      300.0000   716                    300.0000    64125         
+    222    62    infeasible                          300.0000    73439         
+    253    72      299.6000   915                    300.0000    83784         
+    276    71    infeasible                          300.0000    93455         
+    301    72      299.0000   913                    300.0000   103164         
+    344    77    infeasible                          300.0000   113551         
+*   350    79      integral     0      216.0000      300.0000   115078   38.89%
+*   361     1      integral     0      300.0000      300.0000   118061    0.00%
+
+Zero-half cuts applied:  29
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    1.72 sec. (1240.66 ticks)
+Sequential b&c:
+  Real time             =   14.09 sec. (11923.80 ticks)
+                          ------------
+Total (root+branch&cut) =   15.81 sec. (13164.45 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark flat150-1.cnf k 2 OPT 300 TimeCost 16.338904857635498 TimeSolve 15.891534328460693 TimeRead 0.004206418991088867 TimeTrans 0.4431641101837158

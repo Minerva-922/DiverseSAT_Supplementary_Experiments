@@ -1,0 +1,47 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 18171 rows and 42 columns.
+MIP Presolve modified 22738 coefficients.
+Aggregator did 10972 substitutions.
+Reduced MIP has 220030 rows, 54728 columns, and 640382 nonzeros.
+Reduced MIP has 54728 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 3.55 sec. (1939.12 ticks)
+Found incumbent of value -335316.000000 after 6.14 sec. (3500.99 ticks)
+Probing time = 0.07 sec. (15.12 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 820 rows and 0 columns.
+Reduced MIP has 219210 rows, 54728 columns, and 637922 nonzeros.
+Reduced MIP has 54728 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 2.82 sec. (1532.78 ticks)
+Probing time = 0.07 sec. (14.87 ticks)
+Clique table members: 190870.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 7222.48 sec. (1309743.62 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      -335316.0000   177970.0000           153.08%
+      0     0   1.00000e+37     0  -335316.0000   177970.0000  1024855  153.08%
+
+Root node processing (before b&c):
+  Real time             = 7231.98 sec. (1314996.55 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 7231.98 sec. (1314996.55 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_time_limit_feasible
+>>> Benchmark mc2024_track1_155.cnf k 10 OPT -335316 TimeCost 7571.441821575165 TimeSolve 7257.006838321686 TimeRead 0.04967641830444336 TimeTrans 314.38530683517456

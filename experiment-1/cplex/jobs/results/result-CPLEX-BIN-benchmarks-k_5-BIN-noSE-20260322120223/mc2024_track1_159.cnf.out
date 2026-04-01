@@ -1,0 +1,70 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 7512 rows and 0 columns.
+MIP Presolve modified 15024 coefficients.
+Aggregator did 7512 substitutions.
+Reduced MIP has 46151 rows, 27544 columns, and 149928 nonzeros.
+Reduced MIP has 27544 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.24 sec. (145.05 ticks)
+Found incumbent of value -60936.000000 after 0.41 sec. (276.56 ticks)
+Probing time = 0.02 sec. (10.04 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 46151 rows, 27544 columns, and 149928 nonzeros.
+Reduced MIP has 27544 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.43 sec. (207.51 ticks)
+Probing time = 0.02 sec. (9.52 ticks)
+Clique table members: 39764.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 220.97 sec. (133267.19 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       -60936.0000    35056.0000           157.53%
+      0     0    17156.0000 17114   -60936.0000    17156.0000   121049  128.15%
+*     0+    0                        11484.0000    17156.0000            49.39%
+      0     0    15162.8889 13376    11484.0000    Cuts: 9946   243185   32.03%
+*     0+    0                        11950.0000    15162.8889            26.89%
+      0     0    15024.6667 12056    11950.0000    Cuts: 6950   382312   25.73%
+      0     0    15022.0000 11825    11950.0000    Cuts: 1700   520868   25.71%
+*     0+    0                        11952.0000    15022.0000            25.69%
+*     0+    0                        11982.0000    15022.0000            25.37%
+*     0+    0                        12410.0000    15022.0000            21.05%
+*     0+    0                        12420.0000    15022.0000            20.95%
+*     0+    0                        12432.0000    15022.0000            20.83%
+*     0+    0                        12474.0000    15022.0000            20.43%
+      0     0        cutoff          12474.0000    15022.0000   520868   20.43%
+      0     0    15022.0000  9689    12474.0000    Cuts: 1035   654651   20.43%
+      0     0    15022.0000  9499    12474.0000     Cuts: 795   776378   20.43%
+      0     0    15022.0000 11095    12474.0000     Cuts: 758   907769   20.43%
+*     0+    0                        12858.0000    15022.0000            16.83%
+*     0+    0                        12898.0000    15022.0000            16.47%
+*     0+    0                        13196.0000    15022.0000            13.84%
+      0     0        cutoff          13196.0000    15022.0000   907769   13.84%
+      0     0    15022.0000 11312    13196.0000     Cuts: 680  1043598   13.84%
+
+Clique cuts applied:  2462
+Implied bound cuts applied:  2839
+Zero-half cuts applied:  2856
+
+Root node processing (before b&c):
+  Real time             = 7200.11 sec. (3085017.14 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.11 sec. (3085017.14 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_time_limit_feasible
+>>> Benchmark mc2024_track1_159.cnf k 5 OPT 13196 TimeCost 7261.854047298431 TimeSolve 7229.430686950684 TimeRead 0.014511346817016602 TimeTrans 32.408849000930786

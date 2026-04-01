@@ -1,0 +1,44 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 4 times.
+MIP Presolve eliminated 111854 rows and 16850 columns.
+MIP Presolve modified 226186 coefficients.
+Aggregator did 112044 substitutions.
+Reduced MIP has 514516 rows, 263363 columns, and 1393367 nonzeros.
+Reduced MIP has 263363 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 10.60 sec. (4984.48 ticks)
+Probing fixed 230 vars, tightened 0 bounds.
+Probing time = 5.79 sec. (1065.52 ticks)
+Tried aggregator 2 times.
+Detecting symmetries...
+MIP Presolve eliminated 1951 rows and 854 columns.
+MIP Presolve modified 275 coefficients.
+Aggregator did 54 substitutions.
+Reduced MIP has 512511 rows, 262455 columns, and 1388614 nonzeros.
+Reduced MIP has 262455 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 11.23 sec. (6823.06 ticks)
+Probing time = 0.29 sec. (53.28 ticks)
+Clique table members: 950795.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 29.71 sec. (14974.05 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0    53451.0000 101683                  53451.0000   109704         
+      0     0    53009.0000 101412                 Cuts: 10000   118335         
+      0     0    50864.4167 101710                 Cuts: 10000   157720         
+      0     0    49642.4583 101513                 Cuts: 10000   183796         
+      0     0    47730.8125 102653                 Cuts: 10000   222597         
+      0     0    45970.6844 104655                 Cuts: 10000   270516         
+      0     0    44528.9690 106605                  Cuts: 9999   317581         
+      0     0    43591.7694 110028                 Cuts: 10000   366353         
+      0     0    42765.2426 113692                  Cuts: 9998   420184         

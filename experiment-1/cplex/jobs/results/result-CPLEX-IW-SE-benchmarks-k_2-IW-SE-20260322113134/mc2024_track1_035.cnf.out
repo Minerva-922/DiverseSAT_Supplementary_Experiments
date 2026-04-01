@@ -1,0 +1,74 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 1 time.
+MIP Presolve eliminated 104681 rows and 1 columns.
+MIP Presolve modified 39214 coefficients.
+Reduced MIP has 43768 rows, 4499 columns, and 364238 nonzeros.
+Reduced MIP has 4499 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 4.43 sec. (2731.66 ticks)
+Probing time = 0.01 sec. (4.56 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 18 rows and 0 columns.
+Reduced MIP has 43750 rows, 4499 columns, and 363698 nonzeros.
+Reduced MIP has 4499 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.96 sec. (557.09 ticks)
+Probing time = 0.02 sec. (4.56 ticks)
+Clique table members: 40699.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 55.07 sec. (17713.77 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0      111.5230  1530                    111.5230    70268         
+      0     0       62.6019   732                   Cuts: 479   115584         
+      0     0       61.7754   818                   Cuts: 464   164747         
+      0     0       61.1087   821                   Cuts: 524   234151         
+      0     0       61.0302   878                   Cuts: 487   284444         
+      0     0       60.3333  1032                   Cuts: 424   332492         
+Detecting symmetries...
+      0     0       60.3171  1075                   Cuts: 474   380324         
+      0     0       60.2500  1059                   Cuts: 328   427512         
+      0     0       60.2500  1056                   Cuts: 367   471853         
+      0     0       60.2400   990                    Cuts: 81   519149         
+      0     0       60.2222   977                   Cuts: 341   578235         
+      0     0       60.0000  1144                   Cuts: 507   620627         
+      0     0       60.0000  1130                   Cuts: 319   686519         
+      0     0       60.0000  1183                   Cuts: 542   744302         
+Heuristic still looking.
+Detecting symmetries...
+      0     2       60.0000   669                     60.0000   744302         
+Elapsed time = 7084.26 sec. (1673001.49 ticks, tree = 0.01 MB, solutions = 0)
+
+Clique cuts applied:  44
+Zero-half cuts applied:  78
+
+Root node processing (before b&c):
+  Real time             = 7084.07 sec. (1672910.93 ticks)
+Sequential b&c:
+  Real time             =  115.99 sec. (31674.05 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.06 sec. (1704584.98 ticks)
+Solution is infeasible.
+
+---------------------
+@@@ MIP_time_limit_infeasible
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-IW-SE.py", line 105, in <module>
+    print(f">>> Benchmark {os.path.basename(cnf_file)} k {k} OPT {int(prob.solution.get_objective_value())}"
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 7211, in get_objective_value
+    return CPX_PROC.getobjval(self._env._e, self._cplex._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 2055, in getobjval
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1217: No solution exists.

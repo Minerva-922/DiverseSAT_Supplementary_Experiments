@@ -1,0 +1,127 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 1 time.
+MIP Presolve eliminated 86517 rows and 9 columns.
+MIP Presolve modified 3888 coefficients.
+Reduced MIP has 31617 rows, 21132 columns, and 134649 nonzeros.
+Reduced MIP has 21132 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.35 sec. (163.81 ticks)
+Probing time = 0.02 sec. (7.83 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 810 rows and 0 columns.
+Reduced MIP has 30807 rows, 21132 columns, and 127359 nonzeros.
+Reduced MIP has 21132 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.17 sec. (100.94 ticks)
+Probing time = 0.02 sec. (7.75 ticks)
+Clique table members: 11996.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 429.33 sec. (294463.05 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     7128.0000  3779                   7128.0000   181348         
+      0     0     7128.0000  4283                   Cuts: 119   352479         
+      0     0     7128.0000  4770                   Cuts: 283   520940         
+Heuristic still looking.
+Heuristic still looking.
+Detecting symmetries...
+      0     2     7128.0000  3634                   7128.0000   520940         
+Elapsed time = 2873.25 sec. (1928444.51 ticks, tree = 0.01 MB, solutions = 0)
+      1     3     7128.0000  5027                   7128.0000   806899         
+      2     4     7128.0000  4849                   7128.0000   958149         
+      3     5     7128.0000  5264                   7128.0000  1108479         
+      4     6     7128.0000  5294                   7128.0000  1285366         
+      5     7     7128.0000  5252                   7128.0000  1289366         
+      6     8     7128.0000  5473                   7128.0000  1296502         
+      7     9     7128.0000  5571                   7128.0000  1305003         
+      8    10     7128.0000  5306                   7128.0000  1307598         
+      9    11     7128.0000  5242                   7128.0000  1311893         
+     10    12     7128.0000  5180                   7128.0000  1314863         
+Elapsed time = 5297.23 sec. (3431514.37 ticks, tree = 0.57 MB, solutions = 0)
+     11    13     7128.0000  5172                   7128.0000  1317885         
+     12    14     7128.0000  5106                   7128.0000  1321737         
+     13    15     7128.0000  5217                   7128.0000  1327099         
+     14    16     7128.0000  5058                   7128.0000  1328488         
+     15    17     7128.0000  5078                   7128.0000  1330992         
+     16    18     7128.0000  5056                   7128.0000  1333575         
+     17    19     7128.0000  5351                   7128.0000  1351699         
+     18    20     7128.0000  5240                   7128.0000  1357684         
+     19    21     7128.0000  5135                   7128.0000  1363276         
+     20    22     7128.0000  5079                   7128.0000  1366414         
+Elapsed time = 5445.80 sec. (3526510.66 ticks, tree = 0.67 MB, solutions = 0)
+     21    23     7128.0000  5003                   7128.0000  1368807         
+     22    24     7128.0000  5094                   7128.0000  1373783         
+     23    25     7128.0000  4978                   7128.0000  1376634         
+     24    26     7128.0000  4954                   7128.0000  1378786         
+     25    27     7128.0000  4852                   7128.0000  1387374         
+     26    28     7128.0000  4769                   7128.0000  1390869         
+     27    29     7128.0000  4814                   7128.0000  1393249         
+     28    30     7128.0000  4962                   7128.0000  1399159         
+     29    31     7128.0000  4723                   7128.0000  1401613         
+     30    32     7128.0000  4647                   7128.0000  1403701         
+Elapsed time = 6586.12 sec. (4158258.04 ticks, tree = 0.77 MB, solutions = 0)
+     31    33     7128.0000  4739                   7128.0000  1410194         
+     32    34     7128.0000  4630                   7128.0000  1411146         
+     33    35     7128.0000  4626                   7128.0000  1413091         
+     34    36     7128.0000  4561                   7128.0000  1415826         
+     35    37     7128.0000  4529                   7128.0000  1417625         
+     36    38     7128.0000  4515                   7128.0000  1419975         
+     37    39     7128.0000  4453                   7128.0000  1423458         
+     38    40     7128.0000  4450                   7128.0000  1425564         
+     39    41     7128.0000  4406                   7128.0000  1428956         
+     40    42     7128.0000  4367                   7128.0000  1432486         
+Elapsed time = 6665.82 sec. (4210023.01 ticks, tree = 0.89 MB, solutions = 0)
+     41    43     7128.0000  4512                   7128.0000  1438575         
+     42    44     7128.0000  4357                   7128.0000  1440059         
+     43    45     7128.0000  4326                   7128.0000  1443192         
+     44    46     7128.0000  4332                   7128.0000  1445245         
+     45    47     7128.0000  4343                   7128.0000  1447234         
+     46    48     7128.0000  4278                   7128.0000  1450102         
+     47    49     7128.0000  4300                   7128.0000  1452734         
+     48    50     7128.0000  4279                   7128.0000  1455880         
+     49    51     7128.0000  4306                   7128.0000  1461583         
+     50    52     7128.0000  4265                   7128.0000  1462681         
+Elapsed time = 6735.44 sec. (4256535.36 ticks, tree = 1.00 MB, solutions = 0)
+     51    53     7128.0000  4235                   7128.0000  1464667         
+     52    54     7128.0000  4228                   7128.0000  1469367         
+     53    55     7128.0000  4156                   7128.0000  1471713         
+     54    56     7128.0000  4138                   7128.0000  1473715         
+     55    57     7128.0000  4075                   7128.0000  1476223         
+     56    58     7128.0000  4004                   7128.0000  1481277         
+     57    59     7128.0000  3975                   7128.0000  1482971         
+     58    60     7128.0000  3938                   7128.0000  1484923         
+     59    61     7128.0000  3918                   7128.0000  1486703         
+
+Zero-half cuts applied:  181
+Gomory fractional cuts applied:  2
+
+Root node processing (before b&c):
+  Real time             = 2873.10 sec. (1928376.72 ticks)
+Sequential b&c:
+  Real time             = 4326.95 sec. (2572678.82 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.05 sec. (4501055.54 ticks)
+Solution is infeasible.
+
+---------------------
+@@@ MIP_time_limit_infeasible
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-IW-SE.py", line 105, in <module>
+    print(f">>> Benchmark {os.path.basename(cnf_file)} k {k} OPT {int(prob.solution.get_objective_value())}"
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 7211, in get_objective_value
+    return CPX_PROC.getobjval(self._env._e, self._cplex._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 2055, in getobjval
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1217: No solution exists.

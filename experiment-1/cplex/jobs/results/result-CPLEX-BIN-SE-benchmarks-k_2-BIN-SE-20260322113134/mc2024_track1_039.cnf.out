@@ -1,0 +1,135 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 105641 rows and 1 columns.
+MIP Presolve modified 41634 coefficients.
+Aggregator did 1800 substitutions.
+Reduced MIP has 42588 rows, 5399 columns, and 355452 nonzeros.
+Reduced MIP has 5399 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 4.37 sec. (2933.92 ticks)
+Probing time = 0.02 sec. (5.82 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 20 rows and 0 columns.
+Reduced MIP has 42568 rows, 5399 columns, and 354852 nonzeros.
+Reduced MIP has 5399 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.88 sec. (549.60 ticks)
+Probing time = 0.02 sec. (5.70 ticks)
+Clique table members: 52173.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 39.36 sec. (13868.96 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0      104.2875  1257                    104.2875    59804         
+      0     0       60.8438   841                   Cuts: 604   129868         
+      0     0       60.2946   936                   Cuts: 508   212243         
+      0     0       60.2858  1121                   Cuts: 761   257309         
+      0     0       60.2575  1114                   Cuts: 552   304634         
+      0     0       60.0000  1144                   Cuts: 352   348700         
+Detecting symmetries...
+      0     0       60.0000  1199                   Cuts: 473   400588         
+      0     0       60.0000  1136                     Cuts: 6   446391         
+      0     0       60.0000  1240                   Cuts: 467   490726         
+Heuristic still looking.
+Detecting symmetries...
+      0     2       60.0000   610                     60.0000   490726         
+Elapsed time = 3839.59 sec. (1087753.78 ticks, tree = 0.01 MB, solutions = 0)
+      1     3       60.0000  1094                     60.0000   558327         
+      2     4       60.0000  1053                     60.0000   611724         
+      3     5       60.0000  1157                     60.0000   645951         
+      4     6       60.0000  1032                     60.0000   646300         
+      5     7       60.0000   819                     60.0000   648790         
+      6     8       60.0000   996                     60.0000   675096         
+      7     9       60.0000   839                     60.0000   675368         
+      8    10       60.0000   818                     60.0000   676233         
+      9    11       60.0000   907                     60.0000   699153         
+     10    12       60.0000   788                     60.0000   699399         
+Elapsed time = 5157.00 sec. (1424921.60 ticks, tree = 0.08 MB, solutions = 0)
+     11    13       60.0000  1050                     60.0000   718417         
+     13    15       60.0000   953                     60.0000   740377         
+     15    17       60.0000   922                     60.0000   759885         
+     17    19       60.0000  1088                     60.0000   781953         
+     19    21       60.0000   937                     60.0000   804029         
+     20    22       60.0000   832                     60.0000   804442         
+     21    23       60.0000   956                     60.0000   829685         
+     23    25       60.0000   812                     60.0000   830828         
+     25    27       60.0000   888                     60.0000   851743         
+     26    28       60.0000   939                     60.0000   877542         
+Elapsed time = 6049.24 sec. (1678274.06 ticks, tree = 0.20 MB, solutions = 0)
+     27    29       60.0000   755                     60.0000   878516         
+     28    30       60.0000   797                     60.0000   889205         
+     30    30    infeasible                           60.0000   891746         
+     32    32       60.0000   758                     60.0000   899497         
+     34    34       60.0000   845                     60.0000   909559         
+     36    36       60.0000   804                     60.0000   917087         
+     38    38       60.0000   697                     60.0000   917817         
+     41    39    infeasible                           60.0000   918792         
+     43    39    infeasible                           60.0000   920051         
+     47    39    infeasible                           60.0000   921116         
+Elapsed time = 6173.60 sec. (1726531.43 ticks, tree = 0.29 MB, solutions = 0)
+     50    40       60.0000   611                     60.0000   922013         
+     52    40       60.0000   678                     60.0000   928846         
+     54    38    infeasible                           60.0000   930325         
+     55    39       60.0000   829                     60.0000   942102         
+     58    38    infeasible                           60.0000   945998         
+     60    40       60.0000   793                     60.0000   958717         
+     62    40       60.0000   778                     60.0000   970962         
+     63    39    infeasible                           60.0000   973314         
+     66    40       60.0000   702                     60.0000   974506         
+     68    40       60.0000   700                     60.0000   975522         
+Elapsed time = 6395.90 sec. (1807060.99 ticks, tree = 0.29 MB, solutions = 0)
+     70    40       60.0000   725                     60.0000   976602         
+     72    40       60.0000   850                     60.0000   983915         
+     74    40       60.0000   908                     60.0000   994351         
+     75    39    infeasible                           60.0000   995534         
+     76    40       60.0000   792                     60.0000  1003018         
+     78    38    infeasible                           60.0000  1004318         
+     79    39       60.0000   829                     60.0000  1013547         
+     81    39    infeasible                           60.0000  1015761         
+     84    40    infeasible                           60.0000  1016700         
+     85    41       60.0000   689                     60.0000  1023185         
+Elapsed time = 6552.41 sec. (1869180.68 ticks, tree = 0.30 MB, solutions = 0)
+     88    38    infeasible                           60.0000  1024512         
+     90    38       60.0000   708                     60.0000  1033442         
+     93    37       60.0000   876                     60.0000  1034820         
+     95    39       60.0000   845                     60.0000  1035821         
+     97    41       60.0000   905                     60.0000  1050105         
+     98    42       60.0000   897                     60.0000  1067883         
+    100    44       60.0000   902                     60.0000  1092589         
+    102    46       60.0000   976                     60.0000  1118561         
+    104    48       60.0000  1024                     60.0000  1141971         
+
+Clique cuts applied:  69
+Implied bound cuts applied:  1
+Zero-half cuts applied:  63
+
+Root node processing (before b&c):
+  Real time             = 3839.33 sec. (1087627.24 ticks)
+Sequential b&c:
+  Real time             = 3360.71 sec. (973536.75 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.04 sec. (2061164.00 ticks)
+Solution is infeasible.
+
+---------------------
+@@@ MIP_time_limit_infeasible
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-BIN-SE.py", line 134, in <module>
+    print(f">>> Benchmark {os.path.basename(cnf_file)} k {k} OPT {int(prob.solution.get_objective_value())}"
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 7211, in get_objective_value
+    return CPX_PROC.getobjval(self._env._e, self._cplex._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 2055, in getobjval
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1217: No solution exists.

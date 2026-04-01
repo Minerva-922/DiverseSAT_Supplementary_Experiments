@@ -1,0 +1,124 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 12811 rows and 13752 columns.
+MIP Presolve modified 14730 coefficients.
+Aggregator did 7031 substitutions.
+Reduced MIP has 13543 rows, 17973 columns, and 46880 nonzeros.
+Reduced MIP has 16167 binaries, 1806 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.14 sec. (80.18 ticks)
+Found incumbent of value -61366.000000 after 0.21 sec. (128.42 ticks)
+Probing changed sense of 45 constraints.
+Probing time = 0.02 sec. (5.69 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 118 rows and 149 columns.
+Reduced MIP has 13425 rows, 17824 columns, and 46554 nonzeros.
+Reduced MIP has 16035 binaries, 1789 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.15 sec. (156.64 ticks)
+Probing time = 0.02 sec. (5.57 ticks)
+Clique table members: 3195.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.39 sec. (323.30 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                        11070.0000    32092.0000           189.90%
+      0     0    16041.6667  9629    11070.0000    16041.6667    12856   44.91%
+      0     0    13818.0000  1133    11070.0000    Cuts: 2496    16826   24.82%
+      0     0    13802.6667  1108    11070.0000     Cuts: 648    18118   24.69%
+      0     0    13801.0000  1093    11070.0000     Cuts: 286    18890   24.67%
+*     0+    0                        11082.0000    13801.0000            24.54%
+      0     0        cutoff          11082.0000    13801.0000    18890   24.54%
+      0     0    13801.0000  1094    11082.0000     Cuts: 276    19552   24.54%
+*     0+    0                        13698.0000    13801.0000             0.75%
+      0     0    13801.0000   325    13698.0000      Cuts: 14    19715    0.75%
+*     0+    0                        13788.0000    13801.0000             0.09%
+*     0+    0                        13790.0000    13801.0000             0.08%
+      0     0        cutoff          13790.0000    13801.0000    19715    0.08%
+
+Repeating presolve.
+Tried aggregator 1 time.
+MIP Presolve eliminated 152 rows and 2492 columns.
+Reduced MIP has 13273 rows, 15332 columns, and 43759 nonzeros.
+Reduced MIP has 13566 binaries, 1766 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.07 sec. (38.60 ticks)
+Probing time = 0.02 sec. (5.04 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 404 rows and 606 columns.
+Reduced MIP has 12869 rows, 14726 columns, and 42547 nonzeros.
+Reduced MIP has 13061 binaries, 1665 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (22.29 ticks)
+Probing time = 0.03 sec. (4.92 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 404 rows and 606 columns.
+Reduced MIP has 12465 rows, 14120 columns, and 41335 nonzeros.
+Reduced MIP has 12556 binaries, 1564 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (21.57 ticks)
+Probing time = 0.02 sec. (4.80 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 404 rows and 606 columns.
+Reduced MIP has 12061 rows, 13514 columns, and 40123 nonzeros.
+Reduced MIP has 12051 binaries, 1463 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (20.86 ticks)
+Probing time = 0.02 sec. (4.68 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 404 rows and 606 columns.
+Reduced MIP has 11657 rows, 12908 columns, and 38911 nonzeros.
+Reduced MIP has 11546 binaries, 1362 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (20.14 ticks)
+Probing time = 0.02 sec. (4.57 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 408 rows and 612 columns.
+Reduced MIP has 11249 rows, 12296 columns, and 37687 nonzeros.
+Reduced MIP has 11036 binaries, 1260 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.09 sec. (84.21 ticks)
+Represolve time = 1.01 sec. (887.30 ticks)
+Probing time = 0.02 sec. (4.46 ticks)
+Clique table members: 2651.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.99 sec. (562.43 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                        13790.0000    13801.0000             0.08%
+      0     0    13801.0000  1268    13790.0000    13801.0000    27382    0.08%
+      0     0    13800.0000   487    13790.0000      Cuts: 57    27896    0.07%
+      0     0    13800.0000   822    13790.0000     Cuts: 220    28717    0.07%
+      0     0    13800.0000    77    13790.0000       Cuts: 6    28746    0.07%
+      0     0    13800.0000   137    13790.0000  ZeroHalf: 10    29022    0.07%
+*     0+    0                        13800.0000    13800.0000             0.00%
+      0     0        cutoff          13800.0000    13800.0000    29022    0.00%
+Elapsed time = 10.98 sec. (8425.49 ticks, tree = 0.01 MB, solutions = 9)
+
+Clique cuts applied:  43
+Implied bound cuts applied:  54
+Mixed integer rounding cuts applied:  1
+Zero-half cuts applied:  1887
+Lift and project cuts applied:  5
+Gomory fractional cuts applied:  21
+
+Root node processing (before b&c):
+  Real time             =   10.98 sec. (8429.47 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =   10.98 sec. (8429.47 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark mc2024_track1_013.cnf k 5 OPT 13800 TimeCost 28.962159872055054 TimeSolve 11.202883243560791 TimeRead 0.0048351287841796875 TimeTrans 17.754441499710083

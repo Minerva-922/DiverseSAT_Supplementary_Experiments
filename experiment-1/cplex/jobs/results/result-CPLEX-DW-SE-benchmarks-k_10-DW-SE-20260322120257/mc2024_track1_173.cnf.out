@@ -1,0 +1,45 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Found incumbent of value 0.000000 after 0.11 sec. (73.49 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 27 rows and 9 columns.
+MIP Presolve modified 18 coefficients.
+Reduced MIP has 1131233 rows, 15321 columns, and 3415636 nonzeros.
+Reduced MIP has 15321 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 2.80 sec. (1435.32 ticks)
+Probing time = 0.08 sec. (34.48 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 1131233 rows, 15321 columns, and 3415636 nonzeros.
+Reduced MIP has 15321 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 5.03 sec. (1896.22 ticks)
+Probing time = 0.08 sec. (34.48 ticks)
+Clique table members: 5630.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 5131.70 sec. (891049.18 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000    84315.0000              --- 
+      0     0    12775.0000  4562        0.0000    12775.0000   346593     --- 
+
+Root node processing (before b&c):
+  Real time             = 7200.81 sec. (1126018.90 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.81 sec. (1126018.90 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_time_limit_feasible
+>>> Benchmark mc2024_track1_173.cnf k 10 OPT 0 TimeCost 8176.829477071762 TimeSolve 7237.085688352585 TimeRead 0.24717426300048828 TimeTrans 939.4966144561768

@@ -1,0 +1,181 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_Simplex_Tolerances_Optimality           1.0000000000000001e-09
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 1 time.
+MIQP Presolve eliminated 155 rows and 1 columns.
+MIQP Presolve modified 2 coefficients.
+Reduced MIQP has 3364 rows, 703 columns, and 13104 nonzeros.
+Reduced MIQP has 527 binaries, 176 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 176 nonzeros.
+Presolve time = 0.01 sec. (8.29 ticks)
+Probing time = 0.00 sec. (0.72 ticks)
+Tried aggregator 1 time.
+Reduced MIQP has 3364 rows, 703 columns, and 13104 nonzeros.
+Reduced MIQP has 527 binaries, 176 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 176 nonzeros.
+Presolve time = 0.01 sec. (6.43 ticks)
+Classifier predicts products in MIQP should be linearized.
+Probing time = 0.01 sec. (0.72 ticks)
+Clique table members: 1.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.89 sec. (1700.66 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0      176.0000   156                    176.0000        6         
+      0     0      176.0000   190                   Cuts: 144       76         
+      0     0      176.0000   292               ZeroHalf: 248     1050         
+      0     2      176.0000   292                    176.0000     1050         
+Elapsed time = 1.61 sec. (2132.65 ticks, tree = 0.01 MB, solutions = 0)
+      4     6      176.0000   259                    176.0000     2878         
+     62    56      174.7500   111                    176.0000     4970         
+    113    89      148.2817   199                    176.0000     7336         
+    171   131      164.6545   112                    176.0000     9804         
+    226   160      171.5946    97                    176.0000    12090         
+    290   210      160.6004   167                    176.0000    14260         
+    346   256    infeasible                          176.0000    16330         
+    401   299      174.4673   188                    176.0000    18322         
+    458   344      173.0000    60                    176.0000    20304         
+    732   535      176.0000    84                    176.0000    30001         
+Elapsed time = 5.40 sec. (5278.55 ticks, tree = 0.49 MB, solutions = 0)
+    940   666      175.3809   266                    176.0000    40861         
+
+Performing restart 1
+
+Repeating presolve.
+Tried aggregator 1 time.
+Reduced MIQP has 3364 rows, 703 columns, and 13104 nonzeros.
+Reduced MIQP has 527 binaries, 176 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 176 nonzeros.
+Presolve time = 0.01 sec. (6.19 ticks)
+Tried aggregator 1 time.
+Reduced MIQP has 3364 rows, 703 columns, and 13104 nonzeros.
+Reduced MIQP has 527 binaries, 176 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 176 nonzeros.
+Presolve time = 0.01 sec. (6.18 ticks)
+Represolve time = 0.02 sec. (14.99 ticks)
+    992     0      176.0000   282               ZeroHalf: 222    45802         
+    992     0      176.0000   284               ZeroHalf: 187    46495         
+    992     0      176.0000   295                   Cuts: 188    47518         
+    992     0      176.0000   264               ZeroHalf: 173    48729         
+    992     0      176.0000   276                   Cuts: 198    49664         
+    992     2      176.0000   276                    176.0000    49664         
+    995     5      176.0000   234                    176.0000    49994         
+   1000    10      176.0000   183                    176.0000    50172         
+   1014    24      176.0000   149                    176.0000    50687         
+   1057    65      175.7000   142                    176.0000    51925         
+   1153    96    infeasible                          176.0000    59211         
+   1279   142      176.0000   160                    176.0000    67194         
+   1412   210      172.8800   170                    176.0000    74437         
+   1575   273      176.0000   100                    176.0000    83340         
+Elapsed time = 19.83 sec. (17912.05 ticks, tree = 0.23 MB, solutions = 0)
+   1774   362      176.0000    76                    176.0000    94549         
+   1952   438      176.0000    64                    176.0000   106151         
+
+Performing restart 2
+
+Repeating presolve.
+Tried aggregator 1 time.
+Reduced MIQP has 3364 rows, 703 columns, and 13104 nonzeros.
+Reduced MIQP has 527 binaries, 176 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 176 nonzeros.
+Presolve time = 0.01 sec. (6.19 ticks)
+Tried aggregator 1 time.
+Reduced MIQP has 3364 rows, 703 columns, and 13104 nonzeros.
+Reduced MIQP has 527 binaries, 176 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 176 nonzeros.
+Presolve time = 0.01 sec. (6.18 ticks)
+Represolve time = 0.03 sec. (16.47 ticks)
+   1984     0      176.0000   292                   Cuts: 234   108753         
+   1984     0      176.0000   293               ZeroHalf: 196   109752         
+   1984     0      176.0000   290               ZeroHalf: 179   110722         
+   1984     0      176.0000   282               ZeroHalf: 156   111753         
+   1984     0      176.0000   302               ZeroHalf: 200   112747         
+   1984     0      176.0000   300               ZeroHalf: 158   113773         
+   1984     0      176.0000   326               ZeroHalf: 185   114892         
+   1984     0      176.0000   304                   Cuts: 196   115952         
+   1984     0      176.0000   315               ZeroHalf: 205   117447         
+   1984     2      176.0000   315                    176.0000   117447         
+   1987     5      176.0000   311                    176.0000   117968         
+   1990     8      176.0000   272                    176.0000   118144         
+   1994    12      176.0000   252                    176.0000   118317         
+   2003    21      176.0000   157                    176.0000   118571         
+   2016    34      176.0000   178                    176.0000   119037         
+   2035    49      174.6000    74                    176.0000   119818         
+   2057    62      176.0000    61                    176.0000   120785         
+Elapsed time = 39.39 sec. (33829.62 ticks, tree = 0.05 MB, solutions = 0)
+   2077    71      173.4000    92                    176.0000   121761         
+   2100    77      166.7285   209                    176.0000   122945         
+   2125    81      175.6000    86                    176.0000   124507         
+   2152    84      174.0000    72                    176.0000   126184         
+   2174    96      171.9835   229                    176.0000   127318         
+   2197   111      171.1434   155                    176.0000   128141         
+   2235   122    infeasible                          176.0000   130481         
+   2269   125      167.9792   234                    176.0000   132891         
+   2298   130      171.8185   146                    176.0000   135090         
+   2324   145      147.2650   197                    176.0000   136089         
+Elapsed time = 48.02 sec. (43766.81 ticks, tree = 0.13 MB, solutions = 0)
+   2370   151      176.0000    40                    176.0000   138948         
+   2399   155      176.0000   145                    176.0000   140764         
+   2446   177      174.0508   196                    176.0000   143090         
+   2496   209      169.9444   146                    176.0000   145792         
+   2563   238      164.9333   137                    176.0000   149078         
+   2642   274      158.8328   199                    176.0000   153198         
+   2706   313      175.6607   247                    176.0000   156809         
+   2745   330      175.5946   252                    176.0000   159760         
+   2803   360      174.6130   297                    176.0000   163511         
+   2849   378      175.6607   229                    176.0000   167436         
+Elapsed time = 57.56 sec. (53475.67 ticks, tree = 0.33 MB, solutions = 0)
+   2914   409      167.4733   201                    176.0000   173319         
+   3001   454      175.5851   300                    176.0000   179277         
+   3077   503      172.0158   289                    176.0000   183991         
+   3145   519      175.5510   248                    176.0000   190665         
+   3234   564      175.6992   318                    176.0000   197166         
+   3317   599      173.8882   275                    176.0000   203705         
+   3410   639      170.5625   118                    176.0000   211053         
+   3523   690      174.4717   244                    176.0000   218477         
+   3656   727    infeasible                          176.0000   228370         
+   3779   760    infeasible                          176.0000   236901         
+Elapsed time = 69.00 sec. (63114.59 ticks, tree = 0.67 MB, solutions = 0)
+   3922   818      176.0000    62                    176.0000   247049         
+   4087   891      173.3366   244                    176.0000   257665         
+   4192   948    infeasible                          176.0000   262663         
+   4263   978      171.3248   190                    176.0000   267440         
+   4356  1044      173.7143   141                    176.0000   272116         
+   4507  1116    infeasible                          176.0000   280682         
+   4663  1200      175.3333   211                    176.0000   290853         
+   4821  1273      176.0000    65                    176.0000   300742         
+   4983  1335      176.0000   107                    176.0000   312479         
+   5167  1374    infeasible                          176.0000   324803         
+Elapsed time = 80.46 sec. (72782.79 ticks, tree = 1.21 MB, solutions = 0)
+   5351  1434      170.8603   226                    176.0000   337271         
+   5530  1529    infeasible                          176.0000   347391         
+   5744  1675      155.9999   200                    176.0000   354781         
+*  5915  1798      integral     0      102.0000      176.0000   359930   72.55%
+   5986  1853      164.7500    80      102.0000      176.0000   362068   72.55%
+*  6042  1864      integral     0      141.0000      176.0000   363764   24.82%
+*  6084+    1                          176.0000      176.0000             0.00%
+
+Zero-half cuts applied:  83
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    1.61 sec. (2131.98 ticks)
+Sequential b&c:
+  Real time             =   83.69 sec. (74814.81 ticks)
+                          ------------
+Total (root+branch&cut) =   85.30 sec. (76946.79 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark mc2024_track1_121.cnf k 2 OPT 176 TimeCost 85.82858490943909 TimeSolve 85.68223547935486 TimeRead 0.0048825740814208984 TimeTrans 0.14146685600280762

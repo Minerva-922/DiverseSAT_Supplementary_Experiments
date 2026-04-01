@@ -1,0 +1,110 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_Simplex_Tolerances_Optimality           1.0000000000000001e-09
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 1 time.
+MIQP Presolve eliminated 4747 rows and 9 columns.
+MIQP Presolve modified 2408 coefficients.
+Reduced MIQP has 34414 rows, 11991 columns, and 105546 nonzeros.
+Reduced MIQP has 11391 binaries, 600 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 600 nonzeros.
+Presolve time = 0.10 sec. (70.82 ticks)
+Probing time = 0.01 sec. (4.46 ticks)
+Tried aggregator 1 time.
+MIQP Presolve eliminated 2000 rows and 0 columns.
+Reduced MIQP has 32414 rows, 11991 columns, and 99546 nonzeros.
+Reduced MIQP has 11391 binaries, 600 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 600 nonzeros.
+Presolve time = 0.10 sec. (64.09 ticks)
+Classifier predicts products in MIQP should be linearized.
+Probing time = 0.01 sec. (4.28 ticks)
+Clique table members: 16494.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 64.23 sec. (135539.81 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0    13333.3333  6611                  13333.3333        6         
+      0     0    13333.3333  6892                  Cuts: 2406   148726         
+      0     0    13333.3333  7021                  Cuts: 3712   312044         
+      0     2    13333.3333  7021                  13333.3333   312044         
+Elapsed time = 973.72 sec. (479069.07 ticks, tree = 0.01 MB, solutions = 0)
+      1     3    13333.3333  7008                  13333.3333   312826         
+      2     4    13333.3333  6983                  13333.3333   314428         
+      3     5    13333.3333  6965                  13333.3333   316457         
+      8    10    13332.5000  6950                  13333.3333   316837         
+     12    14    13330.9167  6978                  13333.3333   317227         
+     14    16    13330.6667  6914                  13333.3333   318167         
+     15    17    13330.6667  6910                  13333.3333   318851         
+     16    18    13330.6667  6903                  13333.3333   320344         
+     17    19    13330.6667  6896                  13333.3333   322828         
+     19    21    13329.8667  6920                  13333.3333   326004         
+Elapsed time = 988.16 sec. (484836.83 ticks, tree = 0.14 MB, solutions = 0)
+     23    25    13326.6667  6850                  13333.3333   328836         
+     28    30    13323.9167  6820                  13333.3333   332229         
+     30    32    13323.9167  6733                  13333.3333   335733         
+     32    34    13323.9167  6738                  13333.3333   340281         
+     34    36    13323.9167  6704                  13333.3333   343644         
+     39    41    13322.9167  6771                  13333.3333   348315         
+     43    45    13322.9167  6864                  13333.3333   350837         
+     46    48    13322.9167  6813                  13333.3333   353824         
+     48    50    13322.6667  6788                  13333.3333   357970         
+     50    52    13322.6667  6784                  13333.3333   359487         
+Elapsed time = 1020.34 sec. (497837.46 ticks, tree = 0.37 MB, solutions = 0)
+     51    53    13322.6667  6719                  13333.3333   362555         
+     52    54    13322.6667  6751                  13333.3333   368805         
+     54    56    13322.6667  6616                  13333.3333   386092         
+     56    58    13322.6667  6487                  13333.3333   393717         
+     68    70    13320.6667  6508                  13333.3333   395794         
+     73    75    13319.0667  6530                  13333.3333   398284         
+     76    78    13319.0667  6555                  13333.3333   400798         
+     80    82    13319.0667  6472                  13333.3333   404200         
+     84    86    13319.0667  6439                  13333.3333   408191         
+     90    92    13316.0000  6405                  13333.3333   410511         
+Elapsed time = 1077.97 sec. (521201.93 ticks, tree = 0.68 MB, solutions = 0)
+     95    97    13314.5000  6814                  13333.3333   444429         
+     96    98    13307.0000  6581                  13333.3333   570786         
+     97    99    13314.5000  6414                  13333.3333   668802         
+     98   100    13314.0000  6356                  13333.3333   877135         
+    105   107    13311.5833  6345                  13333.3333   878369         
+    107   109    13310.5833  6235                  13333.3333   881439         
+    111   113    13308.9833  6199                  13333.3333   886648         
+    112   114    13308.3833  6188                  13333.3333   889623         
+    114   116    13308.3833  6909                  13333.3333  1533694         
+    115   117    13306.4356  6865                  13333.3333  2467952         
+Elapsed time = 4372.89 sec. (1414877.24 ticks, tree = 0.89 MB, solutions = 0)
+    116   118    13306.4356  7641                  13333.3333  3468700         
+    117   119    13306.4356  6756                  13333.3333  3504763         
+
+Clique cuts applied:  3
+Implied bound cuts applied:  2
+Zero-half cuts applied:  525
+
+Root node processing (before b&c):
+  Real time             =  973.69 sec. (479051.38 ticks)
+Sequential b&c:
+  Real time             = 6226.35 sec. (1701928.95 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.04 sec. (2180980.33 ticks)
+Solution is infeasible.
+
+---------------------
+@@@ MIP_time_limit_infeasible
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-QP-SE.py", line 118, in <module>
+    print(f">>> Benchmark {os.path.basename(cnf_file)} k {k} OPT {int(prob.solution.get_objective_value())}"
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 7211, in get_objective_value
+    return CPX_PROC.getobjval(self._env._e, self._cplex._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 2055, in getobjval
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1217: No solution exists.

@@ -1,0 +1,3528 @@
+c RoundingSat 2
+c branch 
+c commit 
+c #variables 2500 #constraints 9199
+c bounds - >= -500 @ 0.033908
+c bounds 0 >= -500 @ 0.035573
+c bounds 0 >= -499 @ 0.036676
+c bounds 0 >= -498 @ 0.036689
+c bounds -2 >= -498 @ 0.037492
+c bounds -2 >= -497 @ 0.038685
+c bounds -2 >= -496 @ 0.038691
+c bounds -4 >= -496 @ 0.039389
+c bounds -4 >= -495 @ 0.039694
+c bounds -4 >= -494 @ 0.040694
+c bounds -4 >= -493 @ 0.042402
+c bounds -4 >= -492 @ 0.043361
+c bounds -6 >= -492 @ 0.044855
+c bounds -6 >= -491 @ 0.048095
+c bounds -6 >= -490 @ 0.050656
+c bounds -8 >= -490 @ 0.051564
+c bounds -8 >= -489 @ 0.053651
+c bounds -8 >= -488 @ 0.054975
+c bounds -8 >= -487 @ 0.055647
+c bounds -8 >= -486 @ 0.055647
+c bounds -10 >= -486 @ 0.055647
+c bounds -10 >= -485 @ 0.055647
+c bounds -10 >= -484 @ 0.056624
+c bounds -10 >= -483 @ 0.056778
+c bounds -12 >= -483 @ 0.058116
+c bounds -12 >= -482 @ 0.060339
+c bounds -12 >= -481 @ 0.06226
+c bounds -12 >= -480 @ 0.063598
+c bounds -12 >= -479 @ 0.065323
+c bounds -14 >= -479 @ 0.067572
+c bounds -14 >= -478 @ 0.068576
+c bounds -14 >= -477 @ 0.070322
+c bounds -14 >= -476 @ 0.071258
+c bounds -14 >= -475 @ 0.07217
+c bounds -16 >= -475 @ 0.072565
+c bounds -16 >= -474 @ 0.075251
+c bounds -16 >= -473 @ 0.075558
+c bounds -16 >= -472 @ 0.075639
+c bounds -18 >= -472 @ 0.077427
+c bounds -18 >= -471 @ 0.078027
+c bounds -18 >= -470 @ 0.080545
+c bounds -20 >= -470 @ 0.08115
+c bounds -20 >= -469 @ 0.083533
+c bounds -20 >= -468 @ 0.084713
+c bounds -20 >= -467 @ 0.08694
+c bounds -22 >= -467 @ 0.088722
+c bounds -22 >= -466 @ 0.092495
+c bounds -22 >= -465 @ 0.093492
+c bounds -22 >= -464 @ 0.093494
+c bounds -24 >= -464 @ 0.094256
+c bounds -24 >= -463 @ 0.094493
+c bounds -24 >= -462 @ 0.097432
+c bounds -24 >= -461 @ 0.099269
+c bounds -24 >= -460 @ 0.099477
+c bounds -24 >= -459 @ 0.100979
+c bounds -24 >= -458 @ 0.101806
+c bounds -24 >= -457 @ 0.103463
+c bounds -26 >= -457 @ 0.104543
+c bounds -26 >= -456 @ 0.106401
+c bounds -26 >= -455 @ 0.108287
+c bounds -26 >= -454 @ 0.109103
+c bounds -26 >= -453 @ 0.109902
+c bounds -28 >= -453 @ 0.111452
+c bounds -28 >= -452 @ 0.11243
+c bounds -28 >= -451 @ 0.114093
+c bounds -28 >= -450 @ 0.115885
+c bounds -28 >= -449 @ 0.116415
+c bounds -28 >= -448 @ 0.117412
+c bounds -30 >= -448 @ 0.117414
+c bounds -30 >= -447 @ 0.117646
+c bounds -30 >= -446 @ 0.120281
+c bounds -30 >= -445 @ 0.121403
+c bounds -32 >= -445 @ 0.1215
+c bounds -32 >= -444 @ 0.123906
+c bounds -32 >= -443 @ 0.125694
+c bounds -34 >= -443 @ 0.128255
+c bounds -34 >= -442 @ 0.128374
+c bounds -34 >= -441 @ 0.128978
+c bounds -34 >= -440 @ 0.129373
+c bounds -34 >= -439 @ 0.130371
+c bounds -34 >= -438 @ 0.130371
+c bounds -36 >= -438 @ 0.131663
+c bounds -36 >= -437 @ 0.132365
+c bounds -36 >= -436 @ 0.133178
+c bounds -36 >= -435 @ 0.13447
+c bounds -36 >= -434 @ 0.13622
+c bounds -36 >= -433 @ 0.138547
+c bounds -50 >= -433 @ 0.158271
+c bounds -50 >= -432 @ 0.159018
+c bounds -50 >= -431 @ 0.160267
+c bounds -50 >= -430 @ 0.161823
+c bounds -50 >= -429 @ 0.164255
+c bounds -50 >= -428 @ 0.167247
+c bounds -50 >= -427 @ 0.168247
+c bounds -50 >= -426 @ 0.170241
+c bounds -50 >= -425 @ 0.170241
+c bounds -50 >= -424 @ 0.171238
+c bounds -50 >= -423 @ 0.172453
+c bounds -50 >= -422 @ 0.173232
+c bounds -50 >= -421 @ 0.174229
+c bounds -50 >= -420 @ 0.175475
+c bounds -50 >= -419 @ 0.176267
+c bounds -50 >= -418 @ 0.177186
+c bounds -50 >= -417 @ 0.177189
+c bounds -50 >= -416 @ 0.178145
+c bounds -50 >= -415 @ 0.179181
+c bounds -50 >= -414 @ 0.180178
+c bounds -50 >= -413 @ 0.18018
+c bounds -50 >= -412 @ 0.18018
+c bounds -50 >= -411 @ 0.183172
+c bounds -50 >= -410 @ 0.183995
+c bounds -50 >= -409 @ 0.184621
+c bounds -50 >= -408 @ 0.185241
+c bounds -50 >= -407 @ 0.187159
+c bounds -50 >= -406 @ 0.18716
+c bounds -50 >= -405 @ 0.18716
+c bounds -50 >= -404 @ 0.188466
+c bounds -50 >= -403 @ 0.191079
+c bounds -50 >= -402 @ 0.193139
+c bounds -50 >= -401 @ 0.194905
+c bounds -50 >= -400 @ 0.195992
+c bounds -50 >= -399 @ 0.19627
+c bounds -50 >= -398 @ 0.197604
+c bounds -50 >= -397 @ 0.198732
+c bounds -50 >= -396 @ 0.200637
+c bounds -50 >= -395 @ 0.201111
+c bounds -50 >= -394 @ 0.202339
+c bounds -50 >= -393 @ 0.205396
+c bounds -50 >= -392 @ 0.206992
+c bounds -50 >= -391 @ 0.208925
+c bounds -50 >= -390 @ 0.210644
+c bounds -50 >= -389 @ 0.212184
+c bounds -50 >= -388 @ 0.214171
+c bounds -50 >= -387 @ 0.215039
+c bounds -50 >= -386 @ 0.21504
+c bounds -50 >= -385 @ 0.21504
+c bounds -50 >= -384 @ 0.216415
+c bounds -50 >= -383 @ 0.218986
+c bounds -50 >= -382 @ 0.218987
+c bounds -50 >= -381 @ 0.219733
+c bounds -50 >= -380 @ 0.219985
+c bounds -50 >= -379 @ 0.22198
+c bounds -50 >= -378 @ 0.222744
+c bounds -50 >= -377 @ 0.223059
+c bounds -50 >= -376 @ 0.225154
+c bounds -114 >= -376 @ 0.271948
+c bounds -114 >= -375 @ 0.273406
+c bounds -114 >= -374 @ 0.273922
+c bounds -114 >= -373 @ 0.274795
+c bounds -114 >= -372 @ 0.275065
+c bounds -114 >= -371 @ 0.277753
+c bounds -114 >= -370 @ 0.279239
+c bounds -114 >= -369 @ 0.279856
+c bounds -114 >= -368 @ 0.280777
+c bounds -114 >= -367 @ 0.281039
+c bounds -114 >= -366 @ 0.282664
+c bounds -114 >= -365 @ 0.283277
+c bounds -114 >= -364 @ 0.283848
+c bounds -114 >= -363 @ 0.284766
+c bounds -114 >= -362 @ 0.285828
+c bounds -114 >= -361 @ 0.287557
+c #Conflicts:       1000 | #Constraints:      10835
+c bounds -114 >= -360 @ 0.288127
+c bounds -114 >= -359 @ 0.28975
+c bounds -114 >= -358 @ 0.289752
+c bounds -114 >= -357 @ 0.292593
+c bounds -114 >= -356 @ 0.293355
+c bounds -114 >= -355 @ 0.294823
+c bounds -114 >= -354 @ 0.296414
+c bounds -114 >= -353 @ 0.29673
+c bounds -114 >= -352 @ 0.299621
+c bounds -114 >= -351 @ 0.308429
+c bounds -114 >= -350 @ 0.316453
+c bounds -114 >= -349 @ 0.317796
+c bounds -114 >= -348 @ 0.31978
+c bounds -114 >= -347 @ 0.320603
+c bounds -114 >= -346 @ 0.322291
+c bounds -114 >= -345 @ 0.331527
+c bounds -140 >= -345 @ 0.347068
+c bounds -142 >= -345 @ 0.361189
+c bounds -142 >= -344 @ 0.36841
+c bounds -144 >= -344 @ 0.378726
+c bounds -146 >= -344 @ 0.382353
+c bounds -146 >= -343 @ 0.383148
+c #Conflicts:       2000 | #Constraints:      12025
+c INPROCESSING
+c GARBAGE COLLECT
+c bounds -148 >= -343 @ 0.415326
+c bounds -150 >= -343 @ 0.437136
+c bounds -152 >= -343 @ 0.445965
+c bounds -154 >= -343 @ 0.46514
+c bounds -156 >= -343 @ 0.477491
+c bounds -158 >= -343 @ 0.481972
+c bounds -160 >= -343 @ 0.522883
+c bounds -160 >= -342 @ 0.523855
+c bounds -160 >= -341 @ 0.524766
+c bounds -160 >= -340 @ 0.52812
+c bounds -160 >= -339 @ 0.529843
+c bounds -160 >= -338 @ 0.531335
+c bounds -160 >= -337 @ 0.533217
+c bounds -160 >= -336 @ 0.534472
+c bounds -162 >= -336 @ 0.661021
+c bounds -162 >= -335 @ 0.669071
+c #Conflicts:       3000 | #Constraints:      11912
+c bounds -162 >= -334 @ 0.681662
+c bounds -162 >= -333 @ 0.701033
+c bounds -162 >= -332 @ 0.739121
+c bounds -164 >= -332 @ 0.798836
+c bounds -166 >= -332 @ 0.818836
+c #Conflicts:       4000 | #Constraints:      12965
+c bounds -166 >= -331 @ 0.829363
+c bounds -168 >= -331 @ 0.857549
+c bounds -168 >= -330 @ 0.859131
+c bounds -168 >= -329 @ 0.901592
+c bounds -170 >= -329 @ 0.910054
+c bounds -172 >= -329 @ 0.917239
+c bounds -174 >= -329 @ 0.932421
+c bounds -178 >= -329 @ 0.944616
+c bounds -180 >= -329 @ 0.958657
+c bounds -182 >= -329 @ 0.970046
+c bounds -184 >= -329 @ 0.987032
+c bounds -186 >= -329 @ 1.04434
+c bounds -186 >= -328 @ 1.07174
+c #Conflicts:       5000 | #Constraints:      14025
+c bounds -188 >= -328 @ 1.11853
+c bounds -188 >= -327 @ 1.1198
+c bounds -188 >= -326 @ 1.12126
+c bounds -188 >= -325 @ 1.12335
+c bounds -188 >= -324 @ 1.12656
+c bounds -188 >= -323 @ 1.12954
+c bounds -188 >= -322 @ 1.13287
+c bounds -188 >= -321 @ 1.13447
+c bounds -188 >= -320 @ 1.13648
+c bounds -188 >= -319 @ 1.13814
+c bounds -188 >= -318 @ 1.14215
+c bounds -188 >= -317 @ 1.14618
+c bounds -190 >= -317 @ 1.20878
+c bounds -190 >= -316 @ 1.24646
+c bounds -192 >= -316 @ 1.27442
+c #Conflicts:       6000 | #Constraints:      15142
+c INPROCESSING
+c GARBAGE COLLECT
+c bounds -192 >= -315 @ 1.4341
+c #Conflicts:       7000 | #Constraints:      13603
+c #Conflicts:       8000 | #Constraints:      14603
+c #Conflicts:       9000 | #Constraints:      15603
+c INPROCESSING
+c GARBAGE COLLECT
+c bounds -192 >= -314 @ 2.94089
+c bounds -192 >= -313 @ 2.94302
+c bounds -192 >= -312 @ 2.94473
+c bounds -192 >= -311 @ 2.94576
+c #Conflicts:      10000 | #Constraints:      13734
+c bounds -192 >= -310 @ 2.99623
+c #Conflicts:      11000 | #Constraints:      14746
+c bounds -192 >= -309 @ 3.09583
+c #Conflicts:      12000 | #Constraints:      15758
+c bounds -192 >= -308 @ 3.20376
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:      13000 | #Constraints:      13510
+c bounds -192 >= -307 @ 3.33016
+c #Conflicts:      14000 | #Constraints:      14528
+c bounds -192 >= -306 @ 3.43959
+c bounds -192 >= -305 @ 3.44279
+c bounds -192 >= -304 @ 3.44431
+c bounds -192 >= -303 @ 3.44521
+c bounds -192 >= -302 @ 3.44684
+c bounds -192 >= -301 @ 3.44848
+c bounds -192 >= -300 @ 3.44986
+c bounds -192 >= -299 @ 3.45076
+c bounds -192 >= -298 @ 3.45111
+c bounds -192 >= -297 @ 3.45282
+c bounds -192 >= -296 @ 3.45623
+c bounds -192 >= -295 @ 3.45967
+c bounds -192 >= -294 @ 3.46068
+c bounds -192 >= -293 @ 3.46666
+c bounds -192 >= -292 @ 3.46865
+c bounds -192 >= -291 @ 3.4704
+c bounds -192 >= -290 @ 3.47898
+c bounds -192 >= -289 @ 3.48733
+c #Conflicts:      15000 | #Constraints:      15726
+c bounds -192 >= -288 @ 3.50452
+c bounds -192 >= -287 @ 3.52696
+c bounds -192 >= -286 @ 3.55453
+c #Conflicts:      16000 | #Constraints:      16783
+c bounds -192 >= -285 @ 3.61024
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:      17000 | #Constraints:      14263
+c #Conflicts:      18000 | #Constraints:      15263
+c #Conflicts:      19000 | #Constraints:      16263
+c #Conflicts:      20000 | #Constraints:      17263
+c #Conflicts:      21000 | #Constraints:      18263
+c bounds -194 >= -285 @ 6.55626
+c bounds -194 >= -284 @ 6.56897
+c bounds -194 >= -283 @ 6.57124
+c bounds -194 >= -282 @ 6.57547
+c bounds -194 >= -281 @ 6.58322
+c bounds -194 >= -280 @ 6.59016
+c bounds -194 >= -279 @ 6.59764
+c bounds -194 >= -278 @ 6.60744
+c bounds -194 >= -277 @ 6.61636
+c bounds -194 >= -276 @ 6.64113
+c #Conflicts:      22000 | #Constraints:      19357
+c bounds -194 >= -275 @ 6.9612
+c #Conflicts:      23000 | #Constraints:      20384
+c #Conflicts:      24000 | #Constraints:      21384
+c bounds -194 >= -274 @ 7.80235
+c #Conflicts:      25000 | #Constraints:      22408
+c bounds -196 >= -274 @ 8.2688
+c bounds -196 >= -273 @ 8.28818
+c bounds -196 >= -272 @ 8.31298
+c INPROCESSING
+c GARBAGE COLLECT
+c bounds -196 >= -271 @ 8.45446
+c #Conflicts:      26000 | #Constraints:      17012
+c bounds -196 >= -270 @ 8.53346
+c #Conflicts:      27000 | #Constraints:      18036
+c #Conflicts:      28000 | #Constraints:      19036
+c #Conflicts:      29000 | #Constraints:      20036
+c #Conflicts:      30000 | #Constraints:      21036
+c bounds -198 >= -270 @ 10.4941
+c bounds -198 >= -269 @ 10.5949
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:      31000 | #Constraints:      16355
+c bounds -198 >= -268 @ 10.7496
+c #Conflicts:      32000 | #Constraints:      17379
+c bounds -198 >= -267 @ 10.9995
+c #Conflicts:      33000 | #Constraints:      18403
+c #Conflicts:      34000 | #Constraints:      19403
+c bounds -198 >= -266 @ 11.456
+c #Conflicts:      35000 | #Constraints:      20427
+c #Conflicts:      36000 | #Constraints:      21427
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:      37000 | #Constraints:      16998
+c bounds -198 >= -265 @ 12.2896
+c #Conflicts:      38000 | #Constraints:      18025
+c #Conflicts:      39000 | #Constraints:      19025
+c #Conflicts:      40000 | #Constraints:      20025
+c #Conflicts:      41000 | #Constraints:      21025
+c #Conflicts:      42000 | #Constraints:      22025
+c #Conflicts:      43000 | #Constraints:      23025
+c #Conflicts:      44000 | #Constraints:      24025
+c #Conflicts:      45000 | #Constraints:      25025
+c #Conflicts:      46000 | #Constraints:      26025
+c #Conflicts:      47000 | #Constraints:      27025
+c #Conflicts:      48000 | #Constraints:      28025
+c #Conflicts:      49000 | #Constraints:      29025
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:      50000 | #Constraints:      20579
+c #Conflicts:      51000 | #Constraints:      21579
+c #Conflicts:      52000 | #Constraints:      22579
+c #Conflicts:      53000 | #Constraints:      23579
+c #Conflicts:      54000 | #Constraints:      24579
+c #Conflicts:      55000 | #Constraints:      25579
+c bounds -198 >= -264 @ 22.8271
+c #Conflicts:      56000 | #Constraints:      26612
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:      57000 | #Constraints:      19587
+c #Conflicts:      58000 | #Constraints:      20587
+c #Conflicts:      59000 | #Constraints:      21587
+c #Conflicts:      60000 | #Constraints:      22587
+c #Conflicts:      61000 | #Constraints:      23587
+c #Conflicts:      62000 | #Constraints:      24587
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:      63000 | #Constraints:      18222
+c #Conflicts:      64000 | #Constraints:      19222
+c #Conflicts:      65000 | #Constraints:      20222
+c #Conflicts:      66000 | #Constraints:      21222
+c #Conflicts:      67000 | #Constraints:      22222
+c #Conflicts:      68000 | #Constraints:      23222
+c #Conflicts:      69000 | #Constraints:      24222
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:      70000 | #Constraints:      18132
+c #Conflicts:      71000 | #Constraints:      19132
+c #Conflicts:      72000 | #Constraints:      20132
+c #Conflicts:      73000 | #Constraints:      21132
+c #Conflicts:      74000 | #Constraints:      22132
+c #Conflicts:      75000 | #Constraints:      23132
+c bounds -198 >= -263 @ 33.6909
+c #Conflicts:      76000 | #Constraints:      24153
+c #Conflicts:      77000 | #Constraints:      25153
+c #Conflicts:      78000 | #Constraints:      26153
+c #Conflicts:      79000 | #Constraints:      27153
+c #Conflicts:      80000 | #Constraints:      28153
+c #Conflicts:      81000 | #Constraints:      29153
+c #Conflicts:      82000 | #Constraints:      30153
+c #Conflicts:      83000 | #Constraints:      31153
+c #Conflicts:      84000 | #Constraints:      32153
+c #Conflicts:      85000 | #Constraints:      33153
+c #Conflicts:      86000 | #Constraints:      34153
+c #Conflicts:      87000 | #Constraints:      35153
+c #Conflicts:      88000 | #Constraints:      36153
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:      89000 | #Constraints:      24211
+c bounds -198 >= -262 @ 47.1534
+c #Conflicts:      90000 | #Constraints:      25247
+c #Conflicts:      91000 | #Constraints:      26247
+c bounds -198 >= -261 @ 47.4116
+c bounds -198 >= -260 @ 47.4207
+c bounds -198 >= -259 @ 47.4249
+c bounds -198 >= -258 @ 47.4317
+c bounds -198 >= -257 @ 47.5041
+c #Conflicts:      92000 | #Constraints:      27298
+c #Conflicts:      93000 | #Constraints:      28298
+c #Conflicts:      94000 | #Constraints:      29298
+c #Conflicts:      95000 | #Constraints:      30298
+c bounds -198 >= -256 @ 48.2252
+c #Conflicts:      96000 | #Constraints:      31322
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:      97000 | #Constraints:      21670
+c #Conflicts:      98000 | #Constraints:      22670
+c #Conflicts:      99000 | #Constraints:      23670
+c #Conflicts:     100000 | #Constraints:      24670
+c #Conflicts:     101000 | #Constraints:      25670
+c #Conflicts:     102000 | #Constraints:      26670
+c #Conflicts:     103000 | #Constraints:      27670
+c #Conflicts:     104000 | #Constraints:      28670
+c #Conflicts:     105000 | #Constraints:      29670
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     106000 | #Constraints:      21152
+c #Conflicts:     107000 | #Constraints:      22152
+c #Conflicts:     108000 | #Constraints:      23152
+c #Conflicts:     109000 | #Constraints:      24152
+c #Conflicts:     110000 | #Constraints:      25152
+c #Conflicts:     111000 | #Constraints:      26152
+c bounds -198 >= -255 @ 52.7561
+c #Conflicts:     112000 | #Constraints:      27173
+c #Conflicts:     113000 | #Constraints:      28173
+c #Conflicts:     114000 | #Constraints:      29173
+c #Conflicts:     115000 | #Constraints:      30173
+c #Conflicts:     116000 | #Constraints:      31173
+c #Conflicts:     117000 | #Constraints:      32173
+c #Conflicts:     118000 | #Constraints:      33173
+c #Conflicts:     119000 | #Constraints:      34173
+c #Conflicts:     120000 | #Constraints:      35173
+c #Conflicts:     121000 | #Constraints:      36173
+c #Conflicts:     122000 | #Constraints:      37173
+c #Conflicts:     123000 | #Constraints:      38173
+c #Conflicts:     124000 | #Constraints:      39173
+c #Conflicts:     125000 | #Constraints:      40173
+c #Conflicts:     126000 | #Constraints:      41173
+c #Conflicts:     127000 | #Constraints:      42173
+c #Conflicts:     128000 | #Constraints:      43173
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     129000 | #Constraints:      27896
+c #Conflicts:     130000 | #Constraints:      28896
+c #Conflicts:     131000 | #Constraints:      29896
+c #Conflicts:     132000 | #Constraints:      30896
+c #Conflicts:     133000 | #Constraints:      31896
+c #Conflicts:     134000 | #Constraints:      32896
+c #Conflicts:     135000 | #Constraints:      33896
+c #Conflicts:     136000 | #Constraints:      34896
+c #Conflicts:     137000 | #Constraints:      35896
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     138000 | #Constraints:      23984
+c #Conflicts:     139000 | #Constraints:      24984
+c #Conflicts:     140000 | #Constraints:      25984
+c #Conflicts:     141000 | #Constraints:      26984
+c #Conflicts:     142000 | #Constraints:      27984
+c #Conflicts:     143000 | #Constraints:      28984
+c #Conflicts:     144000 | #Constraints:      29984
+c #Conflicts:     145000 | #Constraints:      30984
+c #Conflicts:     146000 | #Constraints:      31984
+c #Conflicts:     147000 | #Constraints:      32984
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     148000 | #Constraints:      22590
+c #Conflicts:     149000 | #Constraints:      23590
+c #Conflicts:     150000 | #Constraints:      24590
+c #Conflicts:     151000 | #Constraints:      25590
+c #Conflicts:     152000 | #Constraints:      26590
+c #Conflicts:     153000 | #Constraints:      27590
+c #Conflicts:     154000 | #Constraints:      28590
+c #Conflicts:     155000 | #Constraints:      29590
+c #Conflicts:     156000 | #Constraints:      30590
+c #Conflicts:     157000 | #Constraints:      31590
+c INPROCESSING
+c GARBAGE COLLECT
+c bounds -198 >= -254 @ 92.2288
+c bounds -198 >= -253 @ 92.238
+c bounds -198 >= -252 @ 92.241
+c bounds -198 >= -251 @ 92.2435
+c bounds -198 >= -250 @ 92.2449
+c #Conflicts:     158000 | #Constraints:      21903
+c #Conflicts:     159000 | #Constraints:      22903
+c #Conflicts:     160000 | #Constraints:      23903
+c #Conflicts:     161000 | #Constraints:      24903
+c #Conflicts:     162000 | #Constraints:      25903
+c #Conflicts:     163000 | #Constraints:      26903
+c #Conflicts:     164000 | #Constraints:      27903
+c #Conflicts:     165000 | #Constraints:      28903
+c #Conflicts:     166000 | #Constraints:      29903
+c #Conflicts:     167000 | #Constraints:      30903
+c #Conflicts:     168000 | #Constraints:      31903
+c #Conflicts:     169000 | #Constraints:      32903
+c #Conflicts:     170000 | #Constraints:      33903
+c #Conflicts:     171000 | #Constraints:      34903
+c #Conflicts:     172000 | #Constraints:      35903
+c bounds -198 >= -249 @ 102.131
+c #Conflicts:     173000 | #Constraints:      36927
+c #Conflicts:     174000 | #Constraints:      37927
+c #Conflicts:     175000 | #Constraints:      38927
+c #Conflicts:     176000 | #Constraints:      39927
+c #Conflicts:     177000 | #Constraints:      40927
+c #Conflicts:     178000 | #Constraints:      41927
+c #Conflicts:     179000 | #Constraints:      42927
+c #Conflicts:     180000 | #Constraints:      43927
+c #Conflicts:     181000 | #Constraints:      44927
+c #Conflicts:     182000 | #Constraints:      45927
+c #Conflicts:     183000 | #Constraints:      46927
+c #Conflicts:     184000 | #Constraints:      47927
+c #Conflicts:     185000 | #Constraints:      48927
+c #Conflicts:     186000 | #Constraints:      49927
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     187000 | #Constraints:      31412
+c bounds -198 >= -248 @ 117.179
+c #Conflicts:     188000 | #Constraints:      32430
+c bounds -198 >= -247 @ 117.484
+c #Conflicts:     189000 | #Constraints:      33454
+c #Conflicts:     190000 | #Constraints:      34454
+c bounds -198 >= -246 @ 118.364
+c #Conflicts:     191000 | #Constraints:      35478
+c #Conflicts:     192000 | #Constraints:      36478
+c #Conflicts:     193000 | #Constraints:      37478
+c bounds -198 >= -245 @ 119.81
+c #Conflicts:     194000 | #Constraints:      38502
+c #Conflicts:     195000 | #Constraints:      39502
+c #Conflicts:     196000 | #Constraints:      40502
+c #Conflicts:     197000 | #Constraints:      41502
+c INPROCESSING
+c GARBAGE COLLECT
+c bounds -198 >= -244 @ 122.018
+c #Conflicts:     198000 | #Constraints:      26878
+c #Conflicts:     199000 | #Constraints:      27878
+c #Conflicts:     200000 | #Constraints:      28878
+c #Conflicts:     201000 | #Constraints:      29878
+c #Conflicts:     202000 | #Constraints:      30878
+c #Conflicts:     203000 | #Constraints:      31878
+c #Conflicts:     204000 | #Constraints:      32878
+c #Conflicts:     205000 | #Constraints:      33878
+c #Conflicts:     206000 | #Constraints:      34878
+c #Conflicts:     207000 | #Constraints:      35878
+c #Conflicts:     208000 | #Constraints:      36878
+c #Conflicts:     209000 | #Constraints:      37878
+c INPROCESSING
+c GARBAGE COLLECT
+c bounds -198 >= -243 @ 130.066
+c #Conflicts:     210000 | #Constraints:      25353
+c #Conflicts:     211000 | #Constraints:      26353
+c #Conflicts:     212000 | #Constraints:      27353
+c #Conflicts:     213000 | #Constraints:      28353
+c #Conflicts:     214000 | #Constraints:      29353
+c #Conflicts:     215000 | #Constraints:      30353
+c #Conflicts:     216000 | #Constraints:      31353
+c #Conflicts:     217000 | #Constraints:      32353
+c #Conflicts:     218000 | #Constraints:      33353
+c #Conflicts:     219000 | #Constraints:      34353
+c #Conflicts:     220000 | #Constraints:      35353
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     221000 | #Constraints:      23713
+c #Conflicts:     222000 | #Constraints:      24713
+c #Conflicts:     223000 | #Constraints:      25713
+c #Conflicts:     224000 | #Constraints:      26713
+c #Conflicts:     225000 | #Constraints:      27713
+c #Conflicts:     226000 | #Constraints:      28713
+c #Conflicts:     227000 | #Constraints:      29713
+c #Conflicts:     228000 | #Constraints:      30713
+c #Conflicts:     229000 | #Constraints:      31713
+c #Conflicts:     230000 | #Constraints:      32713
+c #Conflicts:     231000 | #Constraints:      33713
+c #Conflicts:     232000 | #Constraints:      34713
+c #Conflicts:     233000 | #Constraints:      35713
+c #Conflicts:     234000 | #Constraints:      36713
+c #Conflicts:     235000 | #Constraints:      37713
+c #Conflicts:     236000 | #Constraints:      38713
+c #Conflicts:     237000 | #Constraints:      39713
+c #Conflicts:     238000 | #Constraints:      40713
+c #Conflicts:     239000 | #Constraints:      41713
+c #Conflicts:     240000 | #Constraints:      42713
+c #Conflicts:     241000 | #Constraints:      43713
+c #Conflicts:     242000 | #Constraints:      44713
+c #Conflicts:     243000 | #Constraints:      45713
+c #Conflicts:     244000 | #Constraints:      46713
+c #Conflicts:     245000 | #Constraints:      47713
+c #Conflicts:     246000 | #Constraints:      48713
+c #Conflicts:     247000 | #Constraints:      49713
+c #Conflicts:     248000 | #Constraints:      50713
+c #Conflicts:     249000 | #Constraints:      51713
+c #Conflicts:     250000 | #Constraints:      52713
+c #Conflicts:     251000 | #Constraints:      53713
+c #Conflicts:     252000 | #Constraints:      54713
+c #Conflicts:     253000 | #Constraints:      55713
+c #Conflicts:     254000 | #Constraints:      56713
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     255000 | #Constraints:      34640
+c #Conflicts:     256000 | #Constraints:      35640
+c #Conflicts:     257000 | #Constraints:      36640
+c bounds -198 >= -242 @ 202.493
+c #Conflicts:     258000 | #Constraints:      37661
+c #Conflicts:     259000 | #Constraints:      38661
+c #Conflicts:     260000 | #Constraints:      39661
+c #Conflicts:     261000 | #Constraints:      40661
+c #Conflicts:     262000 | #Constraints:      41661
+c #Conflicts:     263000 | #Constraints:      42661
+c #Conflicts:     264000 | #Constraints:      43661
+c #Conflicts:     265000 | #Constraints:      44661
+c #Conflicts:     266000 | #Constraints:      45661
+c bounds -198 >= -241 @ 212.675
+c #Conflicts:     267000 | #Constraints:      46697
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     268000 | #Constraints:      29398
+c #Conflicts:     269000 | #Constraints:      30398
+c #Conflicts:     270000 | #Constraints:      31398
+c #Conflicts:     271000 | #Constraints:      32398
+c #Conflicts:     272000 | #Constraints:      33398
+c #Conflicts:     273000 | #Constraints:      34398
+c #Conflicts:     274000 | #Constraints:      35398
+c #Conflicts:     275000 | #Constraints:      36398
+c bounds -198 >= -240 @ 223.499
+c #Conflicts:     276000 | #Constraints:      37434
+c #Conflicts:     277000 | #Constraints:      38434
+c #Conflicts:     278000 | #Constraints:      39434
+c #Conflicts:     279000 | #Constraints:      40434
+c #Conflicts:     280000 | #Constraints:      41434
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     281000 | #Constraints:      26745
+c #Conflicts:     282000 | #Constraints:      27745
+c #Conflicts:     283000 | #Constraints:      28745
+c #Conflicts:     284000 | #Constraints:      29745
+c #Conflicts:     285000 | #Constraints:      30745
+c #Conflicts:     286000 | #Constraints:      31745
+c #Conflicts:     287000 | #Constraints:      32745
+c #Conflicts:     288000 | #Constraints:      33745
+c #Conflicts:     289000 | #Constraints:      34745
+c #Conflicts:     290000 | #Constraints:      35745
+c #Conflicts:     291000 | #Constraints:      36745
+c #Conflicts:     292000 | #Constraints:      37745
+c #Conflicts:     293000 | #Constraints:      38745
+c #Conflicts:     294000 | #Constraints:      39745
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     295000 | #Constraints:      26251
+c #Conflicts:     296000 | #Constraints:      27251
+c #Conflicts:     297000 | #Constraints:      28251
+c #Conflicts:     298000 | #Constraints:      29251
+c #Conflicts:     299000 | #Constraints:      30251
+c #Conflicts:     300000 | #Constraints:      31251
+c #Conflicts:     301000 | #Constraints:      32251
+c #Conflicts:     302000 | #Constraints:      33251
+c #Conflicts:     303000 | #Constraints:      34251
+c #Conflicts:     304000 | #Constraints:      35251
+c #Conflicts:     305000 | #Constraints:      36251
+c #Conflicts:     306000 | #Constraints:      37251
+c #Conflicts:     307000 | #Constraints:      38251
+c #Conflicts:     308000 | #Constraints:      39251
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     309000 | #Constraints:      26092
+c #Conflicts:     310000 | #Constraints:      27092
+c #Conflicts:     311000 | #Constraints:      28092
+c #Conflicts:     312000 | #Constraints:      29092
+c #Conflicts:     313000 | #Constraints:      30092
+c #Conflicts:     314000 | #Constraints:      31092
+c #Conflicts:     315000 | #Constraints:      32092
+c #Conflicts:     316000 | #Constraints:      33092
+c #Conflicts:     317000 | #Constraints:      34092
+c #Conflicts:     318000 | #Constraints:      35092
+c #Conflicts:     319000 | #Constraints:      36092
+c #Conflicts:     320000 | #Constraints:      37092
+c #Conflicts:     321000 | #Constraints:      38092
+c #Conflicts:     322000 | #Constraints:      39092
+c #Conflicts:     323000 | #Constraints:      40092
+c bounds -200 >= -240 @ 278.417
+c #Conflicts:     324000 | #Constraints:      41093
+c #Conflicts:     325000 | #Constraints:      42093
+c #Conflicts:     326000 | #Constraints:      43093
+c #Conflicts:     327000 | #Constraints:      44093
+c #Conflicts:     328000 | #Constraints:      45093
+c #Conflicts:     329000 | #Constraints:      46093
+c #Conflicts:     330000 | #Constraints:      47093
+c #Conflicts:     331000 | #Constraints:      48093
+c #Conflicts:     332000 | #Constraints:      49093
+c #Conflicts:     333000 | #Constraints:      50093
+c #Conflicts:     334000 | #Constraints:      51093
+c #Conflicts:     335000 | #Constraints:      52093
+c #Conflicts:     336000 | #Constraints:      53093
+c #Conflicts:     337000 | #Constraints:      54093
+c #Conflicts:     338000 | #Constraints:      55093
+c #Conflicts:     339000 | #Constraints:      56093
+c #Conflicts:     340000 | #Constraints:      57093
+c #Conflicts:     341000 | #Constraints:      58093
+c #Conflicts:     342000 | #Constraints:      59093
+c #Conflicts:     343000 | #Constraints:      60093
+c #Conflicts:     344000 | #Constraints:      61093
+c #Conflicts:     345000 | #Constraints:      62093
+c #Conflicts:     346000 | #Constraints:      63093
+c #Conflicts:     347000 | #Constraints:      64093
+c #Conflicts:     348000 | #Constraints:      65093
+c INPROCESSING
+c GARBAGE COLLECT
+c bounds -200 >= -239 @ 365.188
+c bounds -200 >= -238 @ 365.23
+c #Conflicts:     349000 | #Constraints:      39091
+c #Conflicts:     350000 | #Constraints:      40091
+c #Conflicts:     351000 | #Constraints:      41091
+c #Conflicts:     352000 | #Constraints:      42091
+c #Conflicts:     353000 | #Constraints:      43091
+c #Conflicts:     354000 | #Constraints:      44091
+c #Conflicts:     355000 | #Constraints:      45091
+c #Conflicts:     356000 | #Constraints:      46091
+c #Conflicts:     357000 | #Constraints:      47091
+c #Conflicts:     358000 | #Constraints:      48091
+c #Conflicts:     359000 | #Constraints:      49091
+c #Conflicts:     360000 | #Constraints:      50091
+c #Conflicts:     361000 | #Constraints:      51091
+c #Conflicts:     362000 | #Constraints:      52091
+c #Conflicts:     363000 | #Constraints:      53091
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     364000 | #Constraints:      33011
+c #Conflicts:     365000 | #Constraints:      34011
+c #Conflicts:     366000 | #Constraints:      35011
+c #Conflicts:     367000 | #Constraints:      36011
+c #Conflicts:     368000 | #Constraints:      37011
+c bounds -200 >= -237 @ 402.681
+c #Conflicts:     369000 | #Constraints:      38041
+c #Conflicts:     370000 | #Constraints:      39041
+c #Conflicts:     371000 | #Constraints:      40041
+c #Conflicts:     372000 | #Constraints:      41041
+c #Conflicts:     373000 | #Constraints:      42041
+c #Conflicts:     374000 | #Constraints:      43041
+c #Conflicts:     375000 | #Constraints:      44041
+c #Conflicts:     376000 | #Constraints:      45041
+c #Conflicts:     377000 | #Constraints:      46041
+c #Conflicts:     378000 | #Constraints:      47041
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     379000 | #Constraints:      29854
+c #Conflicts:     380000 | #Constraints:      30854
+c #Conflicts:     381000 | #Constraints:      31854
+c #Conflicts:     382000 | #Constraints:      32854
+c #Conflicts:     383000 | #Constraints:      33854
+c #Conflicts:     384000 | #Constraints:      34854
+c #Conflicts:     385000 | #Constraints:      35854
+c #Conflicts:     386000 | #Constraints:      36854
+c #Conflicts:     387000 | #Constraints:      37854
+c #Conflicts:     388000 | #Constraints:      38854
+c #Conflicts:     389000 | #Constraints:      39854
+c #Conflicts:     390000 | #Constraints:      40854
+c #Conflicts:     391000 | #Constraints:      41854
+c #Conflicts:     392000 | #Constraints:      42854
+c #Conflicts:     393000 | #Constraints:      43854
+c INPROCESSING
+c GARBAGE COLLECT
+c bounds -200 >= -236 @ 435.795
+c bounds -200 >= -235 @ 435.801
+c bounds -200 >= -234 @ 435.805
+c bounds -200 >= -233 @ 435.81
+c #Conflicts:     394000 | #Constraints:      28204
+c #Conflicts:     395000 | #Constraints:      29204
+c #Conflicts:     396000 | #Constraints:      30204
+c #Conflicts:     397000 | #Constraints:      31204
+c #Conflicts:     398000 | #Constraints:      32204
+c #Conflicts:     399000 | #Constraints:      33204
+c #Conflicts:     400000 | #Constraints:      34204
+c #Conflicts:     401000 | #Constraints:      35204
+c #Conflicts:     402000 | #Constraints:      36204
+c #Conflicts:     403000 | #Constraints:      37204
+c #Conflicts:     404000 | #Constraints:      38204
+c #Conflicts:     405000 | #Constraints:      39204
+c #Conflicts:     406000 | #Constraints:      40204
+c #Conflicts:     407000 | #Constraints:      41204
+c #Conflicts:     408000 | #Constraints:      42204
+c #Conflicts:     409000 | #Constraints:      43204
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     410000 | #Constraints:      27946
+c #Conflicts:     411000 | #Constraints:      28946
+c #Conflicts:     412000 | #Constraints:      29946
+c #Conflicts:     413000 | #Constraints:      30946
+c #Conflicts:     414000 | #Constraints:      31946
+c #Conflicts:     415000 | #Constraints:      32946
+c #Conflicts:     416000 | #Constraints:      33946
+c #Conflicts:     417000 | #Constraints:      34946
+c #Conflicts:     418000 | #Constraints:      35946
+c #Conflicts:     419000 | #Constraints:      36946
+c #Conflicts:     420000 | #Constraints:      37946
+c #Conflicts:     421000 | #Constraints:      38946
+c #Conflicts:     422000 | #Constraints:      39946
+c #Conflicts:     423000 | #Constraints:      40946
+c #Conflicts:     424000 | #Constraints:      41946
+c #Conflicts:     425000 | #Constraints:      42946
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     426000 | #Constraints:      28013
+c #Conflicts:     427000 | #Constraints:      29013
+c #Conflicts:     428000 | #Constraints:      30013
+c #Conflicts:     429000 | #Constraints:      31013
+c #Conflicts:     430000 | #Constraints:      32013
+c #Conflicts:     431000 | #Constraints:      33013
+c #Conflicts:     432000 | #Constraints:      34013
+c #Conflicts:     433000 | #Constraints:      35013
+c #Conflicts:     434000 | #Constraints:      36013
+c #Conflicts:     435000 | #Constraints:      37013
+c #Conflicts:     436000 | #Constraints:      38013
+c #Conflicts:     437000 | #Constraints:      39013
+c #Conflicts:     438000 | #Constraints:      40013
+c #Conflicts:     439000 | #Constraints:      41013
+c #Conflicts:     440000 | #Constraints:      42013
+c #Conflicts:     441000 | #Constraints:      43013
+c INPROCESSING
+c GARBAGE COLLECT
+c bounds -200 >= -232 @ 491.164
+c #Conflicts:     442000 | #Constraints:      28068
+c #Conflicts:     443000 | #Constraints:      29068
+c #Conflicts:     444000 | #Constraints:      30068
+c #Conflicts:     445000 | #Constraints:      31068
+c #Conflicts:     446000 | #Constraints:      32068
+c #Conflicts:     447000 | #Constraints:      33068
+c #Conflicts:     448000 | #Constraints:      34068
+c #Conflicts:     449000 | #Constraints:      35068
+c #Conflicts:     450000 | #Constraints:      36068
+c #Conflicts:     451000 | #Constraints:      37068
+c #Conflicts:     452000 | #Constraints:      38068
+c #Conflicts:     453000 | #Constraints:      39068
+c #Conflicts:     454000 | #Constraints:      40068
+c #Conflicts:     455000 | #Constraints:      41068
+c #Conflicts:     456000 | #Constraints:      42068
+c #Conflicts:     457000 | #Constraints:      43068
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     458000 | #Constraints:      27883
+c #Conflicts:     459000 | #Constraints:      28883
+c #Conflicts:     460000 | #Constraints:      29883
+c #Conflicts:     461000 | #Constraints:      30883
+c #Conflicts:     462000 | #Constraints:      31883
+c #Conflicts:     463000 | #Constraints:      32883
+c #Conflicts:     464000 | #Constraints:      33883
+c #Conflicts:     465000 | #Constraints:      34883
+c #Conflicts:     466000 | #Constraints:      35883
+c #Conflicts:     467000 | #Constraints:      36883
+c #Conflicts:     468000 | #Constraints:      37883
+c #Conflicts:     469000 | #Constraints:      38883
+c #Conflicts:     470000 | #Constraints:      39883
+c #Conflicts:     471000 | #Constraints:      40883
+c #Conflicts:     472000 | #Constraints:      41883
+c #Conflicts:     473000 | #Constraints:      42883
+c #Conflicts:     474000 | #Constraints:      43883
+c #Conflicts:     475000 | #Constraints:      44883
+c #Conflicts:     476000 | #Constraints:      45883
+c #Conflicts:     477000 | #Constraints:      46883
+c #Conflicts:     478000 | #Constraints:      47883
+c #Conflicts:     479000 | #Constraints:      48883
+c #Conflicts:     480000 | #Constraints:      49883
+c #Conflicts:     481000 | #Constraints:      50883
+c #Conflicts:     482000 | #Constraints:      51883
+c #Conflicts:     483000 | #Constraints:      52883
+c #Conflicts:     484000 | #Constraints:      53883
+c #Conflicts:     485000 | #Constraints:      54883
+c #Conflicts:     486000 | #Constraints:      55883
+c #Conflicts:     487000 | #Constraints:      56883
+c #Conflicts:     488000 | #Constraints:      57883
+c #Conflicts:     489000 | #Constraints:      58883
+c #Conflicts:     490000 | #Constraints:      59883
+c #Conflicts:     491000 | #Constraints:      60883
+c #Conflicts:     492000 | #Constraints:      61883
+c #Conflicts:     493000 | #Constraints:      62883
+c #Conflicts:     494000 | #Constraints:      63883
+c #Conflicts:     495000 | #Constraints:      64883
+c #Conflicts:     496000 | #Constraints:      65883
+c #Conflicts:     497000 | #Constraints:      66883
+c #Conflicts:     498000 | #Constraints:      67883
+c #Conflicts:     499000 | #Constraints:      68883
+c #Conflicts:     500000 | #Constraints:      69883
+c #Conflicts:     501000 | #Constraints:      70883
+c #Conflicts:     502000 | #Constraints:      71883
+c #Conflicts:     503000 | #Constraints:      72883
+c #Conflicts:     504000 | #Constraints:      73883
+c #Conflicts:     505000 | #Constraints:      74883
+c #Conflicts:     506000 | #Constraints:      75883
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     507000 | #Constraints:      44030
+c #Conflicts:     508000 | #Constraints:      45030
+c #Conflicts:     509000 | #Constraints:      46030
+c #Conflicts:     510000 | #Constraints:      47030
+c #Conflicts:     511000 | #Constraints:      48030
+c #Conflicts:     512000 | #Constraints:      49030
+c #Conflicts:     513000 | #Constraints:      50030
+c #Conflicts:     514000 | #Constraints:      51030
+c #Conflicts:     515000 | #Constraints:      52030
+c #Conflicts:     516000 | #Constraints:      53030
+c #Conflicts:     517000 | #Constraints:      54030
+c #Conflicts:     518000 | #Constraints:      55030
+c #Conflicts:     519000 | #Constraints:      56030
+c #Conflicts:     520000 | #Constraints:      57030
+c #Conflicts:     521000 | #Constraints:      58030
+c #Conflicts:     522000 | #Constraints:      59030
+c #Conflicts:     523000 | #Constraints:      60030
+c #Conflicts:     524000 | #Constraints:      61030
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     525000 | #Constraints:      36753
+c #Conflicts:     526000 | #Constraints:      37753
+c #Conflicts:     527000 | #Constraints:      38753
+c #Conflicts:     528000 | #Constraints:      39753
+c #Conflicts:     529000 | #Constraints:      40753
+c #Conflicts:     530000 | #Constraints:      41753
+c #Conflicts:     531000 | #Constraints:      42753
+c #Conflicts:     532000 | #Constraints:      43753
+c #Conflicts:     533000 | #Constraints:      44753
+c #Conflicts:     534000 | #Constraints:      45753
+c #Conflicts:     535000 | #Constraints:      46753
+c #Conflicts:     536000 | #Constraints:      47753
+c #Conflicts:     537000 | #Constraints:      48753
+c #Conflicts:     538000 | #Constraints:      49753
+c #Conflicts:     539000 | #Constraints:      50753
+c #Conflicts:     540000 | #Constraints:      51753
+c #Conflicts:     541000 | #Constraints:      52753
+c #Conflicts:     542000 | #Constraints:      53753
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     543000 | #Constraints:      33386
+c #Conflicts:     544000 | #Constraints:      34386
+c #Conflicts:     545000 | #Constraints:      35386
+c #Conflicts:     546000 | #Constraints:      36386
+c #Conflicts:     547000 | #Constraints:      37386
+c #Conflicts:     548000 | #Constraints:      38386
+c #Conflicts:     549000 | #Constraints:      39386
+c #Conflicts:     550000 | #Constraints:      40386
+c #Conflicts:     551000 | #Constraints:      41386
+c #Conflicts:     552000 | #Constraints:      42386
+c #Conflicts:     553000 | #Constraints:      43386
+c #Conflicts:     554000 | #Constraints:      44386
+c #Conflicts:     555000 | #Constraints:      45386
+c #Conflicts:     556000 | #Constraints:      46386
+c #Conflicts:     557000 | #Constraints:      47386
+c #Conflicts:     558000 | #Constraints:      48386
+c #Conflicts:     559000 | #Constraints:      49386
+c #Conflicts:     560000 | #Constraints:      50386
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     561000 | #Constraints:      31711
+c #Conflicts:     562000 | #Constraints:      32711
+c #Conflicts:     563000 | #Constraints:      33711
+c #Conflicts:     564000 | #Constraints:      34711
+c #Conflicts:     565000 | #Constraints:      35711
+c #Conflicts:     566000 | #Constraints:      36711
+c #Conflicts:     567000 | #Constraints:      37711
+c #Conflicts:     568000 | #Constraints:      38711
+c #Conflicts:     569000 | #Constraints:      39711
+c #Conflicts:     570000 | #Constraints:      40711
+c #Conflicts:     571000 | #Constraints:      41711
+c #Conflicts:     572000 | #Constraints:      42711
+c #Conflicts:     573000 | #Constraints:      43711
+c #Conflicts:     574000 | #Constraints:      44711
+c #Conflicts:     575000 | #Constraints:      45711
+c #Conflicts:     576000 | #Constraints:      46711
+c #Conflicts:     577000 | #Constraints:      47711
+c #Conflicts:     578000 | #Constraints:      48711
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     579000 | #Constraints:      30855
+c #Conflicts:     580000 | #Constraints:      31855
+c #Conflicts:     581000 | #Constraints:      32855
+c #Conflicts:     582000 | #Constraints:      33855
+c #Conflicts:     583000 | #Constraints:      34855
+c #Conflicts:     584000 | #Constraints:      35855
+c #Conflicts:     585000 | #Constraints:      36855
+c #Conflicts:     586000 | #Constraints:      37855
+c #Conflicts:     587000 | #Constraints:      38855
+c #Conflicts:     588000 | #Constraints:      39855
+c #Conflicts:     589000 | #Constraints:      40855
+c #Conflicts:     590000 | #Constraints:      41855
+c #Conflicts:     591000 | #Constraints:      42855
+c #Conflicts:     592000 | #Constraints:      43855
+c #Conflicts:     593000 | #Constraints:      44855
+c #Conflicts:     594000 | #Constraints:      45855
+c #Conflicts:     595000 | #Constraints:      46855
+c #Conflicts:     596000 | #Constraints:      47855
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     597000 | #Constraints:      30208
+c #Conflicts:     598000 | #Constraints:      31208
+c #Conflicts:     599000 | #Constraints:      32208
+c #Conflicts:     600000 | #Constraints:      33208
+c #Conflicts:     601000 | #Constraints:      34208
+c #Conflicts:     602000 | #Constraints:      35208
+c #Conflicts:     603000 | #Constraints:      36208
+c #Conflicts:     604000 | #Constraints:      37208
+c #Conflicts:     605000 | #Constraints:      38208
+c #Conflicts:     606000 | #Constraints:      39208
+c #Conflicts:     607000 | #Constraints:      40208
+c #Conflicts:     608000 | #Constraints:      41208
+c #Conflicts:     609000 | #Constraints:      42208
+c #Conflicts:     610000 | #Constraints:      43208
+c #Conflicts:     611000 | #Constraints:      44208
+c #Conflicts:     612000 | #Constraints:      45208
+c #Conflicts:     613000 | #Constraints:      46208
+c #Conflicts:     614000 | #Constraints:      47208
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     615000 | #Constraints:      29709
+c #Conflicts:     616000 | #Constraints:      30709
+c #Conflicts:     617000 | #Constraints:      31709
+c #Conflicts:     618000 | #Constraints:      32709
+c #Conflicts:     619000 | #Constraints:      33709
+c #Conflicts:     620000 | #Constraints:      34709
+c #Conflicts:     621000 | #Constraints:      35709
+c #Conflicts:     622000 | #Constraints:      36709
+c #Conflicts:     623000 | #Constraints:      37709
+c #Conflicts:     624000 | #Constraints:      38709
+c #Conflicts:     625000 | #Constraints:      39709
+c #Conflicts:     626000 | #Constraints:      40709
+c #Conflicts:     627000 | #Constraints:      41709
+c #Conflicts:     628000 | #Constraints:      42709
+c #Conflicts:     629000 | #Constraints:      43709
+c #Conflicts:     630000 | #Constraints:      44709
+c #Conflicts:     631000 | #Constraints:      45709
+c #Conflicts:     632000 | #Constraints:      46709
+c #Conflicts:     633000 | #Constraints:      47709
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     634000 | #Constraints:      30154
+c #Conflicts:     635000 | #Constraints:      31154
+c #Conflicts:     636000 | #Constraints:      32154
+c #Conflicts:     637000 | #Constraints:      33154
+c #Conflicts:     638000 | #Constraints:      34154
+c #Conflicts:     639000 | #Constraints:      35154
+c #Conflicts:     640000 | #Constraints:      36154
+c #Conflicts:     641000 | #Constraints:      37154
+c #Conflicts:     642000 | #Constraints:      38154
+c #Conflicts:     643000 | #Constraints:      39154
+c #Conflicts:     644000 | #Constraints:      40154
+c #Conflicts:     645000 | #Constraints:      41154
+c #Conflicts:     646000 | #Constraints:      42154
+c #Conflicts:     647000 | #Constraints:      43154
+c #Conflicts:     648000 | #Constraints:      44154
+c #Conflicts:     649000 | #Constraints:      45154
+c #Conflicts:     650000 | #Constraints:      46154
+c #Conflicts:     651000 | #Constraints:      47154
+c #Conflicts:     652000 | #Constraints:      48154
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     653000 | #Constraints:      30420
+c #Conflicts:     654000 | #Constraints:      31420
+c #Conflicts:     655000 | #Constraints:      32420
+c #Conflicts:     656000 | #Constraints:      33420
+c #Conflicts:     657000 | #Constraints:      34420
+c #Conflicts:     658000 | #Constraints:      35420
+c #Conflicts:     659000 | #Constraints:      36420
+c #Conflicts:     660000 | #Constraints:      37420
+c #Conflicts:     661000 | #Constraints:      38420
+c #Conflicts:     662000 | #Constraints:      39420
+c #Conflicts:     663000 | #Constraints:      40420
+c #Conflicts:     664000 | #Constraints:      41420
+c #Conflicts:     665000 | #Constraints:      42420
+c #Conflicts:     666000 | #Constraints:      43420
+c #Conflicts:     667000 | #Constraints:      44420
+c #Conflicts:     668000 | #Constraints:      45420
+c #Conflicts:     669000 | #Constraints:      46420
+c #Conflicts:     670000 | #Constraints:      47420
+c #Conflicts:     671000 | #Constraints:      48420
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     672000 | #Constraints:      30401
+c #Conflicts:     673000 | #Constraints:      31401
+c #Conflicts:     674000 | #Constraints:      32401
+c #Conflicts:     675000 | #Constraints:      33401
+c #Conflicts:     676000 | #Constraints:      34401
+c #Conflicts:     677000 | #Constraints:      35401
+c #Conflicts:     678000 | #Constraints:      36401
+c #Conflicts:     679000 | #Constraints:      37401
+c #Conflicts:     680000 | #Constraints:      38401
+c #Conflicts:     681000 | #Constraints:      39401
+c #Conflicts:     682000 | #Constraints:      40401
+c #Conflicts:     683000 | #Constraints:      41401
+c #Conflicts:     684000 | #Constraints:      42401
+c #Conflicts:     685000 | #Constraints:      43401
+c #Conflicts:     686000 | #Constraints:      44401
+c #Conflicts:     687000 | #Constraints:      45401
+c #Conflicts:     688000 | #Constraints:      46401
+c #Conflicts:     689000 | #Constraints:      47401
+c #Conflicts:     690000 | #Constraints:      48401
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     691000 | #Constraints:      30336
+c #Conflicts:     692000 | #Constraints:      31336
+c #Conflicts:     693000 | #Constraints:      32336
+c #Conflicts:     694000 | #Constraints:      33336
+c #Conflicts:     695000 | #Constraints:      34336
+c #Conflicts:     696000 | #Constraints:      35336
+c #Conflicts:     697000 | #Constraints:      36336
+c #Conflicts:     698000 | #Constraints:      37336
+c #Conflicts:     699000 | #Constraints:      38336
+c #Conflicts:     700000 | #Constraints:      39336
+c #Conflicts:     701000 | #Constraints:      40336
+c #Conflicts:     702000 | #Constraints:      41336
+c #Conflicts:     703000 | #Constraints:      42336
+c #Conflicts:     704000 | #Constraints:      43336
+c #Conflicts:     705000 | #Constraints:      44336
+c #Conflicts:     706000 | #Constraints:      45336
+c #Conflicts:     707000 | #Constraints:      46336
+c #Conflicts:     708000 | #Constraints:      47336
+c #Conflicts:     709000 | #Constraints:      48336
+c #Conflicts:     710000 | #Constraints:      49336
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     711000 | #Constraints:      31063
+c #Conflicts:     712000 | #Constraints:      32063
+c #Conflicts:     713000 | #Constraints:      33063
+c #Conflicts:     714000 | #Constraints:      34063
+c #Conflicts:     715000 | #Constraints:      35063
+c #Conflicts:     716000 | #Constraints:      36063
+c #Conflicts:     717000 | #Constraints:      37063
+c #Conflicts:     718000 | #Constraints:      38063
+c #Conflicts:     719000 | #Constraints:      39063
+c #Conflicts:     720000 | #Constraints:      40063
+c #Conflicts:     721000 | #Constraints:      41063
+c #Conflicts:     722000 | #Constraints:      42063
+c #Conflicts:     723000 | #Constraints:      43063
+c #Conflicts:     724000 | #Constraints:      44063
+c #Conflicts:     725000 | #Constraints:      45063
+c #Conflicts:     726000 | #Constraints:      46063
+c #Conflicts:     727000 | #Constraints:      47063
+c bounds -200 >= -231 @ 1040.89
+c #Conflicts:     728000 | #Constraints:      48102
+c #Conflicts:     729000 | #Constraints:      49102
+c #Conflicts:     730000 | #Constraints:      50102
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     731000 | #Constraints:      31526
+c #Conflicts:     732000 | #Constraints:      32526
+c #Conflicts:     733000 | #Constraints:      33526
+c #Conflicts:     734000 | #Constraints:      34526
+c #Conflicts:     735000 | #Constraints:      35526
+c #Conflicts:     736000 | #Constraints:      36526
+c #Conflicts:     737000 | #Constraints:      37526
+c #Conflicts:     738000 | #Constraints:      38526
+c #Conflicts:     739000 | #Constraints:      39526
+c #Conflicts:     740000 | #Constraints:      40526
+c #Conflicts:     741000 | #Constraints:      41526
+c #Conflicts:     742000 | #Constraints:      42526
+c #Conflicts:     743000 | #Constraints:      43526
+c #Conflicts:     744000 | #Constraints:      44526
+c #Conflicts:     745000 | #Constraints:      45526
+c #Conflicts:     746000 | #Constraints:      46526
+c #Conflicts:     747000 | #Constraints:      47526
+c #Conflicts:     748000 | #Constraints:      48526
+c #Conflicts:     749000 | #Constraints:      49526
+c #Conflicts:     750000 | #Constraints:      50526
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     751000 | #Constraints:      31850
+c #Conflicts:     752000 | #Constraints:      32850
+c #Conflicts:     753000 | #Constraints:      33850
+c #Conflicts:     754000 | #Constraints:      34850
+c #Conflicts:     755000 | #Constraints:      35850
+c #Conflicts:     756000 | #Constraints:      36850
+c #Conflicts:     757000 | #Constraints:      37850
+c #Conflicts:     758000 | #Constraints:      38850
+c #Conflicts:     759000 | #Constraints:      39850
+c #Conflicts:     760000 | #Constraints:      40850
+c #Conflicts:     761000 | #Constraints:      41850
+c #Conflicts:     762000 | #Constraints:      42850
+c #Conflicts:     763000 | #Constraints:      43850
+c #Conflicts:     764000 | #Constraints:      44850
+c #Conflicts:     765000 | #Constraints:      45850
+c #Conflicts:     766000 | #Constraints:      46850
+c #Conflicts:     767000 | #Constraints:      47850
+c #Conflicts:     768000 | #Constraints:      48850
+c #Conflicts:     769000 | #Constraints:      49850
+c #Conflicts:     770000 | #Constraints:      50850
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     771000 | #Constraints:      31992
+c #Conflicts:     772000 | #Constraints:      32992
+c #Conflicts:     773000 | #Constraints:      33992
+c #Conflicts:     774000 | #Constraints:      34992
+c #Conflicts:     775000 | #Constraints:      35992
+c #Conflicts:     776000 | #Constraints:      36992
+c #Conflicts:     777000 | #Constraints:      37992
+c #Conflicts:     778000 | #Constraints:      38992
+c #Conflicts:     779000 | #Constraints:      39992
+c #Conflicts:     780000 | #Constraints:      40992
+c #Conflicts:     781000 | #Constraints:      41992
+c #Conflicts:     782000 | #Constraints:      42992
+c #Conflicts:     783000 | #Constraints:      43992
+c #Conflicts:     784000 | #Constraints:      44992
+c #Conflicts:     785000 | #Constraints:      45992
+c #Conflicts:     786000 | #Constraints:      46992
+c #Conflicts:     787000 | #Constraints:      47992
+c #Conflicts:     788000 | #Constraints:      48992
+c #Conflicts:     789000 | #Constraints:      49992
+c #Conflicts:     790000 | #Constraints:      50992
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     791000 | #Constraints:      31805
+c #Conflicts:     792000 | #Constraints:      32805
+c #Conflicts:     793000 | #Constraints:      33805
+c #Conflicts:     794000 | #Constraints:      34805
+c #Conflicts:     795000 | #Constraints:      35805
+c #Conflicts:     796000 | #Constraints:      36805
+c #Conflicts:     797000 | #Constraints:      37805
+c #Conflicts:     798000 | #Constraints:      38805
+c #Conflicts:     799000 | #Constraints:      39805
+c #Conflicts:     800000 | #Constraints:      40805
+c #Conflicts:     801000 | #Constraints:      41805
+c #Conflicts:     802000 | #Constraints:      42805
+c #Conflicts:     803000 | #Constraints:      43805
+c #Conflicts:     804000 | #Constraints:      44805
+c #Conflicts:     805000 | #Constraints:      45805
+c #Conflicts:     806000 | #Constraints:      46805
+c #Conflicts:     807000 | #Constraints:      47805
+c #Conflicts:     808000 | #Constraints:      48805
+c #Conflicts:     809000 | #Constraints:      49805
+c #Conflicts:     810000 | #Constraints:      50805
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     811000 | #Constraints:      31533
+c #Conflicts:     812000 | #Constraints:      32533
+c #Conflicts:     813000 | #Constraints:      33533
+c #Conflicts:     814000 | #Constraints:      34533
+c #Conflicts:     815000 | #Constraints:      35533
+c #Conflicts:     816000 | #Constraints:      36533
+c #Conflicts:     817000 | #Constraints:      37533
+c #Conflicts:     818000 | #Constraints:      38533
+c #Conflicts:     819000 | #Constraints:      39533
+c #Conflicts:     820000 | #Constraints:      40533
+c #Conflicts:     821000 | #Constraints:      41533
+c #Conflicts:     822000 | #Constraints:      42533
+c #Conflicts:     823000 | #Constraints:      43533
+c #Conflicts:     824000 | #Constraints:      44533
+c #Conflicts:     825000 | #Constraints:      45533
+c #Conflicts:     826000 | #Constraints:      46533
+c #Conflicts:     827000 | #Constraints:      47533
+c #Conflicts:     828000 | #Constraints:      48533
+c #Conflicts:     829000 | #Constraints:      49533
+c #Conflicts:     830000 | #Constraints:      50533
+c #Conflicts:     831000 | #Constraints:      51533
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     832000 | #Constraints:      32049
+c #Conflicts:     833000 | #Constraints:      33049
+c #Conflicts:     834000 | #Constraints:      34049
+c #Conflicts:     835000 | #Constraints:      35049
+c #Conflicts:     836000 | #Constraints:      36049
+c #Conflicts:     837000 | #Constraints:      37049
+c #Conflicts:     838000 | #Constraints:      38049
+c #Conflicts:     839000 | #Constraints:      39049
+c #Conflicts:     840000 | #Constraints:      40049
+c #Conflicts:     841000 | #Constraints:      41049
+c #Conflicts:     842000 | #Constraints:      42049
+c #Conflicts:     843000 | #Constraints:      43049
+c #Conflicts:     844000 | #Constraints:      44049
+c #Conflicts:     845000 | #Constraints:      45049
+c #Conflicts:     846000 | #Constraints:      46049
+c #Conflicts:     847000 | #Constraints:      47049
+c #Conflicts:     848000 | #Constraints:      48049
+c #Conflicts:     849000 | #Constraints:      49049
+c #Conflicts:     850000 | #Constraints:      50049
+c #Conflicts:     851000 | #Constraints:      51049
+c #Conflicts:     852000 | #Constraints:      52049
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     853000 | #Constraints:      32380
+c #Conflicts:     854000 | #Constraints:      33380
+c #Conflicts:     855000 | #Constraints:      34380
+c #Conflicts:     856000 | #Constraints:      35380
+c #Conflicts:     857000 | #Constraints:      36380
+c #Conflicts:     858000 | #Constraints:      37380
+c #Conflicts:     859000 | #Constraints:      38380
+c #Conflicts:     860000 | #Constraints:      39380
+c #Conflicts:     861000 | #Constraints:      40380
+c #Conflicts:     862000 | #Constraints:      41380
+c #Conflicts:     863000 | #Constraints:      42380
+c #Conflicts:     864000 | #Constraints:      43380
+c #Conflicts:     865000 | #Constraints:      44380
+c #Conflicts:     866000 | #Constraints:      45380
+c #Conflicts:     867000 | #Constraints:      46380
+c #Conflicts:     868000 | #Constraints:      47380
+c #Conflicts:     869000 | #Constraints:      48380
+c #Conflicts:     870000 | #Constraints:      49380
+c #Conflicts:     871000 | #Constraints:      50380
+c #Conflicts:     872000 | #Constraints:      51380
+c #Conflicts:     873000 | #Constraints:      52380
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     874000 | #Constraints:      32530
+c #Conflicts:     875000 | #Constraints:      33530
+c #Conflicts:     876000 | #Constraints:      34530
+c #Conflicts:     877000 | #Constraints:      35530
+c #Conflicts:     878000 | #Constraints:      36530
+c #Conflicts:     879000 | #Constraints:      37530
+c #Conflicts:     880000 | #Constraints:      38530
+c #Conflicts:     881000 | #Constraints:      39530
+c #Conflicts:     882000 | #Constraints:      40530
+c #Conflicts:     883000 | #Constraints:      41530
+c #Conflicts:     884000 | #Constraints:      42530
+c #Conflicts:     885000 | #Constraints:      43530
+c #Conflicts:     886000 | #Constraints:      44530
+c #Conflicts:     887000 | #Constraints:      45530
+c #Conflicts:     888000 | #Constraints:      46530
+c #Conflicts:     889000 | #Constraints:      47530
+c #Conflicts:     890000 | #Constraints:      48530
+c #Conflicts:     891000 | #Constraints:      49530
+c #Conflicts:     892000 | #Constraints:      50530
+c #Conflicts:     893000 | #Constraints:      51530
+c #Conflicts:     894000 | #Constraints:      52530
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     895000 | #Constraints:      32342
+c #Conflicts:     896000 | #Constraints:      33342
+c #Conflicts:     897000 | #Constraints:      34342
+c #Conflicts:     898000 | #Constraints:      35342
+c #Conflicts:     899000 | #Constraints:      36342
+c #Conflicts:     900000 | #Constraints:      37342
+c #Conflicts:     901000 | #Constraints:      38342
+c #Conflicts:     902000 | #Constraints:      39342
+c #Conflicts:     903000 | #Constraints:      40342
+c #Conflicts:     904000 | #Constraints:      41342
+c #Conflicts:     905000 | #Constraints:      42342
+c #Conflicts:     906000 | #Constraints:      43342
+c #Conflicts:     907000 | #Constraints:      44342
+c #Conflicts:     908000 | #Constraints:      45342
+c #Conflicts:     909000 | #Constraints:      46342
+c #Conflicts:     910000 | #Constraints:      47342
+c #Conflicts:     911000 | #Constraints:      48342
+c #Conflicts:     912000 | #Constraints:      49342
+c #Conflicts:     913000 | #Constraints:      50342
+c #Conflicts:     914000 | #Constraints:      51342
+c #Conflicts:     915000 | #Constraints:      52342
+c #Conflicts:     916000 | #Constraints:      53342
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     917000 | #Constraints:      33061
+c #Conflicts:     918000 | #Constraints:      34061
+c #Conflicts:     919000 | #Constraints:      35061
+c #Conflicts:     920000 | #Constraints:      36061
+c #Conflicts:     921000 | #Constraints:      37061
+c #Conflicts:     922000 | #Constraints:      38061
+c #Conflicts:     923000 | #Constraints:      39061
+c #Conflicts:     924000 | #Constraints:      40061
+c #Conflicts:     925000 | #Constraints:      41061
+c #Conflicts:     926000 | #Constraints:      42061
+c #Conflicts:     927000 | #Constraints:      43061
+c #Conflicts:     928000 | #Constraints:      44061
+c #Conflicts:     929000 | #Constraints:      45061
+c #Conflicts:     930000 | #Constraints:      46061
+c #Conflicts:     931000 | #Constraints:      47061
+c #Conflicts:     932000 | #Constraints:      48061
+c #Conflicts:     933000 | #Constraints:      49061
+c #Conflicts:     934000 | #Constraints:      50061
+c #Conflicts:     935000 | #Constraints:      51061
+c #Conflicts:     936000 | #Constraints:      52061
+c #Conflicts:     937000 | #Constraints:      53061
+c #Conflicts:     938000 | #Constraints:      54061
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     939000 | #Constraints:      33562
+c #Conflicts:     940000 | #Constraints:      34562
+c #Conflicts:     941000 | #Constraints:      35562
+c #Conflicts:     942000 | #Constraints:      36562
+c #Conflicts:     943000 | #Constraints:      37562
+c #Conflicts:     944000 | #Constraints:      38562
+c #Conflicts:     945000 | #Constraints:      39562
+c #Conflicts:     946000 | #Constraints:      40562
+c #Conflicts:     947000 | #Constraints:      41562
+c #Conflicts:     948000 | #Constraints:      42562
+c #Conflicts:     949000 | #Constraints:      43562
+c #Conflicts:     950000 | #Constraints:      44562
+c #Conflicts:     951000 | #Constraints:      45562
+c #Conflicts:     952000 | #Constraints:      46562
+c #Conflicts:     953000 | #Constraints:      47562
+c #Conflicts:     954000 | #Constraints:      48562
+c #Conflicts:     955000 | #Constraints:      49562
+c #Conflicts:     956000 | #Constraints:      50562
+c #Conflicts:     957000 | #Constraints:      51562
+c #Conflicts:     958000 | #Constraints:      52562
+c #Conflicts:     959000 | #Constraints:      53562
+c #Conflicts:     960000 | #Constraints:      54562
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     961000 | #Constraints:      33899
+c #Conflicts:     962000 | #Constraints:      34899
+c #Conflicts:     963000 | #Constraints:      35899
+c #Conflicts:     964000 | #Constraints:      36899
+c #Conflicts:     965000 | #Constraints:      37899
+c #Conflicts:     966000 | #Constraints:      38899
+c #Conflicts:     967000 | #Constraints:      39899
+c #Conflicts:     968000 | #Constraints:      40899
+c #Conflicts:     969000 | #Constraints:      41899
+c #Conflicts:     970000 | #Constraints:      42899
+c #Conflicts:     971000 | #Constraints:      43899
+c #Conflicts:     972000 | #Constraints:      44899
+c #Conflicts:     973000 | #Constraints:      45899
+c #Conflicts:     974000 | #Constraints:      46899
+c #Conflicts:     975000 | #Constraints:      47899
+c #Conflicts:     976000 | #Constraints:      48899
+c #Conflicts:     977000 | #Constraints:      49899
+c #Conflicts:     978000 | #Constraints:      50899
+c #Conflicts:     979000 | #Constraints:      51899
+c #Conflicts:     980000 | #Constraints:      52899
+c #Conflicts:     981000 | #Constraints:      53899
+c #Conflicts:     982000 | #Constraints:      54899
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:     983000 | #Constraints:      33951
+c #Conflicts:     984000 | #Constraints:      34951
+c #Conflicts:     985000 | #Constraints:      35951
+c #Conflicts:     986000 | #Constraints:      36951
+c #Conflicts:     987000 | #Constraints:      37951
+c #Conflicts:     988000 | #Constraints:      38951
+c #Conflicts:     989000 | #Constraints:      39951
+c #Conflicts:     990000 | #Constraints:      40951
+c #Conflicts:     991000 | #Constraints:      41951
+c #Conflicts:     992000 | #Constraints:      42951
+c #Conflicts:     993000 | #Constraints:      43951
+c #Conflicts:     994000 | #Constraints:      44951
+c #Conflicts:     995000 | #Constraints:      45951
+c #Conflicts:     996000 | #Constraints:      46951
+c #Conflicts:     997000 | #Constraints:      47951
+c #Conflicts:     998000 | #Constraints:      48951
+c #Conflicts:     999000 | #Constraints:      49951
+c #Conflicts:    1000000 | #Constraints:      50951
+c #Conflicts:    1001000 | #Constraints:      51951
+c #Conflicts:    1002000 | #Constraints:      52951
+c #Conflicts:    1003000 | #Constraints:      53951
+c #Conflicts:    1004000 | #Constraints:      54951
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1005000 | #Constraints:      33817
+c #Conflicts:    1006000 | #Constraints:      34817
+c #Conflicts:    1007000 | #Constraints:      35817
+c #Conflicts:    1008000 | #Constraints:      36817
+c #Conflicts:    1009000 | #Constraints:      37817
+c #Conflicts:    1010000 | #Constraints:      38817
+c #Conflicts:    1011000 | #Constraints:      39817
+c #Conflicts:    1012000 | #Constraints:      40817
+c #Conflicts:    1013000 | #Constraints:      41817
+c #Conflicts:    1014000 | #Constraints:      42817
+c #Conflicts:    1015000 | #Constraints:      43817
+c #Conflicts:    1016000 | #Constraints:      44817
+c #Conflicts:    1017000 | #Constraints:      45817
+c #Conflicts:    1018000 | #Constraints:      46817
+c #Conflicts:    1019000 | #Constraints:      47817
+c #Conflicts:    1020000 | #Constraints:      48817
+c #Conflicts:    1021000 | #Constraints:      49817
+c #Conflicts:    1022000 | #Constraints:      50817
+c #Conflicts:    1023000 | #Constraints:      51817
+c #Conflicts:    1024000 | #Constraints:      52817
+c #Conflicts:    1025000 | #Constraints:      53817
+c #Conflicts:    1026000 | #Constraints:      54817
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1027000 | #Constraints:      33586
+c #Conflicts:    1028000 | #Constraints:      34586
+c #Conflicts:    1029000 | #Constraints:      35586
+c #Conflicts:    1030000 | #Constraints:      36586
+c #Conflicts:    1031000 | #Constraints:      37586
+c #Conflicts:    1032000 | #Constraints:      38586
+c #Conflicts:    1033000 | #Constraints:      39586
+c #Conflicts:    1034000 | #Constraints:      40586
+c #Conflicts:    1035000 | #Constraints:      41586
+c #Conflicts:    1036000 | #Constraints:      42586
+c #Conflicts:    1037000 | #Constraints:      43586
+c #Conflicts:    1038000 | #Constraints:      44586
+c #Conflicts:    1039000 | #Constraints:      45586
+c #Conflicts:    1040000 | #Constraints:      46586
+c #Conflicts:    1041000 | #Constraints:      47586
+c #Conflicts:    1042000 | #Constraints:      48586
+c #Conflicts:    1043000 | #Constraints:      49586
+c #Conflicts:    1044000 | #Constraints:      50586
+c #Conflicts:    1045000 | #Constraints:      51586
+c #Conflicts:    1046000 | #Constraints:      52586
+c #Conflicts:    1047000 | #Constraints:      53586
+c #Conflicts:    1048000 | #Constraints:      54586
+c #Conflicts:    1049000 | #Constraints:      55586
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1050000 | #Constraints:      34086
+c #Conflicts:    1051000 | #Constraints:      35086
+c #Conflicts:    1052000 | #Constraints:      36086
+c #Conflicts:    1053000 | #Constraints:      37086
+c #Conflicts:    1054000 | #Constraints:      38086
+c #Conflicts:    1055000 | #Constraints:      39086
+c #Conflicts:    1056000 | #Constraints:      40086
+c #Conflicts:    1057000 | #Constraints:      41086
+c #Conflicts:    1058000 | #Constraints:      42086
+c #Conflicts:    1059000 | #Constraints:      43086
+c #Conflicts:    1060000 | #Constraints:      44086
+c #Conflicts:    1061000 | #Constraints:      45086
+c #Conflicts:    1062000 | #Constraints:      46086
+c #Conflicts:    1063000 | #Constraints:      47086
+c #Conflicts:    1064000 | #Constraints:      48086
+c #Conflicts:    1065000 | #Constraints:      49086
+c #Conflicts:    1066000 | #Constraints:      50086
+c #Conflicts:    1067000 | #Constraints:      51086
+c #Conflicts:    1068000 | #Constraints:      52086
+c #Conflicts:    1069000 | #Constraints:      53086
+c #Conflicts:    1070000 | #Constraints:      54086
+c #Conflicts:    1071000 | #Constraints:      55086
+c #Conflicts:    1072000 | #Constraints:      56086
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1073000 | #Constraints:      34413
+c #Conflicts:    1074000 | #Constraints:      35413
+c #Conflicts:    1075000 | #Constraints:      36413
+c #Conflicts:    1076000 | #Constraints:      37413
+c #Conflicts:    1077000 | #Constraints:      38413
+c #Conflicts:    1078000 | #Constraints:      39413
+c #Conflicts:    1079000 | #Constraints:      40413
+c #Conflicts:    1080000 | #Constraints:      41413
+c #Conflicts:    1081000 | #Constraints:      42413
+c #Conflicts:    1082000 | #Constraints:      43413
+c #Conflicts:    1083000 | #Constraints:      44413
+c #Conflicts:    1084000 | #Constraints:      45413
+c #Conflicts:    1085000 | #Constraints:      46413
+c #Conflicts:    1086000 | #Constraints:      47413
+c #Conflicts:    1087000 | #Constraints:      48413
+c #Conflicts:    1088000 | #Constraints:      49413
+c #Conflicts:    1089000 | #Constraints:      50413
+c #Conflicts:    1090000 | #Constraints:      51413
+c #Conflicts:    1091000 | #Constraints:      52413
+c #Conflicts:    1092000 | #Constraints:      53413
+c #Conflicts:    1093000 | #Constraints:      54413
+c #Conflicts:    1094000 | #Constraints:      55413
+c #Conflicts:    1095000 | #Constraints:      56413
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1096000 | #Constraints:      34483
+c #Conflicts:    1097000 | #Constraints:      35483
+c #Conflicts:    1098000 | #Constraints:      36483
+c #Conflicts:    1099000 | #Constraints:      37483
+c #Conflicts:    1100000 | #Constraints:      38483
+c #Conflicts:    1101000 | #Constraints:      39483
+c #Conflicts:    1102000 | #Constraints:      40483
+c #Conflicts:    1103000 | #Constraints:      41483
+c #Conflicts:    1104000 | #Constraints:      42483
+c #Conflicts:    1105000 | #Constraints:      43483
+c #Conflicts:    1106000 | #Constraints:      44483
+c #Conflicts:    1107000 | #Constraints:      45483
+c #Conflicts:    1108000 | #Constraints:      46483
+c #Conflicts:    1109000 | #Constraints:      47483
+c #Conflicts:    1110000 | #Constraints:      48483
+c #Conflicts:    1111000 | #Constraints:      49483
+c #Conflicts:    1112000 | #Constraints:      50483
+c #Conflicts:    1113000 | #Constraints:      51483
+c #Conflicts:    1114000 | #Constraints:      52483
+c #Conflicts:    1115000 | #Constraints:      53483
+c #Conflicts:    1116000 | #Constraints:      54483
+c #Conflicts:    1117000 | #Constraints:      55483
+c #Conflicts:    1118000 | #Constraints:      56483
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1119000 | #Constraints:      34371
+c #Conflicts:    1120000 | #Constraints:      35371
+c #Conflicts:    1121000 | #Constraints:      36371
+c #Conflicts:    1122000 | #Constraints:      37371
+c #Conflicts:    1123000 | #Constraints:      38371
+c #Conflicts:    1124000 | #Constraints:      39371
+c #Conflicts:    1125000 | #Constraints:      40371
+c #Conflicts:    1126000 | #Constraints:      41371
+c #Conflicts:    1127000 | #Constraints:      42371
+c #Conflicts:    1128000 | #Constraints:      43371
+c #Conflicts:    1129000 | #Constraints:      44371
+c #Conflicts:    1130000 | #Constraints:      45371
+c #Conflicts:    1131000 | #Constraints:      46371
+c #Conflicts:    1132000 | #Constraints:      47371
+c #Conflicts:    1133000 | #Constraints:      48371
+c #Conflicts:    1134000 | #Constraints:      49371
+c #Conflicts:    1135000 | #Constraints:      50371
+c #Conflicts:    1136000 | #Constraints:      51371
+c #Conflicts:    1137000 | #Constraints:      52371
+c #Conflicts:    1138000 | #Constraints:      53371
+c #Conflicts:    1139000 | #Constraints:      54371
+c #Conflicts:    1140000 | #Constraints:      55371
+c #Conflicts:    1141000 | #Constraints:      56371
+c #Conflicts:    1142000 | #Constraints:      57371
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1143000 | #Constraints:      35156
+c #Conflicts:    1144000 | #Constraints:      36156
+c #Conflicts:    1145000 | #Constraints:      37156
+c #Conflicts:    1146000 | #Constraints:      38156
+c #Conflicts:    1147000 | #Constraints:      39156
+c #Conflicts:    1148000 | #Constraints:      40156
+c #Conflicts:    1149000 | #Constraints:      41156
+c #Conflicts:    1150000 | #Constraints:      42156
+c #Conflicts:    1151000 | #Constraints:      43156
+c #Conflicts:    1152000 | #Constraints:      44156
+c #Conflicts:    1153000 | #Constraints:      45156
+c #Conflicts:    1154000 | #Constraints:      46156
+c #Conflicts:    1155000 | #Constraints:      47156
+c #Conflicts:    1156000 | #Constraints:      48156
+c #Conflicts:    1157000 | #Constraints:      49156
+c #Conflicts:    1158000 | #Constraints:      50156
+c #Conflicts:    1159000 | #Constraints:      51156
+c #Conflicts:    1160000 | #Constraints:      52156
+c #Conflicts:    1161000 | #Constraints:      53156
+c #Conflicts:    1162000 | #Constraints:      54156
+c #Conflicts:    1163000 | #Constraints:      55156
+c #Conflicts:    1164000 | #Constraints:      56156
+c #Conflicts:    1165000 | #Constraints:      57156
+c #Conflicts:    1166000 | #Constraints:      58156
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1167000 | #Constraints:      35689
+c #Conflicts:    1168000 | #Constraints:      36689
+c #Conflicts:    1169000 | #Constraints:      37689
+c #Conflicts:    1170000 | #Constraints:      38689
+c #Conflicts:    1171000 | #Constraints:      39689
+c #Conflicts:    1172000 | #Constraints:      40689
+c #Conflicts:    1173000 | #Constraints:      41689
+c #Conflicts:    1174000 | #Constraints:      42689
+c #Conflicts:    1175000 | #Constraints:      43689
+c #Conflicts:    1176000 | #Constraints:      44689
+c #Conflicts:    1177000 | #Constraints:      45689
+c #Conflicts:    1178000 | #Constraints:      46689
+c #Conflicts:    1179000 | #Constraints:      47689
+c #Conflicts:    1180000 | #Constraints:      48689
+c #Conflicts:    1181000 | #Constraints:      49689
+c #Conflicts:    1182000 | #Constraints:      50689
+c #Conflicts:    1183000 | #Constraints:      51689
+c #Conflicts:    1184000 | #Constraints:      52689
+c #Conflicts:    1185000 | #Constraints:      53689
+c #Conflicts:    1186000 | #Constraints:      54689
+c #Conflicts:    1187000 | #Constraints:      55689
+c #Conflicts:    1188000 | #Constraints:      56689
+c #Conflicts:    1189000 | #Constraints:      57689
+c #Conflicts:    1190000 | #Constraints:      58689
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1191000 | #Constraints:      35956
+c #Conflicts:    1192000 | #Constraints:      36956
+c #Conflicts:    1193000 | #Constraints:      37956
+c #Conflicts:    1194000 | #Constraints:      38956
+c #Conflicts:    1195000 | #Constraints:      39956
+c #Conflicts:    1196000 | #Constraints:      40956
+c #Conflicts:    1197000 | #Constraints:      41956
+c #Conflicts:    1198000 | #Constraints:      42956
+c #Conflicts:    1199000 | #Constraints:      43956
+c #Conflicts:    1200000 | #Constraints:      44956
+c #Conflicts:    1201000 | #Constraints:      45956
+c #Conflicts:    1202000 | #Constraints:      46956
+c #Conflicts:    1203000 | #Constraints:      47956
+c #Conflicts:    1204000 | #Constraints:      48956
+c #Conflicts:    1205000 | #Constraints:      49956
+c #Conflicts:    1206000 | #Constraints:      50956
+c #Conflicts:    1207000 | #Constraints:      51956
+c #Conflicts:    1208000 | #Constraints:      52956
+c #Conflicts:    1209000 | #Constraints:      53956
+c #Conflicts:    1210000 | #Constraints:      54956
+c #Conflicts:    1211000 | #Constraints:      55956
+c #Conflicts:    1212000 | #Constraints:      56956
+c #Conflicts:    1213000 | #Constraints:      57956
+c #Conflicts:    1214000 | #Constraints:      58956
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1215000 | #Constraints:      36002
+c #Conflicts:    1216000 | #Constraints:      37002
+c #Conflicts:    1217000 | #Constraints:      38002
+c #Conflicts:    1218000 | #Constraints:      39002
+c #Conflicts:    1219000 | #Constraints:      40002
+c #Conflicts:    1220000 | #Constraints:      41002
+c #Conflicts:    1221000 | #Constraints:      42002
+c #Conflicts:    1222000 | #Constraints:      43002
+c #Conflicts:    1223000 | #Constraints:      44002
+c #Conflicts:    1224000 | #Constraints:      45002
+c #Conflicts:    1225000 | #Constraints:      46002
+c #Conflicts:    1226000 | #Constraints:      47002
+c #Conflicts:    1227000 | #Constraints:      48002
+c #Conflicts:    1228000 | #Constraints:      49002
+c #Conflicts:    1229000 | #Constraints:      50002
+c #Conflicts:    1230000 | #Constraints:      51002
+c #Conflicts:    1231000 | #Constraints:      52002
+c #Conflicts:    1232000 | #Constraints:      53002
+c #Conflicts:    1233000 | #Constraints:      54002
+c #Conflicts:    1234000 | #Constraints:      55002
+c #Conflicts:    1235000 | #Constraints:      56002
+c #Conflicts:    1236000 | #Constraints:      57002
+c #Conflicts:    1237000 | #Constraints:      58002
+c #Conflicts:    1238000 | #Constraints:      59002
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1239000 | #Constraints:      35940
+c #Conflicts:    1240000 | #Constraints:      36940
+c #Conflicts:    1241000 | #Constraints:      37940
+c #Conflicts:    1242000 | #Constraints:      38940
+c #Conflicts:    1243000 | #Constraints:      39940
+c #Conflicts:    1244000 | #Constraints:      40940
+c #Conflicts:    1245000 | #Constraints:      41940
+c #Conflicts:    1246000 | #Constraints:      42940
+c #Conflicts:    1247000 | #Constraints:      43940
+c #Conflicts:    1248000 | #Constraints:      44940
+c #Conflicts:    1249000 | #Constraints:      45940
+c #Conflicts:    1250000 | #Constraints:      46940
+c #Conflicts:    1251000 | #Constraints:      47940
+c #Conflicts:    1252000 | #Constraints:      48940
+c #Conflicts:    1253000 | #Constraints:      49940
+c #Conflicts:    1254000 | #Constraints:      50940
+c #Conflicts:    1255000 | #Constraints:      51940
+c #Conflicts:    1256000 | #Constraints:      52940
+c #Conflicts:    1257000 | #Constraints:      53940
+c #Conflicts:    1258000 | #Constraints:      54940
+c #Conflicts:    1259000 | #Constraints:      55940
+c #Conflicts:    1260000 | #Constraints:      56940
+c #Conflicts:    1261000 | #Constraints:      57940
+c #Conflicts:    1262000 | #Constraints:      58940
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1263000 | #Constraints:      35658
+c #Conflicts:    1264000 | #Constraints:      36658
+c #Conflicts:    1265000 | #Constraints:      37658
+c #Conflicts:    1266000 | #Constraints:      38658
+c #Conflicts:    1267000 | #Constraints:      39658
+c #Conflicts:    1268000 | #Constraints:      40658
+c #Conflicts:    1269000 | #Constraints:      41658
+c #Conflicts:    1270000 | #Constraints:      42658
+c #Conflicts:    1271000 | #Constraints:      43658
+c #Conflicts:    1272000 | #Constraints:      44658
+c #Conflicts:    1273000 | #Constraints:      45658
+c #Conflicts:    1274000 | #Constraints:      46658
+c #Conflicts:    1275000 | #Constraints:      47658
+c bounds -200 >= -230 @ 2227.27
+c #Conflicts:    1276000 | #Constraints:      48694
+c #Conflicts:    1277000 | #Constraints:      49694
+c #Conflicts:    1278000 | #Constraints:      50694
+c #Conflicts:    1279000 | #Constraints:      51694
+c #Conflicts:    1280000 | #Constraints:      52694
+c #Conflicts:    1281000 | #Constraints:      53694
+c #Conflicts:    1282000 | #Constraints:      54694
+c #Conflicts:    1283000 | #Constraints:      55694
+c #Conflicts:    1284000 | #Constraints:      56694
+c #Conflicts:    1285000 | #Constraints:      57694
+c #Conflicts:    1286000 | #Constraints:      58694
+c #Conflicts:    1287000 | #Constraints:      59694
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1288000 | #Constraints:      36207
+c #Conflicts:    1289000 | #Constraints:      37207
+c #Conflicts:    1290000 | #Constraints:      38207
+c #Conflicts:    1291000 | #Constraints:      39207
+c #Conflicts:    1292000 | #Constraints:      40207
+c #Conflicts:    1293000 | #Constraints:      41207
+c #Conflicts:    1294000 | #Constraints:      42207
+c #Conflicts:    1295000 | #Constraints:      43207
+c #Conflicts:    1296000 | #Constraints:      44207
+c #Conflicts:    1297000 | #Constraints:      45207
+c #Conflicts:    1298000 | #Constraints:      46207
+c #Conflicts:    1299000 | #Constraints:      47207
+c #Conflicts:    1300000 | #Constraints:      48207
+c #Conflicts:    1301000 | #Constraints:      49207
+c #Conflicts:    1302000 | #Constraints:      50207
+c #Conflicts:    1303000 | #Constraints:      51207
+c #Conflicts:    1304000 | #Constraints:      52207
+c #Conflicts:    1305000 | #Constraints:      53207
+c #Conflicts:    1306000 | #Constraints:      54207
+c #Conflicts:    1307000 | #Constraints:      55207
+c #Conflicts:    1308000 | #Constraints:      56207
+c #Conflicts:    1309000 | #Constraints:      57207
+c #Conflicts:    1310000 | #Constraints:      58207
+c #Conflicts:    1311000 | #Constraints:      59207
+c #Conflicts:    1312000 | #Constraints:      60207
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1313000 | #Constraints:      36512
+c #Conflicts:    1314000 | #Constraints:      37512
+c #Conflicts:    1315000 | #Constraints:      38512
+c #Conflicts:    1316000 | #Constraints:      39512
+c #Conflicts:    1317000 | #Constraints:      40512
+c #Conflicts:    1318000 | #Constraints:      41512
+c #Conflicts:    1319000 | #Constraints:      42512
+c #Conflicts:    1320000 | #Constraints:      43512
+c #Conflicts:    1321000 | #Constraints:      44512
+c #Conflicts:    1322000 | #Constraints:      45512
+c #Conflicts:    1323000 | #Constraints:      46512
+c #Conflicts:    1324000 | #Constraints:      47512
+c #Conflicts:    1325000 | #Constraints:      48512
+c #Conflicts:    1326000 | #Constraints:      49512
+c #Conflicts:    1327000 | #Constraints:      50512
+c #Conflicts:    1328000 | #Constraints:      51512
+c #Conflicts:    1329000 | #Constraints:      52512
+c #Conflicts:    1330000 | #Constraints:      53512
+c #Conflicts:    1331000 | #Constraints:      54512
+c #Conflicts:    1332000 | #Constraints:      55512
+c #Conflicts:    1333000 | #Constraints:      56512
+c #Conflicts:    1334000 | #Constraints:      57512
+c #Conflicts:    1335000 | #Constraints:      58512
+c #Conflicts:    1336000 | #Constraints:      59512
+c #Conflicts:    1337000 | #Constraints:      60512
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1338000 | #Constraints:      36504
+c #Conflicts:    1339000 | #Constraints:      37504
+c #Conflicts:    1340000 | #Constraints:      38504
+c #Conflicts:    1341000 | #Constraints:      39504
+c #Conflicts:    1342000 | #Constraints:      40504
+c #Conflicts:    1343000 | #Constraints:      41504
+c #Conflicts:    1344000 | #Constraints:      42504
+c #Conflicts:    1345000 | #Constraints:      43504
+c #Conflicts:    1346000 | #Constraints:      44504
+c #Conflicts:    1347000 | #Constraints:      45504
+c #Conflicts:    1348000 | #Constraints:      46504
+c #Conflicts:    1349000 | #Constraints:      47504
+c #Conflicts:    1350000 | #Constraints:      48504
+c #Conflicts:    1351000 | #Constraints:      49504
+c #Conflicts:    1352000 | #Constraints:      50504
+c #Conflicts:    1353000 | #Constraints:      51504
+c #Conflicts:    1354000 | #Constraints:      52504
+c #Conflicts:    1355000 | #Constraints:      53504
+c #Conflicts:    1356000 | #Constraints:      54504
+c #Conflicts:    1357000 | #Constraints:      55504
+c #Conflicts:    1358000 | #Constraints:      56504
+c #Conflicts:    1359000 | #Constraints:      57504
+c #Conflicts:    1360000 | #Constraints:      58504
+c #Conflicts:    1361000 | #Constraints:      59504
+c #Conflicts:    1362000 | #Constraints:      60504
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1363000 | #Constraints:      36447
+c #Conflicts:    1364000 | #Constraints:      37447
+c #Conflicts:    1365000 | #Constraints:      38447
+c #Conflicts:    1366000 | #Constraints:      39447
+c #Conflicts:    1367000 | #Constraints:      40447
+c #Conflicts:    1368000 | #Constraints:      41447
+c #Conflicts:    1369000 | #Constraints:      42447
+c #Conflicts:    1370000 | #Constraints:      43447
+c #Conflicts:    1371000 | #Constraints:      44447
+c #Conflicts:    1372000 | #Constraints:      45447
+c #Conflicts:    1373000 | #Constraints:      46447
+c #Conflicts:    1374000 | #Constraints:      47447
+c #Conflicts:    1375000 | #Constraints:      48447
+c #Conflicts:    1376000 | #Constraints:      49447
+c #Conflicts:    1377000 | #Constraints:      50447
+c #Conflicts:    1378000 | #Constraints:      51447
+c #Conflicts:    1379000 | #Constraints:      52447
+c #Conflicts:    1380000 | #Constraints:      53447
+c #Conflicts:    1381000 | #Constraints:      54447
+c #Conflicts:    1382000 | #Constraints:      55447
+c #Conflicts:    1383000 | #Constraints:      56447
+c #Conflicts:    1384000 | #Constraints:      57447
+c #Conflicts:    1385000 | #Constraints:      58447
+c #Conflicts:    1386000 | #Constraints:      59447
+c #Conflicts:    1387000 | #Constraints:      60447
+c #Conflicts:    1388000 | #Constraints:      61447
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1389000 | #Constraints:      37170
+c #Conflicts:    1390000 | #Constraints:      38170
+c #Conflicts:    1391000 | #Constraints:      39170
+c #Conflicts:    1392000 | #Constraints:      40170
+c #Conflicts:    1393000 | #Constraints:      41170
+c #Conflicts:    1394000 | #Constraints:      42170
+c #Conflicts:    1395000 | #Constraints:      43170
+c #Conflicts:    1396000 | #Constraints:      44170
+c #Conflicts:    1397000 | #Constraints:      45170
+c #Conflicts:    1398000 | #Constraints:      46170
+c #Conflicts:    1399000 | #Constraints:      47170
+c #Conflicts:    1400000 | #Constraints:      48170
+c #Conflicts:    1401000 | #Constraints:      49170
+c #Conflicts:    1402000 | #Constraints:      50170
+c #Conflicts:    1403000 | #Constraints:      51170
+c #Conflicts:    1404000 | #Constraints:      52170
+c #Conflicts:    1405000 | #Constraints:      53170
+c #Conflicts:    1406000 | #Constraints:      54170
+c #Conflicts:    1407000 | #Constraints:      55170
+c #Conflicts:    1408000 | #Constraints:      56170
+c #Conflicts:    1409000 | #Constraints:      57170
+c #Conflicts:    1410000 | #Constraints:      58170
+c #Conflicts:    1411000 | #Constraints:      59170
+c #Conflicts:    1412000 | #Constraints:      60170
+c #Conflicts:    1413000 | #Constraints:      61170
+c #Conflicts:    1414000 | #Constraints:      62170
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1415000 | #Constraints:      37706
+c #Conflicts:    1416000 | #Constraints:      38706
+c #Conflicts:    1417000 | #Constraints:      39706
+c #Conflicts:    1418000 | #Constraints:      40706
+c #Conflicts:    1419000 | #Constraints:      41706
+c #Conflicts:    1420000 | #Constraints:      42706
+c #Conflicts:    1421000 | #Constraints:      43706
+c #Conflicts:    1422000 | #Constraints:      44706
+c #Conflicts:    1423000 | #Constraints:      45706
+c #Conflicts:    1424000 | #Constraints:      46706
+c #Conflicts:    1425000 | #Constraints:      47706
+c #Conflicts:    1426000 | #Constraints:      48706
+c #Conflicts:    1427000 | #Constraints:      49706
+c #Conflicts:    1428000 | #Constraints:      50706
+c #Conflicts:    1429000 | #Constraints:      51706
+c #Conflicts:    1430000 | #Constraints:      52706
+c #Conflicts:    1431000 | #Constraints:      53706
+c #Conflicts:    1432000 | #Constraints:      54706
+c #Conflicts:    1433000 | #Constraints:      55706
+c #Conflicts:    1434000 | #Constraints:      56706
+c #Conflicts:    1435000 | #Constraints:      57706
+c #Conflicts:    1436000 | #Constraints:      58706
+c #Conflicts:    1437000 | #Constraints:      59706
+c #Conflicts:    1438000 | #Constraints:      60706
+c #Conflicts:    1439000 | #Constraints:      61706
+c #Conflicts:    1440000 | #Constraints:      62706
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1441000 | #Constraints:      38010
+c #Conflicts:    1442000 | #Constraints:      39010
+c #Conflicts:    1443000 | #Constraints:      40010
+c #Conflicts:    1444000 | #Constraints:      41010
+c #Conflicts:    1445000 | #Constraints:      42010
+c #Conflicts:    1446000 | #Constraints:      43010
+c #Conflicts:    1447000 | #Constraints:      44010
+c #Conflicts:    1448000 | #Constraints:      45010
+c #Conflicts:    1449000 | #Constraints:      46010
+c #Conflicts:    1450000 | #Constraints:      47010
+c #Conflicts:    1451000 | #Constraints:      48010
+c #Conflicts:    1452000 | #Constraints:      49010
+c #Conflicts:    1453000 | #Constraints:      50010
+c #Conflicts:    1454000 | #Constraints:      51010
+c #Conflicts:    1455000 | #Constraints:      52010
+c #Conflicts:    1456000 | #Constraints:      53010
+c #Conflicts:    1457000 | #Constraints:      54010
+c #Conflicts:    1458000 | #Constraints:      55010
+c #Conflicts:    1459000 | #Constraints:      56010
+c #Conflicts:    1460000 | #Constraints:      57010
+c #Conflicts:    1461000 | #Constraints:      58010
+c #Conflicts:    1462000 | #Constraints:      59010
+c #Conflicts:    1463000 | #Constraints:      60010
+c #Conflicts:    1464000 | #Constraints:      61010
+c #Conflicts:    1465000 | #Constraints:      62010
+c #Conflicts:    1466000 | #Constraints:      63010
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1467000 | #Constraints:      38099
+c #Conflicts:    1468000 | #Constraints:      39099
+c #Conflicts:    1469000 | #Constraints:      40099
+c #Conflicts:    1470000 | #Constraints:      41099
+c #Conflicts:    1471000 | #Constraints:      42099
+c #Conflicts:    1472000 | #Constraints:      43099
+c #Conflicts:    1473000 | #Constraints:      44099
+c #Conflicts:    1474000 | #Constraints:      45099
+c #Conflicts:    1475000 | #Constraints:      46099
+c #Conflicts:    1476000 | #Constraints:      47099
+c #Conflicts:    1477000 | #Constraints:      48099
+c #Conflicts:    1478000 | #Constraints:      49099
+c #Conflicts:    1479000 | #Constraints:      50099
+c #Conflicts:    1480000 | #Constraints:      51099
+c #Conflicts:    1481000 | #Constraints:      52099
+c #Conflicts:    1482000 | #Constraints:      53099
+c #Conflicts:    1483000 | #Constraints:      54099
+c #Conflicts:    1484000 | #Constraints:      55099
+c #Conflicts:    1485000 | #Constraints:      56099
+c #Conflicts:    1486000 | #Constraints:      57099
+c #Conflicts:    1487000 | #Constraints:      58099
+c #Conflicts:    1488000 | #Constraints:      59099
+c #Conflicts:    1489000 | #Constraints:      60099
+c #Conflicts:    1490000 | #Constraints:      61099
+c #Conflicts:    1491000 | #Constraints:      62099
+c #Conflicts:    1492000 | #Constraints:      63099
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1493000 | #Constraints:      38036
+c #Conflicts:    1494000 | #Constraints:      39036
+c #Conflicts:    1495000 | #Constraints:      40036
+c #Conflicts:    1496000 | #Constraints:      41036
+c #Conflicts:    1497000 | #Constraints:      42036
+c #Conflicts:    1498000 | #Constraints:      43036
+c #Conflicts:    1499000 | #Constraints:      44036
+c #Conflicts:    1500000 | #Constraints:      45036
+c #Conflicts:    1501000 | #Constraints:      46036
+c #Conflicts:    1502000 | #Constraints:      47036
+c #Conflicts:    1503000 | #Constraints:      48036
+c #Conflicts:    1504000 | #Constraints:      49036
+c #Conflicts:    1505000 | #Constraints:      50036
+c #Conflicts:    1506000 | #Constraints:      51036
+c #Conflicts:    1507000 | #Constraints:      52036
+c #Conflicts:    1508000 | #Constraints:      53036
+c #Conflicts:    1509000 | #Constraints:      54036
+c #Conflicts:    1510000 | #Constraints:      55036
+c #Conflicts:    1511000 | #Constraints:      56036
+c #Conflicts:    1512000 | #Constraints:      57036
+c #Conflicts:    1513000 | #Constraints:      58036
+c #Conflicts:    1514000 | #Constraints:      59036
+c #Conflicts:    1515000 | #Constraints:      60036
+c #Conflicts:    1516000 | #Constraints:      61036
+c #Conflicts:    1517000 | #Constraints:      62036
+c #Conflicts:    1518000 | #Constraints:      63036
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1519000 | #Constraints:      37670
+c #Conflicts:    1520000 | #Constraints:      38670
+c #Conflicts:    1521000 | #Constraints:      39670
+c #Conflicts:    1522000 | #Constraints:      40670
+c #Conflicts:    1523000 | #Constraints:      41670
+c #Conflicts:    1524000 | #Constraints:      42670
+c #Conflicts:    1525000 | #Constraints:      43670
+c #Conflicts:    1526000 | #Constraints:      44670
+c #Conflicts:    1527000 | #Constraints:      45670
+c #Conflicts:    1528000 | #Constraints:      46670
+c #Conflicts:    1529000 | #Constraints:      47670
+c #Conflicts:    1530000 | #Constraints:      48670
+c #Conflicts:    1531000 | #Constraints:      49670
+c #Conflicts:    1532000 | #Constraints:      50670
+c #Conflicts:    1533000 | #Constraints:      51670
+c #Conflicts:    1534000 | #Constraints:      52670
+c #Conflicts:    1535000 | #Constraints:      53670
+c #Conflicts:    1536000 | #Constraints:      54670
+c #Conflicts:    1537000 | #Constraints:      55670
+c #Conflicts:    1538000 | #Constraints:      56670
+c #Conflicts:    1539000 | #Constraints:      57670
+c #Conflicts:    1540000 | #Constraints:      58670
+c #Conflicts:    1541000 | #Constraints:      59670
+c #Conflicts:    1542000 | #Constraints:      60670
+c #Conflicts:    1543000 | #Constraints:      61670
+c #Conflicts:    1544000 | #Constraints:      62670
+c #Conflicts:    1545000 | #Constraints:      63670
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1546000 | #Constraints:      38194
+c #Conflicts:    1547000 | #Constraints:      39194
+c #Conflicts:    1548000 | #Constraints:      40194
+c #Conflicts:    1549000 | #Constraints:      41194
+c #Conflicts:    1550000 | #Constraints:      42194
+c #Conflicts:    1551000 | #Constraints:      43194
+c #Conflicts:    1552000 | #Constraints:      44194
+c #Conflicts:    1553000 | #Constraints:      45194
+c #Conflicts:    1554000 | #Constraints:      46194
+c #Conflicts:    1555000 | #Constraints:      47194
+c #Conflicts:    1556000 | #Constraints:      48194
+c #Conflicts:    1557000 | #Constraints:      49194
+c #Conflicts:    1558000 | #Constraints:      50194
+c #Conflicts:    1559000 | #Constraints:      51194
+c #Conflicts:    1560000 | #Constraints:      52194
+c #Conflicts:    1561000 | #Constraints:      53194
+c #Conflicts:    1562000 | #Constraints:      54194
+c #Conflicts:    1563000 | #Constraints:      55194
+c #Conflicts:    1564000 | #Constraints:      56194
+c #Conflicts:    1565000 | #Constraints:      57194
+c #Conflicts:    1566000 | #Constraints:      58194
+c #Conflicts:    1567000 | #Constraints:      59194
+c #Conflicts:    1568000 | #Constraints:      60194
+c #Conflicts:    1569000 | #Constraints:      61194
+c #Conflicts:    1570000 | #Constraints:      62194
+c #Conflicts:    1571000 | #Constraints:      63194
+c #Conflicts:    1572000 | #Constraints:      64194
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1573000 | #Constraints:      38545
+c #Conflicts:    1574000 | #Constraints:      39545
+c #Conflicts:    1575000 | #Constraints:      40545
+c #Conflicts:    1576000 | #Constraints:      41545
+c #Conflicts:    1577000 | #Constraints:      42545
+c #Conflicts:    1578000 | #Constraints:      43545
+c #Conflicts:    1579000 | #Constraints:      44545
+c #Conflicts:    1580000 | #Constraints:      45545
+c #Conflicts:    1581000 | #Constraints:      46545
+c #Conflicts:    1582000 | #Constraints:      47545
+c #Conflicts:    1583000 | #Constraints:      48545
+c #Conflicts:    1584000 | #Constraints:      49545
+c #Conflicts:    1585000 | #Constraints:      50545
+c #Conflicts:    1586000 | #Constraints:      51545
+c #Conflicts:    1587000 | #Constraints:      52545
+c #Conflicts:    1588000 | #Constraints:      53545
+c #Conflicts:    1589000 | #Constraints:      54545
+c #Conflicts:    1590000 | #Constraints:      55545
+c #Conflicts:    1591000 | #Constraints:      56545
+c #Conflicts:    1592000 | #Constraints:      57545
+c #Conflicts:    1593000 | #Constraints:      58545
+c #Conflicts:    1594000 | #Constraints:      59545
+c #Conflicts:    1595000 | #Constraints:      60545
+c #Conflicts:    1596000 | #Constraints:      61545
+c #Conflicts:    1597000 | #Constraints:      62545
+c #Conflicts:    1598000 | #Constraints:      63545
+c #Conflicts:    1599000 | #Constraints:      64545
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1600000 | #Constraints:      38650
+c #Conflicts:    1601000 | #Constraints:      39650
+c #Conflicts:    1602000 | #Constraints:      40650
+c #Conflicts:    1603000 | #Constraints:      41650
+c #Conflicts:    1604000 | #Constraints:      42650
+c #Conflicts:    1605000 | #Constraints:      43650
+c #Conflicts:    1606000 | #Constraints:      44650
+c #Conflicts:    1607000 | #Constraints:      45650
+c #Conflicts:    1608000 | #Constraints:      46650
+c #Conflicts:    1609000 | #Constraints:      47650
+c #Conflicts:    1610000 | #Constraints:      48650
+c #Conflicts:    1611000 | #Constraints:      49650
+c #Conflicts:    1612000 | #Constraints:      50650
+c #Conflicts:    1613000 | #Constraints:      51650
+c #Conflicts:    1614000 | #Constraints:      52650
+c #Conflicts:    1615000 | #Constraints:      53650
+c #Conflicts:    1616000 | #Constraints:      54650
+c #Conflicts:    1617000 | #Constraints:      55650
+c #Conflicts:    1618000 | #Constraints:      56650
+c #Conflicts:    1619000 | #Constraints:      57650
+c #Conflicts:    1620000 | #Constraints:      58650
+c #Conflicts:    1621000 | #Constraints:      59650
+c #Conflicts:    1622000 | #Constraints:      60650
+c #Conflicts:    1623000 | #Constraints:      61650
+c #Conflicts:    1624000 | #Constraints:      62650
+c #Conflicts:    1625000 | #Constraints:      63650
+c #Conflicts:    1626000 | #Constraints:      64650
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1627000 | #Constraints:      38581
+c #Conflicts:    1628000 | #Constraints:      39581
+c #Conflicts:    1629000 | #Constraints:      40581
+c #Conflicts:    1630000 | #Constraints:      41581
+c #Conflicts:    1631000 | #Constraints:      42581
+c #Conflicts:    1632000 | #Constraints:      43581
+c #Conflicts:    1633000 | #Constraints:      44581
+c #Conflicts:    1634000 | #Constraints:      45581
+c #Conflicts:    1635000 | #Constraints:      46581
+c #Conflicts:    1636000 | #Constraints:      47581
+c #Conflicts:    1637000 | #Constraints:      48581
+c #Conflicts:    1638000 | #Constraints:      49581
+c #Conflicts:    1639000 | #Constraints:      50581
+c #Conflicts:    1640000 | #Constraints:      51581
+c #Conflicts:    1641000 | #Constraints:      52581
+c #Conflicts:    1642000 | #Constraints:      53581
+c #Conflicts:    1643000 | #Constraints:      54581
+c #Conflicts:    1644000 | #Constraints:      55581
+c #Conflicts:    1645000 | #Constraints:      56581
+c #Conflicts:    1646000 | #Constraints:      57581
+c #Conflicts:    1647000 | #Constraints:      58581
+c #Conflicts:    1648000 | #Constraints:      59581
+c #Conflicts:    1649000 | #Constraints:      60581
+c #Conflicts:    1650000 | #Constraints:      61581
+c #Conflicts:    1651000 | #Constraints:      62581
+c #Conflicts:    1652000 | #Constraints:      63581
+c #Conflicts:    1653000 | #Constraints:      64581
+c #Conflicts:    1654000 | #Constraints:      65581
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1655000 | #Constraints:      39306
+c #Conflicts:    1656000 | #Constraints:      40306
+c #Conflicts:    1657000 | #Constraints:      41306
+c #Conflicts:    1658000 | #Constraints:      42306
+c #Conflicts:    1659000 | #Constraints:      43306
+c #Conflicts:    1660000 | #Constraints:      44306
+c #Conflicts:    1661000 | #Constraints:      45306
+c #Conflicts:    1662000 | #Constraints:      46306
+c #Conflicts:    1663000 | #Constraints:      47306
+c #Conflicts:    1664000 | #Constraints:      48306
+c #Conflicts:    1665000 | #Constraints:      49306
+c #Conflicts:    1666000 | #Constraints:      50306
+c #Conflicts:    1667000 | #Constraints:      51306
+c #Conflicts:    1668000 | #Constraints:      52306
+c #Conflicts:    1669000 | #Constraints:      53306
+c #Conflicts:    1670000 | #Constraints:      54306
+c #Conflicts:    1671000 | #Constraints:      55306
+c #Conflicts:    1672000 | #Constraints:      56306
+c #Conflicts:    1673000 | #Constraints:      57306
+c #Conflicts:    1674000 | #Constraints:      58306
+c #Conflicts:    1675000 | #Constraints:      59306
+c #Conflicts:    1676000 | #Constraints:      60306
+c #Conflicts:    1677000 | #Constraints:      61306
+c #Conflicts:    1678000 | #Constraints:      62306
+c #Conflicts:    1679000 | #Constraints:      63306
+c #Conflicts:    1680000 | #Constraints:      64306
+c #Conflicts:    1681000 | #Constraints:      65306
+c #Conflicts:    1682000 | #Constraints:      66306
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1683000 | #Constraints:      39795
+c #Conflicts:    1684000 | #Constraints:      40795
+c #Conflicts:    1685000 | #Constraints:      41795
+c #Conflicts:    1686000 | #Constraints:      42795
+c #Conflicts:    1687000 | #Constraints:      43795
+c #Conflicts:    1688000 | #Constraints:      44795
+c #Conflicts:    1689000 | #Constraints:      45795
+c #Conflicts:    1690000 | #Constraints:      46795
+c #Conflicts:    1691000 | #Constraints:      47795
+c #Conflicts:    1692000 | #Constraints:      48795
+c #Conflicts:    1693000 | #Constraints:      49795
+c #Conflicts:    1694000 | #Constraints:      50795
+c #Conflicts:    1695000 | #Constraints:      51795
+c #Conflicts:    1696000 | #Constraints:      52795
+c #Conflicts:    1697000 | #Constraints:      53795
+c #Conflicts:    1698000 | #Constraints:      54795
+c #Conflicts:    1699000 | #Constraints:      55795
+c #Conflicts:    1700000 | #Constraints:      56795
+c #Conflicts:    1701000 | #Constraints:      57795
+c #Conflicts:    1702000 | #Constraints:      58795
+c #Conflicts:    1703000 | #Constraints:      59795
+c #Conflicts:    1704000 | #Constraints:      60795
+c #Conflicts:    1705000 | #Constraints:      61795
+c #Conflicts:    1706000 | #Constraints:      62795
+c #Conflicts:    1707000 | #Constraints:      63795
+c #Conflicts:    1708000 | #Constraints:      64795
+c #Conflicts:    1709000 | #Constraints:      65795
+c #Conflicts:    1710000 | #Constraints:      66795
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1711000 | #Constraints:      40027
+c #Conflicts:    1712000 | #Constraints:      41027
+c #Conflicts:    1713000 | #Constraints:      42027
+c #Conflicts:    1714000 | #Constraints:      43027
+c #Conflicts:    1715000 | #Constraints:      44027
+c #Conflicts:    1716000 | #Constraints:      45027
+c #Conflicts:    1717000 | #Constraints:      46027
+c #Conflicts:    1718000 | #Constraints:      47027
+c #Conflicts:    1719000 | #Constraints:      48027
+c #Conflicts:    1720000 | #Constraints:      49027
+c #Conflicts:    1721000 | #Constraints:      50027
+c #Conflicts:    1722000 | #Constraints:      51027
+c #Conflicts:    1723000 | #Constraints:      52027
+c #Conflicts:    1724000 | #Constraints:      53027
+c #Conflicts:    1725000 | #Constraints:      54027
+c #Conflicts:    1726000 | #Constraints:      55027
+c #Conflicts:    1727000 | #Constraints:      56027
+c #Conflicts:    1728000 | #Constraints:      57027
+c #Conflicts:    1729000 | #Constraints:      58027
+c #Conflicts:    1730000 | #Constraints:      59027
+c #Conflicts:    1731000 | #Constraints:      60027
+c #Conflicts:    1732000 | #Constraints:      61027
+c #Conflicts:    1733000 | #Constraints:      62027
+c #Conflicts:    1734000 | #Constraints:      63027
+c #Conflicts:    1735000 | #Constraints:      64027
+c #Conflicts:    1736000 | #Constraints:      65027
+c #Conflicts:    1737000 | #Constraints:      66027
+c #Conflicts:    1738000 | #Constraints:      67027
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1739000 | #Constraints:      40166
+c #Conflicts:    1740000 | #Constraints:      41166
+c #Conflicts:    1741000 | #Constraints:      42166
+c #Conflicts:    1742000 | #Constraints:      43166
+c #Conflicts:    1743000 | #Constraints:      44166
+c #Conflicts:    1744000 | #Constraints:      45166
+c #Conflicts:    1745000 | #Constraints:      46166
+c #Conflicts:    1746000 | #Constraints:      47166
+c #Conflicts:    1747000 | #Constraints:      48166
+c #Conflicts:    1748000 | #Constraints:      49166
+c #Conflicts:    1749000 | #Constraints:      50166
+c #Conflicts:    1750000 | #Constraints:      51166
+c #Conflicts:    1751000 | #Constraints:      52166
+c #Conflicts:    1752000 | #Constraints:      53166
+c #Conflicts:    1753000 | #Constraints:      54166
+c #Conflicts:    1754000 | #Constraints:      55166
+c #Conflicts:    1755000 | #Constraints:      56166
+c #Conflicts:    1756000 | #Constraints:      57166
+c #Conflicts:    1757000 | #Constraints:      58166
+c #Conflicts:    1758000 | #Constraints:      59166
+c #Conflicts:    1759000 | #Constraints:      60166
+c #Conflicts:    1760000 | #Constraints:      61166
+c #Conflicts:    1761000 | #Constraints:      62166
+c #Conflicts:    1762000 | #Constraints:      63166
+c #Conflicts:    1763000 | #Constraints:      64166
+c #Conflicts:    1764000 | #Constraints:      65166
+c #Conflicts:    1765000 | #Constraints:      66166
+c #Conflicts:    1766000 | #Constraints:      67166
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1767000 | #Constraints:      40043
+c #Conflicts:    1768000 | #Constraints:      41043
+c #Conflicts:    1769000 | #Constraints:      42043
+c #Conflicts:    1770000 | #Constraints:      43043
+c #Conflicts:    1771000 | #Constraints:      44043
+c #Conflicts:    1772000 | #Constraints:      45043
+c #Conflicts:    1773000 | #Constraints:      46043
+c #Conflicts:    1774000 | #Constraints:      47043
+c #Conflicts:    1775000 | #Constraints:      48043
+c #Conflicts:    1776000 | #Constraints:      49043
+c #Conflicts:    1777000 | #Constraints:      50043
+c #Conflicts:    1778000 | #Constraints:      51043
+c #Conflicts:    1779000 | #Constraints:      52043
+c #Conflicts:    1780000 | #Constraints:      53043
+c #Conflicts:    1781000 | #Constraints:      54043
+c #Conflicts:    1782000 | #Constraints:      55043
+c #Conflicts:    1783000 | #Constraints:      56043
+c #Conflicts:    1784000 | #Constraints:      57043
+c #Conflicts:    1785000 | #Constraints:      58043
+c #Conflicts:    1786000 | #Constraints:      59043
+c #Conflicts:    1787000 | #Constraints:      60043
+c #Conflicts:    1788000 | #Constraints:      61043
+c #Conflicts:    1789000 | #Constraints:      62043
+c #Conflicts:    1790000 | #Constraints:      63043
+c #Conflicts:    1791000 | #Constraints:      64043
+c #Conflicts:    1792000 | #Constraints:      65043
+c #Conflicts:    1793000 | #Constraints:      66043
+c #Conflicts:    1794000 | #Constraints:      67043
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1795000 | #Constraints:      39745
+c #Conflicts:    1796000 | #Constraints:      40745
+c #Conflicts:    1797000 | #Constraints:      41745
+c #Conflicts:    1798000 | #Constraints:      42745
+c #Conflicts:    1799000 | #Constraints:      43745
+c #Conflicts:    1800000 | #Constraints:      44745
+c #Conflicts:    1801000 | #Constraints:      45745
+c #Conflicts:    1802000 | #Constraints:      46745
+c #Conflicts:    1803000 | #Constraints:      47745
+c #Conflicts:    1804000 | #Constraints:      48745
+c #Conflicts:    1805000 | #Constraints:      49745
+c #Conflicts:    1806000 | #Constraints:      50745
+c #Conflicts:    1807000 | #Constraints:      51745
+c #Conflicts:    1808000 | #Constraints:      52745
+c #Conflicts:    1809000 | #Constraints:      53745
+c #Conflicts:    1810000 | #Constraints:      54745
+c #Conflicts:    1811000 | #Constraints:      55745
+c #Conflicts:    1812000 | #Constraints:      56745
+c #Conflicts:    1813000 | #Constraints:      57745
+c #Conflicts:    1814000 | #Constraints:      58745
+c #Conflicts:    1815000 | #Constraints:      59745
+c #Conflicts:    1816000 | #Constraints:      60745
+c #Conflicts:    1817000 | #Constraints:      61745
+c #Conflicts:    1818000 | #Constraints:      62745
+c #Conflicts:    1819000 | #Constraints:      63745
+c #Conflicts:    1820000 | #Constraints:      64745
+c #Conflicts:    1821000 | #Constraints:      65745
+c #Conflicts:    1822000 | #Constraints:      66745
+c #Conflicts:    1823000 | #Constraints:      67745
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1824000 | #Constraints:      40292
+c #Conflicts:    1825000 | #Constraints:      41292
+c #Conflicts:    1826000 | #Constraints:      42292
+c #Conflicts:    1827000 | #Constraints:      43292
+c #Conflicts:    1828000 | #Constraints:      44292
+c #Conflicts:    1829000 | #Constraints:      45292
+c #Conflicts:    1830000 | #Constraints:      46292
+c #Conflicts:    1831000 | #Constraints:      47292
+c #Conflicts:    1832000 | #Constraints:      48292
+c #Conflicts:    1833000 | #Constraints:      49292
+c #Conflicts:    1834000 | #Constraints:      50292
+c #Conflicts:    1835000 | #Constraints:      51292
+c #Conflicts:    1836000 | #Constraints:      52292
+c #Conflicts:    1837000 | #Constraints:      53292
+c #Conflicts:    1838000 | #Constraints:      54292
+c #Conflicts:    1839000 | #Constraints:      55292
+c #Conflicts:    1840000 | #Constraints:      56292
+c #Conflicts:    1841000 | #Constraints:      57292
+c #Conflicts:    1842000 | #Constraints:      58292
+c #Conflicts:    1843000 | #Constraints:      59292
+c #Conflicts:    1844000 | #Constraints:      60292
+c #Conflicts:    1845000 | #Constraints:      61292
+c #Conflicts:    1846000 | #Constraints:      62292
+c #Conflicts:    1847000 | #Constraints:      63292
+c #Conflicts:    1848000 | #Constraints:      64292
+c #Conflicts:    1849000 | #Constraints:      65292
+c #Conflicts:    1850000 | #Constraints:      66292
+c #Conflicts:    1851000 | #Constraints:      67292
+c #Conflicts:    1852000 | #Constraints:      68292
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1853000 | #Constraints:      40592
+c #Conflicts:    1854000 | #Constraints:      41592
+c #Conflicts:    1855000 | #Constraints:      42592
+c #Conflicts:    1856000 | #Constraints:      43592
+c #Conflicts:    1857000 | #Constraints:      44592
+c #Conflicts:    1858000 | #Constraints:      45592
+c #Conflicts:    1859000 | #Constraints:      46592
+c #Conflicts:    1860000 | #Constraints:      47592
+c #Conflicts:    1861000 | #Constraints:      48592
+c #Conflicts:    1862000 | #Constraints:      49592
+c #Conflicts:    1863000 | #Constraints:      50592
+c #Conflicts:    1864000 | #Constraints:      51592
+c #Conflicts:    1865000 | #Constraints:      52592
+c #Conflicts:    1866000 | #Constraints:      53592
+c #Conflicts:    1867000 | #Constraints:      54592
+c #Conflicts:    1868000 | #Constraints:      55592
+c #Conflicts:    1869000 | #Constraints:      56592
+c #Conflicts:    1870000 | #Constraints:      57592
+c #Conflicts:    1871000 | #Constraints:      58592
+c #Conflicts:    1872000 | #Constraints:      59592
+c #Conflicts:    1873000 | #Constraints:      60592
+c #Conflicts:    1874000 | #Constraints:      61592
+c #Conflicts:    1875000 | #Constraints:      62592
+c #Conflicts:    1876000 | #Constraints:      63592
+c #Conflicts:    1877000 | #Constraints:      64592
+c #Conflicts:    1878000 | #Constraints:      65592
+c #Conflicts:    1879000 | #Constraints:      66592
+c #Conflicts:    1880000 | #Constraints:      67592
+c #Conflicts:    1881000 | #Constraints:      68592
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1882000 | #Constraints:      40572
+c #Conflicts:    1883000 | #Constraints:      41572
+c #Conflicts:    1884000 | #Constraints:      42572
+c #Conflicts:    1885000 | #Constraints:      43572
+c #Conflicts:    1886000 | #Constraints:      44572
+c #Conflicts:    1887000 | #Constraints:      45572
+c #Conflicts:    1888000 | #Constraints:      46572
+c #Conflicts:    1889000 | #Constraints:      47572
+c #Conflicts:    1890000 | #Constraints:      48572
+c #Conflicts:    1891000 | #Constraints:      49572
+c #Conflicts:    1892000 | #Constraints:      50572
+c #Conflicts:    1893000 | #Constraints:      51572
+c #Conflicts:    1894000 | #Constraints:      52572
+c #Conflicts:    1895000 | #Constraints:      53572
+c #Conflicts:    1896000 | #Constraints:      54572
+c #Conflicts:    1897000 | #Constraints:      55572
+c #Conflicts:    1898000 | #Constraints:      56572
+c #Conflicts:    1899000 | #Constraints:      57572
+c #Conflicts:    1900000 | #Constraints:      58572
+c #Conflicts:    1901000 | #Constraints:      59572
+c #Conflicts:    1902000 | #Constraints:      60572
+c #Conflicts:    1903000 | #Constraints:      61572
+c #Conflicts:    1904000 | #Constraints:      62572
+c #Conflicts:    1905000 | #Constraints:      63572
+c #Conflicts:    1906000 | #Constraints:      64572
+c #Conflicts:    1907000 | #Constraints:      65572
+c #Conflicts:    1908000 | #Constraints:      66572
+c #Conflicts:    1909000 | #Constraints:      67572
+c #Conflicts:    1910000 | #Constraints:      68572
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1911000 | #Constraints:      40490
+c #Conflicts:    1912000 | #Constraints:      41490
+c #Conflicts:    1913000 | #Constraints:      42490
+c #Conflicts:    1914000 | #Constraints:      43490
+c #Conflicts:    1915000 | #Constraints:      44490
+c #Conflicts:    1916000 | #Constraints:      45490
+c #Conflicts:    1917000 | #Constraints:      46490
+c #Conflicts:    1918000 | #Constraints:      47490
+c #Conflicts:    1919000 | #Constraints:      48490
+c #Conflicts:    1920000 | #Constraints:      49490
+c #Conflicts:    1921000 | #Constraints:      50490
+c #Conflicts:    1922000 | #Constraints:      51490
+c #Conflicts:    1923000 | #Constraints:      52490
+c #Conflicts:    1924000 | #Constraints:      53490
+c #Conflicts:    1925000 | #Constraints:      54490
+c #Conflicts:    1926000 | #Constraints:      55490
+c #Conflicts:    1927000 | #Constraints:      56490
+c #Conflicts:    1928000 | #Constraints:      57490
+c #Conflicts:    1929000 | #Constraints:      58490
+c #Conflicts:    1930000 | #Constraints:      59490
+c #Conflicts:    1931000 | #Constraints:      60490
+c #Conflicts:    1932000 | #Constraints:      61490
+c #Conflicts:    1933000 | #Constraints:      62490
+c #Conflicts:    1934000 | #Constraints:      63490
+c #Conflicts:    1935000 | #Constraints:      64490
+c #Conflicts:    1936000 | #Constraints:      65490
+c #Conflicts:    1937000 | #Constraints:      66490
+c #Conflicts:    1938000 | #Constraints:      67490
+c #Conflicts:    1939000 | #Constraints:      68490
+c #Conflicts:    1940000 | #Constraints:      69490
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1941000 | #Constraints:      41225
+c #Conflicts:    1942000 | #Constraints:      42225
+c #Conflicts:    1943000 | #Constraints:      43225
+c #Conflicts:    1944000 | #Constraints:      44225
+c #Conflicts:    1945000 | #Constraints:      45225
+c #Conflicts:    1946000 | #Constraints:      46225
+c #Conflicts:    1947000 | #Constraints:      47225
+c #Conflicts:    1948000 | #Constraints:      48225
+c #Conflicts:    1949000 | #Constraints:      49225
+c #Conflicts:    1950000 | #Constraints:      50225
+c #Conflicts:    1951000 | #Constraints:      51225
+c #Conflicts:    1952000 | #Constraints:      52225
+c #Conflicts:    1953000 | #Constraints:      53225
+c #Conflicts:    1954000 | #Constraints:      54225
+c #Conflicts:    1955000 | #Constraints:      55225
+c #Conflicts:    1956000 | #Constraints:      56225
+c #Conflicts:    1957000 | #Constraints:      57225
+c #Conflicts:    1958000 | #Constraints:      58225
+c #Conflicts:    1959000 | #Constraints:      59225
+c #Conflicts:    1960000 | #Constraints:      60225
+c #Conflicts:    1961000 | #Constraints:      61225
+c #Conflicts:    1962000 | #Constraints:      62225
+c #Conflicts:    1963000 | #Constraints:      63225
+c #Conflicts:    1964000 | #Constraints:      64225
+c #Conflicts:    1965000 | #Constraints:      65225
+c #Conflicts:    1966000 | #Constraints:      66225
+c #Conflicts:    1967000 | #Constraints:      67225
+c #Conflicts:    1968000 | #Constraints:      68225
+c #Conflicts:    1969000 | #Constraints:      69225
+c #Conflicts:    1970000 | #Constraints:      70225
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    1971000 | #Constraints:      41767
+c #Conflicts:    1972000 | #Constraints:      42767
+c #Conflicts:    1973000 | #Constraints:      43767
+c #Conflicts:    1974000 | #Constraints:      44767
+c #Conflicts:    1975000 | #Constraints:      45767
+c #Conflicts:    1976000 | #Constraints:      46767
+c #Conflicts:    1977000 | #Constraints:      47767
+c #Conflicts:    1978000 | #Constraints:      48767
+c #Conflicts:    1979000 | #Constraints:      49767
+c #Conflicts:    1980000 | #Constraints:      50767
+c #Conflicts:    1981000 | #Constraints:      51767
+c #Conflicts:    1982000 | #Constraints:      52767
+c #Conflicts:    1983000 | #Constraints:      53767
+c #Conflicts:    1984000 | #Constraints:      54767
+c #Conflicts:    1985000 | #Constraints:      55767
+c #Conflicts:    1986000 | #Constraints:      56767
+c #Conflicts:    1987000 | #Constraints:      57767
+c #Conflicts:    1988000 | #Constraints:      58767
+c #Conflicts:    1989000 | #Constraints:      59767
+c #Conflicts:    1990000 | #Constraints:      60767
+c #Conflicts:    1991000 | #Constraints:      61767
+c #Conflicts:    1992000 | #Constraints:      62767
+c #Conflicts:    1993000 | #Constraints:      63767
+c #Conflicts:    1994000 | #Constraints:      64767
+c #Conflicts:    1995000 | #Constraints:      65767
+c #Conflicts:    1996000 | #Constraints:      66767
+c #Conflicts:    1997000 | #Constraints:      67767
+c #Conflicts:    1998000 | #Constraints:      68767
+c #Conflicts:    1999000 | #Constraints:      69767
+c #Conflicts:    2000000 | #Constraints:      70767
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2001000 | #Constraints:      42098
+c #Conflicts:    2002000 | #Constraints:      43098
+c #Conflicts:    2003000 | #Constraints:      44098
+c #Conflicts:    2004000 | #Constraints:      45098
+c #Conflicts:    2005000 | #Constraints:      46098
+c #Conflicts:    2006000 | #Constraints:      47098
+c #Conflicts:    2007000 | #Constraints:      48098
+c #Conflicts:    2008000 | #Constraints:      49098
+c #Conflicts:    2009000 | #Constraints:      50098
+c #Conflicts:    2010000 | #Constraints:      51098
+c #Conflicts:    2011000 | #Constraints:      52098
+c #Conflicts:    2012000 | #Constraints:      53098
+c #Conflicts:    2013000 | #Constraints:      54098
+c #Conflicts:    2014000 | #Constraints:      55098
+c #Conflicts:    2015000 | #Constraints:      56098
+c #Conflicts:    2016000 | #Constraints:      57098
+c #Conflicts:    2017000 | #Constraints:      58098
+c #Conflicts:    2018000 | #Constraints:      59098
+c #Conflicts:    2019000 | #Constraints:      60098
+c #Conflicts:    2020000 | #Constraints:      61098
+c #Conflicts:    2021000 | #Constraints:      62098
+c #Conflicts:    2022000 | #Constraints:      63098
+c #Conflicts:    2023000 | #Constraints:      64098
+c #Conflicts:    2024000 | #Constraints:      65098
+c #Conflicts:    2025000 | #Constraints:      66098
+c #Conflicts:    2026000 | #Constraints:      67098
+c #Conflicts:    2027000 | #Constraints:      68098
+c #Conflicts:    2028000 | #Constraints:      69098
+c #Conflicts:    2029000 | #Constraints:      70098
+c #Conflicts:    2030000 | #Constraints:      71098
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2031000 | #Constraints:      42205
+c #Conflicts:    2032000 | #Constraints:      43205
+c #Conflicts:    2033000 | #Constraints:      44205
+c #Conflicts:    2034000 | #Constraints:      45205
+c #Conflicts:    2035000 | #Constraints:      46205
+c #Conflicts:    2036000 | #Constraints:      47205
+c #Conflicts:    2037000 | #Constraints:      48205
+c #Conflicts:    2038000 | #Constraints:      49205
+c #Conflicts:    2039000 | #Constraints:      50205
+c #Conflicts:    2040000 | #Constraints:      51205
+c #Conflicts:    2041000 | #Constraints:      52205
+c #Conflicts:    2042000 | #Constraints:      53205
+c #Conflicts:    2043000 | #Constraints:      54205
+c #Conflicts:    2044000 | #Constraints:      55205
+c #Conflicts:    2045000 | #Constraints:      56205
+c #Conflicts:    2046000 | #Constraints:      57205
+c #Conflicts:    2047000 | #Constraints:      58205
+c #Conflicts:    2048000 | #Constraints:      59205
+c #Conflicts:    2049000 | #Constraints:      60205
+c #Conflicts:    2050000 | #Constraints:      61205
+c #Conflicts:    2051000 | #Constraints:      62205
+c #Conflicts:    2052000 | #Constraints:      63205
+c #Conflicts:    2053000 | #Constraints:      64205
+c #Conflicts:    2054000 | #Constraints:      65205
+c #Conflicts:    2055000 | #Constraints:      66205
+c #Conflicts:    2056000 | #Constraints:      67205
+c #Conflicts:    2057000 | #Constraints:      68205
+c #Conflicts:    2058000 | #Constraints:      69205
+c #Conflicts:    2059000 | #Constraints:      70205
+c #Conflicts:    2060000 | #Constraints:      71205
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2061000 | #Constraints:      41953
+c #Conflicts:    2062000 | #Constraints:      42953
+c #Conflicts:    2063000 | #Constraints:      43953
+c #Conflicts:    2064000 | #Constraints:      44953
+c #Conflicts:    2065000 | #Constraints:      45953
+c #Conflicts:    2066000 | #Constraints:      46953
+c #Conflicts:    2067000 | #Constraints:      47953
+c #Conflicts:    2068000 | #Constraints:      48953
+c #Conflicts:    2069000 | #Constraints:      49953
+c #Conflicts:    2070000 | #Constraints:      50953
+c #Conflicts:    2071000 | #Constraints:      51953
+c #Conflicts:    2072000 | #Constraints:      52953
+c #Conflicts:    2073000 | #Constraints:      53953
+c #Conflicts:    2074000 | #Constraints:      54953
+c #Conflicts:    2075000 | #Constraints:      55953
+c #Conflicts:    2076000 | #Constraints:      56953
+c #Conflicts:    2077000 | #Constraints:      57953
+c #Conflicts:    2078000 | #Constraints:      58953
+c #Conflicts:    2079000 | #Constraints:      59953
+c #Conflicts:    2080000 | #Constraints:      60953
+c #Conflicts:    2081000 | #Constraints:      61953
+c #Conflicts:    2082000 | #Constraints:      62953
+c #Conflicts:    2083000 | #Constraints:      63953
+c #Conflicts:    2084000 | #Constraints:      64953
+c #Conflicts:    2085000 | #Constraints:      65953
+c #Conflicts:    2086000 | #Constraints:      66953
+c #Conflicts:    2087000 | #Constraints:      67953
+c #Conflicts:    2088000 | #Constraints:      68953
+c #Conflicts:    2089000 | #Constraints:      69953
+c #Conflicts:    2090000 | #Constraints:      70953
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2091000 | #Constraints:      41741
+c #Conflicts:    2092000 | #Constraints:      42741
+c #Conflicts:    2093000 | #Constraints:      43741
+c #Conflicts:    2094000 | #Constraints:      44741
+c #Conflicts:    2095000 | #Constraints:      45741
+c #Conflicts:    2096000 | #Constraints:      46741
+c #Conflicts:    2097000 | #Constraints:      47741
+c #Conflicts:    2098000 | #Constraints:      48741
+c #Conflicts:    2099000 | #Constraints:      49741
+c #Conflicts:    2100000 | #Constraints:      50741
+c #Conflicts:    2101000 | #Constraints:      51741
+c #Conflicts:    2102000 | #Constraints:      52741
+c #Conflicts:    2103000 | #Constraints:      53741
+c #Conflicts:    2104000 | #Constraints:      54741
+c #Conflicts:    2105000 | #Constraints:      55741
+c #Conflicts:    2106000 | #Constraints:      56741
+c #Conflicts:    2107000 | #Constraints:      57741
+c #Conflicts:    2108000 | #Constraints:      58741
+c #Conflicts:    2109000 | #Constraints:      59741
+c #Conflicts:    2110000 | #Constraints:      60741
+c #Conflicts:    2111000 | #Constraints:      61741
+c #Conflicts:    2112000 | #Constraints:      62741
+c #Conflicts:    2113000 | #Constraints:      63741
+c #Conflicts:    2114000 | #Constraints:      64741
+c #Conflicts:    2115000 | #Constraints:      65741
+c #Conflicts:    2116000 | #Constraints:      66741
+c #Conflicts:    2117000 | #Constraints:      67741
+c #Conflicts:    2118000 | #Constraints:      68741
+c #Conflicts:    2119000 | #Constraints:      69741
+c #Conflicts:    2120000 | #Constraints:      70741
+c #Conflicts:    2121000 | #Constraints:      71741
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2122000 | #Constraints:      42243
+c #Conflicts:    2123000 | #Constraints:      43243
+c #Conflicts:    2124000 | #Constraints:      44243
+c #Conflicts:    2125000 | #Constraints:      45243
+c #Conflicts:    2126000 | #Constraints:      46243
+c #Conflicts:    2127000 | #Constraints:      47243
+c #Conflicts:    2128000 | #Constraints:      48243
+c #Conflicts:    2129000 | #Constraints:      49243
+c #Conflicts:    2130000 | #Constraints:      50243
+c #Conflicts:    2131000 | #Constraints:      51243
+c #Conflicts:    2132000 | #Constraints:      52243
+c #Conflicts:    2133000 | #Constraints:      53243
+c #Conflicts:    2134000 | #Constraints:      54243
+c #Conflicts:    2135000 | #Constraints:      55243
+c #Conflicts:    2136000 | #Constraints:      56243
+c #Conflicts:    2137000 | #Constraints:      57243
+c #Conflicts:    2138000 | #Constraints:      58243
+c #Conflicts:    2139000 | #Constraints:      59243
+c #Conflicts:    2140000 | #Constraints:      60243
+c #Conflicts:    2141000 | #Constraints:      61243
+c #Conflicts:    2142000 | #Constraints:      62243
+c #Conflicts:    2143000 | #Constraints:      63243
+c #Conflicts:    2144000 | #Constraints:      64243
+c #Conflicts:    2145000 | #Constraints:      65243
+c #Conflicts:    2146000 | #Constraints:      66243
+c #Conflicts:    2147000 | #Constraints:      67243
+c #Conflicts:    2148000 | #Constraints:      68243
+c #Conflicts:    2149000 | #Constraints:      69243
+c #Conflicts:    2150000 | #Constraints:      70243
+c #Conflicts:    2151000 | #Constraints:      71243
+c #Conflicts:    2152000 | #Constraints:      72243
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2153000 | #Constraints:      42504
+c #Conflicts:    2154000 | #Constraints:      43504
+c #Conflicts:    2155000 | #Constraints:      44504
+c #Conflicts:    2156000 | #Constraints:      45504
+c #Conflicts:    2157000 | #Constraints:      46504
+c #Conflicts:    2158000 | #Constraints:      47504
+c #Conflicts:    2159000 | #Constraints:      48504
+c #Conflicts:    2160000 | #Constraints:      49504
+c #Conflicts:    2161000 | #Constraints:      50504
+c #Conflicts:    2162000 | #Constraints:      51504
+c #Conflicts:    2163000 | #Constraints:      52504
+c #Conflicts:    2164000 | #Constraints:      53504
+c #Conflicts:    2165000 | #Constraints:      54504
+c #Conflicts:    2166000 | #Constraints:      55504
+c #Conflicts:    2167000 | #Constraints:      56504
+c #Conflicts:    2168000 | #Constraints:      57504
+c #Conflicts:    2169000 | #Constraints:      58504
+c #Conflicts:    2170000 | #Constraints:      59504
+c #Conflicts:    2171000 | #Constraints:      60504
+c #Conflicts:    2172000 | #Constraints:      61504
+c #Conflicts:    2173000 | #Constraints:      62504
+c #Conflicts:    2174000 | #Constraints:      63504
+c #Conflicts:    2175000 | #Constraints:      64504
+c #Conflicts:    2176000 | #Constraints:      65504
+c #Conflicts:    2177000 | #Constraints:      66504
+c #Conflicts:    2178000 | #Constraints:      67504
+c #Conflicts:    2179000 | #Constraints:      68504
+c #Conflicts:    2180000 | #Constraints:      69504
+c #Conflicts:    2181000 | #Constraints:      70504
+c #Conflicts:    2182000 | #Constraints:      71504
+c #Conflicts:    2183000 | #Constraints:      72504
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2184000 | #Constraints:      42637
+c #Conflicts:    2185000 | #Constraints:      43637
+c #Conflicts:    2186000 | #Constraints:      44637
+c #Conflicts:    2187000 | #Constraints:      45637
+c #Conflicts:    2188000 | #Constraints:      46637
+c #Conflicts:    2189000 | #Constraints:      47637
+c #Conflicts:    2190000 | #Constraints:      48637
+c #Conflicts:    2191000 | #Constraints:      49637
+c #Conflicts:    2192000 | #Constraints:      50637
+c #Conflicts:    2193000 | #Constraints:      51637
+c #Conflicts:    2194000 | #Constraints:      52637
+c #Conflicts:    2195000 | #Constraints:      53637
+c #Conflicts:    2196000 | #Constraints:      54637
+c #Conflicts:    2197000 | #Constraints:      55637
+c #Conflicts:    2198000 | #Constraints:      56637
+c #Conflicts:    2199000 | #Constraints:      57637
+c #Conflicts:    2200000 | #Constraints:      58637
+c #Conflicts:    2201000 | #Constraints:      59637
+c #Conflicts:    2202000 | #Constraints:      60637
+c #Conflicts:    2203000 | #Constraints:      61637
+c #Conflicts:    2204000 | #Constraints:      62637
+c #Conflicts:    2205000 | #Constraints:      63637
+c #Conflicts:    2206000 | #Constraints:      64637
+c #Conflicts:    2207000 | #Constraints:      65637
+c #Conflicts:    2208000 | #Constraints:      66637
+c #Conflicts:    2209000 | #Constraints:      67637
+c #Conflicts:    2210000 | #Constraints:      68637
+c #Conflicts:    2211000 | #Constraints:      69637
+c #Conflicts:    2212000 | #Constraints:      70637
+c #Conflicts:    2213000 | #Constraints:      71637
+c #Conflicts:    2214000 | #Constraints:      72637
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2215000 | #Constraints:      42532
+c #Conflicts:    2216000 | #Constraints:      43532
+c #Conflicts:    2217000 | #Constraints:      44532
+c #Conflicts:    2218000 | #Constraints:      45532
+c #Conflicts:    2219000 | #Constraints:      46532
+c #Conflicts:    2220000 | #Constraints:      47532
+c #Conflicts:    2221000 | #Constraints:      48532
+c #Conflicts:    2222000 | #Constraints:      49532
+c #Conflicts:    2223000 | #Constraints:      50532
+c #Conflicts:    2224000 | #Constraints:      51532
+c #Conflicts:    2225000 | #Constraints:      52532
+c #Conflicts:    2226000 | #Constraints:      53532
+c #Conflicts:    2227000 | #Constraints:      54532
+c #Conflicts:    2228000 | #Constraints:      55532
+c #Conflicts:    2229000 | #Constraints:      56532
+c #Conflicts:    2230000 | #Constraints:      57532
+c #Conflicts:    2231000 | #Constraints:      58532
+c #Conflicts:    2232000 | #Constraints:      59532
+c #Conflicts:    2233000 | #Constraints:      60532
+c #Conflicts:    2234000 | #Constraints:      61532
+c #Conflicts:    2235000 | #Constraints:      62532
+c #Conflicts:    2236000 | #Constraints:      63532
+c #Conflicts:    2237000 | #Constraints:      64532
+c #Conflicts:    2238000 | #Constraints:      65532
+c #Conflicts:    2239000 | #Constraints:      66532
+c #Conflicts:    2240000 | #Constraints:      67532
+c #Conflicts:    2241000 | #Constraints:      68532
+c #Conflicts:    2242000 | #Constraints:      69532
+c #Conflicts:    2243000 | #Constraints:      70532
+c #Conflicts:    2244000 | #Constraints:      71532
+c #Conflicts:    2245000 | #Constraints:      72532
+c #Conflicts:    2246000 | #Constraints:      73532
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2247000 | #Constraints:      43249
+c #Conflicts:    2248000 | #Constraints:      44249
+c #Conflicts:    2249000 | #Constraints:      45249
+c #Conflicts:    2250000 | #Constraints:      46249
+c #Conflicts:    2251000 | #Constraints:      47249
+c #Conflicts:    2252000 | #Constraints:      48249
+c #Conflicts:    2253000 | #Constraints:      49249
+c #Conflicts:    2254000 | #Constraints:      50249
+c #Conflicts:    2255000 | #Constraints:      51249
+c #Conflicts:    2256000 | #Constraints:      52249
+c #Conflicts:    2257000 | #Constraints:      53249
+c #Conflicts:    2258000 | #Constraints:      54249
+c #Conflicts:    2259000 | #Constraints:      55249
+c #Conflicts:    2260000 | #Constraints:      56249
+c #Conflicts:    2261000 | #Constraints:      57249
+c #Conflicts:    2262000 | #Constraints:      58249
+c #Conflicts:    2263000 | #Constraints:      59249
+c #Conflicts:    2264000 | #Constraints:      60249
+c #Conflicts:    2265000 | #Constraints:      61249
+c #Conflicts:    2266000 | #Constraints:      62249
+c #Conflicts:    2267000 | #Constraints:      63249
+c #Conflicts:    2268000 | #Constraints:      64249
+c #Conflicts:    2269000 | #Constraints:      65249
+c #Conflicts:    2270000 | #Constraints:      66249
+c #Conflicts:    2271000 | #Constraints:      67249
+c #Conflicts:    2272000 | #Constraints:      68249
+c #Conflicts:    2273000 | #Constraints:      69249
+c #Conflicts:    2274000 | #Constraints:      70249
+c #Conflicts:    2275000 | #Constraints:      71249
+c #Conflicts:    2276000 | #Constraints:      72249
+c #Conflicts:    2277000 | #Constraints:      73249
+c #Conflicts:    2278000 | #Constraints:      74249
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2279000 | #Constraints:      43669
+c #Conflicts:    2280000 | #Constraints:      44669
+c #Conflicts:    2281000 | #Constraints:      45669
+c #Conflicts:    2282000 | #Constraints:      46669
+c #Conflicts:    2283000 | #Constraints:      47669
+c #Conflicts:    2284000 | #Constraints:      48669
+c #Conflicts:    2285000 | #Constraints:      49669
+c #Conflicts:    2286000 | #Constraints:      50669
+c #Conflicts:    2287000 | #Constraints:      51669
+c #Conflicts:    2288000 | #Constraints:      52669
+c #Conflicts:    2289000 | #Constraints:      53669
+c #Conflicts:    2290000 | #Constraints:      54669
+c #Conflicts:    2291000 | #Constraints:      55669
+c #Conflicts:    2292000 | #Constraints:      56669
+c #Conflicts:    2293000 | #Constraints:      57669
+c #Conflicts:    2294000 | #Constraints:      58669
+c #Conflicts:    2295000 | #Constraints:      59669
+c #Conflicts:    2296000 | #Constraints:      60669
+c #Conflicts:    2297000 | #Constraints:      61669
+c #Conflicts:    2298000 | #Constraints:      62669
+c #Conflicts:    2299000 | #Constraints:      63669
+c #Conflicts:    2300000 | #Constraints:      64669
+c #Conflicts:    2301000 | #Constraints:      65669
+c #Conflicts:    2302000 | #Constraints:      66669
+c #Conflicts:    2303000 | #Constraints:      67669
+c #Conflicts:    2304000 | #Constraints:      68669
+c #Conflicts:    2305000 | #Constraints:      69669
+c #Conflicts:    2306000 | #Constraints:      70669
+c #Conflicts:    2307000 | #Constraints:      71669
+c #Conflicts:    2308000 | #Constraints:      72669
+c #Conflicts:    2309000 | #Constraints:      73669
+c #Conflicts:    2310000 | #Constraints:      74669
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2311000 | #Constraints:      43977
+c #Conflicts:    2312000 | #Constraints:      44977
+c #Conflicts:    2313000 | #Constraints:      45977
+c #Conflicts:    2314000 | #Constraints:      46977
+c #Conflicts:    2315000 | #Constraints:      47977
+c #Conflicts:    2316000 | #Constraints:      48977
+c #Conflicts:    2317000 | #Constraints:      49977
+c #Conflicts:    2318000 | #Constraints:      50977
+c #Conflicts:    2319000 | #Constraints:      51977
+c #Conflicts:    2320000 | #Constraints:      52977
+c #Conflicts:    2321000 | #Constraints:      53977
+c #Conflicts:    2322000 | #Constraints:      54977
+c #Conflicts:    2323000 | #Constraints:      55977
+c #Conflicts:    2324000 | #Constraints:      56977
+c #Conflicts:    2325000 | #Constraints:      57977
+c #Conflicts:    2326000 | #Constraints:      58977
+c #Conflicts:    2327000 | #Constraints:      59977
+c #Conflicts:    2328000 | #Constraints:      60977
+c #Conflicts:    2329000 | #Constraints:      61977
+c #Conflicts:    2330000 | #Constraints:      62977
+c #Conflicts:    2331000 | #Constraints:      63977
+c #Conflicts:    2332000 | #Constraints:      64977
+c #Conflicts:    2333000 | #Constraints:      65977
+c #Conflicts:    2334000 | #Constraints:      66977
+c #Conflicts:    2335000 | #Constraints:      67977
+c #Conflicts:    2336000 | #Constraints:      68977
+c #Conflicts:    2337000 | #Constraints:      69977
+c #Conflicts:    2338000 | #Constraints:      70977
+c #Conflicts:    2339000 | #Constraints:      71977
+c #Conflicts:    2340000 | #Constraints:      72977
+c #Conflicts:    2341000 | #Constraints:      73977
+c #Conflicts:    2342000 | #Constraints:      74977
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2343000 | #Constraints:      44135
+c #Conflicts:    2344000 | #Constraints:      45135
+c #Conflicts:    2345000 | #Constraints:      46135
+c #Conflicts:    2346000 | #Constraints:      47135
+c #Conflicts:    2347000 | #Constraints:      48135
+c #Conflicts:    2348000 | #Constraints:      49135
+c #Conflicts:    2349000 | #Constraints:      50135
+c #Conflicts:    2350000 | #Constraints:      51135
+c #Conflicts:    2351000 | #Constraints:      52135
+c #Conflicts:    2352000 | #Constraints:      53135
+c #Conflicts:    2353000 | #Constraints:      54135
+c #Conflicts:    2354000 | #Constraints:      55135
+c #Conflicts:    2355000 | #Constraints:      56135
+c #Conflicts:    2356000 | #Constraints:      57135
+c #Conflicts:    2357000 | #Constraints:      58135
+c #Conflicts:    2358000 | #Constraints:      59135
+c #Conflicts:    2359000 | #Constraints:      60135
+c #Conflicts:    2360000 | #Constraints:      61135
+c #Conflicts:    2361000 | #Constraints:      62135
+c #Conflicts:    2362000 | #Constraints:      63135
+c #Conflicts:    2363000 | #Constraints:      64135
+c #Conflicts:    2364000 | #Constraints:      65135
+c #Conflicts:    2365000 | #Constraints:      66135
+c #Conflicts:    2366000 | #Constraints:      67135
+c #Conflicts:    2367000 | #Constraints:      68135
+c #Conflicts:    2368000 | #Constraints:      69135
+c #Conflicts:    2369000 | #Constraints:      70135
+c #Conflicts:    2370000 | #Constraints:      71135
+c #Conflicts:    2371000 | #Constraints:      72135
+c #Conflicts:    2372000 | #Constraints:      73135
+c #Conflicts:    2373000 | #Constraints:      74135
+c #Conflicts:    2374000 | #Constraints:      75135
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2375000 | #Constraints:      44068
+c #Conflicts:    2376000 | #Constraints:      45068
+c #Conflicts:    2377000 | #Constraints:      46068
+c #Conflicts:    2378000 | #Constraints:      47068
+c #Conflicts:    2379000 | #Constraints:      48068
+c #Conflicts:    2380000 | #Constraints:      49068
+c #Conflicts:    2381000 | #Constraints:      50068
+c #Conflicts:    2382000 | #Constraints:      51068
+c #Conflicts:    2383000 | #Constraints:      52068
+c #Conflicts:    2384000 | #Constraints:      53068
+c #Conflicts:    2385000 | #Constraints:      54068
+c #Conflicts:    2386000 | #Constraints:      55068
+c #Conflicts:    2387000 | #Constraints:      56068
+c #Conflicts:    2388000 | #Constraints:      57068
+c #Conflicts:    2389000 | #Constraints:      58068
+c #Conflicts:    2390000 | #Constraints:      59068
+c #Conflicts:    2391000 | #Constraints:      60068
+c #Conflicts:    2392000 | #Constraints:      61068
+c #Conflicts:    2393000 | #Constraints:      62068
+c #Conflicts:    2394000 | #Constraints:      63068
+c #Conflicts:    2395000 | #Constraints:      64068
+c #Conflicts:    2396000 | #Constraints:      65068
+c #Conflicts:    2397000 | #Constraints:      66068
+c #Conflicts:    2398000 | #Constraints:      67068
+c #Conflicts:    2399000 | #Constraints:      68068
+c #Conflicts:    2400000 | #Constraints:      69068
+c #Conflicts:    2401000 | #Constraints:      70068
+c #Conflicts:    2402000 | #Constraints:      71068
+c #Conflicts:    2403000 | #Constraints:      72068
+c #Conflicts:    2404000 | #Constraints:      73068
+c #Conflicts:    2405000 | #Constraints:      74068
+c #Conflicts:    2406000 | #Constraints:      75068
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2407000 | #Constraints:      43735
+c #Conflicts:    2408000 | #Constraints:      44735
+c #Conflicts:    2409000 | #Constraints:      45735
+c #Conflicts:    2410000 | #Constraints:      46735
+c #Conflicts:    2411000 | #Constraints:      47735
+c #Conflicts:    2412000 | #Constraints:      48735
+c #Conflicts:    2413000 | #Constraints:      49735
+c #Conflicts:    2414000 | #Constraints:      50735
+c #Conflicts:    2415000 | #Constraints:      51735
+c #Conflicts:    2416000 | #Constraints:      52735
+c #Conflicts:    2417000 | #Constraints:      53735
+c #Conflicts:    2418000 | #Constraints:      54735
+c #Conflicts:    2419000 | #Constraints:      55735
+c #Conflicts:    2420000 | #Constraints:      56735
+c #Conflicts:    2421000 | #Constraints:      57735
+c #Conflicts:    2422000 | #Constraints:      58735
+c #Conflicts:    2423000 | #Constraints:      59735
+c #Conflicts:    2424000 | #Constraints:      60735
+c #Conflicts:    2425000 | #Constraints:      61735
+c #Conflicts:    2426000 | #Constraints:      62735
+c #Conflicts:    2427000 | #Constraints:      63735
+c #Conflicts:    2428000 | #Constraints:      64735
+c #Conflicts:    2429000 | #Constraints:      65735
+c #Conflicts:    2430000 | #Constraints:      66735
+c #Conflicts:    2431000 | #Constraints:      67735
+c #Conflicts:    2432000 | #Constraints:      68735
+c #Conflicts:    2433000 | #Constraints:      69735
+c #Conflicts:    2434000 | #Constraints:      70735
+c #Conflicts:    2435000 | #Constraints:      71735
+c #Conflicts:    2436000 | #Constraints:      72735
+c #Conflicts:    2437000 | #Constraints:      73735
+c #Conflicts:    2438000 | #Constraints:      74735
+c #Conflicts:    2439000 | #Constraints:      75735
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2440000 | #Constraints:      44295
+c #Conflicts:    2441000 | #Constraints:      45295
+c #Conflicts:    2442000 | #Constraints:      46295
+c #Conflicts:    2443000 | #Constraints:      47295
+c #Conflicts:    2444000 | #Constraints:      48295
+c #Conflicts:    2445000 | #Constraints:      49295
+c #Conflicts:    2446000 | #Constraints:      50295
+c #Conflicts:    2447000 | #Constraints:      51295
+c #Conflicts:    2448000 | #Constraints:      52295
+c #Conflicts:    2449000 | #Constraints:      53295
+c #Conflicts:    2450000 | #Constraints:      54295
+c #Conflicts:    2451000 | #Constraints:      55295
+c #Conflicts:    2452000 | #Constraints:      56295
+c #Conflicts:    2453000 | #Constraints:      57295
+c #Conflicts:    2454000 | #Constraints:      58295
+c #Conflicts:    2455000 | #Constraints:      59295
+c #Conflicts:    2456000 | #Constraints:      60295
+c #Conflicts:    2457000 | #Constraints:      61295
+c #Conflicts:    2458000 | #Constraints:      62295
+c #Conflicts:    2459000 | #Constraints:      63295
+c #Conflicts:    2460000 | #Constraints:      64295
+c #Conflicts:    2461000 | #Constraints:      65295
+c #Conflicts:    2462000 | #Constraints:      66295
+c #Conflicts:    2463000 | #Constraints:      67295
+c #Conflicts:    2464000 | #Constraints:      68295
+c #Conflicts:    2465000 | #Constraints:      69295
+c #Conflicts:    2466000 | #Constraints:      70295
+c #Conflicts:    2467000 | #Constraints:      71295
+c #Conflicts:    2468000 | #Constraints:      72295
+c #Conflicts:    2469000 | #Constraints:      73295
+c #Conflicts:    2470000 | #Constraints:      74295
+c #Conflicts:    2471000 | #Constraints:      75295
+c #Conflicts:    2472000 | #Constraints:      76295
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2473000 | #Constraints:      44632
+c #Conflicts:    2474000 | #Constraints:      45632
+c #Conflicts:    2475000 | #Constraints:      46632
+c #Conflicts:    2476000 | #Constraints:      47632
+c #Conflicts:    2477000 | #Constraints:      48632
+c #Conflicts:    2478000 | #Constraints:      49632
+c #Conflicts:    2479000 | #Constraints:      50632
+c #Conflicts:    2480000 | #Constraints:      51632
+c #Conflicts:    2481000 | #Constraints:      52632
+c #Conflicts:    2482000 | #Constraints:      53632
+c #Conflicts:    2483000 | #Constraints:      54632
+c #Conflicts:    2484000 | #Constraints:      55632
+c #Conflicts:    2485000 | #Constraints:      56632
+c #Conflicts:    2486000 | #Constraints:      57632
+c #Conflicts:    2487000 | #Constraints:      58632
+c #Conflicts:    2488000 | #Constraints:      59632
+c #Conflicts:    2489000 | #Constraints:      60632
+c #Conflicts:    2490000 | #Constraints:      61632
+c #Conflicts:    2491000 | #Constraints:      62632
+c #Conflicts:    2492000 | #Constraints:      63632
+c #Conflicts:    2493000 | #Constraints:      64632
+c #Conflicts:    2494000 | #Constraints:      65632
+c #Conflicts:    2495000 | #Constraints:      66632
+c #Conflicts:    2496000 | #Constraints:      67632
+c #Conflicts:    2497000 | #Constraints:      68632
+c #Conflicts:    2498000 | #Constraints:      69632
+c #Conflicts:    2499000 | #Constraints:      70632
+c #Conflicts:    2500000 | #Constraints:      71632
+c #Conflicts:    2501000 | #Constraints:      72632
+c #Conflicts:    2502000 | #Constraints:      73632
+c #Conflicts:    2503000 | #Constraints:      74632
+c #Conflicts:    2504000 | #Constraints:      75632
+c #Conflicts:    2505000 | #Constraints:      76632
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2506000 | #Constraints:      44634
+c #Conflicts:    2507000 | #Constraints:      45634
+c #Conflicts:    2508000 | #Constraints:      46634
+c #Conflicts:    2509000 | #Constraints:      47634
+c #Conflicts:    2510000 | #Constraints:      48634
+c #Conflicts:    2511000 | #Constraints:      49634
+c #Conflicts:    2512000 | #Constraints:      50634
+c #Conflicts:    2513000 | #Constraints:      51634
+c #Conflicts:    2514000 | #Constraints:      52634
+c #Conflicts:    2515000 | #Constraints:      53634
+c #Conflicts:    2516000 | #Constraints:      54634
+c #Conflicts:    2517000 | #Constraints:      55634
+c #Conflicts:    2518000 | #Constraints:      56634
+c #Conflicts:    2519000 | #Constraints:      57634
+c #Conflicts:    2520000 | #Constraints:      58634
+c #Conflicts:    2521000 | #Constraints:      59634
+c #Conflicts:    2522000 | #Constraints:      60634
+c #Conflicts:    2523000 | #Constraints:      61634
+c #Conflicts:    2524000 | #Constraints:      62634
+c #Conflicts:    2525000 | #Constraints:      63634
+c #Conflicts:    2526000 | #Constraints:      64634
+c #Conflicts:    2527000 | #Constraints:      65634
+c #Conflicts:    2528000 | #Constraints:      66634
+c #Conflicts:    2529000 | #Constraints:      67634
+c #Conflicts:    2530000 | #Constraints:      68634
+c #Conflicts:    2531000 | #Constraints:      69634
+c #Conflicts:    2532000 | #Constraints:      70634
+c #Conflicts:    2533000 | #Constraints:      71634
+c #Conflicts:    2534000 | #Constraints:      72634
+c #Conflicts:    2535000 | #Constraints:      73634
+c #Conflicts:    2536000 | #Constraints:      74634
+c #Conflicts:    2537000 | #Constraints:      75634
+c #Conflicts:    2538000 | #Constraints:      76634
+c #Conflicts:    2539000 | #Constraints:      77634
+c #Conflicts:    2540000 | #Constraints:      78634
+c #Conflicts:    2541000 | #Constraints:      79634
+c #Conflicts:    2542000 | #Constraints:      80634
+c #Conflicts:    2543000 | #Constraints:      81634
+c #Conflicts:    2544000 | #Constraints:      82634
+c #Conflicts:    2545000 | #Constraints:      83634
+c #Conflicts:    2546000 | #Constraints:      84634
+c #Conflicts:    2547000 | #Constraints:      85634
+c #Conflicts:    2548000 | #Constraints:      86634
+c #Conflicts:    2549000 | #Constraints:      87634
+c #Conflicts:    2550000 | #Constraints:      88634
+c #Conflicts:    2551000 | #Constraints:      89634
+c #Conflicts:    2552000 | #Constraints:      90634
+c #Conflicts:    2553000 | #Constraints:      91634
+c #Conflicts:    2554000 | #Constraints:      92634
+c #Conflicts:    2555000 | #Constraints:      93634
+c #Conflicts:    2556000 | #Constraints:      94634
+c #Conflicts:    2557000 | #Constraints:      95634
+c #Conflicts:    2558000 | #Constraints:      96634
+c #Conflicts:    2559000 | #Constraints:      97634
+c #Conflicts:    2560000 | #Constraints:      98634
+c #Conflicts:    2561000 | #Constraints:      99634
+c #Conflicts:    2562000 | #Constraints:     100634
+c #Conflicts:    2563000 | #Constraints:     101634
+c #Conflicts:    2564000 | #Constraints:     102634
+c #Conflicts:    2565000 | #Constraints:     103634
+c #Conflicts:    2566000 | #Constraints:     104634
+c #Conflicts:    2567000 | #Constraints:     105634
+c #Conflicts:    2568000 | #Constraints:     106634
+c #Conflicts:    2569000 | #Constraints:     107634
+c #Conflicts:    2570000 | #Constraints:     108634
+c #Conflicts:    2571000 | #Constraints:     109634
+c #Conflicts:    2572000 | #Constraints:     110634
+c #Conflicts:    2573000 | #Constraints:     111634
+c #Conflicts:    2574000 | #Constraints:     112634
+c #Conflicts:    2575000 | #Constraints:     113634
+c #Conflicts:    2576000 | #Constraints:     114634
+c #Conflicts:    2577000 | #Constraints:     115634
+c #Conflicts:    2578000 | #Constraints:     116634
+c #Conflicts:    2579000 | #Constraints:     117634
+c #Conflicts:    2580000 | #Constraints:     118634
+c #Conflicts:    2581000 | #Constraints:     119634
+c #Conflicts:    2582000 | #Constraints:     120634
+c #Conflicts:    2583000 | #Constraints:     121634
+c #Conflicts:    2584000 | #Constraints:     122634
+c #Conflicts:    2585000 | #Constraints:     123634
+c #Conflicts:    2586000 | #Constraints:     124634
+c #Conflicts:    2587000 | #Constraints:     125634
+c #Conflicts:    2588000 | #Constraints:     126634
+c #Conflicts:    2589000 | #Constraints:     127634
+c #Conflicts:    2590000 | #Constraints:     128634
+c #Conflicts:    2591000 | #Constraints:     129634
+c #Conflicts:    2592000 | #Constraints:     130634
+c #Conflicts:    2593000 | #Constraints:     131634
+c #Conflicts:    2594000 | #Constraints:     132634
+c #Conflicts:    2595000 | #Constraints:     133634
+c #Conflicts:    2596000 | #Constraints:     134634
+c #Conflicts:    2597000 | #Constraints:     135634
+c #Conflicts:    2598000 | #Constraints:     136634
+c #Conflicts:    2599000 | #Constraints:     137634
+c #Conflicts:    2600000 | #Constraints:     138634
+c #Conflicts:    2601000 | #Constraints:     139634
+c #Conflicts:    2602000 | #Constraints:     140634
+c #Conflicts:    2603000 | #Constraints:     141634
+c #Conflicts:    2604000 | #Constraints:     142634
+c #Conflicts:    2605000 | #Constraints:     143634
+c #Conflicts:    2606000 | #Constraints:     144634
+c #Conflicts:    2607000 | #Constraints:     145634
+c #Conflicts:    2608000 | #Constraints:     146634
+c #Conflicts:    2609000 | #Constraints:     147634
+c #Conflicts:    2610000 | #Constraints:     148634
+c #Conflicts:    2611000 | #Constraints:     149634
+c #Conflicts:    2612000 | #Constraints:     150634
+c #Conflicts:    2613000 | #Constraints:     151634
+c #Conflicts:    2614000 | #Constraints:     152634
+c #Conflicts:    2615000 | #Constraints:     153634
+c #Conflicts:    2616000 | #Constraints:     154634
+c #Conflicts:    2617000 | #Constraints:     155634
+c #Conflicts:    2618000 | #Constraints:     156634
+c #Conflicts:    2619000 | #Constraints:     157634
+c #Conflicts:    2620000 | #Constraints:     158634
+c #Conflicts:    2621000 | #Constraints:     159634
+c #Conflicts:    2622000 | #Constraints:     160634
+c #Conflicts:    2623000 | #Constraints:     161634
+c #Conflicts:    2624000 | #Constraints:     162634
+c #Conflicts:    2625000 | #Constraints:     163634
+c #Conflicts:    2626000 | #Constraints:     164634
+c #Conflicts:    2627000 | #Constraints:     165634
+c #Conflicts:    2628000 | #Constraints:     166634
+c #Conflicts:    2629000 | #Constraints:     167634
+c #Conflicts:    2630000 | #Constraints:     168634
+c #Conflicts:    2631000 | #Constraints:     169634
+c #Conflicts:    2632000 | #Constraints:     170634
+c #Conflicts:    2633000 | #Constraints:     171634
+c #Conflicts:    2634000 | #Constraints:     172634
+c #Conflicts:    2635000 | #Constraints:     173634
+c #Conflicts:    2636000 | #Constraints:     174634
+c #Conflicts:    2637000 | #Constraints:     175634
+c #Conflicts:    2638000 | #Constraints:     176634
+c #Conflicts:    2639000 | #Constraints:     177634
+c #Conflicts:    2640000 | #Constraints:     178634
+c #Conflicts:    2641000 | #Constraints:     179634
+c #Conflicts:    2642000 | #Constraints:     180634
+c #Conflicts:    2643000 | #Constraints:     181634
+c #Conflicts:    2644000 | #Constraints:     182634
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2645000 | #Constraints:      97900
+c #Conflicts:    2646000 | #Constraints:      98900
+c #Conflicts:    2647000 | #Constraints:      99900
+c #Conflicts:    2648000 | #Constraints:     100900
+c #Conflicts:    2649000 | #Constraints:     101900
+c #Conflicts:    2650000 | #Constraints:     102900
+c #Conflicts:    2651000 | #Constraints:     103900
+c #Conflicts:    2652000 | #Constraints:     104900
+c #Conflicts:    2653000 | #Constraints:     105900
+c #Conflicts:    2654000 | #Constraints:     106900
+c #Conflicts:    2655000 | #Constraints:     107900
+c #Conflicts:    2656000 | #Constraints:     108900
+c #Conflicts:    2657000 | #Constraints:     109900
+c #Conflicts:    2658000 | #Constraints:     110900
+c #Conflicts:    2659000 | #Constraints:     111900
+c #Conflicts:    2660000 | #Constraints:     112900
+c #Conflicts:    2661000 | #Constraints:     113900
+c #Conflicts:    2662000 | #Constraints:     114900
+c #Conflicts:    2663000 | #Constraints:     115900
+c #Conflicts:    2664000 | #Constraints:     116900
+c #Conflicts:    2665000 | #Constraints:     117900
+c #Conflicts:    2666000 | #Constraints:     118900
+c #Conflicts:    2667000 | #Constraints:     119900
+c #Conflicts:    2668000 | #Constraints:     120900
+c #Conflicts:    2669000 | #Constraints:     121900
+c #Conflicts:    2670000 | #Constraints:     122900
+c #Conflicts:    2671000 | #Constraints:     123900
+c #Conflicts:    2672000 | #Constraints:     124900
+c #Conflicts:    2673000 | #Constraints:     125900
+c #Conflicts:    2674000 | #Constraints:     126900
+c #Conflicts:    2675000 | #Constraints:     127900
+c #Conflicts:    2676000 | #Constraints:     128900
+c #Conflicts:    2677000 | #Constraints:     129900
+c #Conflicts:    2678000 | #Constraints:     130900
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2679000 | #Constraints:      71731
+c #Conflicts:    2680000 | #Constraints:      72731
+c #Conflicts:    2681000 | #Constraints:      73731
+c #Conflicts:    2682000 | #Constraints:      74731
+c #Conflicts:    2683000 | #Constraints:      75731
+c #Conflicts:    2684000 | #Constraints:      76731
+c #Conflicts:    2685000 | #Constraints:      77731
+c #Conflicts:    2686000 | #Constraints:      78731
+c #Conflicts:    2687000 | #Constraints:      79731
+c #Conflicts:    2688000 | #Constraints:      80731
+c #Conflicts:    2689000 | #Constraints:      81731
+c #Conflicts:    2690000 | #Constraints:      82731
+c #Conflicts:    2691000 | #Constraints:      83731
+c #Conflicts:    2692000 | #Constraints:      84731
+c #Conflicts:    2693000 | #Constraints:      85731
+c #Conflicts:    2694000 | #Constraints:      86731
+c #Conflicts:    2695000 | #Constraints:      87731
+c #Conflicts:    2696000 | #Constraints:      88731
+c #Conflicts:    2697000 | #Constraints:      89731
+c #Conflicts:    2698000 | #Constraints:      90731
+c #Conflicts:    2699000 | #Constraints:      91731
+c #Conflicts:    2700000 | #Constraints:      92731
+c #Conflicts:    2701000 | #Constraints:      93731
+c #Conflicts:    2702000 | #Constraints:      94731
+c #Conflicts:    2703000 | #Constraints:      95731
+c #Conflicts:    2704000 | #Constraints:      96731
+c #Conflicts:    2705000 | #Constraints:      97731
+c #Conflicts:    2706000 | #Constraints:      98731
+c #Conflicts:    2707000 | #Constraints:      99731
+c #Conflicts:    2708000 | #Constraints:     100731
+c #Conflicts:    2709000 | #Constraints:     101731
+c #Conflicts:    2710000 | #Constraints:     102731
+c #Conflicts:    2711000 | #Constraints:     103731
+c #Conflicts:    2712000 | #Constraints:     104731
+c #Conflicts:    2713000 | #Constraints:     105731
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2714000 | #Constraints:      59496
+c #Conflicts:    2715000 | #Constraints:      60496
+c #Conflicts:    2716000 | #Constraints:      61496
+c #Conflicts:    2717000 | #Constraints:      62496
+c #Conflicts:    2718000 | #Constraints:      63496
+c #Conflicts:    2719000 | #Constraints:      64496
+c #Conflicts:    2720000 | #Constraints:      65496
+c #Conflicts:    2721000 | #Constraints:      66496
+c #Conflicts:    2722000 | #Constraints:      67496
+c #Conflicts:    2723000 | #Constraints:      68496
+c #Conflicts:    2724000 | #Constraints:      69496
+c #Conflicts:    2725000 | #Constraints:      70496
+c #Conflicts:    2726000 | #Constraints:      71496
+c #Conflicts:    2727000 | #Constraints:      72496
+c #Conflicts:    2728000 | #Constraints:      73496
+c #Conflicts:    2729000 | #Constraints:      74496
+c #Conflicts:    2730000 | #Constraints:      75496
+c #Conflicts:    2731000 | #Constraints:      76496
+c #Conflicts:    2732000 | #Constraints:      77496
+c #Conflicts:    2733000 | #Constraints:      78496
+c #Conflicts:    2734000 | #Constraints:      79496
+c #Conflicts:    2735000 | #Constraints:      80496
+c #Conflicts:    2736000 | #Constraints:      81496
+c #Conflicts:    2737000 | #Constraints:      82496
+c #Conflicts:    2738000 | #Constraints:      83496
+c #Conflicts:    2739000 | #Constraints:      84496
+c #Conflicts:    2740000 | #Constraints:      85496
+c #Conflicts:    2741000 | #Constraints:      86496
+c #Conflicts:    2742000 | #Constraints:      87496
+c #Conflicts:    2743000 | #Constraints:      88496
+c #Conflicts:    2744000 | #Constraints:      89496
+c #Conflicts:    2745000 | #Constraints:      90496
+c #Conflicts:    2746000 | #Constraints:      91496
+c #Conflicts:    2747000 | #Constraints:      92496
+c #Conflicts:    2748000 | #Constraints:      93496
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2749000 | #Constraints:      53324
+c #Conflicts:    2750000 | #Constraints:      54324
+c #Conflicts:    2751000 | #Constraints:      55324
+c #Conflicts:    2752000 | #Constraints:      56324
+c #Conflicts:    2753000 | #Constraints:      57324
+c #Conflicts:    2754000 | #Constraints:      58324
+c #Conflicts:    2755000 | #Constraints:      59324
+c #Conflicts:    2756000 | #Constraints:      60324
+c #Conflicts:    2757000 | #Constraints:      61324
+c #Conflicts:    2758000 | #Constraints:      62324
+c #Conflicts:    2759000 | #Constraints:      63324
+c #Conflicts:    2760000 | #Constraints:      64324
+c #Conflicts:    2761000 | #Constraints:      65324
+c #Conflicts:    2762000 | #Constraints:      66324
+c #Conflicts:    2763000 | #Constraints:      67324
+c #Conflicts:    2764000 | #Constraints:      68324
+c #Conflicts:    2765000 | #Constraints:      69324
+c #Conflicts:    2766000 | #Constraints:      70324
+c #Conflicts:    2767000 | #Constraints:      71324
+c #Conflicts:    2768000 | #Constraints:      72324
+c #Conflicts:    2769000 | #Constraints:      73324
+c #Conflicts:    2770000 | #Constraints:      74324
+c #Conflicts:    2771000 | #Constraints:      75324
+c #Conflicts:    2772000 | #Constraints:      76324
+c #Conflicts:    2773000 | #Constraints:      77324
+c #Conflicts:    2774000 | #Constraints:      78324
+c #Conflicts:    2775000 | #Constraints:      79324
+c #Conflicts:    2776000 | #Constraints:      80324
+c #Conflicts:    2777000 | #Constraints:      81324
+c #Conflicts:    2778000 | #Constraints:      82324
+c #Conflicts:    2779000 | #Constraints:      83324
+c #Conflicts:    2780000 | #Constraints:      84324
+c #Conflicts:    2781000 | #Constraints:      85324
+c #Conflicts:    2782000 | #Constraints:      86324
+c #Conflicts:    2783000 | #Constraints:      87324
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2784000 | #Constraints:      50354
+c #Conflicts:    2785000 | #Constraints:      51354
+c #Conflicts:    2786000 | #Constraints:      52354
+c #Conflicts:    2787000 | #Constraints:      53354
+c #Conflicts:    2788000 | #Constraints:      54354
+c #Conflicts:    2789000 | #Constraints:      55354
+c #Conflicts:    2790000 | #Constraints:      56354
+c #Conflicts:    2791000 | #Constraints:      57354
+c #Conflicts:    2792000 | #Constraints:      58354
+c #Conflicts:    2793000 | #Constraints:      59354
+c #Conflicts:    2794000 | #Constraints:      60354
+c #Conflicts:    2795000 | #Constraints:      61354
+c #Conflicts:    2796000 | #Constraints:      62354
+c #Conflicts:    2797000 | #Constraints:      63354
+c #Conflicts:    2798000 | #Constraints:      64354
+c #Conflicts:    2799000 | #Constraints:      65354
+c #Conflicts:    2800000 | #Constraints:      66354
+c #Conflicts:    2801000 | #Constraints:      67354
+c #Conflicts:    2802000 | #Constraints:      68354
+c #Conflicts:    2803000 | #Constraints:      69354
+c #Conflicts:    2804000 | #Constraints:      70354
+c #Conflicts:    2805000 | #Constraints:      71354
+c #Conflicts:    2806000 | #Constraints:      72354
+c #Conflicts:    2807000 | #Constraints:      73354
+c #Conflicts:    2808000 | #Constraints:      74354
+c #Conflicts:    2809000 | #Constraints:      75354
+c #Conflicts:    2810000 | #Constraints:      76354
+c #Conflicts:    2811000 | #Constraints:      77354
+c #Conflicts:    2812000 | #Constraints:      78354
+c #Conflicts:    2813000 | #Constraints:      79354
+c #Conflicts:    2814000 | #Constraints:      80354
+c #Conflicts:    2815000 | #Constraints:      81354
+c #Conflicts:    2816000 | #Constraints:      82354
+c #Conflicts:    2817000 | #Constraints:      83354
+c #Conflicts:    2818000 | #Constraints:      84354
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2819000 | #Constraints:      48777
+c #Conflicts:    2820000 | #Constraints:      49777
+c #Conflicts:    2821000 | #Constraints:      50777
+c #Conflicts:    2822000 | #Constraints:      51777
+c #Conflicts:    2823000 | #Constraints:      52777
+c #Conflicts:    2824000 | #Constraints:      53777
+c #Conflicts:    2825000 | #Constraints:      54777
+c #Conflicts:    2826000 | #Constraints:      55777
+c #Conflicts:    2827000 | #Constraints:      56777
+c #Conflicts:    2828000 | #Constraints:      57777
+c #Conflicts:    2829000 | #Constraints:      58777
+c #Conflicts:    2830000 | #Constraints:      59777
+c #Conflicts:    2831000 | #Constraints:      60777
+c #Conflicts:    2832000 | #Constraints:      61777
+c #Conflicts:    2833000 | #Constraints:      62777
+c #Conflicts:    2834000 | #Constraints:      63777
+c #Conflicts:    2835000 | #Constraints:      64777
+c #Conflicts:    2836000 | #Constraints:      65777
+c #Conflicts:    2837000 | #Constraints:      66777
+c #Conflicts:    2838000 | #Constraints:      67777
+c #Conflicts:    2839000 | #Constraints:      68777
+c #Conflicts:    2840000 | #Constraints:      69777
+c #Conflicts:    2841000 | #Constraints:      70777
+c #Conflicts:    2842000 | #Constraints:      71777
+c #Conflicts:    2843000 | #Constraints:      72777
+c #Conflicts:    2844000 | #Constraints:      73777
+c #Conflicts:    2845000 | #Constraints:      74777
+c #Conflicts:    2846000 | #Constraints:      75777
+c #Conflicts:    2847000 | #Constraints:      76777
+c #Conflicts:    2848000 | #Constraints:      77777
+c #Conflicts:    2849000 | #Constraints:      78777
+c #Conflicts:    2850000 | #Constraints:      79777
+c #Conflicts:    2851000 | #Constraints:      80777
+c #Conflicts:    2852000 | #Constraints:      81777
+c #Conflicts:    2853000 | #Constraints:      82777
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2854000 | #Constraints:      47828
+c #Conflicts:    2855000 | #Constraints:      48828
+c #Conflicts:    2856000 | #Constraints:      49828
+c #Conflicts:    2857000 | #Constraints:      50828
+c #Conflicts:    2858000 | #Constraints:      51828
+c #Conflicts:    2859000 | #Constraints:      52828
+c #Conflicts:    2860000 | #Constraints:      53828
+c #Conflicts:    2861000 | #Constraints:      54828
+c #Conflicts:    2862000 | #Constraints:      55828
+c #Conflicts:    2863000 | #Constraints:      56828
+c #Conflicts:    2864000 | #Constraints:      57828
+c #Conflicts:    2865000 | #Constraints:      58828
+c #Conflicts:    2866000 | #Constraints:      59828
+c #Conflicts:    2867000 | #Constraints:      60828
+c #Conflicts:    2868000 | #Constraints:      61828
+c #Conflicts:    2869000 | #Constraints:      62828
+c #Conflicts:    2870000 | #Constraints:      63828
+c #Conflicts:    2871000 | #Constraints:      64828
+c #Conflicts:    2872000 | #Constraints:      65828
+c #Conflicts:    2873000 | #Constraints:      66828
+c #Conflicts:    2874000 | #Constraints:      67828
+c #Conflicts:    2875000 | #Constraints:      68828
+c #Conflicts:    2876000 | #Constraints:      69828
+c #Conflicts:    2877000 | #Constraints:      70828
+c #Conflicts:    2878000 | #Constraints:      71828
+c #Conflicts:    2879000 | #Constraints:      72828
+c #Conflicts:    2880000 | #Constraints:      73828
+c #Conflicts:    2881000 | #Constraints:      74828
+c #Conflicts:    2882000 | #Constraints:      75828
+c #Conflicts:    2883000 | #Constraints:      76828
+c #Conflicts:    2884000 | #Constraints:      77828
+c #Conflicts:    2885000 | #Constraints:      78828
+c #Conflicts:    2886000 | #Constraints:      79828
+c #Conflicts:    2887000 | #Constraints:      80828
+c #Conflicts:    2888000 | #Constraints:      81828
+c #Conflicts:    2889000 | #Constraints:      82828
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2890000 | #Constraints:      47997
+c #Conflicts:    2891000 | #Constraints:      48997
+c #Conflicts:    2892000 | #Constraints:      49997
+c #Conflicts:    2893000 | #Constraints:      50997
+c #Conflicts:    2894000 | #Constraints:      51997
+c #Conflicts:    2895000 | #Constraints:      52997
+c #Conflicts:    2896000 | #Constraints:      53997
+c #Conflicts:    2897000 | #Constraints:      54997
+c #Conflicts:    2898000 | #Constraints:      55997
+c #Conflicts:    2899000 | #Constraints:      56997
+c #Conflicts:    2900000 | #Constraints:      57997
+c #Conflicts:    2901000 | #Constraints:      58997
+c #Conflicts:    2902000 | #Constraints:      59997
+c #Conflicts:    2903000 | #Constraints:      60997
+c #Conflicts:    2904000 | #Constraints:      61997
+c #Conflicts:    2905000 | #Constraints:      62997
+c #Conflicts:    2906000 | #Constraints:      63997
+c #Conflicts:    2907000 | #Constraints:      64997
+c #Conflicts:    2908000 | #Constraints:      65997
+c #Conflicts:    2909000 | #Constraints:      66997
+c #Conflicts:    2910000 | #Constraints:      67997
+c #Conflicts:    2911000 | #Constraints:      68997
+c #Conflicts:    2912000 | #Constraints:      69997
+c #Conflicts:    2913000 | #Constraints:      70997
+c #Conflicts:    2914000 | #Constraints:      71997
+c #Conflicts:    2915000 | #Constraints:      72997
+c #Conflicts:    2916000 | #Constraints:      73997
+c #Conflicts:    2917000 | #Constraints:      74997
+c #Conflicts:    2918000 | #Constraints:      75997
+c #Conflicts:    2919000 | #Constraints:      76997
+c #Conflicts:    2920000 | #Constraints:      77997
+c #Conflicts:    2921000 | #Constraints:      78997
+c #Conflicts:    2922000 | #Constraints:      79997
+c #Conflicts:    2923000 | #Constraints:      80997
+c #Conflicts:    2924000 | #Constraints:      81997
+c #Conflicts:    2925000 | #Constraints:      82997
+c INPROCESSING
+c GARBAGE COLLECT
+c #Conflicts:    2926000 | #Constraints:      48186
+c #Conflicts:    2927000 | #Constraints:      49186
+c #Conflicts:    2928000 | #Constraints:      50186
+c #Conflicts:    2929000 | #Constraints:      51186
+c #Conflicts:    2930000 | #Constraints:      52186
+c #Conflicts:    2931000 | #Constraints:      53186
+c #Conflicts:    2932000 | #Constraints:      54186
+c #Conflicts:    2933000 | #Constraints:      55186
+c #Conflicts:    2934000 | #Constraints:      56186
+c #Conflicts:    2935000 | #Constraints:      57186
+c #Conflicts:    2936000 | #Constraints:      58186
+c #Conflicts:    2937000 | #Constraints:      59186
+c #Conflicts:    2938000 | #Constraints:      60186
+c #Conflicts:    2939000 | #Constraints:      61186
+c #Conflicts:    2940000 | #Constraints:      62186
+c #Conflicts:    2941000 | #Constraints:      63186
+c #Conflicts:    2942000 | #Constraints:      64186
+c #Conflicts:    2943000 | #Constraints:      65186
+c #Conflicts:    2944000 | #Constraints:      66186
+c #Conflicts:    2945000 | #Constraints:      67186
+c #Conflicts:    2946000 | #Constraints:      68186
+c #Conflicts:    2947000 | #Constraints:      69186
+c #Conflicts:    2948000 | #Constraints:      70186
+c #Conflicts:    2949000 | #Constraints:      71186
+c #Conflicts:    2950000 | #Constraints:      72186
+c #Conflicts:    2951000 | #Constraints:      73186
+c #Conflicts:    2952000 | #Constraints:   

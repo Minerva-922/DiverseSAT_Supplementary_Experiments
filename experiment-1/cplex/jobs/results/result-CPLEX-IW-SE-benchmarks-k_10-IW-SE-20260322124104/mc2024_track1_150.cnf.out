@@ -1,0 +1,91 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 4 times.
+MIP Presolve eliminated 442995 rows and 14513 columns.
+MIP Presolve modified 790 coefficients.
+Aggregator did 6057 substitutions.
+Reduced MIP has 25024 rows, 14955 columns, and 102973 nonzeros.
+Reduced MIP has 14955 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.99 sec. (582.22 ticks)
+Probing time = 0.01 sec. (9.10 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 28 rows and 0 columns.
+MIP Presolve modified 258 coefficients.
+Reduced MIP has 24996 rows, 14955 columns, and 102558 nonzeros.
+Reduced MIP has 14955 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.13 sec. (73.73 ticks)
+Probing time = 0.01 sec. (8.78 ticks)
+Clique table members: 35079.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 140.58 sec. (96137.27 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     2984.0000  2539                   2984.0000    81134         
+      0     0     2860.0000  2705                  Cuts: 6349   150780         
+      0     0     2860.0000  3931                  Cuts: 2203   386947         
+      0     0     2845.0000  4084                   Cuts: 249   634265         
+      0     0     2842.0000  4483                  Cuts: 1134   814741         
+      0     0     2842.0000  4556                   Cuts: 938  1086103         
+Detecting symmetries...
+Heuristic still looking.
+Heuristic still looking.
+Heuristic still looking.
+*     0+    0                            0.0000     2842.0000              --- 
+Detecting symmetries...
+      0     2     2842.0000  4110        0.0000     2842.0000  1087005     --- 
+Elapsed time = 3754.55 sec. (2247271.79 ticks, tree = 0.01 MB, solutions = 1)
+      1     3     2842.0000  4074        0.0000     2842.0000  1421159     --- 
+      2     4     2842.0000  4187        0.0000     2842.0000  1574190     --- 
+      3     5     2842.0000  4296        0.0000     2842.0000  1654113     --- 
+      4     6     2842.0000  4087        0.0000     2842.0000  1833664     --- 
+      5     7     2842.0000  4124        0.0000     2842.0000  1916884     --- 
+      6     8     2842.0000  4179        0.0000     2842.0000  2001522     --- 
+      7     9     2842.0000  4178        0.0000     2842.0000  2097449     --- 
+      8    10     2842.0000  4262        0.0000     2842.0000  2181634     --- 
+      9    11     2842.0000  4114        0.0000     2842.0000  2262682     --- 
+     10    12     2842.0000  3999        0.0000     2842.0000  2335871     --- 
+Elapsed time = 6214.24 sec. (3882383.88 ticks, tree = 0.10 MB, solutions = 1)
+     11    13     2842.0000  3906        0.0000     2842.0000  2409472     --- 
+     13    13     2842.0000  4071        0.0000     2842.0000  2416594     --- 
+     14    14     2842.0000  3816        0.0000     2842.0000  2479305     --- 
+     15    15     2792.0000  3493        0.0000     2842.0000  2589384     --- 
+     16    16     2842.0000  3926        0.0000     2842.0000  2591941     --- 
+     17    17     2842.0000  3911        0.0000     2842.0000  2593613     --- 
+     18    18     2842.0000  3921        0.0000     2842.0000  2596728     --- 
+     19    19     2842.0000  3837        0.0000     2842.0000  2654802     --- 
+     20    20     2842.0000  3827        0.0000     2842.0000  2719121     --- 
+     21    21     2842.0000  3957        0.0000     2842.0000  2720619     --- 
+Elapsed time = 6863.77 sec. (4338121.68 ticks, tree = 0.17 MB, solutions = 1)
+     22    22     2842.0000  3677        0.0000     2842.0000  2781631     --- 
+     23    23     2842.0000  3833        0.0000     2842.0000  2840815     --- 
+     24    22    infeasible              0.0000     2842.0000  2845534     --- 
+     25    23     2842.0000  3525        0.0000     2842.0000  2904175     --- 
+     26    24     2842.0000  3587        0.0000     2842.0000  2906355     --- 
+
+Clique cuts applied:  2220
+Implied bound cuts applied:  60
+Zero-half cuts applied:  263
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             = 3754.24 sec. (2247120.37 ticks)
+Sequential b&c:
+  Real time             = 3445.78 sec. (2346153.22 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.02 sec. (4593273.59 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_time_limit_feasible
+>>> Benchmark mc2024_track1_150.cnf k 10 OPT 0 TimeCost 7550.932165384293 TimeSolve 7228.657837152481 TimeRead 0.06786489486694336 TimeTrans 322.2064633369446

@@ -1,0 +1,60 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_Simplex_Tolerances_Optimality           1.0000000000000001e-09
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Found incumbent of value 0.000000 after 0.01 sec. (5.96 ticks)
+Tried aggregator 5 times.
+MIQP Presolve eliminated 15846 rows and 6788 columns.
+MIQP Presolve modified 8 coefficients.
+Aggregator did 4526 substitutions.
+Reduced MIQP has 25942 rows, 9246 columns, and 103846 nonzeros.
+Reduced MIQP has 8320 binaries, 926 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 926 nonzeros.
+Presolve time = 0.27 sec. (138.79 ticks)
+Probing time = 0.02 sec. (5.22 ticks)
+Tried aggregator 1 time.
+Reduced MIQP has 25942 rows, 9246 columns, and 103846 nonzeros.
+Reduced MIQP has 8320 binaries, 926 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 926 nonzeros.
+Presolve time = 0.09 sec. (45.97 ticks)
+Classifier predicts products in MIQP should be linearized.
+Probing time = 0.02 sec. (5.14 ticks)
+Clique table members: 7702.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 40.39 sec. (69426.63 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000    23150.0000              --- 
+      0     0     5787.5000  4145        0.0000     5787.5000       12     --- 
+      0     0     5787.4904  6329        0.0000    Cuts: 1746    29706     --- 
+      0     2   non-optimal              0.0000     5787.4904    29706     --- 
+Elapsed time = 360.89 sec. (170261.16 ticks, tree = 0.01 MB, solutions = 1)
+      1     3     5787.4628  6236        0.0000     5787.4904    58040     --- 
+      2     2    infeasible              0.0000     5787.4628    67036     --- 
+      3     1    infeasible              0.0000     5787.4628    94146     --- 
+      4     0    infeasible              0.0000        0.0000   110916    0.00%
+
+Clique cuts applied:  488
+Implied bound cuts applied:  24
+Zero-half cuts applied:  341
+
+Root node processing (before b&c):
+  Real time             =  328.81 sec. (159953.34 ticks)
+Sequential b&c:
+  Real time             =  465.05 sec. (153837.06 ticks)
+                          ------------
+Total (root+branch&cut) =  793.86 sec. (313790.39 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark mc2024_track1_014.cnf k 5 OPT 0 TimeCost 810.8114488124847 TimeSolve 797.4909768104553 TimeRead 0.010277986526489258 TimeTrans 13.31019401550293

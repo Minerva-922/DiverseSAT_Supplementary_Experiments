@@ -1,0 +1,524 @@
+c RoundingSat 2
+c branch 
+c commit 
+c #variables 3060 #constraints 9699
+c bounds - >= -510 @ 0.030845
+c bounds 0 >= -510 @ 0.032293
+c bounds 0 >= -509 @ 0.033726
+c bounds 0 >= -508 @ 0.034036
+c bounds 0 >= -507 @ 0.034036
+c bounds -1 >= -507 @ 0.035239
+c bounds -1 >= -506 @ 0.037406
+c bounds -2 >= -506 @ 0.038478
+c bounds -2 >= -505 @ 0.039013
+c bounds -3 >= -505 @ 0.040036
+c bounds -3 >= -504 @ 0.040997
+c bounds -3 >= -503 @ 0.042219
+c bounds -4 >= -503 @ 0.043333
+c bounds -4 >= -502 @ 0.044449
+c bounds -5 >= -502 @ 0.044994
+c bounds -5 >= -501 @ 0.045935
+c bounds -6 >= -501 @ 0.046983
+c bounds -6 >= -500 @ 0.047962
+c bounds -7 >= -500 @ 0.049482
+c bounds -8 >= -500 @ 0.052958
+c bounds -8 >= -499 @ 0.05635
+c bounds -9 >= -499 @ 0.057946
+c bounds -10 >= -499 @ 0.057946
+c bounds -11 >= -499 @ 0.058475
+c bounds -11 >= -498 @ 0.067033
+c bounds -12 >= -498 @ 0.068901
+c bounds -13 >= -498 @ 0.068942
+c bounds -14 >= -498 @ 0.071655
+c bounds -15 >= -498 @ 0.071892
+c bounds -16 >= -498 @ 0.074494
+c bounds -17 >= -498 @ 0.075761
+c bounds -18 >= -498 @ 0.077868
+c bounds -18 >= -497 @ 0.091763
+c bounds -19 >= -497 @ 0.093964
+c bounds -20 >= -497 @ 0.095383
+c bounds -21 >= -497 @ 0.095812
+c bounds -22 >= -497 @ 0.096872
+c bounds -23 >= -497 @ 0.099038
+c bounds -24 >= -497 @ 0.100329
+c bounds -25 >= -497 @ 0.101546
+c bounds -26 >= -497 @ 0.103772
+c bounds -27 >= -497 @ 0.105937
+c bounds -28 >= -497 @ 0.108213
+c bounds -29 >= -497 @ 0.109762
+c bounds -30 >= -497 @ 0.110761
+c bounds -31 >= -497 @ 0.112514
+c bounds -32 >= -497 @ 0.114625
+c bounds -33 >= -497 @ 0.116802
+c bounds -33 >= -496 @ 0.126186
+c bounds -34 >= -496 @ 0.128579
+c bounds -35 >= -496 @ 0.130856
+c bounds -36 >= -496 @ 0.131704
+c bounds -37 >= -496 @ 0.133345
+c bounds -38 >= -496 @ 0.134568
+c bounds -39 >= -496 @ 0.134968
+c bounds -40 >= -496 @ 0.136688
+c bounds -41 >= -496 @ 0.138256
+c bounds -42 >= -496 @ 0.139871
+c bounds -42 >= -495 @ 0.151462
+c bounds -43 >= -495 @ 0.152639
+c bounds -44 >= -495 @ 0.154626
+c bounds -45 >= -495 @ 0.156241
+c bounds -46 >= -495 @ 0.160626
+c bounds -47 >= -495 @ 0.163411
+c bounds -48 >= -495 @ 0.163878
+c bounds -49 >= -495 @ 0.165505
+c bounds -50 >= -495 @ 0.166656
+c bounds -51 >= -495 @ 0.168581
+c bounds -52 >= -495 @ 0.170172
+c bounds -52 >= -494 @ 0.17186
+c bounds -53 >= -494 @ 0.173563
+c bounds -53 >= -493 @ 0.173977
+c bounds -54 >= -493 @ 0.175259
+c bounds -54 >= -492 @ 0.177194
+c bounds -55 >= -492 @ 0.178588
+c bounds -55 >= -491 @ 0.180026
+c bounds -56 >= -491 @ 0.182563
+c bounds -56 >= -490 @ 0.185154
+c bounds -57 >= -490 @ 0.186814
+c bounds -58 >= -490 @ 0.188869
+c bounds -58 >= -489 @ 0.189572
+c bounds -59 >= -489 @ 0.191507
+c bounds -59 >= -488 @ 0.191507
+c bounds -60 >= -488 @ 0.193332
+c bounds -60 >= -487 @ 0.195123
+c bounds -61 >= -487 @ 0.196778
+c bounds -61 >= -486 @ 0.198239
+c bounds -62 >= -486 @ 0.198776
+c bounds -62 >= -485 @ 0.200198
+c bounds -62 >= -484 @ 0.200953
+c bounds -63 >= -484 @ 0.202473
+c bounds -63 >= -483 @ 0.206117
+c bounds -64 >= -483 @ 0.208479
+c bounds -65 >= -483 @ 0.209442
+c #Conflicts:       1000 | #Constraints:      10971
+c bounds -65 >= -482 @ 0.216205
+c bounds -66 >= -482 @ 0.217732
+c bounds -67 >= -482 @ 0.219196
+c bounds -68 >= -482 @ 0.219711
+c bounds -69 >= -482 @ 0.220406
+c bounds -70 >= -482 @ 0.221376
+c bounds -71 >= -482 @ 0.222859
+c bounds -71 >= -481 @ 0.227807
+c bounds -72 >= -481 @ 0.228375
+c bounds -73 >= -481 @ 0.229816
+c bounds -74 >= -481 @ 0.232184
+c bounds -74 >= -480 @ 0.237892
+c bounds -75 >= -480 @ 0.238674
+c bounds -76 >= -480 @ 0.240886
+c bounds -77 >= -480 @ 0.243372
+c bounds -77 >= -479 @ 0.249825
+c bounds -78 >= -479 @ 0.25062
+c bounds -79 >= -479 @ 0.252837
+c bounds -80 >= -479 @ 0.255205
+c bounds -81 >= -479 @ 0.256675
+c bounds -82 >= -479 @ 0.258271
+c bounds -83 >= -479 @ 0.260481
+c bounds -83 >= -478 @ 0.261441
+c bounds -84 >= -478 @ 0.263862
+c bounds -85 >= -478 @ 0.265561
+c bounds -85 >= -477 @ 0.268053
+c bounds -86 >= -477 @ 0.270499
+c bounds -87 >= -477 @ 0.272948
+c bounds -87 >= -476 @ 0.276289
+c bounds -88 >= -476 @ 0.278208
+c bounds -89 >= -476 @ 0.280198
+c bounds -89 >= -475 @ 0.281354
+c bounds -90 >= -475 @ 0.283782
+c bounds -90 >= -474 @ 0.285202
+c bounds -90 >= -473 @ 0.287271
+c bounds -91 >= -473 @ 0.289858
+c bounds -92 >= -473 @ 0.291481
+c bounds -92 >= -472 @ 0.29374
+c bounds -93 >= -472 @ 0.29631
+c bounds -93 >= -471 @ 0.303358
+c bounds -94 >= -471 @ 0.305892
+c bounds -95 >= -471 @ 0.307398
+c bounds -96 >= -471 @ 0.309102
+c bounds -96 >= -470 @ 0.3166
+c bounds -97 >= -470 @ 0.319355
+c bounds -98 >= -470 @ 0.321761
+c bounds -99 >= -470 @ 0.324263
+c bounds -100 >= -470 @ 0.326666
+c bounds -101 >= -470 @ 0.328171
+c bounds -102 >= -470 @ 0.33056
+c bounds -102 >= -469 @ 0.340493
+c bounds -103 >= -469 @ 0.342347
+c bounds -104 >= -469 @ 0.342981
+c bounds -105 >= -469 @ 0.344309
+c bounds -106 >= -469 @ 0.345971
+c bounds -107 >= -469 @ 0.34819
+c bounds -108 >= -469 @ 0.348962
+c bounds -109 >= -469 @ 0.351068
+c bounds -109 >= -468 @ 0.355376
+c bounds -110 >= -468 @ 0.356972
+c bounds -111 >= -468 @ 0.358485
+c bounds -112 >= -468 @ 0.359922
+c bounds -112 >= -467 @ 0.363064
+c bounds -113 >= -467 @ 0.364898
+c bounds -114 >= -467 @ 0.365238
+c bounds -114 >= -466 @ 0.366051
+c bounds -115 >= -466 @ 0.367888
+c bounds -115 >= -465 @ 0.367888
+c bounds -115 >= -464 @ 0.367888
+c bounds -116 >= -464 @ 0.368247
+c bounds -116 >= -463 @ 0.368885
+c bounds -116 >= -462 @ 0.369139
+c bounds -116 >= -461 @ 0.370614
+c bounds -117 >= -461 @ 0.373249
+c bounds -117 >= -460 @ 0.374753
+c bounds -117 >= -459 @ 0.376727
+c bounds -118 >= -459 @ 0.378357
+c bounds -118 >= -458 @ 0.382164
+c bounds -119 >= -458 @ 0.384947
+c bounds -120 >= -458 @ 0.386477
+c bounds -120 >= -457 @ 0.394792
+c bounds -121 >= -457 @ 0.396628
+c bounds -122 >= -457 @ 0.398167
+c bounds -123 >= -457 @ 0.400804
+c bounds -124 >= -457 @ 0.403321
+c bounds -125 >= -457 @ 0.405119
+c #Conflicts:       2000 | #Constraints:      12260
+c INPROCESSING
+c GARBAGE COLLECT
+c bounds -126 >= -457 @ 0.414103
+c bounds -126 >= -456 @ 0.427277
+c bounds -127 >= -456 @ 0.430175
+c bounds -128 >= -456 @ 0.431712
+c bounds -129 >= -456 @ 0.433315
+c bounds -130 >= -456 @ 0.435818
+c bounds -131 >= -456 @ 0.438438
+c bounds -132 >= -456 @ 0.439925
+c bounds -133 >= -456 @ 0.440637
+c bounds -134 >= -456 @ 0.443028
+c bounds -135 >= -456 @ 0.445644
+c bounds -135 >= -455 @ 0.455972
+c bounds -136 >= -455 @ 0.456907
+c bounds -137 >= -455 @ 0.458304
+c bounds -138 >= -455 @ 0.460777
+c bounds -139 >= -455 @ 0.463394
+c bounds -140 >= -455 @ 0.464891
+c bounds -141 >= -455 @ 0.466507
+c bounds -142 >= -455 @ 0.467552
+c bounds -143 >= -455 @ 0.469588
+c bounds -143 >= -454 @ 0.473394
+c bounds -144 >= -454 @ 0.474529
+c bounds -145 >= -454 @ 0.476771
+c bounds -145 >= -453 @ 0.479173
+c bounds -146 >= -453 @ 0.482382
+c bounds -146 >= -452 @ 0.482505
+c bounds -146 >= -451 @ 0.484308
+c bounds -147 >= -451 @ 0.489371
+c bounds -147 >= -450 @ 0.490462
+c bounds -147 >= -449 @ 0.491376
+c bounds -147 >= -448 @ 0.492275
+c bounds -147 >= -447 @ 0.492625
+c bounds -148 >= -447 @ 0.49572
+c bounds -148 >= -446 @ 0.497666
+c bounds -148 >= -445 @ 0.499044
+c bounds -149 >= -445 @ 0.501443
+c bounds -149 >= -444 @ 0.501443
+c bounds -149 >= -443 @ 0.504562
+c bounds -150 >= -443 @ 0.506492
+c bounds -150 >= -442 @ 0.512179
+c bounds -151 >= -442 @ 0.515127
+c bounds -152 >= -442 @ 0.517838
+c bounds -153 >= -442 @ 0.520546
+c bounds -154 >= -442 @ 0.521377
+c bounds -154 >= -441 @ 0.531097
+c bounds -155 >= -441 @ 0.534141
+c bounds -156 >= -441 @ 0.535836
+c bounds -157 >= -441 @ 0.538534
+c bounds -158 >= -441 @ 0.541162
+c bounds -159 >= -441 @ 0.541829
+c bounds -160 >= -441 @ 0.543662
+c bounds -160 >= -440 @ 0.559082
+c bounds -161 >= -440 @ 0.56025
+c bounds -162 >= -440 @ 0.561801
+c bounds -163 >= -440 @ 0.563675
+c bounds -164 >= -440 @ 0.56632
+c bounds -165 >= -440 @ 0.569259
+c bounds -166 >= -440 @ 0.570216
+c bounds -167 >= -440 @ 0.571616
+c bounds -168 >= -440 @ 0.573194
+c bounds -169 >= -440 @ 0.575197
+c bounds -170 >= -440 @ 0.57747
+c #Conflicts:       3000 | #Constraints:      12233
+c bounds -170 >= -439 @ 0.595825
+c bounds -171 >= -439 @ 0.598885
+c bounds -172 >= -439 @ 0.600114
+c bounds -173 >= -439 @ 0.6026
+c bounds -174 >= -439 @ 0.607091
+c bounds -175 >= -439 @ 0.609085
+c bounds -176 >= -439 @ 0.611282
+c bounds -177 >= -439 @ 0.61307
+c bounds -178 >= -439 @ 0.615399
+c bounds -179 >= -439 @ 0.618055
+c bounds -180 >= -439 @ 0.618055
+c bounds -181 >= -439 @ 0.620394
+c bounds -182 >= -439 @ 0.622983
+c bounds -183 >= -439 @ 0.624034
+c bounds -183 >= -438 @ 0.631023
+c bounds -184 >= -438 @ 0.633939
+c bounds -185 >= -438 @ 0.635991
+c bounds -186 >= -438 @ 0.638268
+c bounds -187 >= -438 @ 0.64097
+c bounds -188 >= -438 @ 0.642965
+c bounds -188 >= -437 @ 0.644553
+c bounds -189 >= -437 @ 0.647368
+c bounds -189 >= -436 @ 0.648378
+c bounds -190 >= -436 @ 0.651063
+c bounds -190 >= -435 @ 0.652905
+c bounds -191 >= -435 @ 0.655697
+c bounds -191 >= -434 @ 0.657809
+c bounds -192 >= -434 @ 0.659543
+c bounds -193 >= -434 @ 0.661209
+c bounds -193 >= -433 @ 0.662892
+c bounds -194 >= -433 @ 0.665254
+c bounds -194 >= -432 @ 0.666691
+c bounds -195 >= -432 @ 0.669473
+c bounds -195 >= -431 @ 0.670168
+c bounds -196 >= -431 @ 0.672805
+c bounds -196 >= -430 @ 0.673852
+c bounds -196 >= -429 @ 0.674849
+c bounds -197 >= -429 @ 0.677261
+c bounds -197 >= -428 @ 0.679909
+c bounds -198 >= -428 @ 0.68259
+c bounds -198 >= -427 @ 0.689636
+c bounds -199 >= -427 @ 0.692192
+c bounds -200 >= -427 @ 0.696029
+c bounds -201 >= -427 @ 0.698805
+c bounds -201 >= -426 @ 0.714715
+c bounds -202 >= -426 @ 0.718093
+c bounds -203 >= -426 @ 0.720148
+c bounds -204 >= -426 @ 0.721678
+c bounds -205 >= -426 @ 0.724885
+c bounds -206 >= -426 @ 0.728655
+c bounds -207 >= -426 @ 0.730662
+c bounds -208 >= -426 @ 0.733131
+c bounds -208 >= -425 @ 0.733458
+c #Conflicts:       4000 | #Constraints:      13406
+c bounds -208 >= -424 @ 0.745939
+c bounds -209 >= -424 @ 0.751574
+c bounds -210 >= -424 @ 0.757664
+c bounds -210 >= -423 @ 0.761162
+c bounds -211 >= -423 @ 0.765198
+c bounds -211 >= -422 @ 0.765524
+c bounds -211 >= -421 @ 0.765524
+c bounds -211 >= -420 @ 0.766912
+c bounds -212 >= -420 @ 0.769989
+c bounds -212 >= -419 @ 0.770506
+c bounds -212 >= -418 @ 0.770506
+c bounds -212 >= -417 @ 0.771365
+c bounds -212 >= -416 @ 0.772978
+c INPROCESSING
+c GARBAGE COLLECT
+c bounds -212 >= -415 @ 0.781731
+c bounds -212 >= -414 @ 0.782461
+c bounds -212 >= -413 @ 0.783521
+c bounds -212 >= -412 @ 0.78439
+c bounds -212 >= -411 @ 0.785288
+c bounds -212 >= -410 @ 0.785965
+c bounds -213 >= -410 @ 0.789071
+c bounds -213 >= -409 @ 0.79033
+c bounds -213 >= -408 @ 0.790434
+c bounds -213 >= -407 @ 0.790786
+c bounds -213 >= -406 @ 0.793244
+c bounds -214 >= -406 @ 0.796447
+c bounds -214 >= -405 @ 0.802211
+c bounds -215 >= -405 @ 0.803497
+c bounds -216 >= -405 @ 0.808113
+c bounds -216 >= -404 @ 0.818368
+c bounds -217 >= -404 @ 0.820325
+c bounds -218 >= -404 @ 0.823397
+c bounds -219 >= -404 @ 0.8264
+c bounds -220 >= -404 @ 0.829187
+c bounds -220 >= -403 @ 0.848385
+c bounds -221 >= -403 @ 0.854602
+c bounds -222 >= -403 @ 0.857113
+c bounds -223 >= -403 @ 0.859621
+c bounds -224 >= -403 @ 0.862052
+c bounds -225 >= -403 @ 0.865302
+c bounds -226 >= -403 @ 0.867179
+c bounds -227 >= -403 @ 0.870214
+c bounds -228 >= -403 @ 0.873074
+c #Conflicts:       5000 | #Constraints:      12857
+c bounds -228 >= -402 @ 0.887084
+c bounds -229 >= -402 @ 0.89335
+c bounds -230 >= -402 @ 0.90603
+c bounds -230 >= -401 @ 0.90753
+c bounds -230 >= -400 @ 0.908038
+c bounds -230 >= -399 @ 0.908849
+c bounds -230 >= -398 @ 0.909977
+c bounds -230 >= -397 @ 0.910386
+c bounds -231 >= -397 @ 0.913671
+c bounds -231 >= -396 @ 0.919699
+c bounds -232 >= -396 @ 0.924981
+c bounds -232 >= -395 @ 0.93363
+c bounds -233 >= -395 @ 0.936145
+c bounds -234 >= -395 @ 0.942315
+c bounds -234 >= -394 @ 0.960236
+c bounds -235 >= -394 @ 0.962854
+c bounds -236 >= -394 @ 0.966037
+c bounds -237 >= -394 @ 0.971038
+c bounds -238 >= -394 @ 0.975338
+c bounds -238 >= -393 @ 0.984069
+c bounds -239 >= -393 @ 0.987764
+c bounds -240 >= -393 @ 0.990019
+c #Conflicts:       6000 | #Constraints:      14019
+c bounds -240 >= -392 @ 0.993742
+c bounds -241 >= -392 @ 0.996172
+c bounds -242 >= -392 @ 0.998011
+c bounds -242 >= -391 @ 1.00641
+c bounds -243 >= -391 @ 1.00849
+c bounds -244 >= -391 @ 1.01017
+c bounds -245 >= -391 @ 1.01276
+c bounds -245 >= -390 @ 1.02442
+c bounds -246 >= -390 @ 1.02847
+c bounds -247 >= -390 @ 1.02862
+c bounds -248 >= -390 @ 1.03163
+c bounds -249 >= -390 @ 1.0336
+c bounds -249 >= -389 @ 1.03437
+c bounds -250 >= -389 @ 1.03735
+c bounds -250 >= -388 @ 1.04157
+c bounds -251 >= -388 @ 1.04435
+c bounds -251 >= -387 @ 1.04554
+c bounds -252 >= -387 @ 1.04755
+c bounds -252 >= -386 @ 1.05034
+c bounds -253 >= -386 @ 1.05325
+c bounds -253 >= -385 @ 1.06549
+c bounds -254 >= -385 @ 1.06872
+c bounds -255 >= -385 @ 1.07805
+c bounds -255 >= -384 @ 1.10579
+c bounds -256 >= -384 @ 1.11328
+c bounds -257 >= -384 @ 1.11503
+c bounds -258 >= -384 @ 1.1197
+c bounds -259 >= -384 @ 1.12339
+c bounds -260 >= -384 @ 1.12643
+c bounds -261 >= -384 @ 1.12806
+c bounds -262 >= -384 @ 1.13065
+c bounds -263 >= -384 @ 1.13323
+c #Conflicts:       7000 | #Constraints:      15120
+c bounds -263 >= -383 @ 1.18848
+c bounds -264 >= -383 @ 1.19212
+c bounds -265 >= -383 @ 1.19534
+c bounds -266 >= -383 @ 1.19969
+c bounds -267 >= -383 @ 1.20317
+c bounds -268 >= -383 @ 1.20697
+c bounds -269 >= -383 @ 1.21213
+c bounds -270 >= -383 @ 1.21796
+c bounds -271 >= -383 @ 1.22092
+c bounds -272 >= -383 @ 1.22747
+c bounds -273 >= -383 @ 1.23241
+c bounds -274 >= -383 @ 1.23521
+c bounds -275 >= -383 @ 1.2394
+c bounds -275 >= -382 @ 1.27312
+c bounds -276 >= -382 @ 1.2758
+c bounds -277 >= -382 @ 1.27779
+c bounds -278 >= -382 @ 1.28142
+c bounds -279 >= -382 @ 1.28368
+c bounds -280 >= -382 @ 1.28463
+c bounds -281 >= -382 @ 1.28726
+c bounds -282 >= -382 @ 1.28767
+c bounds -283 >= -382 @ 1.28867
+c bounds -284 >= -382 @ 1.29136
+c bounds -285 >= -382 @ 1.29266
+c bounds -286 >= -382 @ 1.29465
+c bounds -287 >= -382 @ 1.30019
+c bounds -287 >= -381 @ 1.30597
+c bounds -288 >= -381 @ 1.30985
+c #Conflicts:       8000 | #Constraints:      16205
+c bounds -288 >= -380 @ 1.31664
+c bounds -289 >= -380 @ 1.32148
+c bounds -380 >= -380 @ 1.36979
+c cpu time 1.3698 s
+c deterministic time 41944603 4.19e+07
+c optimization time 0.023154 s
+c total solve time 1.31586 s
+c core-guided solve time 0.640286 s
+c propagation time 0.682915 s
+c conflict analysis time 0.222006 s
+c propagations 1956271
+c resolve steps 112768
+c decisions 345341
+c conflicts 8590
+c restarts 36
+c inprocessing phases 2
+c input clauses 8556
+c input cardinalities 1363
+c input general constraints 1393
+c input average constraint length 22.08
+c input average constraint degree 5.90
+c learned clauses 4151
+c learned cardinalities 104
+c learned general constraints 4337
+c learned average constraint length 25.99
+c learned average constraint degree 991.09
+c watched constraints 2156
+c counting constraints 3574
+c gcd simplifications 182
+c detected cardinalities 74
+c weakened non-implied lits 74564
+c weakened non-implying lits 318
+c original variables 3060
+c clausal propagations 706764
+c cardinality propagations 414100
+c watched propagations 23595
+c counting propagations 737679
+c watch lookups 10673531
+c watch backjump lookups 8538966
+c watch checks 9655814
+c propagation checks 7628376
+c constraint additions 836256
+c trail pops 2310047
+c formula constraints 9699
+c learned constraints 8592
+c bound constraints 531
+c core-guided constraints 1082
+c encountered formula constraints 83499
+c encountered learned constraints 23620
+c encountered bound constraints 108
+c encountered core-guided constraints 14131
+c LP total time 0 s
+c LP solve time 0 s
+c LP constraints added 0
+c LP constraints removed 0
+c LP pivots internal 0
+c LP pivots root 0
+c LP calls 0
+c LP optimalities 0
+c LP no pivot count 0
+c LP infeasibilities 0
+c LP valid Farkas constraints 0
+c LP learned Farkas constraints 0
+c LP basis resets 0
+c LP cycling count 0
+c LP singular count 0
+c LP no primal count 0
+c LP no farkas count 0
+c LP other issue count 0
+c LP Gomory cuts 0
+c LP learned cuts 0
+c LP deleted cuts 0
+c LP encountered Gomory constraints 0
+c LP encountered Farkas constraints 0
+c LP encountered learned Farkas constraints 0
+c CG auxiliary variables introduced 404
+c CG solutions found 291
+c CG cores constructed 130
+c CG core cardinality constraints returned 0
+c CG unit cores 0
+c CG single cores 130
+c CG blocks removed during cardinality reduction 0
+c CG first core best 0
+c CG decision core best 0
+c CG core reduction tie 0
+c CG core degree average 1.00
+c CG core slack average 5.18
+o -380
+s OPTIMUM FOUND

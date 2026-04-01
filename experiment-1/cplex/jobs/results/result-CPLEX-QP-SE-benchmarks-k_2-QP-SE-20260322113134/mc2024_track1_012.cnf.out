@@ -1,0 +1,125 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_Simplex_Tolerances_Optimality           1.0000000000000001e-09
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 10 times.
+MIQP Presolve eliminated 13817 rows and 8253 columns.
+MIQP Presolve modified 100 coefficients.
+Aggregator did 2804 substitutions.
+Reduced MIQP has 29016 rows, 8371 columns, and 105280 nonzeros.
+Reduced MIQP has 6261 binaries, 2110 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 2110 nonzeros.
+Presolve time = 0.27 sec. (191.41 ticks)
+Probing time = 0.01 sec. (5.24 ticks)
+Tried aggregator 1 time.
+Reduced MIQP has 29016 rows, 8371 columns, and 105280 nonzeros.
+Reduced MIQP has 6261 binaries, 2110 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 2110 nonzeros.
+Presolve time = 0.09 sec. (53.62 ticks)
+Classifier predicts products in MIQP should be linearized.
+Probing time = 0.01 sec. (5.20 ticks)
+Clique table members: 5597.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 78.81 sec. (181898.48 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     2110.0000  1581                   2110.0000       13         
+      0     0     2104.9914  3007                  Cuts: 2292    19163         
+      0     0     2108.2830  2900                  Cuts: 6965    88450         
+      0     0     2108.2922  3315                  Cuts: 3484   148210         
+Heuristic still looking.
+*     0+    0                           12.0000     2104.9914              --- 
+*     0+    0                           17.0000     2104.9914              --- 
+*     0+    0                           19.0000     2104.9914              --- 
+*     0+    0                           27.0000     2104.9914              --- 
+      0     0        cutoff             27.0000     2104.9914   148210     --- 
+      0     2     2108.1820  3387       27.0000     2104.9914   148210     --- 
+Elapsed time = 720.75 sec. (453367.61 ticks, tree = 0.01 MB, solutions = 4)
+      1     3     2107.8910  4378       27.0000     2104.9914   208928     --- 
+      2     4     2108.0871  3928       27.0000     2104.9914   249502     --- 
+      3     3    infeasible             27.0000     2104.9914   282548     --- 
+      4     4     2107.9078  3815       27.0000     2104.9914   294977     --- 
+      5     5     2107.4152  4242       27.0000     2104.9914   309576     --- 
+      6     6     2106.8698  3378       27.0000     2104.9914   331651     --- 
+      7     7     2105.3299  4008       27.0000     2104.9914   332716     --- 
+      8     8     2079.4538  3778       27.0000     2104.9914   354508     --- 
+      9     9     2103.0533  3919       27.0000     2104.9914   362554     --- 
+     13    13     2101.7929  3943       27.0000     2104.9914   364300     --- 
+Elapsed time = 1008.32 sec. (583125.58 ticks, tree = 0.07 MB, solutions = 4)
+     20    20     2091.8704  4190       27.0000     2104.9914   366473     --- 
+     23    23     2095.0103  4158       27.0000     2104.9914   369752     --- 
+     28    28     2077.9683  4071       27.0000     2104.9914   375120     --- 
+     34    34     2093.9657  4099       27.0000     2104.9914   379660     --- 
+     40    40     2092.9082  4162       27.0000     2104.9914   381563     --- 
+     46    46     2080.1868  4147       27.0000     2104.9914   384508     --- 
+     60    60     2068.8714  4057       27.0000     2104.9914   386243     --- 
+     70    70     2066.5336  3984       27.0000     2104.9914   386393     --- 
+     90    90     2057.0563  3949       27.0000     2104.9914   386774     --- 
+    110   110     2049.8719  3867       27.0000     2104.9914   386997     --- 
+Elapsed time = 1106.15 sec. (630300.33 ticks, tree = 0.71 MB, solutions = 4)
+    132   132     2040.2992  3783       27.0000     2104.9914   387212     --- 
+    153   153     2035.0369  3686       27.0000     2104.9914   387405     --- 
+    174   174     2026.3553  3606       27.0000     2104.9914   387582     --- 
+    190   190     2016.6569  3559       27.0000     2104.9914   387836     --- 
+    204   204     2013.2840  3523       27.0000     2104.9914   388305     --- 
+    228   228     2004.6826  3427       27.0000     2104.9914   388803     --- 
+    250   250     1993.5509  3342       27.0000     2104.9914   389257     --- 
+    274   274     1985.3979  3265       27.0000     2104.9914   389826     --- 
+    300   300     1974.8558  3150       27.0000     2104.9914   390177     --- 
+    311   311     1966.0325  3404       27.0000     2104.9914   393370     --- 
+Elapsed time = 1119.65 sec. (640126.17 ticks, tree = 2.34 MB, solutions = 4)
+    325   325     1924.0346  3499       27.0000     2104.9914   398267     --- 
+    333   333     1893.5309  3336       27.0000     2104.9914   402518     --- 
+    344   344     1836.0496  3676       27.0000     2104.9914   409583     --- 
+    351   351     1874.2807  3685       27.0000     2104.9914   414277     --- 
+    356   356     1862.5911  2980       27.0000     2104.9914   418513     --- 
+    361   361     1852.9236  3293       27.0000     2104.9914   422860     --- 
+    368   368     1834.1051  3323       27.0000     2104.9914   427350     --- 
+    384   384     1806.5286  2374       27.0000     2104.9914   430648     --- 
+    408   408     1782.0286  2205       27.0000     2104.9914   432633     --- 
+    437   437     1749.1119  2125       27.0000     2104.9914   433352     --- 
+Elapsed time = 1138.34 sec. (650896.41 ticks, tree = 3.55 MB, solutions = 4)
+    468   468     1702.4831  1987       27.0000     2104.9914   434108     --- 
+
+Performing restart 1
+
+Repeating presolve.
+Tried aggregator 1 time.
+Reduced MIQP has 29016 rows, 8371 columns, and 105280 nonzeros.
+Reduced MIQP has 6261 binaries, 2110 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 2110 nonzeros.
+Presolve time = 0.09 sec. (52.17 ticks)
+Tried aggregator 1 time.
+Reduced MIQP has 29016 rows, 8371 columns, and 105280 nonzeros.
+Reduced MIQP has 6261 binaries, 2110 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 2110 nonzeros.
+Presolve time = 0.09 sec. (52.07 ticks)
+Represolve time = 0.30 sec. (170.41 ticks)
+*   476     0      integral     0       27.0000                 479741     --- 
+
+Clique cuts applied:  755
+Cover cuts applied:  2
+Implied bound cuts applied:  26
+Mixed integer rounding cuts applied:  1
+Zero-half cuts applied:  154
+
+Root node processing (before b&c):
+  Real time             =  720.73 sec. (453355.68 ticks)
+Sequential b&c:
+  Real time             =  731.99 sec. (434565.74 ticks)
+                          ------------
+Total (root+branch&cut) = 1452.72 sec. (887921.42 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark mc2024_track1_012.cnf k 2 OPT 27 TimeCost 1469.667704820633 TimeSolve 1457.9214017391205 TimeRead 0.025583267211914062 TimeTrans 11.720719814300537

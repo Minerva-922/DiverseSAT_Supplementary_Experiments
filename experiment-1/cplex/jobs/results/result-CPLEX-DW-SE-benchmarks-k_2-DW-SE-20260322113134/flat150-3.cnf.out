@@ -1,0 +1,78 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 783 rows and 1 columns.
+MIP Presolve modified 404 coefficients.
+Aggregator did 450 substitutions.
+Reduced MIP has 4376 rows, 2249 columns, and 12596 nonzeros.
+Reduced MIP has 2249 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (14.07 ticks)
+Probing time = 0.00 sec. (2.54 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 301 rows and 3 columns.
+MIP Presolve modified 2 coefficients.
+Reduced MIP has 4075 rows, 2246 columns, and 11689 nonzeros.
+Reduced MIP has 2246 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (12.63 ticks)
+Probing time = 0.00 sec. (2.27 ticks)
+Clique table members: 3666.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.04 sec. (32.38 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0      450.0000   801                    450.0000      590         
+      0     0      428.0000   779                   Cuts: 871     1488         
+      0     0      342.0000   860                   Cuts: 697     2748         
+      0     0      300.0000   979                   Cuts: 419     3581         
+      0     0      300.0000   952                   Cuts: 340     4299         
+      0     0      300.0000  1257               ZeroHalf: 232     5003         
+Detecting symmetries...
+      0     0      300.0000   841                    Cuts: 22     5117         
+      0     0      300.0000   883                   Cuts: 313     5627         
+Detecting symmetries...
+      0     2      300.0000   883                    300.0000     5627         
+Elapsed time = 4.76 sec. (3385.10 ticks, tree = 0.01 MB, solutions = 0)
+      2     4      300.0000   884                    300.0000     7221         
+      5     7      300.0000   880                    300.0000     9671         
+     11    13      300.0000   882                    300.0000    11352         
+     19    21      300.0000   893                    300.0000    13148         
+     27    29      300.0000   888                    300.0000    15306         
+     31    33      299.0000   894                    300.0000    16739         
+     35    33      300.0000  1154                    300.0000    18156         
+     42    40      300.0000  1022                    300.0000    19756         
+     49    39    infeasible                          300.0000    22042         
+     59    47    infeasible                          300.0000    27366         
+Elapsed time = 9.77 sec. (6878.68 ticks, tree = 0.98 MB, solutions = 0)
+     70    56      300.0000   907                    300.0000    31477         
+    106    80      300.0000  1109                    300.0000    36342         
+    118    82      299.6000  1137                    300.0000    41540         
+    141    83    infeasible                          300.0000    47696         
+*   164     1      integral     0      300.0000      300.0000    52855    0.00%
+
+GUB cover cuts applied:  10
+Cover cuts applied:  875
+Zero-half cuts applied:  149
+Gomory fractional cuts applied:  97
+
+Root node processing (before b&c):
+  Real time             =    4.75 sec. (3381.95 ticks)
+Sequential b&c:
+  Real time             =   11.72 sec. (8452.99 ticks)
+                          ------------
+Total (root+branch&cut) =   16.47 sec. (11834.94 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark flat150-3.cnf k 2 OPT 300 TimeCost 17.113303422927856 TimeSolve 16.574397087097168 TimeRead 0.004006862640380859 TimeTrans 0.5348994731903076

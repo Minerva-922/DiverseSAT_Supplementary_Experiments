@@ -1,0 +1,74 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 3 times.
+MIP Presolve eliminated 333 rows and 276 columns.
+MIP Presolve modified 2 coefficients.
+Aggregator did 924 substitutions.
+Reduced MIP has 5182 rows, 4344 columns, and 19263 nonzeros.
+Reduced MIP has 4344 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.03 sec. (18.85 ticks)
+Found incumbent of value 0.000000 after 0.03 sec. (23.83 ticks)
+Probing time = 0.01 sec. (2.50 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1 rows and 2 columns.
+Reduced MIP has 5181 rows, 4342 columns, and 19259 nonzeros.
+Reduced MIP has 4342 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.03 sec. (17.97 ticks)
+Probing time = 0.01 sec. (2.50 ticks)
+Clique table members: 3225.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (6.21 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000      869.0000              --- 
+      0     0      869.0000   804        0.0000      869.0000      101     --- 
+*     0+    0                           65.0000      869.0000              --- 
+*     0+    0                          851.0000      869.0000             2.12%
+*     0+    0                          854.0000      869.0000             1.76%
+      0     0        cutoff            854.0000      869.0000      101    1.76%
+Detecting symmetries...
+      0     2      869.0000   134      854.0000      869.0000      101    1.76%
+Elapsed time = 0.23 sec. (183.19 ticks, tree = 0.01 MB, solutions = 4)
+*    20+   20                          857.0000      869.0000             1.40%
+*    30+   30                          863.0000      869.0000             0.70%
+    100    91      867.0000    40      863.0000      869.0000     1333    0.70%
+*   130+   75                          865.0000      869.0000             0.46%
+*   152    67      integral     0      866.0000      869.0000     2151    0.35%
+    180    81      867.5000    60      866.0000      869.0000     2986    0.35%
+    262   139      867.0000    14      866.0000      868.0000     4527    0.23%
+    358   193      867.0000    18      866.0000      867.5000     5575    0.17%
+    459   239      867.0000    40      866.0000      867.0000     6943    0.12%
+    602   229      867.0000    34      866.0000      867.0000     8513    0.12%
+    743   231      867.0000    18      866.0000      867.0000     9950    0.12%
+    880   248      867.0000    34      866.0000      867.0000    11342    0.12%
+   1010   253      867.0000   136      866.0000      867.0000    12932    0.12%
+   1624   227      867.0000    18      866.0000      867.0000    18898    0.12%
+Elapsed time = 3.59 sec. (3324.66 ticks, tree = 1.60 MB, solutions = 8)
+   2413   147      867.0000    46      866.0000      867.0000    27177    0.12%
+   3181    73      867.0000    36      866.0000      867.0000    34404    0.12%
+
+Cover cuts applied:  57
+Implied bound cuts applied:  29
+
+Root node processing (before b&c):
+  Real time             =    0.24 sec. (183.36 ticks)
+Sequential b&c:
+  Real time             =    6.07 sec. (5725.93 ticks)
+                          ------------
+Total (root+branch&cut) =    6.31 sec. (5909.30 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark mc2024_track1_054.cnf k 2 OPT 866 TimeCost 7.0287535190582275 TimeSolve 6.38271164894104 TimeRead 0.0042226314544677734 TimeTrans 0.6418192386627197

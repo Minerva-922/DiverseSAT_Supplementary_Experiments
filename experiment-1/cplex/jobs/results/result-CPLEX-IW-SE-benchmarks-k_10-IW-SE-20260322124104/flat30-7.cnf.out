@@ -1,0 +1,75 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 1 time.
+MIP Presolve eliminated 1047 rows and 9 columns.
+MIP Presolve modified 678 coefficients.
+Reduced MIP has 5274 rows, 2601 columns, and 17106 nonzeros.
+Reduced MIP has 2601 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (11.57 ticks)
+Probing time = 0.01 sec. (2.67 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 300 rows and 0 columns.
+Reduced MIP has 4974 rows, 2601 columns, and 16206 nonzeros.
+Reduced MIP has 2601 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (13.31 ticks)
+Probing time = 0.00 sec. (2.49 ticks)
+Clique table members: 7543.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.28 sec. (227.09 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     1980.0000   661                   1980.0000     1509         
+      0     0     1980.0000   542                   Cuts: 158     1816         
+*     0+    0                         1792.0000     1980.0000            10.49%
+      0     0     1980.0000   587     1792.0000     Cuts: 111     2179   10.49%
+      0     0     1980.0000   422     1792.0000       Cuts: 8     2292   10.49%
+*     0+    0                         1798.0000     1980.0000            10.12%
+*     0+    0                         1806.0000     1980.0000             9.63%
+*     0+    0                         1808.0000     1980.0000             9.51%
+      0     0        cutoff           1808.0000     1980.0000     2292    9.51%
+      0     0     1980.0000   559     1808.0000      Cuts: 80     2589    9.51%
+*     0+    0                         1828.0000     1980.0000             8.32%
+*     0+    0                         1830.0000     1980.0000             8.20%
+*     0+    0                         1834.0000     1980.0000             7.96%
+      0     0        cutoff           1834.0000     1980.0000     2589    7.96%
+Detecting symmetries...
+      0     2     1980.0000   546     1834.0000     1980.0000     2589    7.96%
+Elapsed time = 2.73 sec. (1726.23 ticks, tree = 0.01 MB, solutions = 7)
+      1     3     1980.0000   573     1834.0000     1980.0000     4751    7.96%
+      3     5     1954.0000   497     1834.0000     1980.0000     6924    7.96%
+      5     5    infeasible           1834.0000     1980.0000    10141    7.96%
+      6     6     1954.0000   382     1834.0000     1980.0000    12755    7.96%
+     11    11     1954.0000   409     1834.0000     1980.0000    14178    7.96%
+     14    14     1952.2500   397     1834.0000     1980.0000    15755    7.96%
+*    16     3      integral     0     1954.0000     1980.0000    16555    1.33%
+     17     3     1980.0000   407     1954.0000     1980.0000    18369    1.33%
+     19     5     1980.0000   298     1954.0000     1980.0000    20717    1.33%
+     21     7     1980.0000   433     1954.0000     1980.0000    21936    1.33%
+*    40+    1                         1980.0000     1980.0000             0.00%
+
+Clique cuts applied:  4
+Implied bound cuts applied:  6
+Zero-half cuts applied:  8
+
+Root node processing (before b&c):
+  Real time             =    2.71 sec. (1714.60 ticks)
+Sequential b&c:
+  Real time             =    5.17 sec. (3935.96 ticks)
+                          ------------
+Total (root+branch&cut) =    7.88 sec. (5650.56 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark flat30-7.cnf k 10 OPT 1980 TimeCost 8.334605932235718 TimeSolve 7.950080394744873 TimeRead 0.001430511474609375 TimeTrans 0.38309502601623535

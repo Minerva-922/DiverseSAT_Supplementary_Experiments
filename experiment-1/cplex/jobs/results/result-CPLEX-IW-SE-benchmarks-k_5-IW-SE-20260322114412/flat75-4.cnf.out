@@ -1,0 +1,69 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 1137 rows and 4 columns.
+MIP Presolve modified 608 coefficients.
+Aggregator did 225 substitutions.
+Reduced MIP has 6659 rows, 2921 columns, and 21911 nonzeros.
+Reduced MIP has 2921 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.03 sec. (20.79 ticks)
+Probing time = 0.01 sec. (2.86 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 375 rows and 0 columns.
+Reduced MIP has 6284 rows, 2921 columns, and 20786 nonzeros.
+Reduced MIP has 2921 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (16.58 ticks)
+Probing time = 0.00 sec. (2.82 ticks)
+Clique table members: 3909.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.49 sec. (287.09 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     1200.0000   740                   1200.0000     2165         
+      0     0     1200.0000   807                   Cuts: 347     4209         
+      0     0     1200.0000   969                   Cuts: 259     6780         
+*     0+    0                         1144.0000     1200.0000             4.90%
+*     0+    0                         1146.0000     1200.0000             4.71%
+*     0+    0                         1150.0000     1200.0000             4.35%
+      0     0        cutoff           1150.0000     1200.0000     6780    4.35%
+Detecting symmetries...
+      0     2     1200.0000   857     1150.0000     1200.0000     6780    4.35%
+Elapsed time = 4.82 sec. (3382.25 ticks, tree = 0.01 MB, solutions = 3)
+      1     3     1198.0000   718     1150.0000     1200.0000    13280    4.35%
+      3     3     1170.0000   594     1150.0000     1200.0000    15297    4.35%
+      8     8     1168.0000    62     1150.0000     1200.0000    16461    4.35%
+*    10+    2                         1168.0000     1200.0000             2.74%
+     11     2     1200.0000   821     1168.0000     1200.0000    17342    2.74%
+     13     4     1200.0000   759     1168.0000     1200.0000    19534    2.74%
+     15     6     1199.9655   845     1168.0000     1200.0000    21776    2.74%
+     16     7     1200.0000    38     1168.0000     1200.0000    25328    2.74%
+*    18     1      integral     0     1200.0000     1200.0000    25501    0.00%
+
+GUB cover cuts applied:  1
+Clique cuts applied:  13
+Implied bound cuts applied:  1
+Zero-half cuts applied:  15
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    4.81 sec. (3380.19 ticks)
+Sequential b&c:
+  Real time             =    6.54 sec. (4420.12 ticks)
+                          ------------
+Total (root+branch&cut) =   11.35 sec. (7800.31 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark flat75-4.cnf k 5 OPT 1200 TimeCost 11.962277173995972 TimeSolve 11.416326999664307 TimeRead 0.0033521652221679688 TimeTrans 0.5425980091094971

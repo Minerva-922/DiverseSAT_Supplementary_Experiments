@@ -1,0 +1,112 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_Simplex_Tolerances_Optimality           1.0000000000000001e-09
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 1 time.
+MIQP Presolve eliminated 390 rows and 4 columns.
+MIQP Presolve modified 7 coefficients.
+Reduced MIQP has 8934 rows, 1756 columns, and 35380 nonzeros.
+Reduced MIQP has 1580 binaries, 176 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 176 nonzeros.
+Presolve time = 0.03 sec. (21.44 ticks)
+Probing time = 0.00 sec. (2.02 ticks)
+Tried aggregator 1 time.
+Reduced MIQP has 8934 rows, 1756 columns, and 35380 nonzeros.
+Reduced MIQP has 1580 binaries, 176 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 176 nonzeros.
+Presolve time = 0.03 sec. (16.65 ticks)
+Classifier predicts products in MIQP should be linearized.
+Probing time = 0.01 sec. (2.02 ticks)
+Clique table members: 30.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 3.44 sec. (6772.56 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     1100.0000   864                   1100.0000        6         
+      0     0     1100.0000  1017                   Cuts: 444    16304         
+      0     0     1100.0000  1107                   Cuts: 648    63793         
+      0     2     1100.0000  1108                   1099.7500    63793         
+Elapsed time = 96.23 sec. (62289.18 ticks, tree = 0.01 MB, solutions = 0)
+     15    17     1098.0000  1098                   1099.5000    64721         
+     30    32     1095.7500  1073                   1099.5000    65167         
+     40    42     1094.2500  1060                   1099.5000    65599         
+     60    62     1091.2500  1028                   1099.5000    66429         
+     79    81     1088.5000  1018                   1099.5000    67416         
+     92    94     1086.0000   984                   1099.5000    67881         
+    108   110     1083.7500   968                   1099.5000    68377         
+    129   131     1080.5000   928                   1099.5000    68714         
+    155   157     1076.5000   888                   1099.5000    69454         
+    200   202     1070.0000   833                   1099.5000    70127         
+Elapsed time = 108.33 sec. (69148.80 ticks, tree = 0.36 MB, solutions = 0)
+    220   222     1066.7500   808                   1099.5000    70267         
+    305   307     1056.0000   776                   1099.5000    74421         
+    323   325     1056.0000   761                   1099.5000    82179         
+    329   331     1056.0000   803                   1099.5000    89868         
+    339   341     1056.0000   806                   1099.5000    97551         
+    352   354     1056.0000   760                   1099.5000   105296         
+    366   368     1056.0000   785                   1099.5000   112005         
+    380   382     1056.0000   804                   1099.5000   120118         
+    385   387     1056.0000   896                   1099.5000   130875         
+    397   399     1056.0000   879                   1099.5000   140688         
+Elapsed time = 129.77 sec. (81152.48 ticks, tree = 0.72 MB, solutions = 0)
+    406   408     1048.0000   760                   1099.5000   149150         
+    407   407    infeasible                         1099.5000   154079         
+    420   418     1097.5000  1084                   1099.5000   156812         
+    480   478     1088.2500  1016                   1099.5000   160152         
+
+Performing restart 1
+
+Repeating presolve.
+Tried aggregator 1 time.
+Reduced MIQP has 8934 rows, 1756 columns, and 35380 nonzeros.
+Reduced MIQP has 1580 binaries, 176 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 176 nonzeros.
+Presolve time = 0.03 sec. (16.18 ticks)
+Tried aggregator 1 time.
+Reduced MIQP has 8934 rows, 1756 columns, and 35380 nonzeros.
+Reduced MIQP has 1580 binaries, 176 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 176 nonzeros.
+Presolve time = 0.03 sec. (16.16 ticks)
+Represolve time = 0.07 sec. (39.73 ticks)
+    514     0     1100.0000  1014               ZeroHalf: 499   187980         
+    514     0     1100.0000  1343                   Cuts: 673   215876         
+    514     0     1100.0000  1551                  Cuts: 1546   357170         
+    514     0     1100.0000  1616                  Cuts: 2283   486594         
+    514     0     1100.0000  1690                  Cuts: 2333   627161         
+
+Cover cuts applied:  1
+Implied bound cuts applied:  142
+Flow cuts applied:  12
+Mixed integer rounding cuts applied:  9
+Zero-half cuts applied:  4077
+Gomory fractional cuts applied:  27
+
+Root node processing (before b&c):
+  Real time             =   96.23 sec. (62288.32 ticks)
+Sequential b&c:
+  Real time             = 7105.23 sec. (3509361.72 ticks)
+                          ------------
+Total (root+branch&cut) = 7201.46 sec. (3571650.04 ticks)
+Solution is infeasible.
+
+---------------------
+@@@ MIP_time_limit_infeasible
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-QP-SE.py", line 118, in <module>
+    print(f">>> Benchmark {os.path.basename(cnf_file)} k {k} OPT {int(prob.solution.get_objective_value())}"
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 7211, in get_objective_value
+    return CPX_PROC.getobjval(self._env._e, self._cplex._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 2055, in getobjval
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1217: No solution exists.

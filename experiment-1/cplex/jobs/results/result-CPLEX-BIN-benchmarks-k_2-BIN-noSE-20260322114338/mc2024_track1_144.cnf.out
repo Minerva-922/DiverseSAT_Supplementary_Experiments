@@ -1,0 +1,90 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 24251 rows and 176 columns.
+MIP Presolve modified 96128 coefficients.
+Aggregator did 48026 substitutions.
+Reduced MIP has 191314 rows, 120051 columns, and 503835 nonzeros.
+Reduced MIP has 120051 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.15 sec. (624.72 ticks)
+Elapsed time = 32.12 sec. (10000.09 ticks) for 20% of probing (8163 vars fixed)
+Probing fixed 8174 vars, tightened 0 bounds.
+Probing time = 36.75 sec. (11525.09 ticks)
+Tried aggregator 3 times.
+MIP Presolve eliminated 55905 rows and 22787 columns.
+MIP Presolve modified 4033 coefficients.
+Aggregator did 309 substitutions.
+Reduced MIP has 135100 rows, 96954 columns, and 370982 nonzeros.
+Reduced MIP has 96954 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 2.47 sec. (1285.28 ticks)
+Probing fixed 5913 vars, tightened 0 bounds.
+Probing time = 20.11 sec. (6324.60 ticks)
+Tried aggregator 3 times.
+Detecting symmetries...
+MIP Presolve eliminated 22717 rows and 12049 columns.
+MIP Presolve modified 751 coefficients.
+Aggregator did 387 substitutions.
+Reduced MIP has 111996 rows, 84517 columns, and 310622 nonzeros.
+Reduced MIP has 84517 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 2.67 sec. (2710.74 ticks)
+Probing fixed 961 vars, tightened 0 bounds.
+Probing time = 4.17 sec. (1744.83 ticks)
+Clique table members: 240708.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 12.67 sec. (5734.70 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0    18088.1750 25034                  18088.1750    43043         
+      0     0    16312.6574 27465                  Cuts: 9339    73701         
+      0     0    15718.1066 34480                  Cuts: 8656   108234         
+      0     0    15368.9826 35649                  Cuts: 7913   155898         
+      0     0    15171.7083 37022                  Cuts: 7426   219218         
+      0     0    15028.4647 36669                  Cuts: 6112   286991         
+      0     0    14923.0060 37088                  Cuts: 5713   366557         
+      0     0    14850.9438 37531                  Cuts: 4525   487527         
+      0     0    14799.1855 36874                  Cuts: 4352   549623         
+      0     0    14762.5852 37656                  Cuts: 4721   624631         
+      0     0    14729.4753 38287                  Cuts: 5865   694492         
+      0     0    14701.3996 38270                  Cuts: 3576   769063         
+      0     0    14680.1120 38906                  Cuts: 5753   844439         
+      0     0    14658.1073 38359                  Cuts: 4093   923978         
+      0     0    14641.4509 38287                  Cuts: 3086   993260         
+
+GUB cover cuts applied:  1
+Clique cuts applied:  1356
+Cover cuts applied:  19
+Implied bound cuts applied:  22000
+Mixed integer rounding cuts applied:  70
+Zero-half cuts applied:  11492
+Gomory fractional cuts applied:  27
+
+Root node processing (before b&c):
+  Real time             = 7200.14 sec. (3235181.45 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.14 sec. (3235181.45 ticks)
+Solution is infeasible.
+
+---------------------
+@@@ MIP_time_limit_infeasible
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-BIN.py", line 132, in <module>
+    print(f">>> Benchmark {os.path.basename(cnf_file)} k {k} OPT {int(prob.solution.get_objective_value())}"
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 7211, in get_objective_value
+    return CPX_PROC.getobjval(self._env._e, self._cplex._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 2055, in getobjval
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1217: No solution exists.

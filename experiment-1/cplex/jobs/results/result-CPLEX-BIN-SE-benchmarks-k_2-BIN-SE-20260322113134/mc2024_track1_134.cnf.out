@@ -1,0 +1,91 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 7 times.
+MIP Presolve eliminated 21920 rows and 3810 columns.
+MIP Presolve modified 46507 coefficients.
+Aggregator did 23276 substitutions.
+Reduced MIP has 136035 rows, 63849 columns, and 399779 nonzeros.
+Reduced MIP has 63849 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 2.03 sec. (1184.48 ticks)
+Probing fixed 313 vars, tightened 0 bounds.
+Probing time = 4.03 sec. (948.02 ticks)
+Tried aggregator 3 times.
+Detecting symmetries...
+MIP Presolve eliminated 3790 rows and 1619 columns.
+MIP Presolve modified 242 coefficients.
+Aggregator did 98 substitutions.
+Reduced MIP has 132147 rows, 62128 columns, and 389632 nonzeros.
+Reduced MIP has 62128 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 2.26 sec. (1403.62 ticks)
+Probing fixed 11 vars, tightened 0 bounds.
+Probing time = 0.46 sec. (132.46 ticks)
+Clique table members: 258417.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 2.69 sec. (1817.73 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0    10688.5000 19019                  10688.5000    24900         
+      0     0    10048.5000 19134                 Cuts: 10000    36928         
+      0     0     9125.9149 19712                  Cuts: 9815    60560         
+      0     0     8671.5854 20817                  Cuts: 7705    81545         
+      0     0     8349.5572 21983                  Cuts: 7257   101544         
+      0     0     8086.5930 23173                  Cuts: 7189   125581         
+      0     0     7895.2274 24619                  Cuts: 6841   153612         
+      0     0     7732.6547 25613                  Cuts: 6894   180784         
+      0     0     7600.4031 25779                  Cuts: 6258   207976         
+      0     0     7493.7154 26004                  Cuts: 6214   238926         
+      0     0     7404.7284 26358                  Cuts: 6081   272059         
+      0     0     7335.1691 26442                  Cuts: 5899   304800         
+      0     0     7267.2530 26620                  Cuts: 6081   339845         
+      0     0     7202.7921 26644                  Cuts: 5897   383645         
+      0     0     7150.7819 26620                  Cuts: 5365   421070         
+      0     0     7109.4495 26723                  Cuts: 5782   458828         
+      0     0     7066.2380 26715                  Cuts: 5314   502838         
+      0     0     7031.0261 26775                  Cuts: 5471   544371         
+      0     0     7000.7261 26704                  Cuts: 5151   585137         
+      0     0     6972.3931 26765                  Cuts: 5301   628754         
+      0     0     6942.4799 26817                  Cuts: 5612   674277         
+      0     0     6917.8113 26831                  Cuts: 5287   716280         
+      0     0     6892.4854 26878                  Cuts: 5101   757918         
+      0     0     6869.7689 26955                  Cuts: 4747   800368         
+      0     0     6850.3367 26958                  Cuts: 4917   836208         
+      0     0     6830.4634 26958                  Cuts: 4809   875599         
+      0     0     6813.4130 26961                  Cuts: 4638   911371         
+
+Clique cuts applied:  1583
+Implied bound cuts applied:  1564
+Flow cuts applied:  3
+Mixed integer rounding cuts applied:  9
+Zero-half cuts applied:  14458
+Gomory fractional cuts applied:  6
+
+Root node processing (before b&c):
+  Real time             = 7200.16 sec. (2762216.09 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.16 sec. (2762216.09 ticks)
+Solution is infeasible.
+
+---------------------
+@@@ MIP_time_limit_infeasible
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-BIN-SE.py", line 134, in <module>
+    print(f">>> Benchmark {os.path.basename(cnf_file)} k {k} OPT {int(prob.solution.get_objective_value())}"
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 7211, in get_objective_value
+    return CPX_PROC.getobjval(self._env._e, self._cplex._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 2055, in getobjval
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1217: No solution exists.

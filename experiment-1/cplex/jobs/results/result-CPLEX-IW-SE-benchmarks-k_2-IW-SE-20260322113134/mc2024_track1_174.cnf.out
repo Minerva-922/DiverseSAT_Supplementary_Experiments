@@ -1,0 +1,46 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Found incumbent of value 0.000000 after 0.00 sec. (0.46 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 3 rows and 1 columns.
+MIP Presolve modified 2 coefficients.
+Reduced MIP has 19580 rows, 319 columns, and 78128 nonzeros.
+Reduced MIP has 319 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (28.33 ticks)
+Probing time = 0.00 sec. (4.18 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 19580 rows, 319 columns, and 78128 nonzeros.
+Reduced MIP has 319 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.06 sec. (37.43 ticks)
+Probing time = 0.01 sec. (4.18 ticks)
+Clique table members: 99.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.03 sec. (33.72 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000       64.0000              --- 
+*     0     0      integral     0       64.0000       64.0000       25    0.00%
+Elapsed time = 0.19 sec. (132.00 ticks, tree = 0.00 MB, solutions = 2)
+
+Root node processing (before b&c):
+  Real time             =    0.19 sec. (132.11 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.19 sec. (132.11 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark mc2024_track1_174.cnf k 2 OPT 64 TimeCost 0.9584629535675049 TimeSolve 0.20460891723632812 TimeRead 0.020043611526489258 TimeTrans 0.7338104248046875

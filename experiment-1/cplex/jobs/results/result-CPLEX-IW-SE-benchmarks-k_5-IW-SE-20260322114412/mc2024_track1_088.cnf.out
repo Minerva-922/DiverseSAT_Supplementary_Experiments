@@ -1,0 +1,58 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 7 times.
+MIP Presolve eliminated 62527 rows and 10415 columns.
+MIP Presolve modified 2869 coefficients.
+Aggregator did 20387 substitutions.
+Reduced MIP has 242653 rows, 86840 columns, and 854754 nonzeros.
+Reduced MIP has 86840 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 3.40 sec. (1830.20 ticks)
+Probing fixed 270 vars, tightened 0 bounds.
+Probing time = 0.46 sec. (180.58 ticks)
+Cover probing fixed 0 vars, tightened 15 bounds.
+Tried aggregator 2 times.
+Detecting symmetries...
+MIP Presolve eliminated 1190 rows and 382 columns.
+MIP Presolve modified 245 coefficients.
+Aggregator did 120 substitutions.
+Reduced MIP has 241343 rows, 86338 columns, and 850764 nonzeros.
+Reduced MIP has 86338 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 3.92 sec. (2319.66 ticks)
+Probing time = 0.07 sec. (27.18 ticks)
+Clique table members: 135659.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 7248.07 sec. (1434355.40 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0   1.00000e+37     0                  50418.0000   464505         
+
+Root node processing (before b&c):
+  Real time             = 7259.48 sec. (1440820.44 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 7259.48 sec. (1440820.44 ticks)
+Solution is infeasible.
+
+---------------------
+@@@ MIP_time_limit_infeasible
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-IW-SE.py", line 105, in <module>
+    print(f">>> Benchmark {os.path.basename(cnf_file)} k {k} OPT {int(prob.solution.get_objective_value())}"
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 7211, in get_objective_value
+    return CPX_PROC.getobjval(self._env._e, self._cplex._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 2055, in getobjval
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1217: No solution exists.

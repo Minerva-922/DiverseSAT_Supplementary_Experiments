@@ -1,0 +1,48 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 3 times.
+MIP Presolve eliminated 8728 rows and 270 columns.
+MIP Presolve modified 10689 coefficients.
+Aggregator did 364 substitutions.
+Reduced MIP has 962659 rows, 418906 columns, and 2731599 nonzeros.
+Reduced MIP has 418906 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 9.26 sec. (4290.81 ticks)
+Elapsed time = 40.42 sec. (10000.09 ticks) for 21% of probing (49892 vars fixed)
+Probing fixed 49914 vars, tightened 0 bounds.
+Probing changed sense of 402 constraints.
+Probing time = 86.49 sec. (19569.90 ticks)
+Tried aggregator 7 times.
+MIP Presolve eliminated 169505 rows and 61927 columns.
+MIP Presolve modified 2233 coefficients.
+Aggregator did 12543 substitutions.
+Reduced MIP has 780611 rows, 344436 columns, and 2237358 nonzeros.
+Reduced MIP has 344436 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 21.03 sec. (9178.95 ticks)
+Probing time = 0.36 sec. (87.07 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 615 rows and 0 columns.
+Reduced MIP has 779996 rows, 344436 columns, and 2235513 nonzeros.
+Reduced MIP has 344436 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 7.54 sec. (7282.68 ticks)
+Probing time = 0.34 sec. (85.41 ticks)
+Clique table members: 1258349.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 32.64 sec. (19817.88 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0    69470.1667 127410                  69470.1667    92082         
+      0     0    67827.2431 126286                 Cuts: 10000   120094         
+      0     0    67582.9111 126399                 Cuts: 10000   125792         
+      0     0    65273.9620 130040                 Cuts: 10000   174922         
+      0     0    62598.6716 135402                 Cuts: 10000   231321         

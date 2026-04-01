@@ -1,0 +1,58 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_Simplex_Tolerances_Optimality           1.0000000000000001e-09
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIQP Presolve eliminated 202 rows and 60 columns.
+MIQP Presolve modified 8 coefficients.
+Aggregator did 24 substitutions.
+Reduced MIQP has 28222 rows, 12456 columns, and 90331 nonzeros.
+Reduced MIQP has 11210 binaries, 1246 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 1246 nonzeros.
+Presolve time = 0.10 sec. (55.07 ticks)
+Probing fixed 5 vars, tightened 5 bounds.
+Probing time = 0.14 sec. (63.86 ticks)
+Tried aggregator 2 times.
+MIQP Presolve eliminated 63 rows and 11 columns.
+MIQP Presolve modified 13 coefficients.
+Aggregator did 9 substitutions.
+Reduced MIQP has 28150 rows, 12436 columns, and 90126 nonzeros.
+Reduced MIQP has 11191 binaries, 1245 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 1245 nonzeros.
+Presolve time = 0.24 sec. (132.78 ticks)
+Classifier predicts products in MIQP should be linearized.
+Probing fixed 5 vars, tightened 4 bounds.
+Probing time = 0.09 sec. (51.90 ticks)
+Clique table members: 57656.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 8.24 sec. (5520.66 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     7770.3685  4986                   7770.3685       11         
+*     0+    0                         3848.0000     7770.3685           101.93%
+      0     0        cutoff           3848.0000                  22739     --- 
+Elapsed time = 245.02 sec. (87272.37 ticks, tree = 0.01 MB, solutions = 1)
+
+Clique cuts applied:  3855
+Zero-half cuts applied:  57
+
+Root node processing (before b&c):
+  Real time             =  245.02 sec. (87272.74 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =  245.02 sec. (87272.74 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark mc2024_track1_020.cnf k 5 OPT 3848 TimeCost 250.8180911540985 TimeSolve 246.0958857536316 TimeRead 0.006302833557128906 TimeTrans 4.71590256690979

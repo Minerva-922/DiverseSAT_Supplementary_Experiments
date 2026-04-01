@@ -1,0 +1,74 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 1462 rows and 4 columns.
+MIP Presolve modified 763 coefficients.
+Aggregator did 300 substitutions.
+Reduced MIP has 8919 rows, 3896 columns, and 29261 nonzeros.
+Reduced MIP has 3896 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (27.58 ticks)
+Probing time = 0.00 sec. (3.21 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 500 rows and 0 columns.
+Reduced MIP has 8419 rows, 3896 columns, and 27761 nonzeros.
+Reduced MIP has 3896 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.03 sec. (22.14 ticks)
+Probing time = 0.00 sec. (3.13 ticks)
+Clique table members: 5008.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 1.22 sec. (730.12 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     1600.0000  1296                   1600.0000     4356         
+      0     0     1600.0000  1167                    Cuts: 54     6255         
+      0     0     1600.0000  1236                   Cuts: 114     8445         
+      0     0     1600.0000  1166                    Cuts: 14     8952         
+      0     0     1600.0000  1212                    Cuts: 93    11074         
+*     0+    0                            0.0000     1600.0000              --- 
+*     0+    0                           12.0000     1600.0000              --- 
+*     0+    0                           72.0000     1600.0000              --- 
+      0     0        cutoff             72.0000     1600.0000    11074     --- 
+Detecting symmetries...
+      0     2     1600.0000  1150       72.0000     1600.0000    11074     --- 
+Elapsed time = 11.45 sec. (7291.56 ticks, tree = 0.01 MB, solutions = 3)
+      1     3     1600.0000  1154       72.0000     1600.0000    25454     --- 
+      2     4     1600.0000  1185       72.0000     1600.0000    29953     --- 
+      3     5     1600.0000   939       72.0000     1600.0000    31648     --- 
+      4     6     1600.0000   948       72.0000     1600.0000    32677     --- 
+      6     8     1600.0000   918       72.0000     1600.0000    34003     --- 
+      7     9     1600.0000   907       72.0000     1600.0000    40228     --- 
+      8    10     1600.0000   884       72.0000     1600.0000    40658     --- 
+     11     9    infeasible             72.0000     1600.0000    41411     --- 
+     13    11     1600.0000   783       72.0000     1600.0000    42761     --- 
+     17    13     1598.7692   683       72.0000     1600.0000    47419     --- 
+Elapsed time = 26.42 sec. (17383.85 ticks, tree = 0.55 MB, solutions = 3)
+     20    12    infeasible             72.0000     1600.0000    53834     --- 
+*    28    16      integral     0     1556.0000     1600.0000    56539    2.83%
+*    30+   11                         1596.0000     1600.0000             0.25%
+*    30+    1                         1600.0000     1600.0000             0.00%
+
+Clique cuts applied:  10
+Zero-half cuts applied:  15
+
+Root node processing (before b&c):
+  Real time             =   11.44 sec. (7288.89 ticks)
+Sequential b&c:
+  Real time             =   17.30 sec. (11794.52 ticks)
+                          ------------
+Total (root+branch&cut) =   28.74 sec. (19083.41 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark flat100-6.cnf k 5 OPT 1600 TimeCost 29.794426441192627 TimeSolve 28.91775608062744 TimeRead 0.004095554351806641 TimeTrans 0.8725748062133789

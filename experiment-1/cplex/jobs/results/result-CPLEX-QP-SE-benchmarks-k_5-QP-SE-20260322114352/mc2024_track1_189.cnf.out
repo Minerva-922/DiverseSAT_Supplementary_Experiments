@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-QP-SE.py", line 103, in <module>
+    add_cnf_constraints(prob, n, k, clauses, var_indices)
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-QP-SE.py", line 76, in add_cnf_constraints
+    prob.linear_constraints.add(
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 1273, in add
+    return self._add_iter(self.get_num, self._add,
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_baseinterface.py", line 41, in _add_iter
+    addfun(*args, **kwargs)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 1201, in _add
+    CPX_PROC.addrows(self._env._e, self._cplex._lp, 0,
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 1184, in addrows
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1222: Duplicate entry or entries.

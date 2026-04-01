@@ -1,0 +1,77 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 10 times.
+MIP Presolve eliminated 69679 rows and 19635 columns.
+MIP Presolve modified 10704 coefficients.
+Aggregator did 12798 substitutions.
+Reduced MIP has 290591 rows, 142137 columns, and 1033187 nonzeros.
+Reduced MIP has 142137 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 5.94 sec. (3103.70 ticks)
+Probing fixed 5020 vars, tightened 0 bounds.
+Probing changed sense of 380 constraints.
+Probing time = 1.80 sec. (406.20 ticks)
+Tried aggregator 3 times.
+Detecting symmetries...
+MIP Presolve eliminated 24480 rows and 8647 columns.
+MIP Presolve modified 1021 coefficients.
+Aggregator did 2919 substitutions.
+Reduced MIP has 263192 rows, 130571 columns, and 939817 nonzeros.
+Reduced MIP has 130571 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 4.21 sec. (2147.12 ticks)
+Probing time = 0.28 sec. (51.46 ticks)
+Clique table members: 459140.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 79.82 sec. (28601.16 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0    53406.0000 41662                  53406.0000   136937         
+      0     0    53007.0125 42054                  Cuts: 9996   272692         
+      0     0    52817.0624 39191                  Cuts: 9459   416782         
+      0     0    52147.2190 36584                  Cuts: 9645   631813         
+      0     0    51907.7393 36594                  Cuts: 8575   719076         
+      0     0    51786.5186 36530                  Cuts: 6939   787555         
+      0     0    51714.5475 36472                  Cuts: 6065   853708         
+      0     0    51669.9348 36780                  Cuts: 5683   927127         
+      0     0    51639.9880 36330                  Cuts: 5431  1003120         
+      0     0    51612.9224 36688                  Cuts: 5240  1061183         
+      0     0    51587.0519 35663                  Cuts: 5169  1279325         
+      0     0    51556.2763 35167                  Cuts: 5481  1363311         
+
+GUB cover cuts applied:  1
+Clique cuts applied:  6936
+Cover cuts applied:  7
+Implied bound cuts applied:  7258
+Flow cuts applied:  6
+Mixed integer rounding cuts applied:  19
+Zero-half cuts applied:  8744
+
+Root node processing (before b&c):
+  Real time             = 7200.34 sec. (1780896.46 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.34 sec. (1780896.46 ticks)
+Solution is infeasible.
+
+---------------------
+@@@ MIP_time_limit_infeasible
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-DW-SE.py", line 104, in <module>
+    print(f">>> Benchmark {os.path.basename(cnf_file)} k {k} OPT {int(prob.solution.get_objective_value())}"
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 7211, in get_objective_value
+    return CPX_PROC.getobjval(self._env._e, self._cplex._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 2055, in getobjval
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1217: No solution exists.

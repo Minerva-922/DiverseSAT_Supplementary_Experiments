@@ -1,0 +1,67 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 12 rows and 4 columns.
+MIP Presolve modified 8 coefficients.
+Aggregator did 1000 substitutions.
+Reduced MIP has 37234 rows, 12996 columns, and 129686 nonzeros.
+Reduced MIP has 12996 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.16 sec. (83.24 ticks)
+Probing time = 0.01 sec. (5.59 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 37234 rows, 12996 columns, and 129686 nonzeros.
+Reduced MIP has 12996 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.15 sec. (67.65 ticks)
+Probing time = 0.01 sec. (5.57 ticks)
+Clique table members: 3045.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 114.74 sec. (59617.57 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     6000.0000  3957                   6000.0000    41900         
+      0     0     6000.0000  5930                   Cuts: 855   332852         
+      0     0     6000.0000  6056                   Cuts: 943   559322         
+Heuristic still looking.
+Heuristic still looking.
+Detecting symmetries...
+      0     2     6000.0000  6057                   6000.0000   559322         
+Elapsed time = 5276.35 sec. (2821247.80 ticks, tree = 0.01 MB, solutions = 0)
+      1     3     6000.0000  6042                   6000.0000   957377         
+
+Clique cuts applied:  3
+Implied bound cuts applied:  1
+Zero-half cuts applied:  511
+Lift and project cuts applied:  4
+Gomory fractional cuts applied:  11
+
+Root node processing (before b&c):
+  Real time             = 5276.33 sec. (2821240.15 ticks)
+Sequential b&c:
+  Real time             = 1923.72 sec. (988511.60 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.05 sec. (3809751.75 ticks)
+Solution is infeasible.
+
+---------------------
+@@@ MIP_time_limit_infeasible
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-IW-SE.py", line 105, in <module>
+    print(f">>> Benchmark {os.path.basename(cnf_file)} k {k} OPT {int(prob.solution.get_objective_value())}"
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 7211, in get_objective_value
+    return CPX_PROC.getobjval(self._env._e, self._cplex._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 2055, in getobjval
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1217: No solution exists.

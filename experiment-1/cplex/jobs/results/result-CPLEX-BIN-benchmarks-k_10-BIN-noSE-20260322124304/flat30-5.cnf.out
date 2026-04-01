@@ -1,0 +1,59 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 1470 rows and 0 columns.
+MIP Presolve modified 1200 coefficients.
+Aggregator did 360 substitutions.
+Reduced MIP has 2700 rows, 1800 columns, and 7800 nonzeros.
+Reduced MIP has 1800 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (10.61 ticks)
+Found incumbent of value -10470.000000 after 0.04 sec. (23.02 ticks)
+Probing time = 0.00 sec. (1.23 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 300 rows and 0 columns.
+Reduced MIP has 2400 rows, 1800 columns, and 6900 nonzeros.
+Reduced MIP has 1800 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (8.16 ticks)
+Probing time = 0.01 sec. (1.01 ticks)
+Clique table members: 1860.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.13 sec. (106.39 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       -10470.0000     5850.0000           155.87%
+      0     0     2120.0000   854   -10470.0000     2120.0000     1919  120.25%
+      0     0     1980.0000   633   -10470.0000     Cuts: 108     3240  118.91%
+      0     0     1980.0000   652   -10470.0000      Cuts: 61     3569  118.91%
+      0     0     1980.0000   486   -10470.0000   ZeroHalf: 4     3706  118.91%
+*     0+    0                         1770.0000     1980.0000            11.86%
+      0     0        cutoff           1770.0000     1980.0000     3706   11.86%
+      0     0     1980.0000   498     1770.0000  ZeroHalf: 36     3857   11.86%
+*     0+    0                         1980.0000     1980.0000             0.00%
+      0     0        cutoff           1980.0000     1980.0000     3857    0.00%
+Elapsed time = 1.75 sec. (1275.12 ticks, tree = 0.01 MB, solutions = 3)
+
+Zero-half cuts applied:  105
+Gomory fractional cuts applied:  3
+
+Root node processing (before b&c):
+  Real time             =    1.75 sec. (1275.28 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    1.75 sec. (1275.28 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark flat30-5.cnf k 10 OPT 1980 TimeCost 2.0489461421966553 TimeSolve 1.7640411853790283 TimeRead 0.0012624263763427734 TimeTrans 0.2836425304412842

@@ -1,0 +1,77 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 1 time.
+MIP Presolve eliminated 957 rows and 9 columns.
+MIP Presolve modified 498 coefficients.
+Reduced MIP has 5364 rows, 2601 columns, and 17106 nonzeros.
+Reduced MIP has 2601 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (11.53 ticks)
+Probing time = 0.01 sec. (2.67 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 300 rows and 0 columns.
+Reduced MIP has 5064 rows, 2601 columns, and 16206 nonzeros.
+Reduced MIP has 2601 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (13.37 ticks)
+Probing time = 0.01 sec. (2.49 ticks)
+Clique table members: 7893.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.22 sec. (188.58 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     1980.0000   732                   1980.0000     1314         
+      0     0     1980.0000   669                   Cuts: 111     1681         
+      0     0     1980.0000   710                   Cuts: 115     2405         
+      0     0     1980.0000   554                 ZeroHalf: 7     2515         
+*     0+    0                         1160.0000     1980.0000            70.69%
+*     0+    0                         1192.0000     1980.0000            66.11%
+      0     0        cutoff           1192.0000     1980.0000     2515   66.11%
+      0     0     1980.0000   589     1192.0000     Cuts: 121     3109   66.11%
+*     0+    0                         1272.0000     1980.0000            55.66%
+*     0+    0                         1292.0000     1980.0000            53.25%
+      0     0        cutoff           1292.0000     1980.0000     3109   53.25%
+Detecting symmetries...
+      0     2     1980.0000   557     1292.0000     1980.0000     3109   53.25%
+Elapsed time = 3.99 sec. (2712.38 ticks, tree = 0.01 MB, solutions = 4)
+      1     3     1974.0000   434     1292.0000     1980.0000     5914   53.25%
+      2     4     1974.0000   703     1292.0000     1980.0000     7632   53.25%
+      4     6     1974.0000   540     1292.0000     1980.0000     8971   53.25%
+      9    11     1974.0000   532     1292.0000     1980.0000    10800   53.25%
+     14    16     1974.0000   537     1292.0000     1980.0000    12050   53.25%
+     19    21     1974.0000   533     1292.0000     1980.0000    13581   53.25%
+     24    26     1974.0000   505     1292.0000     1980.0000    15213   53.25%
+     27    29     1974.0000   456     1292.0000     1980.0000    16231   53.25%
+*    30+   30                         1938.0000     1980.0000             2.17%
+*    30+    3                         1974.0000     1980.0000             0.30%
+     30     1     1974.0000     0     1974.0000     1980.0000    16948    0.30%
+     40    11     1978.0000   636     1974.0000     1980.0000    21297    0.30%
+Elapsed time = 8.91 sec. (6338.93 ticks, tree = 0.26 MB, solutions = 6)
+     60    31     1980.0000   260     1974.0000     1980.0000    25326    0.30%
+*    70+   37                         1978.0000     1980.0000             0.10%
+*    75     0      integral     0     1980.0000     1980.0000    27590    0.00%
+
+Clique cuts applied:  31
+Implied bound cuts applied:  5
+Zero-half cuts applied:  25
+
+Root node processing (before b&c):
+  Real time             =    3.96 sec. (2700.19 ticks)
+Sequential b&c:
+  Real time             =    6.89 sec. (5206.31 ticks)
+                          ------------
+Total (root+branch&cut) =   10.85 sec. (7906.50 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark flat30-5.cnf k 10 OPT 1980 TimeCost 11.32894778251648 TimeSolve 10.93631649017334 TimeRead 0.001474142074584961 TimeTrans 0.3911571502685547

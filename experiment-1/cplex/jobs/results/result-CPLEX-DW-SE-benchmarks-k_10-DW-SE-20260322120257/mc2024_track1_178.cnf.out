@@ -1,0 +1,151 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 1 time.
+MIP Presolve eliminated 86517 rows and 9 columns.
+MIP Presolve modified 3888 coefficients.
+Reduced MIP has 25785 rows, 21861 columns, and 129546 nonzeros.
+Reduced MIP has 21861 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.37 sec. (165.03 ticks)
+Probing time = 0.07 sec. (11.71 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 810 rows and 0 columns.
+Reduced MIP has 24975 rows, 21861 columns, and 122256 nonzeros.
+Reduced MIP has 21861 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.17 sec. (94.44 ticks)
+Probing time = 0.06 sec. (10.91 ticks)
+Clique table members: 67129.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 404.81 sec. (266168.22 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     7128.0000  4060                   7128.0000   176323         
+      0     0     7128.0000  4568                    Cuts: 94   359368         
+      0     0     7128.0000  5043                   Cuts: 255   527840         
+Heuristic still looking.
+Heuristic still looking.
+Detecting symmetries...
+      0     2     7128.0000  3685                   7128.0000   527840         
+Elapsed time = 2753.53 sec. (1758468.43 ticks, tree = 0.01 MB, solutions = 0)
+      1     3     7128.0000  5282                   7128.0000   824339         
+      2     4     7128.0000  5121                   7128.0000   985832         
+      3     5     7128.0000  5504                   7128.0000  1150027         
+      4     6     7128.0000  5120                   7128.0000  1151041         
+      5     7     7128.0000  5437                   7128.0000  1171924         
+      6     8     7128.0000  5327                   7128.0000  1177327         
+      7     9     7128.0000  5243                   7128.0000  1179258         
+      8    10     7128.0000  5172                   7128.0000  1181042         
+      9    11     7128.0000  5119                   7128.0000  1183167         
+     10    12     7128.0000  5157                   7128.0000  1184769         
+Elapsed time = 4628.02 sec. (2896038.67 ticks, tree = 0.08 MB, solutions = 0)
+     11    13     7128.0000  5104                   7128.0000  1186190         
+     12    14     7128.0000  5061                   7128.0000  1188265         
+     13    15     7128.0000  5061                   7128.0000  1189610         
+     14    16     7128.0000  5420                   7128.0000  1311995         
+     15    17     7128.0000  5069                   7128.0000  1312697         
+     16    18     7128.0000  5011                   7128.0000  1316224         
+     17    19     7128.0000  5013                   7128.0000  1317907         
+     18    20     7128.0000  5021                   7128.0000  1318262         
+     19    21     7128.0000  5005                   7128.0000  1319390         
+     20    22     7128.0000  4963                   7128.0000  1322450         
+Elapsed time = 4971.62 sec. (3097777.17 ticks, tree = 0.18 MB, solutions = 0)
+     21    23     7128.0000  4875                   7128.0000  1325006         
+     22    24     7128.0000  4804                   7128.0000  1330824         
+     23    25     7128.0000  4824                   7128.0000  1332577         
+     24    26     7128.0000  4832                   7128.0000  1333188         
+     25    27     7128.0000  4813                   7128.0000  1335073         
+     26    28     7128.0000  4843                   7128.0000  1336890         
+     27    29     7128.0000  4830                   7128.0000  1337941         
+     28    30     7128.0000  4783                   7128.0000  1341408         
+     29    31     7128.0000  4786                   7128.0000  1343155         
+     30    32     7128.0000  4758                   7128.0000  1343451         
+Elapsed time = 5053.55 sec. (3148047.54 ticks, tree = 0.27 MB, solutions = 0)
+     31    33     7128.0000  4707                   7128.0000  1346700         
+     32    34     7128.0000  4722                   7128.0000  1348489         
+     33    35     7128.0000  4703                   7128.0000  1349094         
+     34    36     7128.0000  4711                   7128.0000  1351238         
+     35    37     7128.0000  4685                   7128.0000  1353212         
+     36    38     7128.0000  4672                   7128.0000  1356352         
+     37    39     7128.0000  4684                   7128.0000  1356874         
+     38    40     7128.0000  4671                   7128.0000  1358675         
+     39    41     7128.0000  4656                   7128.0000  1359318         
+     40    42     7128.0000  4686                   7128.0000  1361500         
+Elapsed time = 5610.41 sec. (3467285.74 ticks, tree = 0.36 MB, solutions = 0)
+     41    43     7128.0000  4639                   7128.0000  1362743         
+     42    44     7128.0000  4599                   7128.0000  1367204         
+     43    45     7128.0000  4601                   7128.0000  1369437         
+     44    46     7128.0000  4590                   7128.0000  1371709         
+     45    47     7128.0000  4787                   7128.0000  1395446         
+     46    48     7128.0000  4567                   7128.0000  1397772         
+     47    49     7128.0000  4589                   7128.0000  1400521         
+     48    50     7128.0000  4600                   7128.0000  1403730         
+     49    51     7128.0000  4577                   7128.0000  1407464         
+     50    52     7128.0000  4552                   7128.0000  1409889         
+Elapsed time = 5717.73 sec. (3540052.52 ticks, tree = 0.45 MB, solutions = 0)
+     51    53     7128.0000  4584                   7128.0000  1411047         
+     52    54     7128.0000  4572                   7128.0000  1413708         
+     53    55     7128.0000  4519                   7128.0000  1416386         
+     54    56     7128.0000  4468                   7128.0000  1421691         
+     55    57     7128.0000  4505                   7128.0000  1424600         
+     56    58     7128.0000  4470                   7128.0000  1427478         
+     57    59     7128.0000  4445                   7128.0000  1429819         
+     58    60     7128.0000  4361                   7128.0000  1436693         
+     59    61     7128.0000  4435                   7128.0000  1440758         
+     60    62     7128.0000  4373                   7128.0000  1441768         
+Elapsed time = 5811.30 sec. (3596863.02 ticks, tree = 0.56 MB, solutions = 0)
+     61    63     7128.0000  4368                   7128.0000  1444886         
+     62    64     7128.0000  4344                   7128.0000  1448008         
+     63    65     7128.0000  4327                   7128.0000  1450998         
+     64    66     7128.0000  4331                   7128.0000  1453635         
+     65    67     7128.0000  4303                   7128.0000  1456207         
+     66    68     7128.0000  4235                   7128.0000  1460833         
+     67    69     7128.0000  4267                   7128.0000  1463938         
+     68    70     7128.0000  4241                   7128.0000  1469902         
+     69    71     7128.0000  4244                   7128.0000  1473038         
+     70    72     7128.0000  4241                   7128.0000  1478430         
+Elapsed time = 6183.34 sec. (3825662.43 ticks, tree = 0.65 MB, solutions = 0)
+     71    73     7128.0000  4162                   7128.0000  1484813         
+     72    74     7128.0000  4192                   7128.0000  1488412         
+     73    75     7128.0000  4156                   7128.0000  1494307         
+     74    76     7128.0000  4111                   7128.0000  1500057         
+     75    77     7128.0000  4091                   7128.0000  1519082         
+     76    78     7128.0000  4070                   7128.0000  1526985         
+     77    79     7128.0000  4071                   7128.0000  1535607         
+     78    80     7128.0000  4212                   7128.0000  1695748         
+     79    81     7128.0000  4095                   7128.0000  1702440         
+
+GUB cover cuts applied:  1
+Clique cuts applied:  1
+Zero-half cuts applied:  152
+Lift and project cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             = 2753.23 sec. (1758364.62 ticks)
+Sequential b&c:
+  Real time             = 4446.83 sec. (2672019.74 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.06 sec. (4430384.35 ticks)
+Solution is infeasible.
+
+---------------------
+@@@ MIP_time_limit_infeasible
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-DW-SE.py", line 104, in <module>
+    print(f">>> Benchmark {os.path.basename(cnf_file)} k {k} OPT {int(prob.solution.get_objective_value())}"
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 7211, in get_objective_value
+    return CPX_PROC.getobjval(self._env._e, self._cplex._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 2055, in getobjval
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1217: No solution exists.

@@ -1,0 +1,67 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 1119 rows and 387 columns.
+MIP Presolve modified 28 coefficients.
+Aggregator did 184 substitutions.
+Reduced MIP has 472238 rows, 207649 columns, and 1472360 nonzeros.
+Reduced MIP has 207649 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.87 sec. (1076.36 ticks)
+Probing fixed 13126 vars, tightened 0 bounds.
+Probing time = 35.42 sec. (9155.55 ticks)
+Tried aggregator 3 times.
+MIP Presolve eliminated 81143 rows and 26041 columns.
+MIP Presolve modified 4659 coefficients.
+Aggregator did 5931 substitutions.
+Reduced MIP has 385164 rows, 175677 columns, and 1240753 nonzeros.
+Reduced MIP has 175677 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 8.09 sec. (4077.67 ticks)
+Probing fixed 2638 vars, tightened 0 bounds.
+Probing time = 6.06 sec. (2294.65 ticks)
+Tried aggregator 3 times.
+Detecting symmetries...
+MIP Presolve eliminated 11141 rows and 3508 columns.
+MIP Presolve modified 64 coefficients.
+Aggregator did 1550 substitutions.
+Reduced MIP has 372473 rows, 170619 columns, and 1199199 nonzeros.
+Reduced MIP has 170619 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 4.70 sec. (2811.85 ticks)
+Probing fixed 50 vars, tightened 0 bounds.
+Probing time = 3.06 sec. (1179.41 ticks)
+Clique table members: 803365.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 7134.54 sec. (1455227.59 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0   1.00000e+37     0                 158375.0000   420520         
+
+Root node processing (before b&c):
+  Real time             = 7200.02 sec. (1479065.21 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.02 sec. (1479065.21 ticks)
+Solution is infeasible.
+
+---------------------
+@@@ MIP_time_limit_infeasible
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-IW-SE.py", line 105, in <module>
+    print(f">>> Benchmark {os.path.basename(cnf_file)} k {k} OPT {int(prob.solution.get_objective_value())}"
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 7211, in get_objective_value
+    return CPX_PROC.getobjval(self._env._e, self._cplex._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 2055, in getobjval
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1217: No solution exists.

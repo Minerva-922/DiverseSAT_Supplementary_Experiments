@@ -1,0 +1,76 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 1 time.
+MIP Presolve eliminated 897 rows and 9 columns.
+MIP Presolve modified 498 coefficients.
+Reduced MIP has 5424 rows, 2601 columns, and 17226 nonzeros.
+Reduced MIP has 2601 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (11.58 ticks)
+Probing time = 0.00 sec. (2.67 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 300 rows and 0 columns.
+Reduced MIP has 5124 rows, 2601 columns, and 16326 nonzeros.
+Reduced MIP has 2601 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (13.45 ticks)
+Probing time = 0.01 sec. (2.50 ticks)
+Clique table members: 7662.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.20 sec. (166.79 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     1980.0000   676                   1980.0000     1173         
+      0     0     1980.0000   620                   Cuts: 157     1533         
+      0     0     1980.0000   619                    Cuts: 89     1938         
+      0     0     1980.0000   690                    Cuts: 65     2292         
+      0     0     1980.0000   623                    Cuts: 26     2428         
+      0     0     1980.0000   590                   Cuts: 107     2812         
+Detecting symmetries...
+      0     0     1980.0000   716                    Cuts: 44     3092         
+*     0+    0                         1928.0000     1980.0000             2.70%
+*     0+    0                         1934.0000     1980.0000             2.38%
+*     0+    0                         1946.0000     1980.0000             1.75%
+      0     0        cutoff           1946.0000     1980.0000     3092    1.75%
+Detecting symmetries...
+      0     2     1980.0000   555     1946.0000     1980.0000     3092    1.75%
+Elapsed time = 3.26 sec. (1937.99 ticks, tree = 0.01 MB, solutions = 3)
+      1     3     1980.0000   521     1946.0000     1980.0000     4820    1.75%
+      5     7     1980.0000   519     1946.0000     1980.0000     7310    1.75%
+      8    10     1980.0000   468     1946.0000     1980.0000     9841    1.75%
+     11    13     1974.0000   360     1946.0000     1980.0000    11504    1.75%
+     14    16     1973.5000   272     1946.0000     1980.0000    13227    1.75%
+     17    18     1971.4286   413     1946.0000     1980.0000    14799    1.75%
+*    23    15      integral     0     1972.0000     1980.0000    15771    0.41%
+     26    17     1980.0000   375     1972.0000     1980.0000    16626    0.41%
+     29    18     1973.0000   429     1972.0000     1980.0000    18371    0.41%
+     32    17     1980.0000   519     1972.0000     1980.0000    20520    0.41%
+*    40+   18                         1976.0000     1980.0000             0.20%
+*    44    16      integral     0     1978.0000     1980.0000    23394    0.10%
+*    50+    1                         1980.0000     1980.0000             0.00%
+
+Clique cuts applied:  8
+Implied bound cuts applied:  9
+Zero-half cuts applied:  25
+Lift and project cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    3.24 sec. (1929.35 ticks)
+Sequential b&c:
+  Real time             =    4.66 sec. (3621.25 ticks)
+                          ------------
+Total (root+branch&cut) =    7.90 sec. (5550.60 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark flat30-2.cnf k 10 OPT 1980 TimeCost 8.340150117874146 TimeSolve 7.956350564956665 TimeRead 0.001508951187133789 TimeTrans 0.3822906017303467

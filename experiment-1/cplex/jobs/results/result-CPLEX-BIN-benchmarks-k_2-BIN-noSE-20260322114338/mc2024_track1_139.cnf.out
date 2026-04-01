@@ -1,0 +1,50 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 54682 rows and 3449 columns.
+MIP Presolve modified 191560 coefficients.
+Aggregator did 95694 substitutions.
+Reduced MIP has 496104 rows, 234824 columns, and 1566550 nonzeros.
+Reduced MIP has 234823 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 7.64 sec. (3903.82 ticks)
+Found incumbent of value -188868.000000 after 13.94 sec. (7151.77 ticks)
+Probing time = 0.73 sec. (147.24 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 2 rows and 4 columns.
+Reduced MIP has 496102 rows, 234820 columns, and 1566544 nonzeros.
+Reduced MIP has 234820 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 7.03 sec. (3594.43 ticks)
+Probing time = 0.61 sec. (137.25 ticks)
+Clique table members: 984634.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 35.51 sec. (14849.05 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            1.0000    47217.0000              --- 
+      0     0    47217.0000 72512        1.0000    47217.0000    97452     --- 
+      0     0    46620.5000 68981        1.0000    Cuts: 1047   130480     --- 
+      0     0    45856.5000 69462        1.0000 ZeroHalf: 3602   157373     --- 
+      0     0    45592.8333 70330        1.0000    Cuts: 3469   166927     --- 
+*     0+    0                           64.0000    45592.8333              --- 
+      0     0        cutoff             64.0000    45592.8333   166927     --- 
+      0     0    45059.2167 71311       64.0000    Cuts: 4949   190317     --- 
+      0     0    44626.5374 74500       64.0000    Cuts: 5033   229067     --- 
+      0     0    44207.3874 78538       64.0000    Cuts: 4714   259208     --- 
+*     0+    0                          227.0000    44207.3874              --- 
+*     0+    0                          230.0000    44207.3874              --- 
+*     0+    0                          292.0000    44207.3874              --- 
+      0     0        cutoff            292.0000    44207.3874   259208     --- 
+      0     0    43688.2388 78335      292.0000    Cuts: 4781   277818     --- 
+      0     0    43206.9795 78697      292.0000    Cuts: 4713   307298     --- 
+      0     0    43040.6155 79077      292.0000    Cuts: 4462   321278     --- 

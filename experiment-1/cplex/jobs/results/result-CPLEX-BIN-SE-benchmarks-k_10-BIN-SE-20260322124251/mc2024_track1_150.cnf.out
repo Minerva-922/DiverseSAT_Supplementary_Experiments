@@ -1,0 +1,107 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 4 times.
+MIP Presolve eliminated 451054 rows and 21603 columns.
+MIP Presolve modified 10584 coefficients.
+Aggregator did 8121 substitutions.
+Reduced MIP has 23476 rows, 14955 columns, and 99877 nonzeros.
+Reduced MIP has 14955 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.04 sec. (600.11 ticks)
+Probing time = 0.05 sec. (21.38 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 28 rows and 1 columns.
+MIP Presolve modified 261 coefficients.
+Reduced MIP has 23448 rows, 14954 columns, and 99461 nonzeros.
+Reduced MIP has 14954 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.17 sec. (100.67 ticks)
+Probing time = 0.02 sec. (8.82 ticks)
+Clique table members: 60204.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 129.30 sec. (92330.01 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     2993.6667  2619                   2993.6667    83219         
+      0     0     2878.6667  3353                  Cuts: 1417   327621         
+      0     0     2846.0000  3808                   Cuts: 367   674799         
+      0     0     2842.6667  4060                   Cuts: 869   940057         
+      0     0     2842.0000  4261                   Cuts: 800  1140491         
+      0     0     2842.0000  4292                   Cuts: 838  1326577         
+Detecting symmetries...
+      0     0     2842.0000  4242                   Cuts: 692  1436531         
+      0     0     2842.0000  4416                   Cuts: 742  1533955         
+Heuristic still looking.
+*     0+    0                            0.0000     2842.0000              --- 
+Detecting symmetries...
+      0     2     2842.0000  4416        0.0000     2842.0000  1533955     --- 
+Elapsed time = 3591.07 sec. (2358935.89 ticks, tree = 0.01 MB, solutions = 1)
+      1     3     2842.0000  4118        0.0000     2842.0000  1966304     --- 
+      2     4     2842.0000  4161        0.0000     2842.0000  2140549     --- 
+      3     5     2842.0000  4122        0.0000     2842.0000  2229270     --- 
+      4     6     2842.0000  4286        0.0000     2842.0000  2420948     --- 
+      5     7     2842.0000  4245        0.0000     2842.0000  2425464     --- 
+      6     8     2842.0000  4313        0.0000     2842.0000  2516521     --- 
+      7     9     2842.0000  5175        0.0000     2842.0000  2566974     --- 
+      8    10     2842.0000  4031        0.0000     2842.0000  2678746     --- 
+      9    11     2842.0000  3970        0.0000     2842.0000  2771036     --- 
+     10    12     2842.0000  4084        0.0000     2842.0000  2774674     --- 
+Elapsed time = 6037.44 sec. (4084297.49 ticks, tree = 0.44 MB, solutions = 1)
+     11    13     2842.0000  4054        0.0000     2842.0000  2776349     --- 
+     12    14     2842.0000  4101        0.0000     2842.0000  2777852     --- 
+     13    15     2842.0000  4012        0.0000     2842.0000  2778877     --- 
+     14    16     2842.0000  3994        0.0000     2842.0000  2783067     --- 
+     15    17     2842.0000  4123        0.0000     2842.0000  2784550     --- 
+     16    18     2842.0000  4065        0.0000     2842.0000  2785410     --- 
+     17    19     2842.0000  4138        0.0000     2842.0000  2786763     --- 
+     18    20     2842.0000  4106        0.0000     2842.0000  2787593     --- 
+     19    21     2842.0000  4120        0.0000     2842.0000  2789556     --- 
+     20    22     2842.0000  4082        0.0000     2842.0000  2792510     --- 
+Elapsed time = 6063.00 sec. (4103537.38 ticks, tree = 0.53 MB, solutions = 1)
+     21    23     2842.0000  4277        0.0000     2842.0000  2799755     --- 
+     22    24     2842.0000  4075        0.0000     2842.0000  2805239     --- 
+     23    25     2842.0000  3791        0.0000     2842.0000  2878149     --- 
+     24    26     2842.0000  3688        0.0000     2842.0000  2961431     --- 
+     25    27     2842.0000  3965        0.0000     2842.0000  3042586     --- 
+     26    28     2842.0000  3783        0.0000     2842.0000  3125907     --- 
+     28    30     2842.0000  3849        0.0000     2842.0000  3127494     --- 
+     29    31     2842.0000  3794        0.0000     2842.0000  3128376     --- 
+     30    32     2842.0000  3739        0.0000     2842.0000  3201115     --- 
+     32    34     2842.0000  3652        0.0000     2842.0000  3282004     --- 
+Elapsed time = 6882.94 sec. (4696911.60 ticks, tree = 0.63 MB, solutions = 1)
+     33    35     2842.0000  3591        0.0000     2842.0000  3361180     --- 
+     34    36     2840.6667  3452        0.0000     2842.0000  3437655     --- 
+     35    37     2840.6667  3524        0.0000     2842.0000  3439892     --- 
+     36    38     2836.0000  3522        0.0000     2842.0000  3446869     --- 
+     37    39     2840.3333  3576        0.0000     2842.0000  3447772     --- 
+     38    40     2834.0000  3661        0.0000     2842.0000  3456104     --- 
+     40    42     2832.0000  3655        0.0000     2842.0000  3458661     --- 
+     41    43     2840.0000  3639        0.0000     2842.0000  3459643     --- 
+     42    44     2840.0000  3694        0.0000     2842.0000  3462189     --- 
+
+GUB cover cuts applied:  2
+Clique cuts applied:  252
+Implied bound cuts applied:  76
+Zero-half cuts applied:  582
+Gomory fractional cuts applied:  3
+
+Root node processing (before b&c):
+  Real time             = 3590.94 sec. (2358851.09 ticks)
+Sequential b&c:
+  Real time             = 3609.08 sec. (2552198.17 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.02 sec. (4911049.26 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_time_limit_feasible
+>>> Benchmark mc2024_track1_150.cnf k 10 OPT 0 TimeCost 7667.15508890152 TimeSolve 7228.753950595856 TimeRead 0.06998515129089355 TimeTrans 438.33115315437317

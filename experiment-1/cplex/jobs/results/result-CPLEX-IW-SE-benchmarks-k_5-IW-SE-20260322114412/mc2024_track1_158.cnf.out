@@ -1,0 +1,46 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 40 rows and 14 columns.
+MIP Presolve modified 8 coefficients.
+Aggregator did 8080 substitutions.
+Reduced MIP has 247975 rows, 104984 columns, and 810092 nonzeros.
+Reduced MIP has 104984 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.58 sec. (773.30 ticks)
+Found incumbent of value 0.000000 after 4.69 sec. (1892.23 ticks)
+Probing time = 0.12 sec. (32.32 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 247975 rows, 104984 columns, and 810092 nonzeros.
+Reduced MIP has 104984 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.46 sec. (633.68 ticks)
+Probing time = 0.11 sec. (31.54 ticks)
+Clique table members: 140579.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 7326.65 sec. (1316157.33 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000    48462.0000              --- 
+      0     0   1.00000e+37     0        0.0000    48462.0000   539488     --- 
+
+Root node processing (before b&c):
+  Real time             = 7333.54 sec. (1318994.66 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 7333.54 sec. (1318994.66 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_time_limit_feasible
+>>> Benchmark mc2024_track1_158.cnf k 5 OPT 0 TimeCost 7710.301998615265 TimeSolve 7358.083050251007 TimeRead 0.08556628227233887 TimeTrans 352.1333820819855

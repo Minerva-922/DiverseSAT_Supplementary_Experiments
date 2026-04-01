@@ -1,0 +1,78 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_Simplex_Tolerances_Optimality           1.0000000000000001e-09
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 12 times.
+MIQP Presolve eliminated 161824 rows and 37254 columns.
+MIQP Presolve modified 7296 coefficients.
+Aggregator did 57806 substitutions.
+Reduced MIQP has 236207 rows, 106784 columns, and 741109 nonzeros.
+Reduced MIQP has 68679 binaries, 38105 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 38105 nonzeros.
+Presolve time = 19.45 sec. (8804.98 ticks)
+Probing fixed 19488 vars, tightened 32775 bounds.
+Probing changed sense of 1069 constraints.
+Probing time = 10.92 sec. (3064.62 ticks)
+Tried aggregator 9 times.
+MIQP Presolve eliminated 121404 rows and 37557 columns.
+MIQP Presolve modified 331 coefficients.
+Aggregator did 16936 substitutions.
+Reduced MIQP has 97867 rows, 52291 columns, and 332980 nonzeros.
+Reduced MIQP has 31067 binaries, 21224 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 21224 nonzeros.
+Presolve time = 3.01 sec. (1527.02 ticks)
+Probing time = 0.06 sec. (17.22 ticks)
+Tried aggregator 1 time.
+MIQP Presolve eliminated 181 rows and 0 columns.
+MIQP Presolve modified 8 coefficients.
+Reduced MIQP has 97686 rows, 52291 columns, and 332429 nonzeros.
+Reduced MIQP has 31067 binaries, 21224 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 21224 nonzeros.
+Presolve time = 0.36 sec. (176.63 ticks)
+Classifier predicts products in MIQP should be linearized.
+Probing time = 0.06 sec. (17.66 ticks)
+Clique table members: 222451.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 55.90 sec. (54994.06 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     8683.0713 25718                   8683.0713    12249         
+      0     0     8558.5767 30245                  Cuts: 3261   118696         
+      0     0     8516.2668 30796                  Cuts: 3171   151993         
+*     0+    0                         1020.0000     8516.2668           734.93%
+      0     0     8489.9158 31083     1020.0000    Cuts: 1737   204129  732.34%
+*     0+    0                         1214.0000     8489.9158           599.33%
+*     0+    0                         1232.0000     8489.9158           589.12%
+      0     0        cutoff           1232.0000     8489.9158   204129  589.12%
+      0     0     8476.0506 31238     1232.0000    Cuts: 1681   235731  587.99%
+      0     0     8463.4543 31230     1232.0000    Cuts: 1497   345206  586.97%
+      0     0     8441.6281 31470     1232.0000    Cuts: 1724   389756  585.20%
+*     0+    0                         1278.0000     8441.6281           560.53%
+*     0+    0                         1326.0000     8441.6281           536.62%
+      0     0        cutoff           1326.0000     8441.6281   389756  536.62%
+
+Clique cuts applied:  149
+Mixed integer rounding cuts applied:  3
+Zero-half cuts applied:  3124
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             = 7200.37 sec. (3361336.59 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.37 sec. (3361336.59 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_time_limit_feasible
+>>> Benchmark mc2024_track1_122.cnf k 2 OPT 1326 TimeCost 8431.154701709747 TimeSolve 7225.778419494629 TimeRead 0.3162970542907715 TimeTrans 1205.0599851608276

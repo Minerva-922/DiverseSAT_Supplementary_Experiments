@@ -1,0 +1,46 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 10 times.
+MIP Presolve eliminated 82876 rows and 57795 columns.
+MIP Presolve modified 22658 coefficients.
+Aggregator did 24964 substitutions.
+Reduced MIP has 164054 rows, 62951 columns, and 652936 nonzeros.
+Reduced MIP has 62951 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 2.28 sec. (1227.88 ticks)
+Found incumbent of value 63.000000 after 4.97 sec. (2345.64 ticks)
+Probing time = 0.06 sec. (18.79 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 164054 rows, 62951 columns, and 652936 nonzeros.
+Reduced MIP has 62951 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.94 sec. (410.51 ticks)
+Probing time = 0.06 sec. (18.41 ticks)
+Clique table members: 62570.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 7264.09 sec. (2087898.04 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                           63.0000   348150.0000              --- 
+      0     0   1.00000e+37     0       63.0000   348150.0000   347992     --- 
+
+Root node processing (before b&c):
+  Real time             = 7270.52 sec. (2090880.21 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 7270.52 sec. (2090880.21 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_time_limit_feasible
+>>> Benchmark mc2024_track1_012.cnf k 10 OPT 63 TimeCost 7899.729669809341 TimeSolve 7298.521390199661 TimeRead 0.026717424392700195 TimeTrans 601.1815621852875

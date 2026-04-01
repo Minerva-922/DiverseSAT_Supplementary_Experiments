@@ -1,0 +1,66 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_Simplex_Tolerances_Optimality           1.0000000000000001e-09
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 4 times.
+MIQP Presolve eliminated 28113 rows and 3823 columns.
+MIQP Presolve modified 6374 coefficients.
+Aggregator did 8246 substitutions.
+Reduced MIQP has 319115 rows, 117591 columns, and 1019206 nonzeros.
+Reduced MIQP has 105119 binaries, 12472 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 12472 nonzeros.
+Presolve time = 4.03 sec. (2178.55 ticks)
+Probing fixed 1045 vars, tightened 1045 bounds.
+Probing changed sense of 443 constraints.
+Probing time = 4.34 sec. (1511.58 ticks)
+Tried aggregator 3 times.
+MIQP Presolve eliminated 25437 rows and 9094 columns.
+Aggregator did 836 substitutions.
+Reduced MIQP has 292842 rows, 107661 columns, and 953768 nonzeros.
+Reduced MIQP has 95398 binaries, 12263 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 12263 nonzeros.
+Presolve time = 3.04 sec. (1546.84 ticks)
+Classifier predicts products in MIQP should be linearized.
+Probing time = 0.10 sec. (27.58 ticks)
+Clique table members: 300404.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 431.49 sec. (981472.93 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0    75024.3718 58230                  75024.3718       11         
+      0     0        cutoff                                      20376         
+Elapsed time = 2489.82 sec. (1533297.68 ticks, tree = 0.01 MB, solutions = 0)
+
+Clique cuts applied:  7363
+Implied bound cuts applied:  7
+Zero-half cuts applied:  35
+
+Root node processing (before b&c):
+  Real time             = 2489.82 sec. (1533297.93 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 2489.82 sec. (1533297.93 ticks)
+Solution is infeasible.
+
+---------------------
+@@@ MIP_infeasible
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-QP-SE.py", line 118, in <module>
+    print(f">>> Benchmark {os.path.basename(cnf_file)} k {k} OPT {int(prob.solution.get_objective_value())}"
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 7211, in get_objective_value
+    return CPX_PROC.getobjval(self._env._e, self._cplex._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 2055, in getobjval
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1217: No solution exists.

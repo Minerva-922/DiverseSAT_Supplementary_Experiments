@@ -1,0 +1,49 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Found incumbent of value 0.000000 after 0.00 sec. (0.77 ticks)
+Tried aggregator 2 times.
+MIP Presolve eliminated 3026 rows and 63 columns.
+MIP Presolve modified 1438 coefficients.
+Aggregator did 16 substitutions.
+Reduced MIP has 4179 rows, 2846 columns, and 18356 nonzeros.
+Reduced MIP has 2846 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.03 sec. (15.93 ticks)
+Probing time = 0.01 sec. (3.11 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 4179 rows, 2846 columns, and 18356 nonzeros.
+Reduced MIP has 2846 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (12.87 ticks)
+Probing time = 0.01 sec. (3.11 ticks)
+Clique table members: 9748.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.32 sec. (184.29 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000     3800.0000              --- 
+      0     0      884.0000   298        0.0000      884.0000     2142     --- 
+*     0+    0                          884.0000      884.0000             0.00%
+      0     0        cutoff            884.0000      884.0000     2142    0.00%
+Elapsed time = 0.79 sec. (480.41 ticks, tree = 0.01 MB, solutions = 2)
+
+Root node processing (before b&c):
+  Real time             =    0.79 sec. (480.54 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.79 sec. (480.54 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark mc2024_track1_003.cnf k 5 OPT 884 TimeCost 1.290945291519165 TimeSolve 0.8043279647827148 TimeRead 0.003528594970703125 TimeTrans 0.48308873176574707

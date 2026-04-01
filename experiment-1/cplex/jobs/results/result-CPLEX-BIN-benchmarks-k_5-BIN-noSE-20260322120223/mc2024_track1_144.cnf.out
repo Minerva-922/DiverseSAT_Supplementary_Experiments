@@ -1,0 +1,52 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 72578 rows and 374 columns.
+MIP Presolve modified 144190 coefficients.
+Aggregator did 72040 substitutions.
+Reduced MIP has 454277 rows, 264114 columns, and 1247590 nonzeros.
+Reduced MIP has 264114 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 2.74 sec. (1430.18 ticks)
+Elapsed time = 30.57 sec. (10000.60 ticks) for 11% of probing (17794 vars fixed)
+Elapsed time = 57.15 sec. (20001.83 ticks) for 19% of probing (19760 vars fixed)
+Probing fixed 19948 vars, tightened 0 bounds.
+Probing time = 72.36 sec. (25897.22 ticks)
+Tried aggregator 3 times.
+MIP Presolve eliminated 155552 rows and 61312 columns.
+MIP Presolve modified 10327 coefficients.
+Aggregator did 817 substitutions.
+Reduced MIP has 297908 rows, 201982 columns, and 871959 nonzeros.
+Reduced MIP has 201982 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 6.14 sec. (3014.39 ticks)
+Probing fixed 11151 vars, tightened 0 bounds.
+Probing changed sense of 2730 constraints.
+Probing time = 12.58 sec. (4934.18 ticks)
+Cover probing fixed 4 vars, tightened 202 bounds.
+Tried aggregator 4 times.
+Detecting symmetries...
+MIP Presolve eliminated 56493 rows and 26125 columns.
+MIP Presolve modified 2645 coefficients.
+Aggregator did 1871 substitutions.
+Reduced MIP has 239515 rows, 173986 columns, and 717483 nonzeros.
+Reduced MIP has 173986 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 10.11 sec. (7996.18 ticks)
+Probing fixed 1741 vars, tightened 0 bounds.
+Probing time = 3.50 sec. (1622.06 ticks)
+Clique table members: 530135.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 1236.92 sec. (488970.65 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0   120454.1343 95356                 120454.1343   279990         
+      0     0   117968.3679 90011                 Cuts: 10000   449268         
+      0     0   114357.0309 84579                 Cuts: 10000   683333         

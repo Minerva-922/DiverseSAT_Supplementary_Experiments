@@ -1,0 +1,52 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_Simplex_Tolerances_Optimality           1.0000000000000001e-09
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Found incumbent of value 0.000000 after 0.00 sec. (3.20 ticks)
+Tried aggregator 2 times.
+MIQP Presolve eliminated 4425 rows and 31 columns.
+MIQP Presolve modified 3908 coefficients.
+Aggregator did 18 substitutions.
+Reduced MIQP has 169014 rows, 1991 columns, and 509996 nonzeros.
+Reduced MIQP has 1891 binaries, 100 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 100 nonzeros.
+Presolve time = 0.78 sec. (408.54 ticks)
+Probing time = 0.04 sec. (18.41 ticks)
+Tried aggregator 1 time.
+Reduced MIQP has 169014 rows, 1991 columns, and 509996 nonzeros.
+Reduced MIQP has 1891 binaries, 100 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 100 nonzeros.
+Presolve time = 0.58 sec. (306.23 ticks)
+Classifier predicts products in MIQP should be linearized.
+Probing time = 0.04 sec. (18.13 ticks)
+Clique table members: 5346.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 760.45 sec. (1751098.97 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000    10000.0000              --- 
+      0     0     1954.1485  1132        0.0000     1954.1485       11     --- 
+
+Clique cuts applied:  3
+Zero-half cuts applied:  236
+
+Root node processing (before b&c):
+  Real time             = 7200.30 sec. (2681892.40 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.30 sec. (2681892.40 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_time_limit_feasible
+>>> Benchmark mc2024_track1_186.cnf k 10 OPT 0 TimeCost 7256.462051153183 TimeSolve 7238.50957942009 TimeRead 0.030023574829101562 TimeTrans 17.92244815826416

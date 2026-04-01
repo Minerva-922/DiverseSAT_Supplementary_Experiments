@@ -1,0 +1,69 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 1 time.
+MIP Presolve eliminated 629 rows and 1 columns.
+MIP Presolve modified 318 coefficients.
+Reduced MIP has 4051 rows, 1874 columns, and 11285 nonzeros.
+Reduced MIP has 1874 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (7.72 ticks)
+Probing time = 0.01 sec. (3.67 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 253 rows and 4 columns.
+MIP Presolve modified 2 coefficients.
+Reduced MIP has 3798 rows, 1870 columns, and 10523 nonzeros.
+Reduced MIP has 1870 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (11.34 ticks)
+Probing time = 0.01 sec. (2.46 ticks)
+Clique table members: 7331.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.05 sec. (32.20 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0      250.0000   611                    250.0000      777         
+      0     0      250.0000   581                 ZeroHalf: 4      851         
+      0     0      250.0000   799                   Cuts: 131     1140         
+      0     0      250.0000   860               ZeroHalf: 171     1390         
+Detecting symmetries...
+      0     2      250.0000   596                    250.0000     1390         
+Elapsed time = 1.79 sec. (1314.64 ticks, tree = 0.01 MB, solutions = 0)
+      9    11      250.0000   603                    250.0000     4107         
+     20    22      250.0000   587                    250.0000     6303         
+     25    27      249.5000   791                    250.0000     8700         
+     31    29    infeasible                          250.0000    11538         
+     38    26    infeasible                          250.0000    14821         
+     46    30      250.0000   599                    250.0000    16539         
+     53    35      250.0000   590                    250.0000    18190         
+     57    39      250.0000   544                    250.0000    20065         
+     62    38    infeasible                          250.0000    23099         
+*    68    36      integral     0       56.0000      250.0000    25827  346.43%
+     80    38    infeasible             56.0000      250.0000    30978  346.43%
+Elapsed time = 5.78 sec. (4701.45 ticks, tree = 0.31 MB, solutions = 1)
+    103    41      248.5000   763       56.0000      250.0000    38558  346.43%
+    130    46      250.0000   577       56.0000      250.0000    46655  346.43%
+    155    53    infeasible             56.0000      250.0000    55016  346.43%
+*   200     0      integral     0      250.0000      250.0000    62003    0.00%
+
+Zero-half cuts applied:  26
+
+Root node processing (before b&c):
+  Real time             =    1.79 sec. (1314.56 ticks)
+Sequential b&c:
+  Real time             =    8.54 sec. (7080.58 ticks)
+                          ------------
+Total (root+branch&cut) =   10.33 sec. (8395.14 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark flat125-3.cnf k 2 OPT 250 TimeCost 10.82965087890625 TimeSolve 10.397839784622192 TimeRead 0.0036962032318115234 TimeTrans 0.4281148910522461

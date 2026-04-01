@@ -1,0 +1,82 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 21951 rows and 322 columns.
+MIP Presolve modified 43077 coefficients.
+Aggregator did 21506 substitutions.
+Reduced MIP has 132288 rows, 78746 columns, and 367393 nonzeros.
+Reduced MIP has 78742 binaries, 4 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.79 sec. (444.27 ticks)
+Found incumbent of value 4764.000000 after 1.54 sec. (892.65 ticks)
+Probing fixed 5332 vars, tightened 0 bounds.
+Probing changed sense of 3234 constraints.
+Probing time = 6.54 sec. (2183.12 ticks)
+Tried aggregator 3 times.
+MIP Presolve eliminated 33614 rows and 13402 columns.
+MIP Presolve modified 2471 coefficients.
+Aggregator did 113 substitutions.
+Reduced MIP has 98561 rows, 65231 columns, and 286266 nonzeros.
+Reduced MIP has 65227 binaries, 4 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.96 sec. (1020.41 ticks)
+Probing fixed 1055 vars, tightened 0 bounds.
+Probing time = 1.88 sec. (623.15 ticks)
+Tried aggregator 2 times.
+Detecting symmetries...
+MIP Presolve eliminated 4148 rows and 2107 columns.
+MIP Presolve modified 28 coefficients.
+Aggregator did 15 substitutions.
+Reduced MIP has 94398 rows, 63109 columns, and 273335 nonzeros.
+Reduced MIP has 63109 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.02 sec. (666.88 ticks)
+Probing fixed 3 vars, tightened 0 bounds.
+Probing time = 0.30 sec. (104.40 ticks)
+Clique table members: 209197.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 220.57 sec. (77756.69 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                         4788.0000    88624.0000              --- 
+      0     0    39506.6667 37505     4788.0000    39506.6667   103419  725.12%
+      0     0    39287.3756 36787     4788.0000   Cuts: 10000   141809  720.54%
+      0     0    38554.5256 35726     4788.0000   Cuts: 10000   241453  705.23%
+      0     0    37290.2138 34287     4788.0000    Cuts: 9998   402459  678.83%
+*     0+    0                         5568.0000    37290.2138           569.72%
+*     0+    0                         5856.0000    37290.2138           536.79%
+*     0+    0                         6226.0000    37290.2138           498.94%
+*     0+    0                         6382.0000    37290.2138           484.30%
+*     0+    0                         6384.0000    37290.2138           484.12%
+*     0+    0                         6392.0000    37290.2138           483.39%
+      0     0        cutoff           6392.0000    37290.2138   402459  483.39%
+      0     0    36600.2697 32913     6392.0000    Cuts: 9999   599723  472.59%
+      0     0    35758.6264 31336     6392.0000    Cuts: 9873  1019881  459.43%
+
+GUB cover cuts applied:  106
+Clique cuts applied:  7329
+Cover cuts applied:  373
+Implied bound cuts applied:  7519
+Flow cuts applied:  18
+Mixed integer rounding cuts applied:  45
+Zero-half cuts applied:  11419
+Gomory fractional cuts applied:  179
+
+Root node processing (before b&c):
+  Real time             = 7200.13 sec. (2734361.04 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.13 sec. (2734361.04 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_time_limit_feasible
+>>> Benchmark mc2024_track1_018.cnf k 5 OPT 6392 TimeCost 7478.569305896759 TimeSolve 7224.907793521881 TimeRead 0.03696727752685547 TimeTrans 253.62454509735107

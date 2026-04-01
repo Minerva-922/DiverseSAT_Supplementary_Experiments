@@ -1,0 +1,81 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_Simplex_Tolerances_Optimality           1.0000000000000001e-09
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 1 time.
+MIQP Presolve eliminated 1977 rows and 9 columns.
+MIQP Presolve modified 18 coefficients.
+Reduced MIQP has 25288 rows, 3951 columns, and 134376 nonzeros.
+Reduced MIQP has 3753 binaries, 198 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 198 nonzeros.
+Presolve time = 0.12 sec. (79.08 ticks)
+Probing time = 0.01 sec. (3.86 ticks)
+Tried aggregator 1 time.
+Reduced MIQP has 25288 rows, 3951 columns, and 134376 nonzeros.
+Reduced MIQP has 3753 binaries, 198 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 198 nonzeros.
+Presolve time = 0.09 sec. (56.75 ticks)
+Classifier predicts products in MIQP should be linearized.
+Probing time = 0.01 sec. (3.84 ticks)
+Clique table members: 153.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 15.83 sec. (32665.37 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     4950.0000  1241                   4950.0000        6         
+      0     0     4950.0000  2356                   Cuts: 924    13832         
+      0     0     4950.0000  2511                  Cuts: 1723    20542         
+      0     0     4950.0000  2606                  Cuts: 2104    26923         
+      0     0     4950.0000  2771                  Cuts: 2736    33031         
+Heuristic still looking.
+Heuristic still looking.
+Heuristic still looking.
+      0     2     4950.0000  3248                   4950.0000    33031         
+Elapsed time = 1328.03 sec. (624941.87 ticks, tree = 0.01 MB, solutions = 0)
+      1     3     4950.0000  3309                   4950.0000    38681         
+      2     4     4950.0000  3319                   4950.0000    43761         
+      3     5     4950.0000  3267                   4950.0000    54902         
+      4     6     4950.0000  3326                   4950.0000    60145         
+      5     7     4950.0000  3316                   4950.0000    79951         
+      6     8     4950.0000  3363                   4950.0000   104946         
+      7     9     4950.0000  3356                   4950.0000   120614         
+      8    10     4950.0000  3356                   4950.0000   134352         
+      9    11     4950.0000  3340                   4950.0000   159518         
+     10    12     4950.0000  3485                   4950.0000   171114         
+Elapsed time = 6692.87 sec. (2768272.69 ticks, tree = 0.05 MB, solutions = 0)
+     11    13     4950.0000  3340                   4950.0000   176927         
+     12    14     4950.0000  3410                   4950.0000   182702         
+
+Implied bound cuts applied:  1
+Zero-half cuts applied:  1005
+Gomory fractional cuts applied:  12
+
+Root node processing (before b&c):
+  Real time             = 1328.02 sec. (624936.10 ticks)
+Sequential b&c:
+  Real time             = 5872.18 sec. (2387508.58 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.20 sec. (3012444.69 ticks)
+Solution is infeasible.
+
+---------------------
+@@@ MIP_time_limit_infeasible
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-QP-SE.py", line 118, in <module>
+    print(f">>> Benchmark {os.path.basename(cnf_file)} k {k} OPT {int(prob.solution.get_objective_value())}"
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 7211, in get_objective_value
+    return CPX_PROC.getobjval(self._env._e, self._cplex._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 2055, in getobjval
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1217: No solution exists.

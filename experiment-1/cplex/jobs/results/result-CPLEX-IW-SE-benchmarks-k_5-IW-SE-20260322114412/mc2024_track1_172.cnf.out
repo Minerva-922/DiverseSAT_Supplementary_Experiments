@@ -1,0 +1,116 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 64132 rows and 4 columns.
+MIP Presolve modified 988 coefficients.
+Aggregator did 216 substitutions.
+Reduced MIP has 4450 rows, 2804 columns, and 35257 nonzeros.
+Reduced MIP has 2804 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.30 sec. (158.09 ticks)
+Probing time = 0.01 sec. (4.24 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 30 rows and 0 columns.
+Reduced MIP has 4420 rows, 2804 columns, and 34177 nonzeros.
+Reduced MIP has 2804 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.05 sec. (33.77 ticks)
+Probing time = 0.00 sec. (4.24 ticks)
+Clique table members: 1797.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 1.08 sec. (848.16 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0      120.0000   303                    120.0000     4075         
+      0     0      120.0000   214                  Cliques: 7     4201         
+      0     0      120.0000   285                   Cuts: 218     7098         
+      0     0      120.0000   292                    Cuts: 20     8050         
+*     0+    0                          112.0000      120.0000             7.14%
+*     0+    0                          116.0000      120.0000             3.45%
+*     0+    0                          118.0000      120.0000             1.69%
+Detecting symmetries...
+      0     2      120.0000   144      118.0000      120.0000     8050    1.69%
+Elapsed time = 6.10 sec. (4600.52 ticks, tree = 0.01 MB, solutions = 3)
+      2     2      120.0000   322      118.0000      120.0000    10481    1.69%
+      4     4      120.0000   303      118.0000      120.0000    16704    1.69%
+      6     6      120.0000   212      118.0000      120.0000    21262    1.69%
+     21     9    infeasible            118.0000      120.0000    22647    1.69%
+     34     4    infeasible            118.0000      120.0000    23590    1.69%
+     36     6      120.0000   225      118.0000      120.0000    28355    1.69%
+     39     7      120.0000   186      118.0000      120.0000    32382    1.69%
+     60    10      120.0000   154      118.0000      120.0000    33832    1.69%
+    110    12      120.0000    96      118.0000      120.0000    35525    1.69%
+    268    16      120.0000   140      118.0000      120.0000    40482    1.69%
+Elapsed time = 13.52 sec. (9906.54 ticks, tree = 0.03 MB, solutions = 3)
+    492    14    infeasible            118.0000      120.0000    46603    1.69%
+    726    22      120.0000    71      118.0000      120.0000    51913    1.69%
+    920    11      120.0000   184      118.0000      120.0000    57615    1.69%
+   1130    15      120.0000    97      118.0000      120.0000    63839    1.69%
+   1331    12    infeasible            118.0000      120.0000    69907    1.69%
+   1529    14    infeasible            118.0000      120.0000    76009    1.69%
+   1721    14    infeasible            118.0000      120.0000    81982    1.69%
+   1925    32      120.0000   195      118.0000      120.0000    87457    1.69%
+   2079    31      120.0000   141      118.0000      120.0000    92699    1.69%
+   2278    22      120.0000   190      118.0000      120.0000    98208    1.69%
+Elapsed time = 25.23 sec. (19478.57 ticks, tree = 0.07 MB, solutions = 3)
+   2493    21      120.0000   154      118.0000      120.0000   103765    1.69%
+   2663    15      120.0000   228      118.0000      120.0000   110089    1.69%
+   2842    18      120.0000   118      118.0000      120.0000   116392    1.69%
+   3040    16      120.0000   127      118.0000      120.0000   122952    1.69%
+   3220    12      120.0000   155      118.0000      120.0000   129477    1.69%
+   3388     8      120.0000   207      118.0000      120.0000   135466    1.69%
+   3594    10      120.0000   169      118.0000      120.0000   142959    1.69%
+   3985     8      120.0000   191      118.0000      120.0000   150672    1.69%
+   4238     9      120.0000   148      118.0000      120.0000   159156    1.69%
+   4702    13      120.0000   181      118.0000      120.0000   166299    1.69%
+Elapsed time = 37.29 sec. (29041.27 ticks, tree = 0.23 MB, solutions = 3)
+
+Performing restart 1
+
+Repeating presolve.
+Tried aggregator 2 times.
+MIP Presolve eliminated 443 rows and 655 columns.
+MIP Presolve modified 11 coefficients.
+Aggregator did 2 substitutions.
+Reduced MIP has 3975 rows, 2147 columns, and 31917 nonzeros.
+Reduced MIP has 2147 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.05 sec. (40.77 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 1 rows and 2 columns.
+MIP Presolve modified 2 coefficients.
+Reduced MIP has 3974 rows, 2145 columns, and 31909 nonzeros.
+Reduced MIP has 2145 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (30.13 ticks)
+Represolve time = 0.24 sec. (147.00 ticks)
+   4712     2      120.0000    98      118.0000      120.0000   171457    1.69%
+   4717     4      120.0000   128      118.0000      120.0000   175750    1.69%
+   4732     9      120.0000   151      118.0000      120.0000   176483    1.69%
+   4739    12      120.0000   195      118.0000      120.0000   181928    1.69%
+   4748    14      120.0000   236      118.0000      120.0000   183825    1.69%
+   4751    15      120.0000   273      118.0000      120.0000   188854    1.69%
+   4756    16      120.0000   277      118.0000      120.0000   189256    1.69%
+   4781    18      120.0000   254      118.0000      120.0000   191393    1.69%
+*  4812+    0                          120.0000      120.0000             0.00%
+
+Clique cuts applied:  5
+
+Root node processing (before b&c):
+  Real time             =    6.08 sec. (4582.33 ticks)
+Sequential b&c:
+  Real time             =   48.00 sec. (37299.43 ticks)
+                          ------------
+Total (root+branch&cut) =   54.08 sec. (41881.76 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark mc2024_track1_172.cnf k 5 OPT 120 TimeCost 57.91517162322998 TimeSolve 54.34210968017578 TimeRead 0.021814346313476562 TimeTrans 3.5512475967407227

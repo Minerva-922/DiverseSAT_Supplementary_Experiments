@@ -1,0 +1,204 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 6 times.
+MIP Presolve eliminated 64003 rows and 1725 columns.
+MIP Presolve modified 3531 coefficients.
+Aggregator did 1360 substitutions.
+Reduced MIP has 84035 rows, 30004 columns, and 299143 nonzeros.
+Reduced MIP has 30004 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.05 sec. (687.57 ticks)
+Probing fixed 8405 vars, tightened 0 bounds.
+Probing time = 0.62 sec. (204.15 ticks)
+Tried aggregator 5 times.
+MIP Presolve eliminated 36008 rows and 8601 columns.
+MIP Presolve modified 1444 coefficients.
+Aggregator did 3780 substitutions.
+Reduced MIP has 44247 rows, 17623 columns, and 153591 nonzeros.
+Reduced MIP has 17623 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.72 sec. (435.86 ticks)
+Probing fixed 69 vars, tightened 0 bounds.
+Probing time = 0.25 sec. (78.94 ticks)
+Tried aggregator 2 times.
+Detecting symmetries...
+MIP Presolve eliminated 287 rows and 78 columns.
+Aggregator did 42 substitutions.
+Reduced MIP has 43918 rows, 17503 columns, and 152500 nonzeros.
+Reduced MIP has 17503 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.33 sec. (186.70 ticks)
+Probing time = 0.02 sec. (7.37 ticks)
+Clique table members: 127097.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 15.36 sec. (6035.77 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0    10526.0000  3028                  10526.0000    14838         
+      0     0    10526.0000  2726                   Cuts: 950    45175         
+      0     0    10526.0000  2846                   Cuts: 710    78371         
+      0     0    10526.0000  3001                   Cuts: 923   111542         
+Heuristic still looking.
+Heuristic still looking.
+Detecting symmetries...
+      0     2    10526.0000  2605                  10526.0000   111542         
+Elapsed time = 485.95 sec. (254115.49 ticks, tree = 0.01 MB, solutions = 0)
+      1     3    10526.0000  3393                  10526.0000   319318         
+      2     4    10526.0000  2766                  10526.0000   349937         
+      3     5    10526.0000  3025                  10526.0000   414976         
+      4     6    10526.0000  2930                  10526.0000   445872         
+      5     7    10524.0000  2834                  10526.0000   480356         
+      6     8    10526.0000  2748                  10526.0000   483338         
+      7     9    10525.0000  2752                  10526.0000   486425         
+      8    10    10524.0000  2706                  10526.0000   487122         
+      9    11    10524.0000  2758                  10526.0000   487359         
+     10    12    10524.0000  2825                  10526.0000   519413         
+Elapsed time = 1804.12 sec. (782787.49 ticks, tree = 0.11 MB, solutions = 0)
+     13    15    10524.0000  2990                  10526.0000   552601         
+     16    18    10524.0000  2643                  10526.0000   558567         
+     20    22    10524.0000  2640                  10526.0000   559277         
+     22    24    10524.0000  2564                  10526.0000   561804         
+     25    27    10524.0000  2566                  10526.0000   563525         
+     28    30    10524.0000  2523                  10526.0000   565190         
+     32    34    10524.0000  2500                  10526.0000   567991         
+     35    37    10522.0000  2465                  10526.0000   570094         
+     37    39    10522.0000  2469                  10526.0000   572704         
+     40    42    10522.0000  2469                  10526.0000   573976         
+Elapsed time = 2030.81 sec. (905660.70 ticks, tree = 0.39 MB, solutions = 0)
+     43    45    10522.0000  2446                  10526.0000   575960         
+     47    49    10522.0000  2458                  10526.0000   577574         
+     51    53    10521.0000  2389                  10526.0000   580315         
+     54    56    10521.0000  2398                  10526.0000   582581         
+     57    59    10521.0000  2376                  10526.0000   584178         
+     58    58    infeasible                        10526.0000   586983         
+     60    56    infeasible                        10526.0000   589251         
+     61    57    10526.0000  3291                  10526.0000   636088         
+     63    59    10525.0000  3284                  10526.0000   636886         
+     65    61    10525.0000  3168                  10526.0000   638479         
+Elapsed time = 2368.64 sec. (1075682.49 ticks, tree = 0.59 MB, solutions = 0)
+     66    62    10524.0000  3180                  10526.0000   638786         
+     69    65    10524.0000  3143                  10526.0000   640001         
+     70    66    10524.0000  3051                  10526.0000   641365         
+     72    68    10524.0000  3058                  10526.0000   643164         
+     74    70    10524.0000  2964                  10526.0000   645974         
+     76    72    10524.0000  2920                  10526.0000   647419         
+     79    75    10524.0000  2912                  10526.0000   649484         
+     80    76    10524.0000  2897                  10526.0000   650543         
+     81    77    10524.0000  2893                  10526.0000   652261         
+     83    79    10524.0000  2861                  10526.0000   653384         
+Elapsed time = 2602.98 sec. (1197571.02 ticks, tree = 0.77 MB, solutions = 0)
+     85    81    10524.0000  2862                  10526.0000   655163         
+     87    83    10524.0000  2812                  10526.0000   656561         
+     88    84    10524.0000  3061                  10526.0000   690102         
+     89    85    10524.0000  2653                  10526.0000   699056         
+     91    87    10524.0000  2661                  10526.0000   700832         
+     96    92    10524.0000  2650                  10526.0000   703938         
+    100    96    10524.0000  2627                  10526.0000   705600         
+    102    98    10524.0000  2612                  10526.0000   708703         
+    105   101    10524.0000  2601                  10526.0000   710501         
+    107   103    10524.0000  2581                  10526.0000   712207         
+Elapsed time = 2723.04 sec. (1258849.75 ticks, tree = 1.03 MB, solutions = 0)
+    108   102    infeasible                        10526.0000   712432         
+    110   102    10526.0000  3404                  10526.0000   800069         
+    112   104    10526.0000  3379                  10526.0000   801257         
+    113   105    10526.0000  3117                  10526.0000   808588         
+    114   106    10526.0000  3058                  10526.0000   811108         
+    115   107    10525.0000  3052                  10526.0000   811134         
+    116   108    10524.0000  3307                  10526.0000   854335         
+    120   112    10524.0000  3063                  10526.0000   855971         
+    121   113    10522.0000  3383                  10526.0000   897766         
+    122   114    10524.0000  3307                  10526.0000   938169         
+Elapsed time = 3550.94 sec. (1673141.60 ticks, tree = 1.13 MB, solutions = 0)
+    123   113    infeasible                        10526.0000   945314         
+    125   115    10524.0000  3075                  10526.0000   949953         
+    127   117    10524.0000  3292                  10526.0000   989240         
+    130   120    10524.0000  3460                  10526.0000  1035558         
+    131   121    10524.0000  3262                  10526.0000  1076271         
+    134   124    10524.0000  3200                  10526.0000  1077360         
+    136   126    10524.0000  3116                  10526.0000  1078235         
+    138   128    10524.0000  3023                  10526.0000  1079804         
+    140   130    10524.0000  3255                  10526.0000  1117403         
+    141   131    10524.0000  3305                  10526.0000  1158226         
+Elapsed time = 4149.08 sec. (1981117.62 ticks, tree = 1.30 MB, solutions = 0)
+    142   132    10524.0000  3022                  10526.0000  1159207         
+    144   134    10524.0000  3193                  10526.0000  1198111         
+    147   137    10524.0000  2985                  10526.0000  1199098         
+    148   138    10524.0000  3284                  10526.0000  1242308         
+    152   142    10524.0000  2973                  10526.0000  1243194         
+    153   143    10524.0000  3270                  10526.0000  1281491         
+    157   147    10524.0000  2949                  10526.0000  1282333         
+    158   148    10523.0000  3206                  10526.0000  1315052         
+    161   151    10524.0000  3289                  10526.0000  1354903         
+    164   154    10524.0000  3381                  10526.0000  1395655         
+Elapsed time = 4801.14 sec. (2321235.64 ticks, tree = 1.56 MB, solutions = 0)
+    167   157    10524.0000  2910                  10526.0000  1396953         
+    168   158    10524.0000  3156                  10526.0000  1431302         
+    171   161    10524.0000  2870                  10526.0000  1432430         
+    172   162    10524.0000  3044                  10526.0000  1464024         
+    175   165    10524.0000  3212                  10526.0000  1503990         
+    179   169    10524.0000  2842                  10526.0000  1504977         
+    181   171    10523.9797  3146                  10526.0000  1543001         
+    184   174    10524.0000  3197                  10526.0000  1582254         
+    186   176    10524.0000  2818                  10526.0000  1584033         
+    188   178    10524.0000  2811                  10526.0000  1585607         
+Elapsed time = 5302.47 sec. (2584726.53 ticks, tree = 1.82 MB, solutions = 0)
+    190   180    10524.0000  2707                  10526.0000  1587885         
+    194   184    10523.7500  2720                  10526.0000  1591546         
+    196   186    10523.8333  2741                  10526.0000  1593159         
+    198   188    10524.0000  2666                  10526.0000  1594931         
+    199   189    10524.0000  3063                  10526.0000  1634684         
+    200   190    10524.0000  2602                  10526.0000  1636125         
+    203   193    10524.0000  2600                  10526.0000  1638177         
+    208   198    10524.0000  2597                  10526.0000  1640218         
+    210   200    10524.0000  3123                  10526.0000  1672411         
+    212   202    10522.0000  3061                  10526.0000  1703400         
+Elapsed time = 5629.67 sec. (2748837.03 ticks, tree = 2.08 MB, solutions = 0)
+    214   204    10522.0000  3102                  10526.0000  1737927         
+    215   205    10521.8095  3196                  10526.0000  1778187         
+    216   206    10522.0000  3071                  10526.0000  1807610         
+    217   207    10522.0000  3212                  10526.0000  1838338         
+    218   208    10522.0000  3079                  10526.0000  1877071         
+    220   210    10522.0000  3032                  10526.0000  1909299         
+    224   214    10522.0000  2662                  10526.0000  1914016         
+    230   216    10524.0000  3425                  10526.0000  1971041         
+    231   217    10524.0000  3465                  10526.0000  2019755         
+    233   219    10524.0000  3427                  10526.0000  2070538         
+Elapsed time = 6941.21 sec. (3380965.70 ticks, tree = 2.29 MB, solutions = 0)
+    236   222    10524.0000  3589                  10526.0000  2123423         
+    242   228    10523.0000  3380                  10526.0000  2127255         
+    250   236    10522.0000  3350                  10526.0000  2130470         
+    258   244    10522.0000  3262                  10526.0000  2135547         
+    267   253    10522.0000  3284                  10526.0000  2139657         
+
+Clique cuts applied:  321
+Implied bound cuts applied:  1021
+Zero-half cuts applied:  90
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =  485.80 sec. (254033.89 ticks)
+Sequential b&c:
+  Real time             = 6714.23 sec. (3245165.08 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.03 sec. (3499198.98 ticks)
+Solution is infeasible.
+
+---------------------
+@@@ MIP_time_limit_infeasible
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-IW-SE.py", line 105, in <module>
+    print(f">>> Benchmark {os.path.basename(cnf_file)} k {k} OPT {int(prob.solution.get_objective_value())}"
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 7211, in get_objective_value
+    return CPX_PROC.getobjval(self._env._e, self._cplex._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 2055, in getobjval
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1217: No solution exists.

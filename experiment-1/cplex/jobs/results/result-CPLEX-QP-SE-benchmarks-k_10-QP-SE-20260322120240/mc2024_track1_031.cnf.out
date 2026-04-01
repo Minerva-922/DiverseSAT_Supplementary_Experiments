@@ -1,0 +1,84 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_Simplex_Tolerances_Optimality           1.0000000000000001e-09
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Found incumbent of value 0.000000 after 0.00 sec. (0.30 ticks)
+Tried aggregator 1 time.
+MIQP Presolve eliminated 27 rows and 9 columns.
+MIQP Presolve modified 18 coefficients.
+Reduced MIQP has 2928 rows, 1551 columns, and 10776 nonzeros.
+Reduced MIQP has 1473 binaries, 78 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 78 nonzeros.
+Presolve time = 0.00 sec. (5.55 ticks)
+Probing time = 0.00 sec. (0.91 ticks)
+Tried aggregator 1 time.
+Reduced MIQP has 2928 rows, 1551 columns, and 10776 nonzeros.
+Reduced MIQP has 1473 binaries, 78 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 78 nonzeros.
+Presolve time = 0.01 sec. (5.04 ticks)
+Classifier predicts products in MIQP should be linearized.
+Probing time = 0.00 sec. (0.90 ticks)
+Clique table members: 153.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.37 sec. (597.31 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000     7800.0000              --- 
+      0     0     1950.0000   420        0.0000     1950.0000        7     --- 
+      0     0     1950.0000   379        0.0000      Cuts: 49     1528     --- 
+      0     0     1950.0000   402        0.0000      Cuts: 82     3090     --- 
+      0     0     1950.0000   421        0.0000  ZeroHalf: 58     4288     --- 
+*     0+    0                          194.0000     1950.0000           905.15%
+*     0+    0                          388.0000     1950.0000           402.58%
+*     0+    0                          593.0000     1950.0000           228.84%
+      0     0        cutoff            593.0000     1950.0000     4288  228.84%
+*     0+    0                          917.0000     1950.0000           112.65%
+*     0+    0                          920.0000     1950.0000           111.96%
+*     0+    0                          921.0000     1950.0000           111.73%
+*     0+    0                          922.0000     1950.0000           111.50%
+      0     0        cutoff            922.0000     1950.0000     4288  111.50%
+      0     2     1950.0000   421      922.0000     1950.0000     4288  111.50%
+Elapsed time = 2.11 sec. (1704.13 ticks, tree = 0.01 MB, solutions = 8)
+      2     4     1950.0000   376      922.0000     1950.0000     7194  111.50%
+      5     7     1950.0000   400      922.0000     1950.0000     9676  111.50%
+      8    10     1950.0000   381      922.0000     1950.0000    12428  111.50%
+     13    15     1950.0000   411      922.0000     1950.0000    14776  111.50%
+     18    20     1950.0000   323      922.0000     1950.0000    18483  111.50%
+*    20+   20                         1908.0000     1950.0000             2.20%
+     21    23     1950.0000   416     1908.0000     1950.0000    21477    2.20%
+     29    31     1950.0000   350     1908.0000     1950.0000    24131    2.20%
+     39    41     1950.0000   391     1908.0000     1950.0000    26419    2.20%
+     50    52     1950.0000   428     1908.0000     1950.0000    29172    2.20%
+*   150+  150                         1909.0000     1950.0000             2.15%
+*   160+  160                         1915.0000     1950.0000             1.83%
+*   210+  210                         1921.0000     1950.0000             1.51%
+*   220+  220                         1933.0000     1950.0000             0.88%
+    220   222     1950.0000   162     1933.0000     1950.0000    36556    0.88%
+Elapsed time = 7.69 sec. (5236.30 ticks, tree = 0.23 MB, solutions = 13)
+*   250+  250                         1946.0000     1950.0000             0.21%
+*   260+  260                         1948.0000     1950.0000             0.10%
+*   280+  276                         1949.0000     1950.0000             0.05%
+*   288     1      integral     0     1950.0000     1950.0000    37513    0.00%
+
+Zero-half cuts applied:  102
+
+Root node processing (before b&c):
+  Real time             =    2.10 sec. (1703.46 ticks)
+Sequential b&c:
+  Real time             =    5.83 sec. (3761.27 ticks)
+                          ------------
+Total (root+branch&cut) =    7.93 sec. (5464.73 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark mc2024_track1_031.cnf k 10 OPT 1950 TimeCost 8.202770948410034 TimeSolve 7.978153944015503 TimeRead 0.07565140724182129 TimeTrans 0.14896559715270996

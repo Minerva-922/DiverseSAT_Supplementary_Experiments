@@ -1,0 +1,104 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 14898 rows and 78 columns.
+MIP Presolve modified 3314 coefficients.
+Aggregator did 1058 substitutions.
+Reduced MIP has 10391 rows, 7588 columns, and 45256 nonzeros.
+Reduced MIP has 7588 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.09 sec. (62.32 ticks)
+Found incumbent of value -34902.000000 after 0.21 sec. (140.51 ticks)
+Probing time = 0.00 sec. (4.07 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 10391 rows, 7588 columns, and 45256 nonzeros.
+Reduced MIP has 7588 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (28.74 ticks)
+Probing time = 0.01 sec. (4.06 ticks)
+Clique table members: 1952.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 3.25 sec. (2318.54 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       -34902.0000    17030.0000           148.79%
+      0     0     4249.1667  1443   -34902.0000     4249.1667    13028  112.17%
+      0     0     3889.5714  1130   -34902.0000     Cuts: 218    16772  111.14%
+      0     0     3800.1429   813   -34902.0000     Cuts: 209    21878  110.89%
+      0     0     3796.7143   955   -34902.0000     Cuts: 114    25944  110.88%
+*     0+    0                         2292.0000     3796.7143            65.65%
+*     0+    0                         2341.0000     3796.7143            62.18%
+      0     0        cutoff           2341.0000     3796.7143    25944   62.18%
+      0     0     3796.7143   853     2341.0000     Cuts: 121    30161   62.18%
+      0     0     3796.7143   683     2341.0000      Cuts: 84    34433   62.18%
+Detecting symmetries...
+      0     0     3796.7143   788     2341.0000      Cuts: 66    38388   62.18%
+*     0+    0                         2564.0000     3796.7143            48.08%
+*     0+    0                         2567.0000     3796.7143            47.90%
+*     0+    0                         2686.0000     3796.7143            41.35%
+*     0+    0                         2726.0000     3796.7143            39.28%
+*     0+    0                         2941.0000     3796.7143            29.10%
+      0     0        cutoff           2941.0000     3796.7143    38388   29.10%
+      0     0     3796.7143   665     2941.0000  ZeroHalf: 22    39008   29.10%
+      0     0     3796.7143   554     2941.0000      Cuts: 11    40818   29.10%
+      0     0     3796.7143   578     2941.0000      Cuts: 23    41868   29.10%
+*     0+    0                         3791.0000     3796.7143             0.15%
+      0     0        cutoff           3791.0000     3796.7143    41868    0.15%
+*     0+    0                         3792.0000     3796.7143             0.12%
+Detecting symmetries...
+      0     2     3796.7143   369     3792.0000     3796.7143    41868    0.12%
+Elapsed time = 26.68 sec. (18911.94 ticks, tree = 0.01 MB, solutions = 10)
+      1     3     3796.7143   658     3792.0000     3796.7143    57355    0.12%
+      2     4     3796.7143   570     3792.0000     3796.7143    61046    0.12%
+      3     5     3796.7143   544     3792.0000     3796.7143    64229    0.12%
+      4     6     3796.7143   424     3792.0000     3796.7143    66878    0.12%
+      5     7     3796.7143   546     3792.0000     3796.7143    70381    0.12%
+      6     8     3796.7143   778     3792.0000     3796.7143    73960    0.12%
+      8    10     3796.7143   652     3792.0000     3796.7143    75338    0.12%
+     10    12     3796.7143   583     3792.0000     3796.7143    76636    0.12%
+     11    13     3796.7143   543     3792.0000     3796.7143    78399    0.12%
+     14    16     3796.7143   850     3792.0000     3796.7143    86712    0.12%
+Elapsed time = 43.47 sec. (29478.73 ticks, tree = 0.06 MB, solutions = 10)
+     17    19     3796.7143   461     3792.0000     3796.7143    92509    0.12%
+     19    21     3796.7143   660     3792.0000     3796.7143   100298    0.12%
+     24    26     3796.7143   649     3792.0000     3796.7143   105833    0.12%
+     26    28     3796.7143   593     3792.0000     3796.7143   114624    0.12%
+     29    31     3796.7143   152     3792.0000     3796.7143   120083    0.12%
+     30    32     3796.7143   151     3792.0000     3796.7143   121378    0.12%
+     33    35     3795.8571   664     3792.0000     3796.7143   129125    0.12%
+     37    37     3795.0000    20     3792.0000     3796.7143   139138    0.12%
+*    40+   38                         3794.0000     3796.7143             0.07%
+*    49    30      integral     0     3795.0000     3796.7143   144958    0.05%
+     52    26    infeasible           3795.0000     3796.7143   146762    0.05%
+     78     0    infeasible           3795.0000     3795.0000   152467    0.00%
+Elapsed time = 64.77 sec. (41787.20 ticks, tree = 0.01 MB, solutions = 12)
+
+Clique cuts applied:  8
+Cover cuts applied:  4
+Implied bound cuts applied:  5
+Flow cuts applied:  1
+Mixed integer rounding cuts applied:  1
+Zero-half cuts applied:  304
+Lift and project cuts applied:  14
+Gomory fractional cuts applied:  16
+
+Root node processing (before b&c):
+  Real time             =   26.67 sec. (18905.29 ticks)
+Sequential b&c:
+  Real time             =   38.10 sec. (22885.74 ticks)
+                          ------------
+Total (root+branch&cut) =   64.77 sec. (41791.03 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark mc2024_track1_006.cnf k 10 OPT 3795 TimeCost 69.11954665184021 TimeSolve 65.09526205062866 TimeRead 0.0042989253997802734 TimeTrans 4.019985675811768

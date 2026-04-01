@@ -1,0 +1,76 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 3 times.
+MIP Presolve eliminated 16555 rows and 1189 columns.
+MIP Presolve modified 29662 coefficients.
+Aggregator did 14753 substitutions.
+Reduced MIP has 89982 rows, 53478 columns, and 247406 nonzeros.
+Reduced MIP has 53478 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.71 sec. (377.88 ticks)
+Probing time = 0.07 sec. (20.53 ticks)
+Cover probing fixed 1 vars, tightened 0 bounds.
+Tried aggregator 2 times.
+Detecting symmetries...
+MIP Presolve eliminated 182 rows and 76 columns.
+MIP Presolve modified 1 coefficients.
+Aggregator did 1 substitutions.
+Reduced MIP has 89799 rows, 53401 columns, and 246988 nonzeros.
+Reduced MIP has 53401 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.09 sec. (512.50 ticks)
+Probing time = 0.07 sec. (17.33 ticks)
+Clique table members: 177731.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 264.17 sec. (100024.04 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0    30925.0000 38399                  30925.0000   104452         
+      0     0    27780.6111 28490                  Cuts: 5823   251102         
+      0     0    24011.9080 25320                  Cuts: 3242   302035         
+      0     0    21427.7020 20086                  Cuts: 2452   354335         
+      0     0    20163.9722 20485               ZeroHalf: 2250   409901         
+      0     0    19443.4074 18095                  Cuts: 2781   463610         
+      0     0    19028.9732 19497                  Cuts: 2090   529832         
+      0     0    18187.3300 17404                  Cuts: 1415   594439         
+      0     0    17841.3333 14907                  Cuts: 1855   643653         
+      0     0    17659.1944 16230                  Cuts: 1064   751548         
+      0     0    17145.9167 15986                  Cuts: 1805   799087         
+      0     0    16882.5152 15556                  Cuts: 2006   864673         
+      0     0    16574.5476 15584                  Cuts: 1898   922473         
+      0     0    16309.8333 15795                   Cuts: 765  1041339         
+
+Implied bound cuts applied:  1243
+Mixed integer rounding cuts applied:  2
+Zero-half cuts applied:  6298
+Lift and project cuts applied:  1
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             = 7200.07 sec. (2790223.49 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.07 sec. (2790223.49 ticks)
+Solution is infeasible.
+
+---------------------
+@@@ MIP_time_limit_infeasible
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-BIN.py", line 132, in <module>
+    print(f">>> Benchmark {os.path.basename(cnf_file)} k {k} OPT {int(prob.solution.get_objective_value())}"
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 7211, in get_objective_value
+    return CPX_PROC.getobjval(self._env._e, self._cplex._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 2055, in getobjval
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1217: No solution exists.

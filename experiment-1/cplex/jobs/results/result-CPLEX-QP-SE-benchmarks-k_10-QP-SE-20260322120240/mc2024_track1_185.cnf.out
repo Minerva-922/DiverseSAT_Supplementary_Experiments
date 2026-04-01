@@ -1,0 +1,128 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_Simplex_Tolerances_Optimality           1.0000000000000001e-09
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 4 times.
+MIQP Presolve eliminated 112459 rows and 1549 columns.
+Aggregator did 1260 substitutions.
+Reduced MIQP has 16840 rows, 2711 columns, and 47321 nonzeros.
+Reduced MIQP has 2575 binaries, 136 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 136 nonzeros.
+Presolve time = 0.23 sec. (145.06 ticks)
+Probing time = 0.01 sec. (4.12 ticks)
+Tried aggregator 1 time.
+MIQP Presolve eliminated 18 rows and 0 columns.
+MIQP Presolve modified 18 coefficients.
+Reduced MIQP has 16822 rows, 2711 columns, and 47276 nonzeros.
+Reduced MIQP has 2575 binaries, 136 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 136 nonzeros.
+Presolve time = 0.06 sec. (29.90 ticks)
+Classifier predicts products in MIQP should be linearized.
+Probing time = 0.01 sec. (4.42 ticks)
+Clique table members: 9526.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 13.97 sec. (22816.68 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     3400.0000  1360                   3400.0000       12         
+*     0+    0                          280.0000     3400.0000              --- 
+      0     0     3400.0000  1473      280.0000     Cuts: 299    71334     --- 
+      0     0     3400.0000  1485      280.0000    Cuts: 4305   162599     --- 
+      0     0     3400.0000  1574      280.0000    Cuts: 4305   215815     --- 
+Heuristic still looking.
+Heuristic still looking.
+Heuristic still looking.
+      0     2     3400.0000  1588      280.0000     3400.0000   215815     --- 
+Elapsed time = 1088.81 sec. (407890.13 ticks, tree = 0.01 MB, solutions = 1)
+      1     3     3400.0000  1431      280.0000     3400.0000   259048     --- 
+      2     4     3400.0000  1473      280.0000     3400.0000   278081     --- 
+      3     5     3320.0000  1456      280.0000     3400.0000   384157     --- 
+      4     6     3400.0000  1459      280.0000     3400.0000   438155     --- 
+      5     7     3400.0000  1453      280.0000     3400.0000   468208     --- 
+      6     8     3250.0000  1495      280.0000     3400.0000   597085     --- 
+      7     9     3375.0000  1887      280.0000     3400.0000   611239     --- 
+      8    10     3400.0000  1562      280.0000     3400.0000   677844     --- 
+      9    11     3400.0000  1629      280.0000     3400.0000   779663     --- 
+     10    12     3400.0000  1676      280.0000     3400.0000   895864     --- 
+Elapsed time = 2201.84 sec. (792725.44 ticks, tree = 0.04 MB, solutions = 1)
+     11    13     3400.0000  1615      280.0000     3400.0000   929116     --- 
+     12    14     3400.0000  1643      280.0000     3400.0000  1065135     --- 
+     13    15     3400.0000  1597      280.0000     3400.0000  1132362     --- 
+     14    16     3400.0000  1459      280.0000     3400.0000  1239906     --- 
+     15    17     3400.0000  1534      280.0000     3400.0000  1335422     --- 
+     16    16    infeasible            280.0000     3400.0000  1349069     --- 
+     17    17     3400.0000  1675      280.0000     3400.0000  1387025     --- 
+     18    18     3400.0000  1645      280.0000     3400.0000  1463100     --- 
+     19    19     3400.0000  1838      280.0000     3400.0000  1579949     --- 
+     20    20     3400.0000  1811      280.0000     3400.0000  1602532     --- 
+Elapsed time = 3342.87 sec. (1144571.00 ticks, tree = 0.06 MB, solutions = 1)
+     21    21     3400.0000  1921      280.0000     3400.0000  1629434     --- 
+     22    22     3400.0000  1935      280.0000     3400.0000  1653617     --- 
+     23    23     3400.0000  1884      280.0000     3400.0000  1671562     --- 
+     24    24     3363.0154  1691      280.0000     3400.0000  1842597     --- 
+     25    23    infeasible            280.0000     3400.0000  1852206     --- 
+     26    24     3363.0154  1709      280.0000     3400.0000  1896725     --- 
+     27    25     3363.0154  1862      280.0000     3400.0000  1940253     --- 
+     28    26     3363.0154  1709      280.0000     3400.0000  1963721     --- 
+     29    27     3362.9728  1824      280.0000     3400.0000  1979701     --- 
+     30    28     3337.9199  1694      280.0000     3400.0000  2021287     --- 
+Elapsed time = 4161.29 sec. (1431697.78 ticks, tree = 0.09 MB, solutions = 1)
+     31    27    infeasible            280.0000     3400.0000  2032597     --- 
+     32    28     3336.6283  1881      280.0000     3400.0000  2036708     --- 
+     33    29     3333.9299  1527      280.0000     3400.0000  2095693     --- 
+     34    30     3335.6036  1824      280.0000     3400.0000  2112641     --- 
+     35    31     3334.4744  1648      280.0000     3400.0000  2191882     --- 
+     36    32     3333.7500  1591      280.0000     3400.0000  2402281     --- 
+     38    32     3334.4744  1595      280.0000     3400.0000  2435886     --- 
+     40    32     3334.4744  1659      280.0000     3400.0000  2475305     --- 
+     41    33     3327.6694  1774      280.0000     3400.0000  2518517     --- 
+     42    34     3310.9183  1587      280.0000     3400.0000  2582182     --- 
+Elapsed time = 5053.22 sec. (1724513.35 ticks, tree = 0.11 MB, solutions = 1)
+     43    35     3278.8958  1425      280.0000     3400.0000  2804906     --- 
+     44    36     3310.9183  1555      280.0000     3400.0000  2882805     --- 
+     45    37     3310.9183  1495      280.0000     3400.0000  2960069     --- 
+     46    36    infeasible            280.0000     3400.0000  2968681     --- 
+     47    35    infeasible            280.0000     3400.0000  2975674     --- 
+     48    34    infeasible            280.0000     3400.0000  2987700     --- 
+     49    33    infeasible            280.0000     3400.0000  3005677     --- 
+     50    34     3400.0000  1576      280.0000     3400.0000  3194755     --- 
+     51    35     3400.0000  1603      280.0000     3400.0000  3288624     --- 
+     52    34    infeasible            280.0000     3400.0000  3321940     --- 
+Elapsed time = 6238.70 sec. (2136157.47 ticks, tree = 0.12 MB, solutions = 1)
+     53    35     3400.0000  1475      280.0000     3400.0000  3374323     --- 
+     54    36     3400.0000  1503      280.0000     3400.0000  3412064     --- 
+     55    37     3391.0000  1509      280.0000     3400.0000  3539014     --- 
+     56    38     3391.0000  1709      280.0000     3400.0000  3642164     --- 
+     57    39     3391.0000  1661      280.0000     3400.0000  3719058     --- 
+     58    40     3391.0000  1718      280.0000     3400.0000  3805425     --- 
+     59    41     3391.0000  1819      280.0000     3400.0000  3859599     --- 
+     60    42     3382.0000  1697      280.0000     3400.0000  3913262     --- 
+     61    43     3382.0000  1600      280.0000     3400.0000  3997179     --- 
+     62    44     3382.0000  1666      280.0000     3400.0000  4043725     --- 
+Elapsed time = 7186.05 sec. (2482051.50 ticks, tree = 0.15 MB, solutions = 1)
+
+Clique cuts applied:  1055
+Implied bound cuts applied:  47
+Zero-half cuts applied:  494
+Gomory fractional cuts applied:  14
+
+Root node processing (before b&c):
+  Real time             = 1088.79 sec. (407874.97 ticks)
+Sequential b&c:
+  Real time             = 6111.23 sec. (2080021.66 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.02 sec. (2487896.63 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_time_limit_feasible
+>>> Benchmark mc2024_track1_185.cnf k 10 OPT 280 TimeCost 7245.377546310425 TimeSolve 7226.657519102097 TimeRead 0.04689359664916992 TimeTrans 18.673133611679077

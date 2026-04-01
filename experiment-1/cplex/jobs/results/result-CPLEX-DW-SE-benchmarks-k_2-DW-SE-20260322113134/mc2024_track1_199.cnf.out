@@ -1,0 +1,78 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 9 times.
+MIP Presolve eliminated 34076 rows and 8630 columns.
+MIP Presolve modified 3565 coefficients.
+Aggregator did 37644 substitutions.
+Reduced MIP has 385353 rows, 163198 columns, and 1131384 nonzeros.
+Reduced MIP has 163198 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 5.94 sec. (3046.78 ticks)
+Found incumbent of value 112.000000 after 9.30 sec. (4735.67 ticks)
+Probing fixed 1661 vars, tightened 0 bounds.
+Probing time = 12.63 sec. (3608.44 ticks)
+Tried aggregator 3 times.
+Detecting symmetries...
+MIP Presolve eliminated 12384 rows and 4639 columns.
+MIP Presolve modified 1083 coefficients.
+Aggregator did 642 substitutions.
+Reduced MIP has 372327 rows, 157908 columns, and 1097041 nonzeros.
+Reduced MIP has 157908 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 9.01 sec. (5372.13 ticks)
+Probing fixed 91 vars, tightened 0 bounds.
+Probing time = 2.23 sec. (602.25 ticks)
+Clique table members: 710882.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 44.06 sec. (11037.13 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                          112.0000    32883.0000              --- 
+      0     0    32809.7167 44698      112.0000    32809.7167    34888     --- 
+      0     0    32411.7500 53614      112.0000   Cuts: 10000    86041     --- 
+      0     0    31997.9375 58390      112.0000   Cuts: 10000   115822     --- 
+      0     0    30670.1250 60829      112.0000   Cuts: 10000   147167     --- 
+*     0+    0                          146.0000    30670.1250              --- 
+      0     0        cutoff            146.0000    30670.1250   147167     --- 
+      0     0    29365.0458 64793      146.0000   Cuts: 10000   183934     --- 
+      0     0    28274.0000 66834      146.0000    Cuts: 9995   221476     --- 
+      0     0    27351.4023 68697      146.0000    Cuts: 9997   258192     --- 
+*     0+    0                          176.0000    27351.4023              --- 
+      0     0        cutoff            176.0000    27351.4023   258192     --- 
+      0     0    26466.3960 74157      176.0000   Cuts: 10000   301408     --- 
+      0     0    25845.9030 79481      176.0000    Cuts: 9998   346394     --- 
+      0     0    25334.6221 84109      176.0000    Cuts: 9998   396282     --- 
+*     0+    0                          245.0000    25334.6221              --- 
+*     0+    0                          321.0000    25334.6221              --- 
+*     0+    0                          336.0000    25334.6221              --- 
+*     0+    0                          343.0000    25334.6221              --- 
+      0     0        cutoff            343.0000    25334.6221   396282     --- 
+
+GUB cover cuts applied:  66
+Clique cuts applied:  11471
+Cover cuts applied:  26497
+Implied bound cuts applied:  2614
+Flow cuts applied:  2
+Mixed integer rounding cuts applied:  449
+Zero-half cuts applied:  27222
+Gomory fractional cuts applied:  34
+
+Root node processing (before b&c):
+  Real time             = 7200.06 sec. (1308097.38 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.06 sec. (1308097.38 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_time_limit_feasible
+>>> Benchmark mc2024_track1_199.cnf k 2 OPT 343 TimeCost 8590.0040974617 TimeSolve 7225.252515554428 TimeRead 0.2511935234069824 TimeTrans 1364.5003883838654

@@ -1,0 +1,64 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_Simplex_Tolerances_Optimality           1.0000000000000001e-09
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIQP Presolve eliminated 543 rows and 144 columns.
+MIQP Presolve modified 8 coefficients.
+Aggregator did 85 substitutions.
+Reduced MIQP has 670362 rows, 240101 columns, and 2039881 nonzeros.
+Reduced MIQP has 216090 binaries, 24011 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 24011 nonzeros.
+Presolve time = 2.41 sec. (1279.56 ticks)
+Elapsed time = 41.47 sec. (10000.34 ticks) for 5% of probing (6152 vars fixed)
+Elapsed time = 80.53 sec. (20002.45 ticks) for 10% of probing (7207 vars fixed)
+Probing fixed 9092 vars, tightened 9090 bounds.
+Probing time = 115.21 sec. (28783.38 ticks)
+Tried aggregator 6 times.
+MIQP Presolve eliminated 147769 rows and 41105 columns.
+MIQP Presolve modified 18631 coefficients.
+Aggregator did 10307 substitutions.
+Reduced MIQP has 512281 rows, 188682 columns, and 1636610 nonzeros.
+Reduced MIQP has 166366 binaries, 22316 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 22316 nonzeros.
+Presolve time = 20.73 sec. (9409.89 ticks)
+Elapsed time = 30.80 sec. (10000.57 ticks) for 15% of probing (8810 vars fixed)
+Probing fixed 10052 vars, tightened 10943 bounds.
+Probing time = 53.08 sec. (16857.12 ticks)
+Tried aggregator 4 times.
+MIQP Presolve eliminated 83139 rows and 23735 columns.
+MIQP Presolve modified 3562 coefficients.
+Aggregator did 9369 substitutions.
+Reduced MIQP has 419772 rows, 155568 columns, and 1371897 nonzeros.
+Reduced MIQP has 135614 binaries, 19954 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 19954 nonzeros.
+Presolve time = 12.29 sec. (5965.93 ticks)
+Classifier predicts products in MIQP should be linearized.
+Probing time = 0.37 sec. (72.46 ticks)
+Clique table members: 188541.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 1223.38 sec. (580394.73 ticks)
+
+Root node processing (before b&c):
+  Real time             = 1431.05 sec. (644057.37 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 1431.05 sec. (644057.37 ticks)
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-QP-SE.py", line 108, in <module>
+    prob.solve()
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/__init__.py", line 1304, in solve
+    _proc.mipopt(self._env._e, self._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 708, in mipopt
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1256: Basis singular.

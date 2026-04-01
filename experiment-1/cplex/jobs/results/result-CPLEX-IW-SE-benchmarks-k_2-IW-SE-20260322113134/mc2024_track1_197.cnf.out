@@ -1,0 +1,118 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 6 times.
+MIP Presolve eliminated 6270 rows and 1274 columns.
+MIP Presolve modified 1031 coefficients.
+Aggregator did 1057 substitutions.
+Reduced MIP has 98532 rows, 38119 columns, and 281700 nonzeros.
+Reduced MIP has 38119 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.93 sec. (532.66 ticks)
+Probing fixed 310 vars, tightened 0 bounds.
+Probing time = 2.46 sec. (589.90 ticks)
+Tried aggregator 4 times.
+Detecting symmetries...
+MIP Presolve eliminated 3478 rows and 1361 columns.
+MIP Presolve modified 67 coefficients.
+Aggregator did 82 substitutions.
+Reduced MIP has 94972 rows, 36676 columns, and 272529 nonzeros.
+Reduced MIP has 36676 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.74 sec. (968.51 ticks)
+Probing time = 0.04 sec. (11.80 ticks)
+Clique table members: 119005.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 1.32 sec. (836.82 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     7594.0000 13480                   7594.0000     9879         
+      0     0     7234.5000 13519                 Cuts: 10000    15564         
+      0     0     6539.7778 14102                 Cuts: 10000    31728         
+      0     0     6173.8199 15946                  Cuts: 9999    53473         
+      0     0     5934.1313 17025                  Cuts: 8559    76890         
+      0     0     5759.1018 17704                  Cuts: 7622   105903         
+      0     0     5610.5736 18417                  Cuts: 6904   137533         
+      0     0     5503.5970 18321                  Cuts: 5716   186995         
+      0     0     5424.0586 18568                  Cuts: 5558   219301         
+      0     0     5354.7779 18653                  Cuts: 5417   246672         
+      0     0     5294.9647 18703                  Cuts: 4631   274383         
+      0     0     5241.2922 18634                  Cuts: 4979   301599         
+      0     0     5196.0460 18669                  Cuts: 4831   327355         
+      0     0     5158.1103 18656                  Cuts: 4550   352720         
+      0     0     5125.7817 18630                  Cuts: 4484   377549         
+      0     0     5098.8237 18663                  Cuts: 4159   399450         
+      0     0     5071.6405 18613                  Cuts: 4596   422758         
+      0     0     5048.5728 18668                  Cuts: 3905   447084         
+      0     0     5024.5727 18525                  Cuts: 3690   475916         
+      0     0     5004.8580 18571                  Cuts: 4003   502035         
+      0     0     4988.3460 18650                  Cuts: 3446   524701         
+      0     0     4970.0737 18656                  Cuts: 3885   549489         
+      0     0     4955.6225 18660                  Cuts: 3493   573208         
+      0     0     4943.4630 18668                  Cuts: 3254   595386         
+      0     0     4931.3832 18652                  Cuts: 2692   619021         
+      0     0     4918.3128 18710                  Cuts: 2970   644651         
+      0     0     4904.3415 18691                  Cuts: 3209   670155         
+      0     0     4894.4271 18710                  Cuts: 3744   692144         
+      0     0     4884.6672 18700                  Cuts: 2918   712633         
+      0     0     4874.2983 18722                  Cuts: 2876   732623         
+      0     0     4866.2513 18721                  Cuts: 2463   753340         
+      0     0     4859.4835 18721                  Cuts: 2556   771969         
+      0     0     4852.0795 18738                  Cuts: 2686   792055         
+      0     0     4843.6456 18693                  Cuts: 2540   815142         
+      0     0     4837.1410 18703                  Cuts: 2548   834935         
+      0     0     4829.8588 18633                  Cuts: 3078   856078         
+      0     0     4821.7497 18661                  Cuts: 2539   876989         
+      0     0     4813.6178 18682                  Cuts: 2644   900721         
+      0     0     4805.0744 18656                  Cuts: 2928   923072         
+      0     0     4798.2000 18655                  Cuts: 2862   944900         
+      0     0     4791.7942 18666                  Cuts: 2687   981605         
+      0     0     4786.0476 18702                  Cuts: 2760  1003167         
+      0     0     4779.8200 18716                  Cuts: 2523  1025823         
+      0     0     4773.7504 18729                  Cuts: 2731  1048335         
+      0     0     4766.9948 18620                  Cuts: 2846  1070800         
+      0     0     4762.0401 18631                  Cuts: 2744  1098818         
+      0     0     4757.3406 18660                  Cuts: 2661  1120179         
+      0     0     4753.1193 18715                  Cuts: 2581  1137428         
+      0     0     4748.4849 18677                  Cuts: 2330  1156279         
+      0     0     4743.7136 18725                  Cuts: 2605  1175073         
+      0     0     4739.4737 18703                  Cuts: 2679  1192130         
+      0     0     4735.2420 18821                  Cuts: 2637  1207711         
+      0     0     4730.5954 18725                  Cuts: 2395  1226249         
+      0     0     4726.7965 18752                  Cuts: 2494  1243725         
+      0     0     4723.3806 18777                  Cuts: 2430  1260848         
+      0     0     4718.8500 18806                  Cuts: 2512  1279973         
+      0     0     4714.9107 18681                  Cuts: 2482  1320314         
+
+Clique cuts applied:  3079
+Implied bound cuts applied:  1037
+Zero-half cuts applied:  8337
+Gomory fractional cuts applied:  3
+
+Root node processing (before b&c):
+  Real time             = 7200.08 sec. (3228400.97 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.08 sec. (3228400.97 ticks)
+Solution is infeasible.
+
+---------------------
+@@@ MIP_time_limit_infeasible
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-IW-SE.py", line 105, in <module>
+    print(f">>> Benchmark {os.path.basename(cnf_file)} k {k} OPT {int(prob.solution.get_objective_value())}"
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_subinterfaces.py", line 7211, in get_objective_value
+    return CPX_PROC.getobjval(self._env._e, self._cplex._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 2055, in getobjval
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1217: No solution exists.

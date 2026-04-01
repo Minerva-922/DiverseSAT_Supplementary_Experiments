@@ -1,0 +1,159 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_Simplex_Tolerances_Optimality           1.0000000000000001e-09
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Found incumbent of value 0.000000 after 0.00 sec. (0.18 ticks)
+Tried aggregator 1 time.
+MIQP Presolve eliminated 323 rows and 1 columns.
+MIQP Presolve modified 168 coefficients.
+Reduced MIQP has 1366 rows, 599 columns, and 3890 nonzeros.
+Reduced MIQP has 449 binaries, 150 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 150 nonzeros.
+Presolve time = 0.00 sec. (3.01 ticks)
+Probing time = 0.01 sec. (0.99 ticks)
+Tried aggregator 1 time.
+MIQP Presolve eliminated 100 rows and 0 columns.
+Reduced MIQP has 1266 rows, 599 columns, and 3590 nonzeros.
+Reduced MIQP has 449 binaries, 150 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 150 nonzeros.
+Presolve time = 0.00 sec. (2.57 ticks)
+Classifier predicts products in MIQP should be linearized.
+Probing time = 0.00 sec. (0.91 ticks)
+Clique table members: 702.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.07 sec. (59.32 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000      600.0000              --- 
+      0     0      133.3333   434        0.0000      133.3333        7     --- 
+      0     0      133.3333   389        0.0000     Cuts: 116      964     --- 
+      0     0      133.3333   444        0.0000 ZeroHalf: 114     1399     --- 
+      0     0      133.3333   445        0.0000  ZeroHalf: 36     1537     --- 
+*     0+    0                            2.0000      133.3333              --- 
+      0     0        cutoff              2.0000      133.3333     1537     --- 
+*     0+    0                            4.0000      133.3333              --- 
+      0     0        cutoff              4.0000      133.3333     1537     --- 
+      0     2      133.3333   445        4.0000      133.1667     1537     --- 
+Elapsed time = 0.43 sec. (335.58 ticks, tree = 0.01 MB, solutions = 3)
+     48    30      114.8121   343        4.0000      132.6667     5909     --- 
+*    80+   48                          100.0000      132.4167            32.42%
+    100    63      129.6868   419      100.0000      132.4167    10392   32.42%
+    140    78      105.8884   228      100.0000      132.3750    15412   32.37%
+    182    96    infeasible            100.0000      132.1811    19840   32.18%
+    220   105        cutoff            100.0000      131.6667    25028   31.67%
+    256   122      103.7672   225      100.0000      131.4503    29451   31.45%
+    318   154      129.0201   380      100.0000      131.1013    34051   31.10%
+    353   167        cutoff            100.0000      131.0667    38959   31.07%
+    379   174      101.3333    35      100.0000      130.9359    44138   30.94%
+    566   192      103.3333    35      100.0000      123.7242    61216   23.72%
+Elapsed time = 5.11 sec. (3482.27 ticks, tree = 0.17 MB, solutions = 4)
+
+Performing restart 1
+
+Repeating presolve.
+Tried aggregator 1 time.
+Reduced MIQP has 1266 rows, 599 columns, and 3590 nonzeros.
+Reduced MIQP has 449 binaries, 150 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 150 nonzeros.
+Presolve time = 0.00 sec. (1.99 ticks)
+Tried aggregator 1 time.
+Reduced MIQP has 1266 rows, 599 columns, and 3590 nonzeros.
+Reduced MIQP has 449 binaries, 150 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 150 nonzeros.
+Presolve time = 0.01 sec. (1.99 ticks)
+Represolve time = 0.01 sec. (6.33 ticks)
+   1048     0      133.3333   470      100.0000  ZeroHalf: 39    68615    4.00%
+   1048     0      133.3333   455      100.0000  ZeroHalf: 48    69018    4.00%
+   1048     0      133.3333   479      100.0000  ZeroHalf: 72    69120    4.00%
+   1048     0      133.3333   482      100.0000  ZeroHalf: 18    69173    4.00%
+   1048     0      133.3333   483      100.0000  ZeroHalf: 19    69254    4.00%
+   1048     2      133.3333   483      100.0000      104.0000    69254    4.00%
+   1052     6      131.5833   468      100.0000      104.0000    69457    4.00%
+   1056    10      131.1667   462      100.0000      104.0000    69648    4.00%
+   1060    14      125.0000   422      100.0000      104.0000    69764    4.00%
+   1064    18      123.4312   427      100.0000      104.0000    69897    4.00%
+   1070    20      131.7333   471      100.0000      104.0000    70498    4.00%
+   1074    22      128.4000   463      100.0000      104.0000    70675    4.00%
+   1080    24      132.3333   473      100.0000      104.0000    71613    4.00%
+   1084    28      130.7549   466      100.0000      104.0000    71825    4.00%
+   1092    29      132.1667   449      100.0000      104.0000    73694    4.00%
+Elapsed time = 20.67 sec. (14592.52 ticks, tree = 0.02 MB, solutions = 4)
+   1100    31      126.0797   419      100.0000      104.0000    75243    4.00%
+   1108    32      110.5833   134      100.0000      104.0000    76767    4.00%
+   1123    39      118.1856   319      100.0000      104.0000    77617    4.00%
+   1131    38        cutoff            100.0000      104.0000    78272    4.00%
+   1135    42      130.2406   452      100.0000      104.0000    78576    4.00%
+   1142    43      125.6564   441      100.0000      104.0000    80288    4.00%
+   1147    48      113.3642   266      100.0000      104.0000    80862    4.00%
+   1153    49      130.3049   445      100.0000      104.0000    81395    4.00%
+   1160    51      101.8890   307      100.0000      104.0000    82680    4.00%
+   1167    52      131.1471   469      100.0000      104.0000    84309    4.00%
+Elapsed time = 35.56 sec. (25195.76 ticks, tree = 0.03 MB, solutions = 4)
+   1181    58      130.1716   450      100.0000      104.0000    86155    4.00%
+   1204    66      131.0637   467      100.0000      104.0000    88733    4.00%
+   1213    66        cutoff            100.0000      104.0000    90307    4.00%
+   1231    77      129.4750   459      100.0000      104.0000    91678    4.00%
+   1238    79      130.5667   448      100.0000      104.0000    92870    4.00%
+   1247    81      116.7170   250      100.0000      104.0000    94640    4.00%
+   1255    82      130.7333   465      100.0000      104.0000    95894    4.00%
+   1263    86      130.5000   450      100.0000      104.0000    96977    4.00%
+   1271    88      130.7333   465      100.0000      104.0000    97985    4.00%
+   1290    95      130.7333   461      100.0000      104.0000    99875    4.00%
+Elapsed time = 50.41 sec. (35599.83 ticks, tree = 0.07 MB, solutions = 4)
+   1295   100      128.4994   453      100.0000      104.0000   100325    4.00%
+   1314   110      130.6667   463      100.0000      104.0000   102119    4.00%
+   1321   113      129.5882   447      100.0000      104.0000   103142    4.00%
+   1330   115      118.5318   259      100.0000      104.0000   105182    4.00%
+   1351   124      129.5049   447      100.0000      104.0000   106534    4.00%
+   1371   136      128.0163   403      100.0000      104.0000   108042    4.00%
+   1381   134      130.6471   459      100.0000      104.0000   110641    4.00%
+   1390   134      130.4637   460      100.0000      104.0000   112411    4.00%
+   1396   140      127.8646   437      100.0000      104.0000   113000    4.00%
+   1417   137      130.3971   445      100.0000      104.0000   117273    4.00%
+Elapsed time = 65.16 sec. (45955.78 ticks, tree = 0.10 MB, solutions = 4)
+   1428   137      128.1658   429      100.0000      104.0000   119678    4.00%
+   1461   141      129.8444   450      100.0000      104.0000   124536    4.00%
+   1474   142      129.5049   449      100.0000      104.0000   126794    4.00%
+   1490   135      129.9816   459      100.0000      104.0000   131585    4.00%
+   1500   138      129.7038   441      100.0000      104.0000   133357    4.00%
+   1512   139      129.6256   444      100.0000      104.0000   135676    4.00%
+   1535   141    infeasible            100.0000      104.0000   139545    4.00%
+   1574   160      129.2137   424      100.0000      104.0000   143542    4.00%
+   1597   148      119.5149   361      100.0000      104.0000   150904    4.00%
+   1641   153      122.9674   375      100.0000      104.0000   157333    4.00%
+Elapsed time = 79.74 sec. (56262.31 ticks, tree = 0.13 MB, solutions = 4)
+   1674   170      116.6361   367      100.0000      104.0000   159777    4.00%
+   1731   177      126.0000   419      100.0000      104.0000   166234    4.00%
+   1748   179      125.7500   426      100.0000      104.0000   169725    4.00%
+   1769   175      125.5000   425      100.0000      104.0000   174360    4.00%
+   1791   169    infeasible            100.0000      104.0000   179502    4.00%
+   1823   152        cutoff            100.0000      104.0000   187760    4.00%
+   2646   519      103.0000    31      100.0000      103.2121   192007    3.21%
+   3668   766      101.1667    13      100.0000      102.2500   193993    2.25%
+   4678   780      101.1667    12      100.0000      101.8333   195776    1.83%
+   5670   272      101.3333    15      100.0000      101.3333   197477    1.33%
+Elapsed time = 92.07 sec. (65948.29 ticks, tree = 0.29 MB, solutions = 4)
+
+Clique cuts applied:  2
+Zero-half cuts applied:  62
+
+Root node processing (before b&c):
+  Real time             =    0.43 sec. (335.55 ticks)
+Sequential b&c:
+  Real time             =   92.06 sec. (66014.18 ticks)
+                          ------------
+Total (root+branch&cut) =   92.49 sec. (66349.73 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_optimal
+>>> Benchmark flat50-10.cnf k 2 OPT 100 TimeCost 92.93893885612488 TimeSolve 92.87265014648438 TimeRead 0.0017919540405273438 TimeTrans 0.06449675559997559

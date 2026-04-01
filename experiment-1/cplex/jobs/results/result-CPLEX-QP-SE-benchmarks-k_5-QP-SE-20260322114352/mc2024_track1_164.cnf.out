@@ -1,0 +1,77 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_Simplex_Tolerances_Optimality           1.0000000000000001e-09
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIQP Presolve eliminated 2570 rows and 18 columns.
+MIQP Presolve modified 44 coefficients.
+Aggregator did 2520 substitutions.
+Reduced MIQP has 40462 rows, 13132 columns, and 144332 nonzeros.
+Reduced MIQP has 11566 binaries, 1566 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 1566 nonzeros.
+Presolve time = 0.24 sec. (154.39 ticks)
+Probing time = 0.01 sec. (5.34 ticks)
+Tried aggregator 1 time.
+Reduced MIQP has 40462 rows, 13132 columns, and 144332 nonzeros.
+Reduced MIQP has 11566 binaries, 1566 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 1566 nonzeros.
+Presolve time = 0.11 sec. (67.56 ticks)
+Classifier predicts products in MIQP should be linearized.
+Probing time = 0.02 sec. (5.36 ticks)
+Clique table members: 6278.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 79.16 sec. (159153.04 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     9787.5000  6081                   9787.5000       10         
+      0     0     9787.5000  7137               ZeroHalf: 261   581075         
+      0     0     9787.5000  7316                  Cuts: 6121  1062707         
+Heuristic still looking.
+Heuristic still looking.
+Heuristic still looking.
+*     0+    0                          316.0000     9787.5000              --- 
+*     0+    0                          644.0000     9787.5000              --- 
+*     0+    0                          652.0000     9787.5000              --- 
+*     0+    0                         1596.0000     9787.5000           513.25%
+*     0+    0                         1640.0000     9787.5000           496.80%
+*     0+    0                         1648.0000     9787.5000           493.90%
+*     0+    0                         3026.0000     9787.5000           223.45%
+*     0+    0                         3042.0000     9787.5000           221.75%
+*     0+    0                         3050.0000     9787.5000           220.90%
+*     0+    0                         3054.0000     9787.5000           220.48%
+      0     0        cutoff           3054.0000     9787.5000  1062707  220.48%
+      0     2     9787.5000  7472     3054.0000     9787.5000  1062707  220.48%
+Elapsed time = 4127.10 sec. (1457500.77 ticks, tree = 0.01 MB, solutions = 10)
+      1     3     9787.0153  7428     3054.0000     9787.5000  1443421  220.48%
+      2     4     9786.7224  7749     3054.0000     9787.5000  1870359  220.48%
+      3     5     9787.0153  7592     3054.0000     9787.5000  2303794  220.48%
+      4     4    infeasible           3054.0000     9787.5000  2321410  220.48%
+      5     5     9783.8102  7402     3054.0000     9787.5000  2794731  220.48%
+      6     6     9783.8102  7397     3054.0000     9787.5000  3328080  220.48%
+      7     7     9778.1183  7408     3054.0000     9787.5000  3342141  220.48%
+
+Clique cuts applied:  790
+Implied bound cuts applied:  1
+Zero-half cuts applied:  252
+Gomory fractional cuts applied:  7
+
+Root node processing (before b&c):
+  Real time             = 4127.07 sec. (1457487.48 ticks)
+Sequential b&c:
+  Real time             = 3073.02 sec. (891208.80 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.09 sec. (2348696.28 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_time_limit_feasible
+>>> Benchmark mc2024_track1_164.cnf k 5 OPT 3054 TimeCost 7234.90206694603 TimeSolve 7225.352493286133 TimeRead 0.011115074157714844 TimeTrans 9.538458585739136

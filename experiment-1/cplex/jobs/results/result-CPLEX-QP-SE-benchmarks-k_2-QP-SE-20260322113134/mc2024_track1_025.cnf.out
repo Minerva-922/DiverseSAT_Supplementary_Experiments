@@ -1,0 +1,51 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_Simplex_Tolerances_Optimality           1.0000000000000001e-09
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIQP Presolve eliminated 48 rows and 18 columns.
+MIQP Presolve modified 2 coefficients.
+Aggregator did 5 substitutions.
+Reduced MIQP has 46052 rows, 18621 columns, and 129334 nonzeros.
+Reduced MIQP has 13965 binaries, 4656 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 4656 nonzeros.
+Presolve time = 0.16 sec. (102.53 ticks)
+Probing fixed 130 vars, tightened 130 bounds.
+Probing time = 1.54 sec. (585.12 ticks)
+Tried aggregator 3 times.
+MIQP Presolve eliminated 2353 rows and 690 columns.
+MIQP Presolve modified 257 coefficients.
+Aggregator did 92 substitutions.
+Reduced MIQP has 43607 rows, 17839 columns, and 123602 nonzeros.
+Reduced MIQP has 13250 binaries, 4589 generals, 0 SOSs, and 0 indicators.
+Reduced MIQP objective Q matrix has 4589 nonzeros.
+Presolve time = 0.50 sec. (275.17 ticks)
+Classifier predicts products in MIQP should be linearized.
+Probing time = 0.04 sec. (11.66 ticks)
+Clique table members: 79936.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 18.46 sec. (14665.66 ticks)
+
+Root node processing (before b&c):
+  Real time             =   20.93 sec. (15717.07 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =   20.93 sec. (15717.07 ticks)
+Traceback (most recent call last):
+  File "/scratch/scherif/DiverseSAT-journal_sup/DiverseSAT_Supplementary_Experiments/experiment-1/cplex/jobs/../solvers/CPLEX-QP-SE.py", line 108, in <module>
+    prob.solve()
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/__init__.py", line 1304, in solve
+    _proc.mipopt(self._env._e, self._lp)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 708, in mipopt
+    check_status(env, status)
+  File "/users/scherif/.local/lib/python3.9/site-packages/cplex/_internal/_procedural.py", line 249, in __call__
+    raise CplexSolverError(error_string, env, status)
+cplex.exceptions.errors.CplexSolverError: CPLEX Error  1256: Basis singular.

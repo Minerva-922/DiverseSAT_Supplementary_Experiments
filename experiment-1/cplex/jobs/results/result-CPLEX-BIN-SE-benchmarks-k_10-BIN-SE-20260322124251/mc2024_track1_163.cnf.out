@@ -1,0 +1,58 @@
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_ClockType                               1
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_MIP_Tolerances_Integrality              0
+Tried aggregator 2 times.
+MIP Presolve eliminated 14706 rows and 57 columns.
+MIP Presolve modified 12830 coefficients.
+Aggregator did 11400 substitutions.
+Reduced MIP has 96159 rows, 41052 columns, and 350817 nonzeros.
+Reduced MIP has 41052 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.64 sec. (362.46 ticks)
+Found incumbent of value 1156.000000 after 1.30 sec. (700.97 ticks)
+Probing time = 0.20 sec. (112.91 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 4323 rows and 1447 columns.
+Reduced MIP has 91836 rows, 39602 columns, and 340724 nonzeros.
+Reduced MIP has 39602 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.70 sec. (429.95 ticks)
+Probing time = 0.04 sec. (13.05 ticks)
+Clique table members: 12131.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 769.02 sec. (325657.18 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                         1156.0000   103350.0000              --- 
+      0     0    51035.0000 12705     1156.0000    51035.0000   271029     --- 
+      0     0    41158.3952 11729     1156.0000    Cuts: 5794   518191     --- 
+
+GUB cover cuts applied:  2
+Clique cuts applied:  62
+Cover cuts applied:  10
+Implied bound cuts applied:  22
+Flow cuts applied:  20
+Mixed integer rounding cuts applied:  16
+Zero-half cuts applied:  7642
+Lift and project cuts applied:  14
+Gomory fractional cuts applied:  128
+
+Root node processing (before b&c):
+  Real time             = 7200.10 sec. (3676924.55 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) = 7200.10 sec. (3676924.55 ticks)
+Solution is feasible.
+
+---------------------
+@@@ MIP_time_limit_feasible
+>>> Benchmark mc2024_track1_163.cnf k 10 OPT 1156 TimeCost 7320.430777311325 TimeSolve 7228.90163898468 TimeRead 0.01184225082397461 TimeTrans 91.51729607582092

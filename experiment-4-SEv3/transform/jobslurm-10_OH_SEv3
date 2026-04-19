@@ -1,0 +1,18 @@
+#!/bin/sh
+#SBATCH --job-name=10Ov3
+#SBATCH --partition=normal
+#SBATCH --time=10-1:00:00
+#SBATCH --output=slurm-%j.out
+#SBATCH --mem=120G
+#SBATCH --nodes=1
+#SBATCH --exclusive
+echo "-----------------------------------------------------------"
+echo "hostname                     =   $(hostname)"
+echo "SLURM_JOB_NAME               =   $SLURM_JOB_NAME"
+echo "SLURM_JOBID                  =   $SLURM_JOBID"
+echo "-----------------------------------------------------------"
+k_value="10"
+encode="OH"
+SE_mode="SEv3"
+key_word="k_${k_value}-${encode}-${SE_mode}"
+python ./goTransformer.py 10 10000 ../transformers/${encode}_${SE_mode}_cnf_to_PBO.py  /users/scherif/ComputeSpace/DiverseSAT/benchmarks/ ../benchmarks/$key_word  ./output-trans/ .cnf .pbo  --name_list 299_instances.txt ${k_value}  --suffix $key_word

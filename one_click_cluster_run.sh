@@ -1,14 +1,17 @@
 #!/usr/bin/env bash
-# one_click_cluster_run.sh —— 一键在 matricsi 集群上跑 exp-2 / exp-3 / exp-4 / exp-5
+# one_click_cluster_run.sh —— 一键在 matricsi 集群上跑 exp-2 / exp-3 / exp-4（默认）
 #
 # 合作者只需在集群上执行一次：
 #
 #     cd /users/scherif/ComputeSpace/DiverseSAT/DiverseSAT_Supplementary_Experiments/added_experiment
 #     bash one_click_cluster_run.sh
 #
-# 默认行为：四个实验并行提交到 SLURM 队列。
-# 不同实验之间没有依赖；同一实验内 solve 用 --dependency=afterok 等自己的 transform。
-# 加 --sequential 可以让后一个实验等前一个实验全部 job 完成再开始。
+# 默认行为：exp-2 / exp-3 / exp-4 三个实验并行提交到 SLURM 队列。
+#   - exp-5 (SEv1v3 heuristic overlay) 默认 **不跑**——它是 unsound symmetry breaking
+#     overlay（会把 lex-min 和 diagonal-min 两个不同 canonical 代表硬合，可能杀掉最
+#     优解），等 Sami 邮件里的 A/B/C 决策后再决定是否加 --with-exp5 启用。
+#   - 不同实验之间没有依赖；同一实验内 solve 用 --dependency=afterok 等自己的 transform。
+#   - 加 --sequential 可以让后一个实验等前一个实验全部 job 完成再开始。
 #
 # 脚本会自动完成：
 #   1. 检查环境（git 最新、Python pysat、solver 二进制、benchmark 目录）
@@ -18,16 +21,17 @@
 #   5. 打印最终的 job ID 列表和后续步骤（sumup）
 #
 # 用法
-#   bash one_click_cluster_run.sh                 # 四个实验都跑
-#   bash one_click_cluster_run.sh --only exp2,exp3          # 只跑 exp-2 和 exp-3
-#   bash one_click_cluster_run.sh --only exp4               # 只跑 exp-4
-#   bash one_click_cluster_run.sh --skip exp5               # 跑全部，但跳过 exp-5
-#   bash one_click_cluster_run.sh --sequential              # 强制 exp2→exp3→exp4→exp5 串行
-#   bash one_click_cluster_run.sh --dry-run                 # 打印所有命令但不执行
-#   bash one_click_cluster_run.sh --yes                     # 跳过所有确认（全自动）
-#   bash one_click_cluster_run.sh --no-git-pull             # 跳过 git pull
-#   bash one_click_cluster_run.sh --no-smoke                # 跳过 smoke test
-#   bash one_click_cluster_run.sh --help                    # 显示此帮助
+#   bash one_click_cluster_run.sh                        # 默认：跑 exp-2/3/4（不跑 exp-5）
+#   bash one_click_cluster_run.sh --with-exp5            # 额外把 exp-5 SEv1v3 overlay 也跑上
+#   bash one_click_cluster_run.sh --only exp2,exp3       # 只跑指定实验（完全覆盖默认）
+#   bash one_click_cluster_run.sh --only exp4            # 只跑 exp-4
+#   bash one_click_cluster_run.sh --skip exp3            # 默认集合里排除 exp-3
+#   bash one_click_cluster_run.sh --sequential           # 强制实验之间串行
+#   bash one_click_cluster_run.sh --dry-run              # 打印所有命令但不执行
+#   bash one_click_cluster_run.sh --yes                  # 跳过所有确认（全自动）
+#   bash one_click_cluster_run.sh --no-git-pull          # 跳过 git pull
+#   bash one_click_cluster_run.sh --no-smoke             # 跳过 smoke test
+#   bash one_click_cluster_run.sh --help                 # 显示此帮助
 #
 # 退出码
 # ------
@@ -52,7 +56,7 @@ GAUSSMAXHS_BIN="${GAUSSMAXHS_BIN:-/users/scherif/ComputeSpace/DiverseSAT/solvers
 RUN_EXP2=1
 RUN_EXP3=1
 RUN_EXP4=1
-RUN_EXP5=1
+RUN_EXP5=0   # 默认关闭：SEv1v3 overlay unsound，等 Sami 决策；用 --with-exp5 打开
 DRY_RUN=0
 ASSUME_YES=0
 DO_GIT_PULL=1
@@ -92,6 +96,7 @@ while [[ $# -gt 0 ]]; do
         --only=*)       apply_only "${1#*=}"; shift ;;
         --skip)         apply_skip "$2"; shift 2 ;;
         --skip=*)       apply_skip "${1#*=}"; shift ;;
+        --with-exp5)    RUN_EXP5=1; shift ;;
         --sequential)   SEQUENTIAL=1; shift ;;
         --dry-run)      DRY_RUN=1; shift ;;
         --yes|-y)       ASSUME_YES=1; shift ;;
@@ -504,7 +509,7 @@ main() {
     echo -e "${BLUE}"
     echo "============================================================"
     echo "  DiverseSAT supplementary experiments — one-click runner"
-    echo "  (exp-2 / exp-3 / exp-4 / exp-5)"
+    echo "  default: exp-2 / exp-3 / exp-4   (exp-5 opt-in via --with-exp5)"
     echo "============================================================"
     echo -e "${NC}"
 

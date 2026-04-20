@@ -82,7 +82,8 @@ done
 RED='\033[1;31m'; GREEN='\033[1;32m'; YELLOW='\033[1;33m'; BLUE='\033[1;34m'; NC='\033[0m'
 log()   { printf "${BLUE}[INFO]${NC}  %s\n" "$*"; }
 ok()    { printf "${GREEN}[ OK ]${NC}  %s\n" "$*"; }
-warn()  { printf "${YELLOW}[WARN]${NC}  %s\n" "$*"; }
+# WARN 一律走 stderr —— 其一符合 Unix 惯例，其二防止被 VAR=$(submit_xxx) capture
+warn()  { printf "${YELLOW}[WARN]${NC}  %s\n" "$*" >&2; }
 die()   { printf "${RED}[FAIL]${NC}  %s\n" "$*" >&2; exit "${2:-1}"; }
 step()  { printf "\n${BLUE}========== %s ==========${NC}\n" "$*"; }
 
@@ -264,71 +265,99 @@ smoke_test() {
 #   submit_and_collect_ids <dir> <prefix>         —— 无依赖提交
 #   submit_with_dependency <dir> <prefix> <deps>  —— 带 afterok 依赖提交
 # -------------------------------------------------------------------
+# 重要: 这 3 个函数被以 VAR=$(submit_xxx ...) 的方式调用 —— stdout 会被 capture。
+#       所以所有人读的 log/printf 都必须重定向到 stderr (>&2)，
+#       否则日志会污染 VAR，被下一步当成 SLURM jobid 传给 --dependency=afterok:…
+#       (历史上踩过: "Batch job submission failed: Job dependency problem")
 submit_and_collect_ids() {
     local dir="$1" prefix="$2"
-    local ids="" jobfile jid
+    local ids="" jobfile jid count=0
     pushd "$dir" >/dev/null || die "cd $dir 失败"
     for jobfile in ${prefix}*; do
         [[ -f "$jobfile" ]] || continue
         if (( DRY_RUN )); then
-            printf "${YELLOW}[DRY]${NC}   sbatch --parsable %s  (in %s)\n" "$jobfile" "$dir"
+            printf "${YELLOW}[DRY]${NC}   sbatch --parsable %s  (in %s)\n" "$jobfile" "$dir" >&2
             jid="DRY$RANDOM"
         else
             jid=$(sbatch --parsable "$jobfile") || die "sbatch 失败: $jobfile" 3
-            log "  submitted $jobfile → $jid"
+            log "  submitted $jobfile → $jid" >&2
         fi
         [[ -n "$ids" ]] && ids+=":"
         ids+="$jid"
+        count=$((count+1))
         sleep 0.2
     done
     popd >/dev/null
+    if (( count == 0 )); then
+        if (( DRY_RUN )); then
+            warn "[DRY] $dir 里没有 '${prefix}*' (generate 还没跑过); 真 run 时会自动 generate"
+        else
+            die "在 $dir 里没找到匹配 '${prefix}*' 的 SLURM 脚本 —— generate 步骤可能失败了" 3
+        fi
+    fi
     printf '%s\n' "$ids"
 }
 
 submit_with_dependency() {
     local dir="$1" prefix="$2" dep="$3"
-    local ids="" jobfile jid
+    local ids="" jobfile jid count=0
     [[ -z "$dep" ]] && die "submit_with_dependency 收到空依赖列表" 3
     pushd "$dir" >/dev/null || die "cd $dir 失败"
     for jobfile in ${prefix}*; do
         [[ -f "$jobfile" ]] || continue
         if (( DRY_RUN )); then
-            printf "${YELLOW}[DRY]${NC}   sbatch --parsable --dependency=afterok:%s %s  (in %s)\n" "$dep" "$jobfile" "$dir"
+            printf "${YELLOW}[DRY]${NC}   sbatch --parsable --dependency=afterok:%s %s  (in %s)\n" "$dep" "$jobfile" "$dir" >&2
             jid="DRY$RANDOM"
         else
             jid=$(sbatch --parsable --dependency=afterok:"$dep" "$jobfile") \
                 || die "sbatch（带 dependency）失败: $jobfile" 3
-            log "  submitted $jobfile → $jid (deps=$dep)"
+            log "  submitted $jobfile → $jid (deps=$dep)" >&2
         fi
         [[ -n "$ids" ]] && ids+=":"
         ids+="$jid"
+        count=$((count+1))
         sleep 0.2
     done
     popd >/dev/null
+    if (( count == 0 )); then
+        if (( DRY_RUN )); then
+            warn "[DRY] $dir 里没有 '${prefix}*' (generate 还没跑过); 真 run 时会自动 generate"
+        else
+            die "在 $dir 里没找到匹配 '${prefix}*' 的 SLURM 脚本 —— generate 步骤可能失败了" 3
+        fi
+    fi
     printf '%s\n' "$ids"
 }
 
 # 以 afterany（不论成功失败都算完成）方式提交 —— 只用于 --sequential 跨实验等待
 submit_with_afterany() {
     local dir="$1" prefix="$2" dep="$3"
-    local ids="" jobfile jid
+    local ids="" jobfile jid count=0
     [[ -z "$dep" ]] && { submit_and_collect_ids "$dir" "$prefix"; return; }
     pushd "$dir" >/dev/null || die "cd $dir 失败"
     for jobfile in ${prefix}*; do
         [[ -f "$jobfile" ]] || continue
         if (( DRY_RUN )); then
-            printf "${YELLOW}[DRY]${NC}   sbatch --parsable --dependency=afterany:%s %s  (in %s)\n" "$dep" "$jobfile" "$dir"
+            printf "${YELLOW}[DRY]${NC}   sbatch --parsable --dependency=afterany:%s %s  (in %s)\n" "$dep" "$jobfile" "$dir" >&2
             jid="DRY$RANDOM"
         else
             jid=$(sbatch --parsable --dependency=afterany:"$dep" "$jobfile") \
                 || die "sbatch（--sequential）失败: $jobfile" 3
-            log "  submitted $jobfile → $jid (seq deps=$dep)"
+            log "  submitted $jobfile → $jid (seq deps=$dep)" >&2
         fi
         [[ -n "$ids" ]] && ids+=":"
         ids+="$jid"
+        count=$((count+1))
         sleep 0.2
     done
     popd >/dev/null
+    if (( count == 0 )); then
+        if (( DRY_RUN )); then
+            warn "[DRY] $dir 里没有 '${prefix}*' (generate 还没跑过); 真 run 时会自动 generate"
+        else
+            die "在 $dir 里没找到匹配 '${prefix}*' 的 SLURM 脚本 —— generate 步骤可能失败了" 3
+        fi
+    fi
     printf '%s\n' "$ids"
 }
 

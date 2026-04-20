@@ -4,7 +4,7 @@
 # CPLEX, full k-sweep on 299 instances).
 #
 # Usage:
-#   ./run_all_experiments.sh prepare    # copy support scripts + instance list
+#   ./run_all_experiments.sh prepare    # verify self-contained support files are present
 #   ./run_all_experiments.sh generate   # emit SLURM scripts into transform/, jobs/, cplex/jobs/
 #   ./run_all_experiments.sh submit     # sbatch everything
 #   ./run_all_experiments.sh sumup      # aggregate results into CSV
@@ -18,9 +18,6 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR"
 
-EXP1_ROOT="${EXP1_ROOT:-../experiment-1}"
-EXP2_ROOT="${EXP2_ROOT:-../experiment-2-k=3,4}"
-
 step() {
     echo ""
     echo "================================================================"
@@ -28,31 +25,39 @@ step() {
     echo "================================================================"
 }
 
+# 历史版本会从 ../experiment-1/ 或 ../experiment-2-k=3,4/ 跨目录拷贝
+# 支持脚本 (goTransformer.py / goSolver.py / sumup.py / 299_instances.txt)。
+# 现在所有需要的文件都已经物理复制到 experiment-4-SEv3/ 自身的目录下并 commit，
+# 因此 prepare 只做存在性校验 —— 不再动 ../experiment-* 的任何东西。
 do_prepare() {
-    step "[prepare] Copying RoundingSAT support files"
-    # Prefer experiment-2 copies (k=3,4), fall back to experiment-1.
-    for src in "$EXP2_ROOT" "$EXP1_ROOT"; do
-        if [ -f "$src/roundingsat/transform/goTransformer.py" ]; then
-            cp -n "$src/roundingsat/transform/goTransformer.py" transform/
-            cp -n "$src/roundingsat/transform/299_instances.txt"    transform/
-            cp -n "$src/roundingsat/jobs/goSolver.py"               jobs/
-            cp -n "$src/roundingsat/jobs/299_instances.txt"         jobs/
-            cp -n "$src/roundingsat/sumup/sumup.py"                 sumup/
-            echo "  [ok] copied support files from $src"
-            break
+    step "[prepare] Verifying self-contained support files"
+    local missing=0 f
+    for f in \
+        transform/goTransformer.py \
+        transform/genearte_scripts.py \
+        transform/299_instances.txt \
+        jobs/goSolver.py \
+        jobs/genearte_scripts_jobs.py \
+        jobs/299_instances.txt \
+        sumup/sumup.py \
+        cplex/jobs/goSolver.py \
+        cplex/jobs/genearte_scripts_jobs.py \
+        cplex/jobs/299_instances.txt \
+        cplex/sumup/sumup.py
+    do
+        if [ -f "$f" ]; then
+            echo "  [ok] $f"
+        else
+            echo "  [MISSING] $f"
+            missing=$((missing + 1))
         fi
     done
-
-    step "[prepare] Copying CPLEX support files"
-    for src in "$EXP2_ROOT" "$EXP1_ROOT"; do
-        if [ -f "$src/cplex/jobs/goSolver.py" ]; then
-            cp -n "$src/cplex/jobs/goSolver.py"       cplex/jobs/
-            cp -n "$src/cplex/jobs/299_instances.txt" cplex/jobs/
-            cp -n "$src/cplex/sumup/sumup.py"         cplex/sumup/
-            echo "  [ok] copied CPLEX support files from $src"
-            break
-        fi
-    done
+    if [ "$missing" -gt 0 ]; then
+        echo ""
+        echo "  !! $missing 个支持文件缺失 —— 请先 git pull（此实验目录现在应自包含，"
+        echo "     不再从 ../experiment-1 / ../experiment-2-k=3,4 拷贝）"
+        exit 1
+    fi
 }
 
 do_generate() {

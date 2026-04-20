@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# run345.sh —— 一键在 matricsi 集群上跑 DiverseSAT 补充实验 (默认 exp-2/3/4)
+# run234.sh —— 一键在 matricsi 集群上跑 DiverseSAT 补充实验 (默认 exp-2/3/4)
 #
 # 退出码
 # ------
@@ -71,7 +71,7 @@ while [[ $# -gt 0 ]]; do
         --no-git-pull)  DO_GIT_PULL=0; shift ;;
         --no-smoke)     DO_SMOKE=0; shift ;;
         -h|--help)
-            sed -n '/^# run345.sh/,/^set -/p' "$0" \
+            sed -n '/^# run234.sh/,/^set -/p' "$0" \
                 | grep '^#' | sed 's/^# \{0,1\}//'
             exit 0 ;;
         *)  echo "Unknown option: $1" >&2; exit 1 ;;
@@ -183,6 +183,23 @@ preflight() {
         ok "GaussMaxHS 二进制 $GAUSSMAXHS_BIN"
     fi
 
+    # 9. 保证 run_all_experiments.sh / build_gaussmaxhs.sh 可执行
+    #    (git 在 Linux 上会保留 +x, 但初次 pull 或某些同步方式可能丢失)
+    local sh fixed=0
+    for sh in \
+        "$SCRIPT_DIR/experiment-2-k=3,4/run_all_experiments.sh" \
+        "$SCRIPT_DIR/experiment-3-XOR/run_all_experiments.sh" \
+        "$SCRIPT_DIR/experiment-3-XOR/build_gaussmaxhs.sh" \
+        "$SCRIPT_DIR/experiment-4-SEv3/run_all_experiments.sh" \
+        "$SCRIPT_DIR/experiment-5-SEv1v3/run_all_experiments.sh"
+    do
+        [[ -f "$sh" ]] || continue
+        if [[ ! -x "$sh" ]]; then
+            chmod +x "$sh" && fixed=$((fixed+1))
+        fi
+    done
+    (( fixed > 0 )) && log "给 $fixed 个 *.sh 补上了可执行权限"
+
     ok "前置检查全部通过"
 }
 
@@ -192,9 +209,6 @@ smoke_test() {
     step "Smoke test（用 benchmark 目录里最小的 .cnf）"
 
     local SAMPLE
-    # 注意: 用 awk 'NR==1 {print $2}' 代替 | head -1 | awk '...' ——
-    # 后者在文件数很多 (cluster 上 2128+) 时 head 提前关闭 pipe 导致 sort SIGPIPE,
-    # 配合 set -euo pipefail 会让整个脚本静默退出 (exit 141)。
     SAMPLE=$(find "$BENCH_DIR" -name '*.cnf' -printf '%s %p\n' 2>/dev/null \
                     | sort -n \
                     | awk 'NR==1 {print $2}')
@@ -498,7 +512,7 @@ summary() {
 main() {
     echo -e "${BLUE}"
     echo "============================================================"
-    echo "  DiverseSAT supplementary experiments — run345.sh"
+    echo "  DiverseSAT supplementary experiments — run234.sh"
     echo "  default: exp-2 / exp-3 / exp-4   (exp-5 opt-in via --with-exp5)"
     echo "============================================================"
     echo -e "${NC}"

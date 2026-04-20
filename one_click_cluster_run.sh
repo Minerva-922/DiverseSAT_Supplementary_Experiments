@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
-# =============================================================================
-# one_click_cluster_run.sh
+# one_click_cluster_run.sh —— 一键在 matricsi 集群上跑 exp-2 + exp-3
 #
-# 一键运行 exp-2 和 exp-3 在 matricsi 集群上的完整流程（transform + solve）。
-# 合作者在 cluster 上只需要执行一次：
+# 合作者只需在集群上执行一次：
 #
 #     cd /users/scherif/ComputeSpace/DiverseSAT/DiverseSAT_Supplementary_Experiments/added_experiment
 #     bash one_click_cluster_run.sh
 #
-# 脚本会：
+# 脚本会自动完成：
 #   1. 检查环境（git 最新、Python pysat、solver 二进制、benchmark 目录）
 #   2. 跑一次快速的 transform smoke test，避免整批失败
 #   3. 生成 SLURM 脚本
@@ -16,14 +14,14 @@
 #   5. 打印最终的 job ID 列表和后续步骤（sumup）
 #
 # 用法
-# ----
 #   bash one_click_cluster_run.sh                 # 两个实验都跑
 #   bash one_click_cluster_run.sh --exp2-only     # 只跑 exp-2
 #   bash one_click_cluster_run.sh --exp3-only     # 只跑 exp-3
 #   bash one_click_cluster_run.sh --dry-run       # 打印所有命令但不执行
 #   bash one_click_cluster_run.sh --yes           # 跳过所有确认（全自动）
-#   bash one_click_cluster_run.sh --no-git-pull   # 跳过 git pull 步骤
+#   bash one_click_cluster_run.sh --no-git-pull   # 跳过 git pull
 #   bash one_click_cluster_run.sh --no-smoke      # 跳过 smoke test
+#   bash one_click_cluster_run.sh --help          # 显示此帮助
 #
 # 退出码
 # ------
@@ -37,13 +35,9 @@
 #   BENCH_DIR=/path/to/benchmarks           默认 /users/scherif/ComputeSpace/DiverseSAT/benchmarks
 #   ROUNDINGSAT_BIN=/path/to/roundingsat    默认 /users/scherif/ComputeSpace/DiverseSAT/solvers/roundingsat
 #   GAUSSMAXHS_BIN=/path/to/maxhs           默认 /users/scherif/ComputeSpace/DiverseSAT/solvers/gaussmaxhs/maxhs
-# =============================================================================
 
 set -euo pipefail
 
-# ---------------------------------------------------------------------------
-# 默认配置
-# ---------------------------------------------------------------------------
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BENCH_DIR="${BENCH_DIR:-/users/scherif/ComputeSpace/DiverseSAT/benchmarks}"
 ROUNDINGSAT_BIN="${ROUNDINGSAT_BIN:-/users/scherif/ComputeSpace/DiverseSAT/solvers/roundingsat}"
@@ -56,9 +50,6 @@ ASSUME_YES=0
 DO_GIT_PULL=1
 DO_SMOKE=1
 
-# ---------------------------------------------------------------------------
-# 解析命令行参数
-# ---------------------------------------------------------------------------
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --exp2-only)    RUN_EXP3=0; shift ;;
@@ -68,15 +59,14 @@ while [[ $# -gt 0 ]]; do
         --no-git-pull)  DO_GIT_PULL=0; shift ;;
         --no-smoke)     DO_SMOKE=0; shift ;;
         -h|--help)
-            sed -n '/^# 用法$/,/^# 退出码$/p' "$0" | sed 's/^# \{0,1\}//'
+            sed -n '/^# one_click_cluster_run.sh/,/^set -/p' "$0" \
+                | grep '^#' | sed 's/^# \{0,1\}//'
             exit 0 ;;
         *)  echo "Unknown option: $1" >&2; exit 1 ;;
     esac
 done
 
-# ---------------------------------------------------------------------------
 # 辅助函数
-# ---------------------------------------------------------------------------
 RED='\033[1;31m'; GREEN='\033[1;32m'; YELLOW='\033[1;33m'; BLUE='\033[1;34m'; NC='\033[0m'
 log()   { printf "${BLUE}[INFO]${NC}  %s\n" "$*"; }
 ok()    { printf "${GREEN}[ OK ]${NC}  %s\n" "$*"; }
@@ -100,9 +90,7 @@ confirm() {
     [[ "$ans" =~ ^[Yy]$ ]]
 }
 
-# ---------------------------------------------------------------------------
 # Pre-flight 检查
-# ---------------------------------------------------------------------------
 preflight() {
     step "前置检查 (pre-flight)"
 
@@ -177,9 +165,7 @@ preflight() {
     ok "前置检查全部通过"
 }
 
-# ---------------------------------------------------------------------------
 # Smoke test：在最小 .cnf 上跑一遍 transform，确认 Python 环境和参数格式 OK
-# ---------------------------------------------------------------------------
 smoke_test() {
     (( DO_SMOKE )) || { warn "跳过 smoke test（--no-smoke）"; return 0; }
     step "Smoke test（用 benchmark 目录里最小的 .cnf）"
@@ -218,10 +204,8 @@ smoke_test() {
     ok "Smoke test 通过"
 }
 
-# ---------------------------------------------------------------------------
 # 工具：迭代一个 submit_all.sh 对应的 jobslurm-* 文件，逐个 sbatch --parsable，
 #       返回冒号分隔的 job ID 列表（可作为 --dependency=afterok 的参数）
-# ---------------------------------------------------------------------------
 submit_and_collect_ids() {
     local dir="$1"     # 包含 jobslurm-* 的目录
     local prefix="$2"  # 筛选前缀，如 jobslurm-
@@ -249,9 +233,7 @@ submit_and_collect_ids() {
     printf '%s\n' "$ids"
 }
 
-# ---------------------------------------------------------------------------
 # 工具：带 --dependency 提交一批 solve jobs
-# ---------------------------------------------------------------------------
 submit_with_dependency() {
     local dir="$1"
     local prefix="$2"
@@ -280,9 +262,7 @@ submit_with_dependency() {
     printf '%s\n' "$ids"
 }
 
-# ---------------------------------------------------------------------------
 # exp-2 流程
-# ---------------------------------------------------------------------------
 EXP2_IDS=""
 run_exp2() {
     (( RUN_EXP2 )) || return 0
@@ -313,9 +293,7 @@ run_exp2() {
     EXP2_IDS="$TRANSFORM_IDS:$RS_IDS:$CPLEX_IDS"
 }
 
-# ---------------------------------------------------------------------------
 # exp-3 流程
-# ---------------------------------------------------------------------------
 EXP3_IDS=""
 run_exp3() {
     (( RUN_EXP3 )) || return 0
@@ -340,9 +318,7 @@ run_exp3() {
     EXP3_IDS="$TRANSFORM_IDS:$SOLVE_IDS"
 }
 
-# ---------------------------------------------------------------------------
 # 最终状态
-# ---------------------------------------------------------------------------
 summary() {
     step "✅ 全部任务已提交 —— 可以关闭终端，SLURM 会自动跑"
 
@@ -373,9 +349,7 @@ summary() {
     echo -e "预计墙钟时间：每个 solve job 最多 10000 秒（~2.8h），SLURM 并发按集群负载。"
 }
 
-# ---------------------------------------------------------------------------
 # main
-# ---------------------------------------------------------------------------
 main() {
     echo -e "${BLUE}"
     echo "============================================================"

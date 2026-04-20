@@ -83,50 +83,14 @@ fail() { printf '\033[1;31m[gaussmaxhs] ERROR:\033[0m %s\n' "$*" >&2; exit "${2:
 if command -v module >/dev/null 2>&1; then
     say "loading compiler / build toolchain"
     run "module purge || true"
-    
-    # Load GCC compiler (try versions in order of preference)
-    for gcc_version in gcc/15.2.0 gcc/11.2.0 gcc; do
-        if run "module load $gcc_version 2>/dev/null"; then
-            say "loaded $gcc_version"
-            break
-        fi
-    done
-    
-    # Load CMake (try utils/cmake first, then plain cmake)
-    for cmake_module in utils/cmake/4.1.2 utils/cmake/4.1.1 utils/cmake cmake; do
-        if run "module load $cmake_module 2>/dev/null"; then
-            say "loaded $cmake_module"
-            break
-        fi
-    done
-    
-    # Load Python (try various versions)
-    for python_version in python/3.11.7 python/3.13.7 python/3.9.20 python; do
-        if run "module load $python_version 2>/dev/null"; then
-            say "loaded $python_version"
-            break
-        fi
-    done
-    
-    # Load CPLEX module if available (optional, but helps with library paths)
-    for cplex_module in optimizer/cplex/22.1.1.0 optimizer/cplex/2211 optimizer/cplex/12.8.0; do
-        if run "module load $cplex_module 2>/dev/null"; then
-            say "loaded $cplex_module (provides CPLEX environment)"
-            # If CPLEX_ROOT not set, try to get it from module
-            if [[ -z "$CPLEX_ROOT" ]] && command -v cplex >/dev/null 2>&1; then
-                CPLEX_ROOT="$(dirname $(dirname $(which cplex)))"
-            fi
-            break
-        fi
-    done
-    
-    # Verify critical tools are available
-    if ! command -v cmake >/dev/null 2>&1; then
-        fail "cmake not found after loading modules. Available modules: $(module avail 2>&1 | grep -i cmake | head -5)" 1
-    fi
-    if ! command -v python3 >/dev/null 2>&1 && ! command -v python >/dev/null 2>&1; then
-        fail "python not found after loading modules" 1
-    fi
+    # Adjust these names if matricsi's module tree uses different labels.
+    run "module load gcc/11 || module load gcc || true"
+    run "module load cmake || true"
+    run "module load python/3.10 || module load python || true"
+    # CPLEX is not provided as a module on matricsi (per exp-1 history);
+    # Python `import cplex` works because CPLEX is installed site-wide
+    # and the `cplex` Python pkg ships its own libs. We need the C
+    # static libs separately, see next section.
 fi
 
 # ----------------------------------------------------------------------------
@@ -145,67 +109,36 @@ autodetect_cplex () {
         "/softs/CPLEX_Studio2211"
         "/softs/CPLEX_Studio221"
     )
-    
-    # Also check if CPLEX module set environment variables
-    if [[ -n "${CPLEX_DIR:-}" ]]; then
-        candidates+=("$CPLEX_DIR")
-    fi
-    if [[ -n "${CONDA_PREFIX:-}" && -d "$CONDA_PREFIX/cplex" ]]; then
-        candidates+=("$CONDA_PREFIX")
-    fi
-    
     for root in "${candidates[@]}"; do
         [[ -z "$root" ]] && continue
-        
-        # Try different library paths
-        for lib_subpath in "cplex/lib/x86-64_linux/static_pic" \
-                           "cplex/lib/x86-64_linux/static" \
-                           "cplex/lib/x86-64_linux" \
-                           "lib/x86-64_linux/static_pic"; do
-            local lib="$root/$lib_subpath"
-            local inc="$root/cplex/include"
-            
-            if [[ -f "$lib/libcplex.a" && -f "$lib/libilocplex.a" && -f "$inc/ilcplex/cplex.h" ]]; then
-                CPLEX_LIBDIR="$lib"
-                CPLEX_INCDIR="$inc"
-                say "auto-detected CPLEX at $root (lib: $lib_subpath)"
-                return 0
-            fi
-        done
+        local lib="$root/cplex/lib/x86-64_linux/static_pic"
+        local inc="$root/cplex/include"
+        if [[ -f "$lib/libcplex.a" && -f "$lib/libilocplex.a" && -f "$inc/ilcplex/cplex.h" ]]; then
+            CPLEX_LIBDIR="$lib"
+            CPLEX_INCDIR="$inc"
+            say "auto-detected CPLEX at $root"
+            return 0
+        fi
     done
     return 1
 }
 
 if [[ -z "$CPLEX_LIBDIR" || -z "$CPLEX_INCDIR" ]]; then
     if ! autodetect_cplex; then
-        cat >&2 <<EOF
-[gaussmaxhs] ERROR: CPLEX static libraries not found.
-
-Please load the CPLEX module or set CPLEX_ROOT:
-  module load optimizer/cplex/22.1.1.0
-
-Or manually set:
-  export CPLEX_ROOT=/path/to/cplex/studio
-  export CPLEX_LIBDIR=\$CPLEX_ROOT/cplex/lib/x86-64_linux/static_pic
-  export CPLEX_INCDIR=\$CPLEX_ROOT/cplex/include
-
-Available CPLEX modules on this system:
-$(module avail 2>&1 | grep -i cplex | head -5 || echo "  none found")
-EOF
-        exit 1
+        fail "CPLEX static libraries not found. Set CPLEX_ROOT, or export
+       CPLEX_LIBDIR  (directory containing libcplex.a + libilocplex.a)
+       CPLEX_INCDIR  (directory containing ilcplex/cplex.h)
+Example:
+       export CPLEX_ROOT=/opt/ibm/ILOG/CPLEX_Studio2211
+or
+       export CPLEX_LIBDIR=\$CPLEX_ROOT/cplex/lib/x86-64_linux/static_pic
+       export CPLEX_INCDIR=\$CPLEX_ROOT/cplex/include" 1
     fi
 fi
 
-# Verify CPLEX files exist
-if [[ ! -f "$CPLEX_LIBDIR/libcplex.a" ]]; then
-    fail "missing $CPLEX_LIBDIR/libcplex.a" 1
-fi
-if [[ ! -f "$CPLEX_LIBDIR/libilocplex.a" ]]; then
-    fail "missing $CPLEX_LIBDIR/libilocplex.a" 1
-fi
-if [[ ! -f "$CPLEX_INCDIR/ilcplex/cplex.h" ]]; then
-    fail "missing $CPLEX_INCDIR/ilcplex/cplex.h" 1
-fi
+[[ -f "$CPLEX_LIBDIR/libcplex.a"    ]] || fail "missing $CPLEX_LIBDIR/libcplex.a"
+[[ -f "$CPLEX_LIBDIR/libilocplex.a" ]] || fail "missing $CPLEX_LIBDIR/libilocplex.a"
+[[ -f "$CPLEX_INCDIR/ilcplex/cplex.h" ]] || fail "missing $CPLEX_INCDIR/ilcplex/cplex.h"
 
 say "CPLEX_LIBDIR = $CPLEX_LIBDIR"
 say "CPLEX_INCDIR = $CPLEX_INCDIR"
@@ -285,7 +218,7 @@ x 10 1 2 3 0
 x 10 -1 3 4 0
 EOF
     say "running smoke test on upstream README instance"
-    if ! OUT="$("$INSTALL_PREFIX/maxhs" "$TMP/smoke.wcnfxor" 2>&1)"; then
+    if ! OUT="$('$INSTALL_PREFIX/maxhs' "$TMP/smoke.wcnfxor" 2>&1)"; then
         printf '%s\n' "$OUT" >&2
         fail "smoke test: maxhs exited non-zero" 3
     fi

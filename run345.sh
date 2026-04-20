@@ -145,7 +145,8 @@ preflight() {
     # 5. benchmark 目录
     [[ -d "$BENCH_DIR" ]] || die "BENCH_DIR 不存在: $BENCH_DIR（用环境变量 BENCH_DIR=... 覆盖）"
     local N_BENCH
-    N_BENCH=$(find "$BENCH_DIR" -maxdepth 1 -name '*.cnf' 2>/dev/null | wc -l)
+    # benchmarks 是分子目录存的 (e.g. flat150-360/ai/hoos/.../*.cnf), 用递归查找
+    N_BENCH=$(find "$BENCH_DIR" -name '*.cnf' 2>/dev/null | wc -l)
     (( N_BENCH >= 299 )) \
         && ok "benchmark 目录 $BENCH_DIR 下有 $N_BENCH 个 .cnf 实例" \
         || warn "benchmark 目录 $BENCH_DIR 下只有 $N_BENCH 个 .cnf（期望 ≥ 299）—— 确认是否正确"
@@ -191,7 +192,7 @@ smoke_test() {
     step "Smoke test（用 benchmark 目录里最小的 .cnf）"
 
     local SAMPLE
-    SAMPLE=$(find "$BENCH_DIR" -maxdepth 1 -name '*.cnf' -printf '%s %p\n' 2>/dev/null \
+    SAMPLE=$(find "$BENCH_DIR" -name '*.cnf' -printf '%s %p\n' 2>/dev/null \
                     | sort -n | head -1 | awk '{print $2}')
     [[ -f "$SAMPLE" ]] || die "找不到任何 .cnf 文件做 smoke test"
     log "用例: $(basename "$SAMPLE") ($(stat -c%s "$SAMPLE") bytes)"

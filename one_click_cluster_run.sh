@@ -1,27 +1,33 @@
 #!/usr/bin/env bash
-# one_click_cluster_run.sh —— 一键在 matricsi 集群上跑 exp-2 + exp-3
+# one_click_cluster_run.sh —— 一键在 matricsi 集群上跑 exp-2 / exp-3 / exp-4 / exp-5
 #
 # 合作者只需在集群上执行一次：
 #
 #     cd /users/scherif/ComputeSpace/DiverseSAT/DiverseSAT_Supplementary_Experiments/added_experiment
 #     bash one_click_cluster_run.sh
 #
+# 默认行为：四个实验并行提交到 SLURM 队列。
+# 不同实验之间没有依赖；同一实验内 solve 用 --dependency=afterok 等自己的 transform。
+# 加 --sequential 可以让后一个实验等前一个实验全部 job 完成再开始。
+#
 # 脚本会自动完成：
 #   1. 检查环境（git 最新、Python pysat、solver 二进制、benchmark 目录）
 #   2. 跑一次快速的 transform smoke test，避免整批失败
-#   3. 生成 SLURM 脚本
+#   3. 生成每个实验的 SLURM 脚本
 #   4. 用 sbatch --dependency 把 "transform → solve" 自动串联后提交
 #   5. 打印最终的 job ID 列表和后续步骤（sumup）
 #
 # 用法
-#   bash one_click_cluster_run.sh                 # 两个实验都跑
-#   bash one_click_cluster_run.sh --exp2-only     # 只跑 exp-2
-#   bash one_click_cluster_run.sh --exp3-only     # 只跑 exp-3
-#   bash one_click_cluster_run.sh --dry-run       # 打印所有命令但不执行
-#   bash one_click_cluster_run.sh --yes           # 跳过所有确认（全自动）
-#   bash one_click_cluster_run.sh --no-git-pull   # 跳过 git pull
-#   bash one_click_cluster_run.sh --no-smoke      # 跳过 smoke test
-#   bash one_click_cluster_run.sh --help          # 显示此帮助
+#   bash one_click_cluster_run.sh                 # 四个实验都跑
+#   bash one_click_cluster_run.sh --only exp2,exp3          # 只跑 exp-2 和 exp-3
+#   bash one_click_cluster_run.sh --only exp4               # 只跑 exp-4
+#   bash one_click_cluster_run.sh --skip exp5               # 跑全部，但跳过 exp-5
+#   bash one_click_cluster_run.sh --sequential              # 强制 exp2→exp3→exp4→exp5 串行
+#   bash one_click_cluster_run.sh --dry-run                 # 打印所有命令但不执行
+#   bash one_click_cluster_run.sh --yes                     # 跳过所有确认（全自动）
+#   bash one_click_cluster_run.sh --no-git-pull             # 跳过 git pull
+#   bash one_click_cluster_run.sh --no-smoke                # 跳过 smoke test
+#   bash one_click_cluster_run.sh --help                    # 显示此帮助
 #
 # 退出码
 # ------
@@ -45,15 +51,48 @@ GAUSSMAXHS_BIN="${GAUSSMAXHS_BIN:-/users/scherif/ComputeSpace/DiverseSAT/solvers
 
 RUN_EXP2=1
 RUN_EXP3=1
+RUN_EXP4=1
+RUN_EXP5=1
 DRY_RUN=0
 ASSUME_YES=0
 DO_GIT_PULL=1
 DO_SMOKE=1
+SEQUENTIAL=0
+
+# 解析 --only / --skip
+apply_only() {
+    RUN_EXP2=0; RUN_EXP3=0; RUN_EXP4=0; RUN_EXP5=0
+    IFS=',' read -ra names <<< "$1"
+    for n in "${names[@]}"; do
+        case "$n" in
+            exp2) RUN_EXP2=1 ;;
+            exp3) RUN_EXP3=1 ;;
+            exp4) RUN_EXP4=1 ;;
+            exp5) RUN_EXP5=1 ;;
+            *) echo "Unknown experiment in --only: $n (expected exp2/exp3/exp4/exp5)" >&2; exit 1 ;;
+        esac
+    done
+}
+apply_skip() {
+    IFS=',' read -ra names <<< "$1"
+    for n in "${names[@]}"; do
+        case "$n" in
+            exp2) RUN_EXP2=0 ;;
+            exp3) RUN_EXP3=0 ;;
+            exp4) RUN_EXP4=0 ;;
+            exp5) RUN_EXP5=0 ;;
+            *) echo "Unknown experiment in --skip: $n (expected exp2/exp3/exp4/exp5)" >&2; exit 1 ;;
+        esac
+    done
+}
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
-        --exp2-only)    RUN_EXP3=0; shift ;;
-        --exp3-only)    RUN_EXP2=0; shift ;;
+        --only)         apply_only "$2"; shift 2 ;;
+        --only=*)       apply_only "${1#*=}"; shift ;;
+        --skip)         apply_skip "$2"; shift 2 ;;
+        --skip=*)       apply_skip "${1#*=}"; shift ;;
+        --sequential)   SEQUENTIAL=1; shift ;;
         --dry-run)      DRY_RUN=1; shift ;;
         --yes|-y)       ASSUME_YES=1; shift ;;
         --no-git-pull)  DO_GIT_PULL=0; shift ;;
@@ -75,7 +114,6 @@ die()   { printf "${RED}[FAIL]${NC}  %s\n" "$*" >&2; exit "${2:-1}"; }
 step()  { printf "\n${BLUE}========== %s ==========${NC}\n" "$*"; }
 
 run() {
-    # run <cmd...>  —— 遵守 DRY_RUN
     if (( DRY_RUN )); then
         printf "${YELLOW}[DRY]${NC}   %s\n" "$*"
     else
@@ -95,9 +133,9 @@ preflight() {
     step "前置检查 (pre-flight)"
 
     # 1. 当前目录
-    if [[ ! -d "$SCRIPT_DIR/experiment-2-k=3,4" ]] || [[ ! -d "$SCRIPT_DIR/experiment-3-XOR" ]]; then
-        die "脚本必须放在 added_experiment/ 目录下（找不到 experiment-2-k=3,4 或 experiment-3-XOR 子目录）。当前在 $SCRIPT_DIR"
-    fi
+    for d in experiment-2-k=3,4 experiment-3-XOR experiment-4-SEv3 experiment-5-SEv1v3; do
+        [[ -d "$SCRIPT_DIR/$d" ]] || die "找不到子目录 $d —— 脚本必须放在 added_experiment/ 下。当前在 $SCRIPT_DIR"
+    done
     ok "工作目录 $SCRIPT_DIR"
 
     # 2. sbatch 可用
@@ -111,12 +149,13 @@ preflight() {
     fi
     ok "Python $(python3 --version 2>&1 | awk '{print $2}') + pysat 可用"
 
-    # 4. git pull（默认跑；--no-git-pull 可以跳）
+    # 4. git pull
     if (( DO_GIT_PULL )); then
         if git -C "$SCRIPT_DIR/.." rev-parse --is-inside-work-tree >/dev/null 2>&1; then
             log "git pull ..."
             run "git -C '$SCRIPT_DIR/..' pull --ff-only origin master || warn 'git pull 失败 —— 手动 pull 后重跑本脚本'"
-            local HEAD=$(git -C "$SCRIPT_DIR/.." rev-parse --short HEAD 2>/dev/null || echo '?')
+            local HEAD
+            HEAD=$(git -C "$SCRIPT_DIR/.." rev-parse --short HEAD 2>/dev/null || echo '?')
             ok "仓库 HEAD = $HEAD"
         else
             warn "不是 git 仓库 —— 跳过 pull"
@@ -127,26 +166,29 @@ preflight() {
 
     # 5. benchmark 目录
     [[ -d "$BENCH_DIR" ]] || die "BENCH_DIR 不存在: $BENCH_DIR（用环境变量 BENCH_DIR=... 覆盖）"
-    local N_BENCH=$(find "$BENCH_DIR" -maxdepth 1 -name '*.cnf' 2>/dev/null | wc -l)
+    local N_BENCH
+    N_BENCH=$(find "$BENCH_DIR" -maxdepth 1 -name '*.cnf' 2>/dev/null | wc -l)
     (( N_BENCH >= 299 )) \
         && ok "benchmark 目录 $BENCH_DIR 下有 $N_BENCH 个 .cnf 实例" \
         || warn "benchmark 目录 $BENCH_DIR 下只有 $N_BENCH 个 .cnf（期望 ≥ 299）—— 确认是否正确"
 
-    # 6. exp-2 的 solver 二进制
-    if (( RUN_EXP2 )); then
+    # 6. RoundingSAT 二进制（exp-2/4/5 需要）
+    if (( RUN_EXP2 || RUN_EXP4 || RUN_EXP5 )); then
         [[ -x "$ROUNDINGSAT_BIN" ]] \
             || die "RoundingSAT 二进制不存在或不可执行: $ROUNDINGSAT_BIN（用环境变量 ROUNDINGSAT_BIN=... 覆盖）"
         ok "RoundingSAT 二进制 $ROUNDINGSAT_BIN"
+    fi
 
-        # CPLEX 只能通过 module 加载，没法静态检查。但至少警告一下。
+    # 7. CPLEX module（exp-2 需要）
+    if (( RUN_EXP2 )); then
         if command -v module >/dev/null 2>&1 && module is-loaded cplex 2>/dev/null; then
             ok "CPLEX 模块已加载"
         else
-            warn "CPLEX 模块未加载 —— SLURM 脚本里的 'module load cplex' 会处理；如果集群的 module 名字改过，需要先手动改 cplex/jobs/jobslurm-*_CPLEX"
+            warn "CPLEX 模块未加载 —— SLURM 脚本里的 'module load cplex' 会处理；如果集群的 module 名字改过，需要先手动改 experiment-2-k=3,4/cplex/jobs/jobslurm-*_CPLEX"
         fi
     fi
 
-    # 7. exp-3 的 GaussMaxHS 二进制（缺失则提示编译）
+    # 8. GaussMaxHS 二进制（仅 exp-3 需要）
     if (( RUN_EXP3 )); then
         if [[ ! -x "$GAUSSMAXHS_BIN" ]]; then
             warn "GaussMaxHS 二进制不存在: $GAUSSMAXHS_BIN"
@@ -165,18 +207,19 @@ preflight() {
     ok "前置检查全部通过"
 }
 
-# Smoke test：在最小 .cnf 上跑一遍 transform，确认 Python 环境和参数格式 OK
+# Smoke test
 smoke_test() {
     (( DO_SMOKE )) || { warn "跳过 smoke test（--no-smoke）"; return 0; }
     step "Smoke test（用 benchmark 目录里最小的 .cnf）"
 
-    local SAMPLE=$(find "$BENCH_DIR" -maxdepth 1 -name '*.cnf' -printf '%s %p\n' 2>/dev/null \
+    local SAMPLE
+    SAMPLE=$(find "$BENCH_DIR" -maxdepth 1 -name '*.cnf' -printf '%s %p\n' 2>/dev/null \
                     | sort -n | head -1 | awk '{print $2}')
     [[ -f "$SAMPLE" ]] || die "找不到任何 .cnf 文件做 smoke test"
     log "用例: $(basename "$SAMPLE") ($(stat -c%s "$SAMPLE") bytes)"
 
     if (( RUN_EXP2 )); then
-        log "exp-2 smoke test: OH_SEv1_cnf_to_PBO.py on K=3"
+        log "exp-2 smoke: OH_SEv1_cnf_to_PBO.py K=3"
         run "python3 '$SCRIPT_DIR/experiment-2-k=3,4/roundingsat/transformers/OH_SEv1_cnf_to_PBO.py' '$SAMPLE' /tmp/smoke_exp2.pbo 3 >/dev/null" \
             || die "exp-2 transformer 调用失败" 2
         (( DRY_RUN )) || [[ -s /tmp/smoke_exp2.pbo ]] || die "exp-2 transformer 没产出 .pbo" 2
@@ -184,7 +227,7 @@ smoke_test() {
     fi
 
     if (( RUN_EXP3 )); then
-        log "exp-3 smoke test: OH_SEv1XOR_cnf_to_wcnfxor.py on K=3"
+        log "exp-3 smoke: OH_SEv1XOR_cnf_to_wcnfxor.py K=3"
         run "python3 '$SCRIPT_DIR/experiment-3-XOR/transformers/OH_SEv1XOR_cnf_to_wcnfxor.py' '$SAMPLE' /tmp/smoke_exp3.wcnfxor 3 >/dev/null" \
             || die "exp-3 transformer 调用失败" 2
         if (( ! DRY_RUN )); then
@@ -193,7 +236,6 @@ smoke_test() {
         fi
         ok "exp-3 transformer OK"
 
-        # 额外：用真正的 maxhs 二进制跑一个 --help 确认可执行
         if [[ -x "$GAUSSMAXHS_BIN" ]]; then
             log "GaussMaxHS 二进制健全性检查"
             run "'$GAUSSMAXHS_BIN' --help >/dev/null 2>&1 || '$GAUSSMAXHS_BIN' -h >/dev/null 2>&1 || true"
@@ -201,24 +243,38 @@ smoke_test() {
         fi
     fi
 
+    if (( RUN_EXP4 )); then
+        log "exp-4 smoke: OH_SEv3_cnf_to_PBO.py K=3"
+        run "python3 '$SCRIPT_DIR/experiment-4-SEv3/transformers/OH_SEv3_cnf_to_PBO.py' '$SAMPLE' /tmp/smoke_exp4.opb 3 >/dev/null" \
+            || die "exp-4 transformer 调用失败" 2
+        (( DRY_RUN )) || [[ -s /tmp/smoke_exp4.opb ]] || die "exp-4 transformer 没产出 .opb" 2
+        ok "exp-4 transformer OK"
+    fi
+
+    if (( RUN_EXP5 )); then
+        log "exp-5 smoke: OH_SEv1v3_cnf_to_PBO.py K=3"
+        run "python3 '$SCRIPT_DIR/experiment-5-SEv1v3/transformers/OH_SEv1v3_cnf_to_PBO.py' '$SAMPLE' /tmp/smoke_exp5.opb 3 >/dev/null" \
+            || die "exp-5 transformer 调用失败" 2
+        (( DRY_RUN )) || [[ -s /tmp/smoke_exp5.opb ]] || die "exp-5 transformer 没产出 .opb" 2
+        ok "exp-5 transformer OK"
+    fi
+
     ok "Smoke test 通过"
 }
 
-# 工具：迭代一个 submit_all.sh 对应的 jobslurm-* 文件，逐个 sbatch --parsable，
-#       返回冒号分隔的 job ID 列表（可作为 --dependency=afterok 的参数）
+# -------------------------------------------------------------------
+# 提交工具：
+#   submit_and_collect_ids <dir> <prefix>         —— 无依赖提交
+#   submit_with_dependency <dir> <prefix> <deps>  —— 带 afterok 依赖提交
+# -------------------------------------------------------------------
 submit_and_collect_ids() {
-    local dir="$1"     # 包含 jobslurm-* 的目录
-    local prefix="$2"  # 筛选前缀，如 jobslurm-
-    local ids=""
-    local jobfile jid
-
+    local dir="$1" prefix="$2"
+    local ids="" jobfile jid
     pushd "$dir" >/dev/null || die "cd $dir 失败"
-
-    # jobslurm-3_OH_SEv1 / jobslurm-2_OH_SEv1XOR 等
     for jobfile in ${prefix}*; do
         [[ -f "$jobfile" ]] || continue
         if (( DRY_RUN )); then
-            printf "${YELLOW}[DRY]${NC}   sbatch --parsable $jobfile  (in $dir)\n"
+            printf "${YELLOW}[DRY]${NC}   sbatch --parsable %s  (in %s)\n" "$jobfile" "$dir"
             jid="DRY$RANDOM"
         else
             jid=$(sbatch --parsable "$jobfile") || die "sbatch 失败: $jobfile" 3
@@ -228,25 +284,19 @@ submit_and_collect_ids() {
         ids+="$jid"
         sleep 0.2
     done
-
     popd >/dev/null
     printf '%s\n' "$ids"
 }
 
-# 工具：带 --dependency 提交一批 solve jobs
 submit_with_dependency() {
-    local dir="$1"
-    local prefix="$2"
-    local dep="$3"     # 冒号分隔 job ID
-    local ids=""
-    local jobfile jid
-
+    local dir="$1" prefix="$2" dep="$3"
+    local ids="" jobfile jid
+    [[ -z "$dep" ]] && die "submit_with_dependency 收到空依赖列表" 3
     pushd "$dir" >/dev/null || die "cd $dir 失败"
-
     for jobfile in ${prefix}*; do
         [[ -f "$jobfile" ]] || continue
         if (( DRY_RUN )); then
-            printf "${YELLOW}[DRY]${NC}   sbatch --parsable --dependency=afterok:$dep $jobfile  (in $dir)\n"
+            printf "${YELLOW}[DRY]${NC}   sbatch --parsable --dependency=afterok:%s %s  (in %s)\n" "$dep" "$jobfile" "$dir"
             jid="DRY$RANDOM"
         else
             jid=$(sbatch --parsable --dependency=afterok:"$dep" "$jobfile") \
@@ -257,108 +307,219 @@ submit_with_dependency() {
         ids+="$jid"
         sleep 0.2
     done
-
     popd >/dev/null
     printf '%s\n' "$ids"
 }
 
-# exp-2 流程
-EXP2_IDS=""
+# 以 afterany（不论成功失败都算完成）方式提交 —— 只用于 --sequential 跨实验等待
+submit_with_afterany() {
+    local dir="$1" prefix="$2" dep="$3"
+    local ids="" jobfile jid
+    [[ -z "$dep" ]] && { submit_and_collect_ids "$dir" "$prefix"; return; }
+    pushd "$dir" >/dev/null || die "cd $dir 失败"
+    for jobfile in ${prefix}*; do
+        [[ -f "$jobfile" ]] || continue
+        if (( DRY_RUN )); then
+            printf "${YELLOW}[DRY]${NC}   sbatch --parsable --dependency=afterany:%s %s  (in %s)\n" "$dep" "$jobfile" "$dir"
+            jid="DRY$RANDOM"
+        else
+            jid=$(sbatch --parsable --dependency=afterany:"$dep" "$jobfile") \
+                || die "sbatch（--sequential）失败: $jobfile" 3
+            log "  submitted $jobfile → $jid (seq deps=$dep)"
+        fi
+        [[ -n "$ids" ]] && ids+=":"
+        ids+="$jid"
+        sleep 0.2
+    done
+    popd >/dev/null
+    printf '%s\n' "$ids"
+}
+
+# -------------------------------------------------------------------
+# 各实验流程
+# -------------------------------------------------------------------
+EXP2_IDS=""; EXP3_IDS=""; EXP4_IDS=""; EXP5_IDS=""
+PREV_EXP_LAST_IDS=""  # --sequential 模式下，下一个实验 transform 等这些 ID 完成
+
+# 用于 --sequential 的辅助：把 transform 绑到前一个实验的全部 ID
+submit_transform_respecting_sequential() {
+    local dir="$1" prefix="$2"
+    if (( SEQUENTIAL )) && [[ -n "$PREV_EXP_LAST_IDS" ]]; then
+        submit_with_afterany "$dir" "$prefix" "$PREV_EXP_LAST_IDS"
+    else
+        submit_and_collect_ids "$dir" "$prefix"
+    fi
+}
+
 run_exp2() {
     (( RUN_EXP2 )) || return 0
     step "exp-2 —— 生成 SLURM 脚本"
-
     pushd "$SCRIPT_DIR/experiment-2-k=3,4" >/dev/null
     run "./run_all_experiments.sh generate" || die "exp-2 generate 失败"
     popd >/dev/null
 
     step "exp-2 —— 提交 transform（6 个任务）"
-    local TRANSFORM_IDS
-    TRANSFORM_IDS=$(submit_and_collect_ids \
+    local T_IDS
+    T_IDS=$(submit_transform_respecting_sequential \
         "$SCRIPT_DIR/experiment-2-k=3,4/roundingsat/transform" "jobslurm-")
-    ok "exp-2 transform IDs: $TRANSFORM_IDS"
+    ok "exp-2 transform IDs: $T_IDS"
 
     step "exp-2 —— 提交 RoundingSAT solve（6 个任务，依赖 transform）"
     local RS_IDS
     RS_IDS=$(submit_with_dependency \
-        "$SCRIPT_DIR/experiment-2-k=3,4/roundingsat/jobs" "jobslurm-" "$TRANSFORM_IDS")
+        "$SCRIPT_DIR/experiment-2-k=3,4/roundingsat/jobs" "jobslurm-" "$T_IDS")
     ok "exp-2 RoundingSAT solve IDs: $RS_IDS"
 
-    step "exp-2 —— 提交 CPLEX solve（8 个任务，独立于 transform）"
+    step "exp-2 —— 提交 CPLEX solve（8 个任务，不依赖 transform）"
     local CPLEX_IDS
-    CPLEX_IDS=$(submit_and_collect_ids \
-        "$SCRIPT_DIR/experiment-2-k=3,4/cplex/jobs" "jobslurm-")
+    if (( SEQUENTIAL )) && [[ -n "$PREV_EXP_LAST_IDS" ]]; then
+        CPLEX_IDS=$(submit_with_afterany \
+            "$SCRIPT_DIR/experiment-2-k=3,4/cplex/jobs" "jobslurm-" "$PREV_EXP_LAST_IDS")
+    else
+        CPLEX_IDS=$(submit_and_collect_ids \
+            "$SCRIPT_DIR/experiment-2-k=3,4/cplex/jobs" "jobslurm-")
+    fi
     ok "exp-2 CPLEX solve IDs: $CPLEX_IDS"
 
-    EXP2_IDS="$TRANSFORM_IDS:$RS_IDS:$CPLEX_IDS"
+    EXP2_IDS="$T_IDS:$RS_IDS:$CPLEX_IDS"
+    PREV_EXP_LAST_IDS="$RS_IDS:$CPLEX_IDS"
 }
 
-# exp-3 流程
-EXP3_IDS=""
 run_exp3() {
     (( RUN_EXP3 )) || return 0
     step "exp-3 —— 生成 SLURM 脚本"
-
     pushd "$SCRIPT_DIR/experiment-3-XOR" >/dev/null
     run "./run_all_experiments.sh generate" || die "exp-3 generate 失败"
     popd >/dev/null
 
     step "exp-3 —— 提交 transform（15 个任务）"
-    local TRANSFORM_IDS
-    TRANSFORM_IDS=$(submit_and_collect_ids \
+    local T_IDS
+    T_IDS=$(submit_transform_respecting_sequential \
         "$SCRIPT_DIR/experiment-3-XOR/transform" "jobslurm-")
-    ok "exp-3 transform IDs: $TRANSFORM_IDS"
+    ok "exp-3 transform IDs: $T_IDS"
 
     step "exp-3 —— 提交 GaussMaxHS solve（15 个任务，依赖 transform）"
-    local SOLVE_IDS
-    SOLVE_IDS=$(submit_with_dependency \
-        "$SCRIPT_DIR/experiment-3-XOR/jobs" "jobslurm-" "$TRANSFORM_IDS")
-    ok "exp-3 GaussMaxHS solve IDs: $SOLVE_IDS"
+    local S_IDS
+    S_IDS=$(submit_with_dependency \
+        "$SCRIPT_DIR/experiment-3-XOR/jobs" "jobslurm-" "$T_IDS")
+    ok "exp-3 GaussMaxHS solve IDs: $S_IDS"
 
-    EXP3_IDS="$TRANSFORM_IDS:$SOLVE_IDS"
+    EXP3_IDS="$T_IDS:$S_IDS"
+    PREV_EXP_LAST_IDS="$S_IDS"
 }
 
-# 最终状态
+run_exp4() {
+    (( RUN_EXP4 )) || return 0
+    step "exp-4 —— prepare + 生成 SLURM 脚本"
+    pushd "$SCRIPT_DIR/experiment-4-SEv3" >/dev/null
+    run "./run_all_experiments.sh prepare"  || die "exp-4 prepare 失败"
+    run "./run_all_experiments.sh generate" || die "exp-4 generate 失败"
+    popd >/dev/null
+
+    step "exp-4 —— 提交 transform（15 个任务，SEv3 standalone）"
+    local T_IDS
+    T_IDS=$(submit_transform_respecting_sequential \
+        "$SCRIPT_DIR/experiment-4-SEv3/transform" "jobslurm-")
+    ok "exp-4 transform IDs: $T_IDS"
+
+    step "exp-4 —— 提交 RoundingSAT solve（15 个任务，依赖 transform）"
+    local S_IDS
+    S_IDS=$(submit_with_dependency \
+        "$SCRIPT_DIR/experiment-4-SEv3/jobs" "jobslurm-" "$T_IDS")
+    ok "exp-4 RoundingSAT solve IDs: $S_IDS"
+
+    EXP4_IDS="$T_IDS:$S_IDS"
+    PREV_EXP_LAST_IDS="$S_IDS"
+}
+
+run_exp5() {
+    (( RUN_EXP5 )) || return 0
+    step "exp-5 —— prepare + 生成 SLURM 脚本（SEv1v3 heuristic overlay）"
+    warn "exp-5 是 SEv1+SEv3 启发式叠加（非 sound），可能在部分 instance 上比 exp-4 次优或 UNSAT — 这是预期行为"
+    pushd "$SCRIPT_DIR/experiment-5-SEv1v3" >/dev/null
+    run "./run_all_experiments.sh prepare"  || die "exp-5 prepare 失败"
+    run "./run_all_experiments.sh generate" || die "exp-5 generate 失败"
+    popd >/dev/null
+
+    step "exp-5 —— 提交 transform（15 个任务，SEv1 ∧ SEv3 overlay）"
+    local T_IDS
+    T_IDS=$(submit_transform_respecting_sequential \
+        "$SCRIPT_DIR/experiment-5-SEv1v3/transform" "jobslurm-")
+    ok "exp-5 transform IDs: $T_IDS"
+
+    step "exp-5 —— 提交 RoundingSAT solve（15 个任务，依赖 transform）"
+    local S_IDS
+    S_IDS=$(submit_with_dependency \
+        "$SCRIPT_DIR/experiment-5-SEv1v3/jobs" "jobslurm-" "$T_IDS")
+    ok "exp-5 RoundingSAT solve IDs: $S_IDS"
+
+    EXP5_IDS="$T_IDS:$S_IDS"
+    PREV_EXP_LAST_IDS="$S_IDS"
+}
+
 summary() {
     step "✅ 全部任务已提交 —— 可以关闭终端，SLURM 会自动跑"
 
-    if [[ -n "$EXP2_IDS" ]]; then
-        local N_EXP2=$(awk -F: '{print NF}' <<< "$EXP2_IDS")
-        echo -e "  ${GREEN}exp-2${NC}: 共 ${N_EXP2} 个 SLURM job 已提交"
-        echo -e "    （其中 RoundingSAT solve 自动等 transform 完成再跑，CPLEX 独立并行）"
-    fi
-    if [[ -n "$EXP3_IDS" ]]; then
-        local N_EXP3=$(awk -F: '{print NF}' <<< "$EXP3_IDS")
-        echo -e "  ${GREEN}exp-3${NC}: 共 ${N_EXP3} 个 SLURM job 已提交"
-        echo -e "    （GaussMaxHS solve 自动等 transform 完成再跑）"
-    fi
+    local total=0
+    local n
+    for pair in "EXP2_IDS:exp-2" "EXP3_IDS:exp-3" "EXP4_IDS:exp-4" "EXP5_IDS:exp-5"; do
+        local var="${pair%%:*}" label="${pair##*:}"
+        local ids="${!var}"
+        if [[ -n "$ids" ]]; then
+            n=$(awk -F: '{print NF}' <<< "$ids")
+            echo -e "  ${GREEN}${label}${NC}: 共 ${n} 个 SLURM job 已提交"
+            total=$((total + n))
+        fi
+    done
+    echo "  ────────────────────────────"
+    echo -e "  ${GREEN}合计${NC}: ${total} 个 SLURM job"
 
     echo ""
-    echo -e "${BLUE}监控:${NC}    squeue -u \$USER"
-    echo -e "${BLUE}取消所有:${NC}  scancel -u \$USER"
+    if (( SEQUENTIAL )); then
+        echo -e "${YELLOW}模式：--sequential${NC}（exp-2 → exp-3 → exp-4 → exp-5 按顺序跑，后一个等前一个全部完成）"
+    else
+        echo -e "${BLUE}模式：并行${NC}（四个实验同时在队列里，SLURM 根据资源自行调度；solve 只等自己实验的 transform）"
+    fi
+    echo ""
+    echo -e "${BLUE}监控:${NC}       squeue -u \$USER"
+    echo -e "${BLUE}取消所有:${NC}   scancel -u \$USER"
     echo ""
     echo -e "${BLUE}全部跑完后，汇总 CSV:${NC}"
-    (( RUN_EXP2 )) && echo "    cd '$SCRIPT_DIR/experiment-2-k=3,4' && ./run_all_experiments.sh sumup"
-    (( RUN_EXP3 )) && echo "    cd '$SCRIPT_DIR/experiment-3-XOR' && ./run_all_experiments.sh sumup"
+    (( RUN_EXP2 )) && echo "    cd '$SCRIPT_DIR/experiment-2-k=3,4'  && ./run_all_experiments.sh sumup"
+    (( RUN_EXP3 )) && echo "    cd '$SCRIPT_DIR/experiment-3-XOR'    && ./run_all_experiments.sh sumup"
+    (( RUN_EXP4 )) && echo "    cd '$SCRIPT_DIR/experiment-4-SEv3'   && ./run_all_experiments.sh sumup"
+    (( RUN_EXP5 )) && echo "    cd '$SCRIPT_DIR/experiment-5-SEv1v3' && ./run_all_experiments.sh sumup"
     echo ""
     echo -e "${BLUE}结果 CSV 位置:${NC}"
     (( RUN_EXP2 )) && echo "    $SCRIPT_DIR/experiment-2-k=3,4/roundingsat/sumup/results/"
     (( RUN_EXP2 )) && echo "    $SCRIPT_DIR/experiment-2-k=3,4/cplex/sumup/results/"
     (( RUN_EXP3 )) && echo "    $SCRIPT_DIR/experiment-3-XOR/sumup/results/"
+    (( RUN_EXP4 )) && echo "    $SCRIPT_DIR/experiment-4-SEv3/sumup/results/"
+    (( RUN_EXP5 )) && echo "    $SCRIPT_DIR/experiment-5-SEv1v3/sumup/results/"
     echo ""
-    echo -e "预计墙钟时间：每个 solve job 最多 10000 秒（~2.8h），SLURM 并发按集群负载。"
+    echo -e "预计墙钟时间：每个 solve job 最多 10000 秒（~2.8h），并发度取决于 SLURM 负载。"
 }
 
-# main
 main() {
     echo -e "${BLUE}"
     echo "============================================================"
-    echo "  DiverseSAT supplementary experiments (exp-2 + exp-3)"
-    echo "  one-click cluster runner"
+    echo "  DiverseSAT supplementary experiments — one-click runner"
+    echo "  (exp-2 / exp-3 / exp-4 / exp-5)"
     echo "============================================================"
     echo -e "${NC}"
 
-    (( DRY_RUN )) && warn "DRY-RUN 模式：只打印命令，不执行"
+    (( DRY_RUN ))    && warn "DRY-RUN 模式：只打印命令，不执行"
+    (( SEQUENTIAL )) && warn "SEQUENTIAL 模式：实验之间用 afterany 依赖，前一个实验全部结束后下一个才开始"
+
+    local pending=()
+    (( RUN_EXP2 )) && pending+=("exp-2 (RS+CPLEX, k=3,4, 20 jobs)")
+    (( RUN_EXP3 )) && pending+=("exp-3 (GaussMaxHS SEv1-XOR, k=2,3,4,5,10, 30 jobs)")
+    (( RUN_EXP4 )) && pending+=("exp-4 (RS SEv3 standalone, k=2,3,4,5,10, 30 jobs)")
+    (( RUN_EXP5 )) && pending+=("exp-5 (RS SEv1∧SEv3 overlay, k=2,3,4,5,10, 30 jobs)")
+    [[ ${#pending[@]} -eq 0 ]] && die "--only/--skip 把全部实验都排除了，没事可做"
+
+    log "计划提交："
+    for p in "${pending[@]}"; do echo "    • $p"; done
 
     preflight
     smoke_test
@@ -369,6 +530,8 @@ main() {
 
     run_exp2
     run_exp3
+    run_exp4
+    run_exp5
     summary
 }
 

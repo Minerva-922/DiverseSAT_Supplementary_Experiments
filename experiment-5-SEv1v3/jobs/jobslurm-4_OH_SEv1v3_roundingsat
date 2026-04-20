@@ -1,0 +1,19 @@
+#!/bin/sh
+#SBATCH --job-name=4Ov13R
+#SBATCH --partition=normal
+#SBATCH --time=10-1:00:00
+#SBATCH --output=slurm-%j.out
+#SBATCH --mem=120G
+#SBATCH --nodes=1
+#SBATCH --exclusive
+echo "-----------------------------------------------------------"
+echo "hostname                     =   $(hostname)"
+echo "SLURM_JOB_NAME               =   $SLURM_JOB_NAME"
+echo "SLURM_JOBID                  =   $SLURM_JOBID"
+echo "-----------------------------------------------------------"
+k_value="4"
+encode="OH"
+SE_mode="SEv1v3"
+solver="roundingsat"
+key_word="k_${k_value}-${encode}-${SE_mode}"
+python ./goSolver.py 10 10000 /users/scherif/ComputeSpace/DiverseSAT/solvers/roundingsat ../benchmarks/$key_word ./results --suffix $key_word

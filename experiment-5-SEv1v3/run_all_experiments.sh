@@ -1,7 +1,12 @@
 #!/bin/bash
 #
-# Master script for experiment-4 (SEv3 standalone, with RoundingSAT and
-# CPLEX, full k-sweep on 299 instances).
+# Master script for experiment-5 (SEv1 + SEv3 heuristic overlay, with
+# RoundingSAT and CPLEX, full k-sweep on 299 instances).
+#
+# IMPORTANT: the SEv1v3 overlay is NOT a sound symmetry-breaking scheme
+# (see README.md and v2.tex Remark rem:diagonal-vs-lex).  Results from
+# this experiment are reported as a speculative heuristic complement
+# to experiment-4's SEv3-standalone configuration.
 #
 # Usage:
 #   ./run_all_experiments.sh prepare    # copy support scripts + instance list
@@ -20,6 +25,7 @@ cd "$SCRIPT_DIR"
 
 EXP1_ROOT="${EXP1_ROOT:-../experiment-1}"
 EXP2_ROOT="${EXP2_ROOT:-../experiment-2-k=3,4}"
+EXP4_ROOT="${EXP4_ROOT:-../experiment-4-SEv3}"
 
 step() {
     echo ""
@@ -30,21 +36,32 @@ step() {
 
 do_prepare() {
     step "[prepare] Copying RoundingSAT support files"
-    # Prefer experiment-2 copies (k=3,4), fall back to experiment-1.
-    for src in "$EXP2_ROOT" "$EXP1_ROOT"; do
-        if [ -f "$src/roundingsat/transform/goTransformer.py" ]; then
+    # Prefer exp-4 (same layout as this experiment); fall back to exp-2/1.
+    for src in "$EXP4_ROOT" "$EXP2_ROOT" "$EXP1_ROOT"; do
+        # exp-4 exposes files directly, exp-1/2 nest them under roundingsat/.
+        if [ -f "$src/transform/goTransformer.py" ]; then
+            cp -n "$src/transform/goTransformer.py" transform/
+            cp -n "$src/transform/299_instances.txt" transform/
+            cp -n "$src/jobs/goSolver.py"           jobs/
+            cp -n "$src/jobs/299_instances.txt"     jobs/
+            if [ -f "$src/sumup/sumup.py" ]; then
+                cp -n "$src/sumup/sumup.py" sumup/
+            fi
+            echo "  [ok] copied support files from $src (flat layout)"
+            break
+        elif [ -f "$src/roundingsat/transform/goTransformer.py" ]; then
             cp -n "$src/roundingsat/transform/goTransformer.py" transform/
-            cp -n "$src/roundingsat/transform/299_instances.txt"    transform/
-            cp -n "$src/roundingsat/jobs/goSolver.py"               jobs/
-            cp -n "$src/roundingsat/jobs/299_instances.txt"         jobs/
-            cp -n "$src/roundingsat/sumup/sumup.py"                 sumup/
-            echo "  [ok] copied support files from $src"
+            cp -n "$src/roundingsat/transform/299_instances.txt" transform/
+            cp -n "$src/roundingsat/jobs/goSolver.py"           jobs/
+            cp -n "$src/roundingsat/jobs/299_instances.txt"     jobs/
+            cp -n "$src/roundingsat/sumup/sumup.py"             sumup/
+            echo "  [ok] copied support files from $src (nested layout)"
             break
         fi
     done
 
     step "[prepare] Copying CPLEX support files"
-    for src in "$EXP2_ROOT" "$EXP1_ROOT"; do
+    for src in "$EXP4_ROOT" "$EXP2_ROOT" "$EXP1_ROOT"; do
         if [ -f "$src/cplex/jobs/goSolver.py" ]; then
             cp -n "$src/cplex/jobs/goSolver.py"       cplex/jobs/
             cp -n "$src/cplex/jobs/299_instances.txt" cplex/jobs/
@@ -86,22 +103,29 @@ do_test() {
 }
 
 do_summary() {
-    step "experiment-4 Summary"
-    echo "  Goal: evaluate SEv3 (\"square binary clauses\", per the PDF"
-    echo "  materials/14-symmetry_elimination.pdf Version 3) as a"
-    echo "  standalone, lightweight partial symmetry breaker."
+    step "experiment-5 Summary"
+    echo "  Goal: evaluate the **SEv1 + SEv3 heuristic overlay** --"
+    echo "  SEv3's diagonal-dominance binary clauses conjoined on top of"
+    echo "  SEv1's strict-lex module -- as a speculative complement to"
+    echo "  experiment-4's SEv3-standalone configuration."
+    echo ""
+    echo "  WARNING: this overlay is NOT a sound symmetry-breaking scheme"
+    echo "  (see README.md and v2.tex Remark rem:diagonal-vs-lex)."
+    echo "  Expect some instances to flip to UNSAT or to report strictly"
+    echo "  suboptimal diversity -- such behaviour is the object of study."
     echo ""
     echo "  What we run:"
     echo "    RoundingSAT: OH / UNA / BIN"
     echo "    CPLEX:       QP / DW / IW / BIN"
-    echo "    k:           {2, 3, 4, 5, 10}   SE mode: SEv3 alone (no SEv1)"
+    echo "    k:           {2, 3, 4, 5, 10}   SE mode: SEv1v3 overlay"
     echo ""
-    echo "  SEv3 working definition (see transformers/_pbo_io.py):"
-    echo "    V_{j,j} -> V_{i,j}     for j in {1..K-1}, i in {j+1..K}"
-    echo "       i.e.  K*(K-1)/2 binary clauses  (~V_{j,j} OR V_{i,j})"
+    echo "  SEv1v3 working definition:"
+    echo "    SEv1  strict-lex chain on C_{i,j}     ((K-1)*(3N-1) clauses)"
+    echo "    SEv3  V_{j,j} -> V_{i,j} binaries      (K*(K-1)/2 clauses)"
     echo ""
-    echo "  Comparison baseline: same configurations from experiment-1 /"
-    echo "  experiment-2 with SEv1 alone, and experiment-3 with SEv1XOR."
+    echo "  Comparison baselines:"
+    echo "    exp-1 / exp-2  :  SEv1 alone    (sound baseline)"
+    echo "    exp-4          :  SEv3 alone    (sound standalone substitute)"
     echo ""
     echo "  Total jobs:"
     echo "    transform:          3 (encodings) * 5 (k) = 15"

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Generate SLURM job scripts for experiment-4 RoundingSAT runs.
+Generate SLURM job scripts for experiment-5 RoundingSAT runs.
 
-experiment-4 scope:
+experiment-5 scope:
     k in {2, 3, 4, 5, 10}
     encodings in {OH, UNA, BIN}
-    symmetry mode fixed to SEv3 standalone
+    symmetry mode fixed to SEv1v3 heuristic overlay
     solver fixed to roundingsat
 """
 
@@ -14,11 +14,11 @@ from pathlib import Path
 
 # Configuration
 k_values = [2, 3, 4, 5, 10]
-SE_modes = ["SEv3"]
+SE_modes = ["SEv1v3"]
 encodes = ["OH", "UNA", "BIN"]
 solvers = ["roundingsat"]
 
-# Kept as a no-op to preserve the call sites below; exp-4 only has one SE mode.
+# Kept as a no-op to preserve the call sites below; exp-5 only has one SE mode.
 FEWEST_TESTS = False
 
 SLURM_TEMPLATE = """#!/bin/sh
@@ -91,7 +91,7 @@ def get_solver_short(solver):
 
 def generate_job_name(k_value, encode, SE_mode, solver):
     encode_short = get_encode_short(encode)
-    se_version = "3"
+    se_version = "13"
     solver_short = get_solver_short(solver)
     return f"{k_value}{encode_short}{se_version}{solver_short}"
 
@@ -156,7 +156,7 @@ def main():
                     )
                     print(
                         f"✓ Generated: {script_filename:45s} "
-                        f"(job: {job_name:8s}, k={k_value:2d}, {encode:3s}, {SE_mode:5s}, "
+                        f"(job: {job_name:8s}, k={k_value:2d}, {encode:3s}, {SE_mode:7s}, "
                         f"{solver:11s}, p={parallel_num})"
                     )
 
@@ -165,10 +165,10 @@ def main():
     if skipped_count > 0:
         print(f"Total combinations skipped: {skipped_count}")
 
-    print(f"\n{'Filename':<45s} {'Job Name':<10s} {'K':<3s} {'Enc':<4s} {'SE':<6s} {'Solver':<12s} {'Par'}")
+    print(f"\n{'Filename':<45s} {'Job Name':<10s} {'K':<3s} {'Enc':<4s} {'SE':<8s} {'Solver':<12s} {'Par'}")
     print("-" * 90)
     for filename, job_name, k_value, encode, SE_mode, solver, parallel_num in generated_files[:10]:
-        print(f"{filename:<45s} {job_name:<10s} {k_value:<3d} {encode:<4s} {SE_mode:<6s} {solver:<12s} {parallel_num}")
+        print(f"{filename:<45s} {job_name:<10s} {k_value:<3d} {encode:<4s} {SE_mode:<8s} {solver:<12s} {parallel_num}")
     if len(generated_files) > 10:
         print(f"... ({len(generated_files) - 10} more)")
 
@@ -176,7 +176,7 @@ def main():
     with open(submission_script, "w") as f:
         f.write("#!/bin/bash\n")
         f.write("# Batch submission script for all generated SLURM jobs\n")
-        f.write("# experiment-4 RoundingSAT submission (SEv3 standalone)\n")
+        f.write("# experiment-5 RoundingSAT submission (SEv1 + SEv3 heuristic overlay)\n")
         f.write(f"# Total jobs: {len(generated_files)}\n\n")
         for filename, job_name, k_value, encode, SE_mode, solver, parallel_num in generated_files:
             f.write(

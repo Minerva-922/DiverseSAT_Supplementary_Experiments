@@ -1,37 +1,5 @@
 #!/usr/bin/env bash
-# one_click_cluster_run.sh —— 一键在 matricsi 集群上跑 exp-2 / exp-3 / exp-4（默认）
-#
-# 合作者只需在集群上执行一次：
-#
-#     cd /users/scherif/ComputeSpace/DiverseSAT/DiverseSAT_Supplementary_Experiments/added_experiment
-#     bash one_click_cluster_run.sh
-#
-# 默认行为：exp-2 / exp-3 / exp-4 三个实验并行提交到 SLURM 队列。
-#   - exp-5 (SEv1v3 heuristic overlay) 默认 **不跑**——它是 unsound symmetry breaking
-#     overlay（会把 lex-min 和 diagonal-min 两个不同 canonical 代表硬合，可能杀掉最
-#     优解），等 Sami 邮件里的 A/B/C 决策后再决定是否加 --with-exp5 启用。
-#   - 不同实验之间没有依赖；同一实验内 solve 用 --dependency=afterok 等自己的 transform。
-#   - 加 --sequential 可以让后一个实验等前一个实验全部 job 完成再开始。
-#
-# 脚本会自动完成：
-#   1. 检查环境（git 最新、Python pysat、solver 二进制、benchmark 目录）
-#   2. 跑一次快速的 transform smoke test，避免整批失败
-#   3. 生成每个实验的 SLURM 脚本
-#   4. 用 sbatch --dependency 把 "transform → solve" 自动串联后提交
-#   5. 打印最终的 job ID 列表和后续步骤（sumup）
-#
-# 用法
-#   bash one_click_cluster_run.sh                        # 默认：跑 exp-2/3/4（不跑 exp-5）
-#   bash one_click_cluster_run.sh --with-exp5            # 额外把 exp-5 SEv1v3 overlay 也跑上
-#   bash one_click_cluster_run.sh --only exp2,exp3       # 只跑指定实验（完全覆盖默认）
-#   bash one_click_cluster_run.sh --only exp4            # 只跑 exp-4
-#   bash one_click_cluster_run.sh --skip exp3            # 默认集合里排除 exp-3
-#   bash one_click_cluster_run.sh --sequential           # 强制实验之间串行
-#   bash one_click_cluster_run.sh --dry-run              # 打印所有命令但不执行
-#   bash one_click_cluster_run.sh --yes                  # 跳过所有确认（全自动）
-#   bash one_click_cluster_run.sh --no-git-pull          # 跳过 git pull
-#   bash one_click_cluster_run.sh --no-smoke             # 跳过 smoke test
-#   bash one_click_cluster_run.sh --help                 # 显示此帮助
+# run345.sh —— 一键在 matricsi 集群上跑 DiverseSAT 补充实验 (默认 exp-2/3/4)
 #
 # 退出码
 # ------
@@ -103,7 +71,7 @@ while [[ $# -gt 0 ]]; do
         --no-git-pull)  DO_GIT_PULL=0; shift ;;
         --no-smoke)     DO_SMOKE=0; shift ;;
         -h|--help)
-            sed -n '/^# one_click_cluster_run.sh/,/^set -/p' "$0" \
+            sed -n '/^# run345.sh/,/^set -/p' "$0" \
                 | grep '^#' | sed 's/^# \{0,1\}//'
             exit 0 ;;
         *)  echo "Unknown option: $1" >&2; exit 1 ;;
@@ -137,8 +105,13 @@ confirm() {
 preflight() {
     step "前置检查 (pre-flight)"
 
-    # 1. 当前目录
-    for d in experiment-2-k=3,4 experiment-3-XOR experiment-4-SEv3 experiment-5-SEv1v3; do
+    # 1. 当前目录：只检查本次实际要跑的实验
+    local required_dirs=()
+    (( RUN_EXP2 )) && required_dirs+=( "experiment-2-k=3,4" )
+    (( RUN_EXP3 )) && required_dirs+=( "experiment-3-XOR" )
+    (( RUN_EXP4 )) && required_dirs+=( "experiment-4-SEv3" )
+    (( RUN_EXP5 )) && required_dirs+=( "experiment-5-SEv1v3" )
+    for d in "${required_dirs[@]}"; do
         [[ -d "$SCRIPT_DIR/$d" ]] || die "找不到子目录 $d —— 脚本必须放在 added_experiment/ 下。当前在 $SCRIPT_DIR"
     done
     ok "工作目录 $SCRIPT_DIR"
@@ -184,12 +157,12 @@ preflight() {
         ok "RoundingSAT 二进制 $ROUNDINGSAT_BIN"
     fi
 
-    # 7. CPLEX module（exp-2 需要）
-    if (( RUN_EXP2 )); then
+    # 7. CPLEX module（exp-2 和 exp-4 都需要）
+    if (( RUN_EXP2 || RUN_EXP4 )); then
         if command -v module >/dev/null 2>&1 && module is-loaded cplex 2>/dev/null; then
             ok "CPLEX 模块已加载"
         else
-            warn "CPLEX 模块未加载 —— SLURM 脚本里的 'module load cplex' 会处理；如果集群的 module 名字改过，需要先手动改 experiment-2-k=3,4/cplex/jobs/jobslurm-*_CPLEX"
+            warn "CPLEX 模块未加载 —— SLURM 脚本里的 'module load cplex' 会处理；如果集群的 module 名字改过，需要先手动改各 jobslurm-*_CPLEX 脚本"
         fi
     fi
 
@@ -415,26 +388,37 @@ run_exp3() {
 
 run_exp4() {
     (( RUN_EXP4 )) || return 0
-    step "exp-4 —— prepare + 生成 SLURM 脚本"
+    step "exp-4 —— prepare + 生成 SLURM 脚本（RS + CPLEX, SEv3 standalone）"
     pushd "$SCRIPT_DIR/experiment-4-SEv3" >/dev/null
     run "./run_all_experiments.sh prepare"  || die "exp-4 prepare 失败"
     run "./run_all_experiments.sh generate" || die "exp-4 generate 失败"
     popd >/dev/null
 
-    step "exp-4 —— 提交 transform（15 个任务，SEv3 standalone）"
+    step "exp-4 —— 提交 transform（15 个任务，CNF→OPB+SEv3）"
     local T_IDS
     T_IDS=$(submit_transform_respecting_sequential \
         "$SCRIPT_DIR/experiment-4-SEv3/transform" "jobslurm-")
     ok "exp-4 transform IDs: $T_IDS"
 
     step "exp-4 —— 提交 RoundingSAT solve（15 个任务，依赖 transform）"
-    local S_IDS
-    S_IDS=$(submit_with_dependency \
+    local RS_IDS
+    RS_IDS=$(submit_with_dependency \
         "$SCRIPT_DIR/experiment-4-SEv3/jobs" "jobslurm-" "$T_IDS")
-    ok "exp-4 RoundingSAT solve IDs: $S_IDS"
+    ok "exp-4 RoundingSAT solve IDs: $RS_IDS"
 
-    EXP4_IDS="$T_IDS:$S_IDS"
-    PREV_EXP_LAST_IDS="$S_IDS"
+    step "exp-4 —— 提交 CPLEX solve（20 个任务, QP/DW/IW/BIN × k={2,3,4,5,10}, 不依赖 transform）"
+    local CPLEX_IDS
+    if (( SEQUENTIAL )) && [[ -n "$PREV_EXP_LAST_IDS" ]]; then
+        CPLEX_IDS=$(submit_with_afterany \
+            "$SCRIPT_DIR/experiment-4-SEv3/cplex/jobs" "jobslurm-" "$PREV_EXP_LAST_IDS")
+    else
+        CPLEX_IDS=$(submit_and_collect_ids \
+            "$SCRIPT_DIR/experiment-4-SEv3/cplex/jobs" "jobslurm-")
+    fi
+    ok "exp-4 CPLEX solve IDs: $CPLEX_IDS"
+
+    EXP4_IDS="$T_IDS:$RS_IDS:$CPLEX_IDS"
+    PREV_EXP_LAST_IDS="$RS_IDS:$CPLEX_IDS"
 }
 
 run_exp5() {
@@ -499,7 +483,8 @@ summary() {
     (( RUN_EXP2 )) && echo "    $SCRIPT_DIR/experiment-2-k=3,4/roundingsat/sumup/results/"
     (( RUN_EXP2 )) && echo "    $SCRIPT_DIR/experiment-2-k=3,4/cplex/sumup/results/"
     (( RUN_EXP3 )) && echo "    $SCRIPT_DIR/experiment-3-XOR/sumup/results/"
-    (( RUN_EXP4 )) && echo "    $SCRIPT_DIR/experiment-4-SEv3/sumup/results/"
+    (( RUN_EXP4 )) && echo "    $SCRIPT_DIR/experiment-4-SEv3/sumup/results/          (RoundingSAT)"
+    (( RUN_EXP4 )) && echo "    $SCRIPT_DIR/experiment-4-SEv3/cplex/sumup/results/    (CPLEX)"
     (( RUN_EXP5 )) && echo "    $SCRIPT_DIR/experiment-5-SEv1v3/sumup/results/"
     echo ""
     echo -e "预计墙钟时间：每个 solve job 最多 10000 秒（~2.8h），并发度取决于 SLURM 负载。"
@@ -508,7 +493,7 @@ summary() {
 main() {
     echo -e "${BLUE}"
     echo "============================================================"
-    echo "  DiverseSAT supplementary experiments — one-click runner"
+    echo "  DiverseSAT supplementary experiments — run345.sh"
     echo "  default: exp-2 / exp-3 / exp-4   (exp-5 opt-in via --with-exp5)"
     echo "============================================================"
     echo -e "${NC}"
@@ -517,9 +502,9 @@ main() {
     (( SEQUENTIAL )) && warn "SEQUENTIAL 模式：实验之间用 afterany 依赖，前一个实验全部结束后下一个才开始"
 
     local pending=()
-    (( RUN_EXP2 )) && pending+=("exp-2 (RS+CPLEX, k=3,4, 20 jobs)")
+    (( RUN_EXP2 )) && pending+=("exp-2 (RS+CPLEX, k=3,4,                20 jobs)")
     (( RUN_EXP3 )) && pending+=("exp-3 (GaussMaxHS SEv1-XOR, k=2,3,4,5,10, 30 jobs)")
-    (( RUN_EXP4 )) && pending+=("exp-4 (RS SEv3 standalone, k=2,3,4,5,10, 30 jobs)")
+    (( RUN_EXP4 )) && pending+=("exp-4 (RS+CPLEX SEv3, k=2,3,4,5,10,     50 jobs)")
     (( RUN_EXP5 )) && pending+=("exp-5 (RS SEv1∧SEv3 overlay, k=2,3,4,5,10, 30 jobs)")
     [[ ${#pending[@]} -eq 0 ]] && die "--only/--skip 把全部实验都排除了，没事可做"
 
